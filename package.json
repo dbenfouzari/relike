@@ -1,0 +1,20 @@
+{
+  "name": "fastics",
+  "private": true,
+  "scripts": {
+    "build": "make build"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "engines": {
+    "node": ">= 14.7",
+    "yarn": ">= 1.22"
+  },
+  "packageManager": "yarn@3.0.1"
+}
