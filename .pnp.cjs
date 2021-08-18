@@ -23,19 +23,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "@fastics/cli",
-        "reference": "workspace:packages/cli"
+        "name": "@fastics/client",
+        "reference": "workspace:packages/client"
       },
       {
-        "name": "@fastics/components",
-        "reference": "workspace:packages/components"
+        "name": "@fastics/server",
+        "reference": "workspace:packages/server"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@fastics/cli", ["workspace:packages/cli"]],
-      ["@fastics/components", ["workspace:packages/components"]],
+      ["@fastics/client", ["workspace:packages/client"]],
+      ["@fastics/server", ["workspace:packages/server"]],
       ["fastics", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -45,27 +45,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@types/node", "npm:16.6.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@fastics/cli", [
-        ["workspace:packages/cli", {
-          "packageLocation": "./packages/cli/",
+      ["@fastics/client", [
+        ["workspace:packages/client", {
+          "packageLocation": "./packages/client/",
           "packageDependencies": [
-            ["@fastics/cli", "workspace:packages/cli"]
+            ["@fastics/client", "workspace:packages/client"],
+            ["@fastics/server", "workspace:packages/server"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["@fastics/components", [
-        ["workspace:packages/components", {
-          "packageLocation": "./packages/components/",
+      ["@fastics/server", [
+        ["workspace:packages/server", {
+          "packageLocation": "./packages/server/",
           "packageDependencies": [
-            ["@fastics/components", "workspace:packages/components"]
+            ["@fastics/server", "workspace:packages/server"],
+            ["nanoid", "npm:3.1.25"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["@types/node", [
+        ["npm:16.6.1", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.6.1-df37ae7d3a-c13aa0da0c.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.6.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["fastics", [
@@ -73,9 +85,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["fastics", "workspace:."],
+            ["@types/node", "npm:16.6.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["nanoid", [
+        ["npm:3.1.25", {
+          "packageLocation": "./.yarn/cache/nanoid-npm-3.1.25-c8f62ce160-e2353828c7.zip/node_modules/nanoid/",
+          "packageDependencies": [
+            ["nanoid", "npm:3.1.25"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["typescript", [

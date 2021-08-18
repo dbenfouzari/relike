@@ -5,25 +5,46 @@ __metadata:
   version: 4
   cacheKey: 8
 
-"@fastics/cli@workspace:packages/cli":
+"@fastics/client@workspace:packages/client":
   version: 0.0.0-use.local
-  resolution: "@fastics/cli@workspace:packages/cli"
+  resolution: "@fastics/client@workspace:packages/client"
+  dependencies:
+    "@fastics/server": ^0.0.1
   languageName: unknown
   linkType: soft
 
-"@fastics/components@workspace:packages/components":
+"@fastics/server@^0.0.1, @fastics/server@workspace:packages/server":
   version: 0.0.0-use.local
-  resolution: "@fastics/components@workspace:packages/components"
+  resolution: "@fastics/server@workspace:packages/server"
+  dependencies:
+    nanoid: ^3.1.25
   languageName: unknown
   linkType: soft
+
+"@types/node@npm:^16.6.1":
+  version: 16.6.1
+  resolution: "@types/node@npm:16.6.1"
+  checksum: c13aa0da0c2bf9070e521d1b537ba38f64b213dd1b8aeec66c279fc21f8c0ccaf380364f6dc2ec8f84440c4cd1460b67dfe47de2cafcb6eaf4b648817cb27dc4
+  languageName: node
+  linkType: hard
 
 "fastics@workspace:.":
   version: 0.0.0-use.local
   resolution: "fastics@workspace:."
   dependencies:
+    "@types/node": ^16.6.1
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
+
+"nanoid@npm:^3.1.25":
+  version: 3.1.25
+  resolution: "nanoid@npm:3.1.25"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: e2353828c7d8fde65265e9c981380102e2021f292038a93fd27288bad390339833286e8cbc7531abe1cb2c6b317e55f38b895dcb775151637bb487388558e0ff
+  languageName: node
+  linkType: hard
 
 typescript@^4.3.5:
   version: 4.3.5
