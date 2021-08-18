@@ -5,6 +5,18 @@ __metadata:
   version: 4
   cacheKey: 8
 
+"@fastics/cli@workspace:packages/cli":
+  version: 0.0.0-use.local
+  resolution: "@fastics/cli@workspace:packages/cli"
+  languageName: unknown
+  linkType: soft
+
+"@fastics/components@workspace:packages/components":
+  version: 0.0.0-use.local
+  resolution: "@fastics/components@workspace:packages/components"
+  languageName: unknown
+  linkType: soft
+
 "fastics@workspace:.":
   version: 0.0.0-use.local
   resolution: "fastics@workspace:."

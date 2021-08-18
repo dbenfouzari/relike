@@ -21,11 +21,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "fastics",
         "reference": "workspace:."
+      },
+      {
+        "name": "@fastics/cli",
+        "reference": "workspace:packages/cli"
+      },
+      {
+        "name": "@fastics/components",
+        "reference": "workspace:packages/components"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@fastics/cli", ["workspace:packages/cli"]],
+      ["@fastics/components", ["workspace:packages/components"]],
       ["fastics", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -36,6 +46,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@fastics/cli", [
+        ["workspace:packages/cli", {
+          "packageLocation": "./packages/cli/",
+          "packageDependencies": [
+            ["@fastics/cli", "workspace:packages/cli"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@fastics/components", [
+        ["workspace:packages/components", {
+          "packageLocation": "./packages/components/",
+          "packageDependencies": [
+            ["@fastics/components", "workspace:packages/components"]
           ],
           "linkType": "SOFT",
         }]

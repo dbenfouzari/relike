@@ -1,17 +1,17 @@
 {
   "name": "fastics",
+  "version": "0.0.1",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "make build"
   },
   "devDependencies": {
     "typescript": "^4.3.5"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": ">= 14.7",
     "yarn": ">= 1.22"

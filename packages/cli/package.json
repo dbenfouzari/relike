@@ -1,0 +1,6 @@
+{
+  "name": "@fastics/cli",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "packageManager": "yarn@3.0.1"
+}
