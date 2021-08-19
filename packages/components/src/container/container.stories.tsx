@@ -1,5 +1,4 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
 
 import Alignment from "../alignment";
 import Colors from "../colors";

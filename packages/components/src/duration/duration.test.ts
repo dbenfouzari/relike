@@ -42,8 +42,9 @@ describe("Duration", function () {
     it("should warn user when using months", () => {
       jest.spyOn(console, "warn").mockImplementationOnce(jest.fn);
 
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const _test = Duration.months(0);
+
+      expect(_test.inMonths).toEqual(0);
 
       expect(console.warn).toHaveBeenCalledWith(
         "Be careful when you work with months. This library does not provide a really good way to handle these values since it's not the same every month, every year.",
@@ -60,8 +61,9 @@ describe("Duration", function () {
     it("should warn user when using years", () => {
       jest.spyOn(console, "warn").mockImplementationOnce(jest.fn);
 
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const _test = Duration.years(0);
+
+      expect(_test.inYears).toEqual(0);
 
       expect(console.warn).toHaveBeenCalledWith(
         "Be careful when you work with years. This library does not provide a really good way to handle these values since it's not the same every month, every year.",

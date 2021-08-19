@@ -17,7 +17,7 @@
     "declaration": true,
     "declarationMap": true,
     "allowSyntheticDefaultImports": true,
-    "noEmit": false
+    "noEmit": true
   },
   "include": [
     "./src/**/*"

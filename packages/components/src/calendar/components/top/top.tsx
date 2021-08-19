@@ -1,5 +1,3 @@
-import React from "react";
-
 import Color from "../../../color";
 import DateTime from "../../../date-time";
 import Icon from "../../../icon";

@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { FC, HTMLProps, MouseEvent, ReactText, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { FC, HTMLProps, MouseEvent, ReactText, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import useOnClickOutside from "../hooks";
 import Icon from "../icon";

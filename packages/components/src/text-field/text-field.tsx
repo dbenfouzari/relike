@@ -1,6 +1,6 @@
 // TODO: Replace styled-components by react-jss
 
-import React, { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes } from "react";
 import styled from "styled-components";
 
 import Input from "../input";

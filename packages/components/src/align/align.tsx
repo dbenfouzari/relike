@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Alignment from "../alignment";

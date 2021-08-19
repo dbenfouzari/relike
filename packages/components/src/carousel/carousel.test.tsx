@@ -1,7 +1,7 @@
 import "intersection-observer";
 
 import { render } from "@testing-library/react";
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 import Colors from "../colors";
 import Carousel from "./carousel";

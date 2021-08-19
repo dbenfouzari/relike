@@ -1,5 +1,3 @@
-import React from "react";
-
 import { CalendarEvent } from "../../types";
 import classes from "./event.module.scss";
 

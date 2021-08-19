@@ -1,6 +1,6 @@
 import { Children, ReactElement, useCallback, useEffect, useMemo, useRef } from "react";
 
-import { TabItemProps } from "../components/tab-item";
+import type { TabItemProps } from "../components/tab-item";
 import useDefaultState from "./useDefaultState";
 
 const useTabs = <T extends ReactElement<TabItemProps>[]>(children: T, defaultActiveKey?: string, space: number = 0) => {

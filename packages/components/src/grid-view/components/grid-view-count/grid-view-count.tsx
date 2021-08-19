@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { Children, cloneElement, FC, useEffect } from "react";
+import { Children, cloneElement, FC, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 
 import Padding from "../../../padding";

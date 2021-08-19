@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { FC, forwardRef, ReactNode, RefObject } from "react";
+import { FC, forwardRef, ReactNode, RefObject } from "react";
 import { createUseStyles } from "react-jss";
 
 import Color from "../../../color";

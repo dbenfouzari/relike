@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import classnames from "classnames";
-import React from "react";
 
 import Colors from "../colors";
 import { Icon } from "../icon";

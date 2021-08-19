@@ -15,7 +15,6 @@
     "alwaysStrict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
-    "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
@@ -27,22 +26,5 @@
     "noFallthroughCasesInSwitch": true,
     "isolatedModules": true,
     "jsx": "react-jsx"
-  },
-  "references": [
-    {
-      "path": "packages/cli"
-    },
-    {
-      "path": "packages/components"
-    }
-  ],
-  "exclude": [
-    ".yarn",
-    "node_modules",
-    "dist",
-    "*.d.ts"
-  ],
-  "include": [
-    "src"
-  ]
+  }
 }

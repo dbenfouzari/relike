@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { FC, ReactChild, ReactChildren } from "react";
+import { FC, ReactChild, ReactChildren } from "react";
 
 import Icon from "../icon";
 import IconButton from "../icon-button";

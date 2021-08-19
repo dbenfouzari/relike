@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { createElement, ReactHTML, ReactNode } from "react";
+import { createElement, ReactHTML, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Align from "../align";

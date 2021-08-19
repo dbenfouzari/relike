@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { cloneElement, FC, ReactElement, ReactNode } from "react";
+import { cloneElement, FC, ReactElement, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Color from "../../../color";

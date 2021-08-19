@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import { DAYS, SupportedLocales } from "../../constants";
 import { Day } from "../../types";
