@@ -1,1 +1,1 @@
-export { default as generateComponent } from './generate-component';
+export { default as generateComponent } from "./generate-component";

@@ -52,13 +52,7 @@ type SkeletonComponent = FC<SkeletonProps> & {
 /**
  * You can display a **[Skeleton]** to mimic a content while it's loading.
  */
-export const Skeleton: SkeletonComponent = ({
-  active,
-  avatar,
-  children,
-  color,
-  paragraph = true,
-}) => (
+export const Skeleton: SkeletonComponent = ({ active, avatar, children, color, paragraph = true }) => (
   <SkeletonContext.Provider value={{ active, color }}>
     <div className={classnames({ [classes.skeleton__active]: active })}>
       {children || (

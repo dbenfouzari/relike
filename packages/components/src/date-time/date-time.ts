@@ -28,15 +28,7 @@ const _sixDigits = (n: number) => n.toString().padStart(6, "0");
 class DateTime {
   private readonly date: Date;
 
-  constructor({
-    year,
-    month = 1,
-    day = 1,
-    hour = 0,
-    minute = 0,
-    second = 0,
-    millisecond = 0,
-  }: DateTimeConstructor) {
+  constructor({ year, month = 1, day = 1, hour = 0, minute = 0, second = 0, millisecond = 0 }: DateTimeConstructor) {
     this.date = new Date(year, month - 1, day, hour, minute, second, millisecond);
   }
 
@@ -436,8 +428,7 @@ class DateTime {
    * The format is `yyyy-MM-ddTHH:mm:ss.mmmZ` for UTC time, and `yyyy-MM-ddTHH:mm:ss.mmm` (no trailing "Z") for local/non-UTC time, where:
    */
   public toIso8601String() {
-    const y =
-      this.year >= -9999 && this.year <= 9999 ? _fourDigits(this.year) : _sixDigits(this.year);
+    const y = this.year >= -9999 && this.year <= 9999 ? _fourDigits(this.year) : _sixDigits(this.year);
     const m = _twoDigits(this.month);
     const d = _twoDigits(this.day);
     const h = _twoDigits(this.hour);

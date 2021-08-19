@@ -41,13 +41,7 @@ interface LoaderScreenStylesProps {
   animationDuration: Duration;
 }
 
-const makeUseStyles = ({
-  animationDuration,
-  color1,
-  color2,
-  color3,
-  color4,
-}: LoaderScreenStylesProps) => {
+const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: LoaderScreenStylesProps) => {
   const durationInMs = animationDuration.inMilliseconds;
 
   return createUseStyles({

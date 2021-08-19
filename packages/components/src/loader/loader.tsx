@@ -65,12 +65,7 @@ type LoaderComponent = FC<LoaderProps> & {
 /**
  * A spinner for displaying loading state of a page or a section.
  */
-export const Loader: LoaderComponent = ({
-  color = Colors.blue[500],
-  size = 16,
-  thickness = 2,
-  className,
-}) => {
+export const Loader: LoaderComponent = ({ color = Colors.blue[500], size = 16, thickness = 2, className }) => {
   const styles = useStyles({ color, size, thickness });
 
   return (

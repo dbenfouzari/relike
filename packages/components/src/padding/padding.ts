@@ -12,8 +12,7 @@ class Padding extends EdgeInsets {
    * Generates CSS string based on data.
    */
   toCSSString() {
-    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left))
-      return null;
+    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left)) return null;
 
     const result = [];
 
@@ -33,8 +32,7 @@ class Padding extends EdgeInsets {
    * Generates `styled-components` CSS based on data.
    */
   toStyledCSS() {
-    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left))
-      return null;
+    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left)) return null;
 
     return css`
       ${!isNull(this.left) && `padding-left: ${this.left}px;`}
@@ -55,12 +53,7 @@ class Padding extends EdgeInsets {
     bottom?: Maybe<number>;
     left?: Maybe<number>;
   }) {
-    return new Padding(
-      top ?? this.top,
-      right ?? this.right,
-      bottom ?? this.bottom,
-      left ?? this.left,
-    );
+    return new Padding(top ?? this.top, right ?? this.right, bottom ?? this.bottom, left ?? this.left);
   }
 
   public toString() {

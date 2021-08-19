@@ -33,17 +33,9 @@ interface ModalProps {
   title: string;
 }
 
-export const Modal: FC<ModalProps> = ({
-  onClose,
-  withOverlay = true,
-  children,
-  classNames,
-  title,
-}) => (
+export const Modal: FC<ModalProps> = ({ onClose, withOverlay = true, children, classNames, title }) => (
   <>
-    {withOverlay && (
-      <div className={classnames(classes.overlay, classNames?.overlay)} onClick={onClose} />
-    )}
+    {withOverlay && <div className={classnames(classes.overlay, classNames?.overlay)} onClick={onClose} />}
 
     <div className={classnames(classes.modal_wrapper, classNames?.wrapper)}>
       <div className={classnames(classes.modal_header, classNames?.header)}>

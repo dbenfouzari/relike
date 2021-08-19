@@ -74,11 +74,7 @@ const useStyles = createUseStyles({
 /**
  * You can display a **[Skeleton.Avatar]** to mimic an avatar while content is loading.
  */
-export const SkeletonAvatar: FC<AvatarProps> = ({
-  size = "default",
-  shape = "circle",
-  sizes = DEFAULT_SIZES,
-}) => {
+export const SkeletonAvatar: FC<AvatarProps> = ({ size = "default", shape = "circle", sizes = DEFAULT_SIZES }) => {
   const { active = false, color = Colors.grey[200] } = useSkeletonContext();
   const styles = useStyles({ size, shape, active, color, sizes });
 

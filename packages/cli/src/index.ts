@@ -14,9 +14,7 @@ program.name("yarn fastics");
 program
   .command("generate:component")
   .alias("g:c")
-  .description(
-    "Generate React Component. It includes Storybook's story, CSS module stylesheet, and test file."
-  )
+  .description("Generate React Component. It includes Storybook's story, CSS module stylesheet, and test file.")
   .usage(
     `
   # By passing arguments
@@ -31,7 +29,7 @@ program
   ? What is the component name ? button
   ? Select a target directory src/components/
   ✨  Done in 4.24s.
-`
+`,
   )
 
   .argument("[component]", "Component name")

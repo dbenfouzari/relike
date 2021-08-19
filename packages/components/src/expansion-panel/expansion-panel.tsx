@@ -35,21 +35,11 @@ interface ExpansionPanelProps {
  * It has a header and a body and can be either expanded or collapsed.
  * The body of the panel is only visible when it is expanded.
  */
-export const ExpansionPanel: FC<ExpansionPanelProps> = ({
-  headerBuilder,
-  children,
-  classNames,
-}) => {
+export const ExpansionPanel: FC<ExpansionPanelProps> = ({ headerBuilder, children, classNames }) => {
   const { ref: contentRef, contentHeight, isExpanded, toggleExpand } = useExpansion(children);
 
   return (
-    <div
-      className={classnames(
-        classes.wrapper,
-        { [classes.wrapper__open]: isExpanded },
-        classNames?.wrapper,
-      )}
-    >
+    <div className={classnames(classes.wrapper, { [classes.wrapper__open]: isExpanded }, classNames?.wrapper)}>
       <div className={classnames(classes.header, classNames?.header)}>
         {headerBuilder({ isExpanded })}
 
@@ -67,9 +57,7 @@ export const ExpansionPanel: FC<ExpansionPanelProps> = ({
         className={classnames(classes.content, classNames?.contentOuter)}
         style={{ maxHeight: contentHeight }}
       >
-        <div className={classnames(classes.content_inner, classNames?.contentInner)}>
-          {children}
-        </div>
+        <div className={classnames(classes.content_inner, classNames?.contentInner)}>{children}</div>
       </div>
     </div>
   );

@@ -24,12 +24,7 @@ export const Default = Template.bind({});
 Default.args = {
   children: [
     <Stepper.Item key="finished" title="Finished" description="This is a description" />,
-    <Stepper.Item
-      key="in-progress"
-      title="In Progress"
-      description="This is a description"
-      subTitle="Left 00:00:08"
-    />,
+    <Stepper.Item key="in-progress" title="In Progress" description="This is a description" subTitle="Left 00:00:08" />,
     <Stepper.Item key="waiting" title="Waiting" description="This is a description" />,
   ],
   current: 1,
@@ -43,12 +38,7 @@ WithCustomColors.args = {
   titleColor: Colors.green[200],
   children: [
     <Stepper.Item key="finished" title="Finished" description="This is a description" />,
-    <Stepper.Item
-      key="in-progress"
-      title="In Progress"
-      description="This is a description"
-      subTitle="Left 00:00:08"
-    />,
+    <Stepper.Item key="in-progress" title="In Progress" description="This is a description" subTitle="Left 00:00:08" />,
     <Stepper.Item key="waiting" title="Waiting" description="This is a description" />,
   ],
   current: 1,

@@ -47,10 +47,7 @@ class Color {
   static fromARGB(a: number, r: number, g: number, b: number) {
     this.assert(a, r, g, b);
 
-    return new Color(
-      (((a & 0xff) << 24) | ((r & 0xff) << 16) | ((g & 0xff) << 8) | ((b & 0xff) << 0)) &
-        0xffffffff,
-    );
+    return new Color((((a & 0xff) << 24) | ((r & 0xff) << 16) | ((g & 0xff) << 8) | ((b & 0xff) << 0)) & 0xffffffff);
   }
 
   /**

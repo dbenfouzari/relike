@@ -29,9 +29,7 @@ const useTextEditingController = <B extends boolean>({
     if (event.target.selectionStart === null) return null;
     if (event.target.selectionEnd === null) return null;
 
-    setSelectedText(
-      event.target.value.substring(event.target.selectionStart, event.target.selectionEnd),
-    );
+    setSelectedText(event.target.value.substring(event.target.selectionStart, event.target.selectionEnd));
   }, []);
 
   const handleChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {

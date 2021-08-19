@@ -9,9 +9,7 @@ export default {
   component: SkeletonParagraph,
 } as ComponentMeta<typeof SkeletonParagraph>;
 
-const Template: ComponentStory<typeof SkeletonParagraph> = (args) => (
-  <SkeletonParagraph {...args} />
-);
+const Template: ComponentStory<typeof SkeletonParagraph> = (args) => <SkeletonParagraph {...args} />;
 
 const ActiveTemplate: ComponentStory<typeof SkeletonParagraph> = (args) => (
   <SkeletonContext.Provider value={{ active: true }}>

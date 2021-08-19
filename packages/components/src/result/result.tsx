@@ -137,26 +137,13 @@ const getIcon = (status?: ResultStatus, icon?: ReactElement<IconProps>, iconSize
 /**
  * Used to feed back the results of a series of operational tasks.
  */
-export const Result: FC<ResultProps> = ({
-  status,
-  title,
-  subtitle,
-  icon,
-  children,
-  iconSize,
-  actions,
-  classNames,
-}) => (
+export const Result: FC<ResultProps> = ({ status, title, subtitle, icon, children, iconSize, actions, classNames }) => (
   <div className={classnames(classes.wrapper, classNames?.wrapper)}>
-    <div className={classnames(classes.icon, classNames?.icon)}>
-      {getIcon(status, icon, iconSize)}
-    </div>
+    <div className={classnames(classes.icon, classNames?.icon)}>{getIcon(status, icon, iconSize)}</div>
 
     <div className={classnames(classes.title, classNames?.title)}>{title}</div>
 
-    {subtitle && (
-      <div className={classnames(classes.subtitle, classNames?.subtitle)}>{subtitle}</div>
-    )}
+    {subtitle && <div className={classnames(classes.subtitle, classNames?.subtitle)}>{subtitle}</div>}
 
     {actions && <div className={classnames(classes.actions, classNames?.actions)}>{actions}</div>}
 

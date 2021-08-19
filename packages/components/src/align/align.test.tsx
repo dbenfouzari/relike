@@ -5,11 +5,7 @@ import Align from "./align";
 
 type Direction = "flex-start" | "flex-end" | "center";
 
-const expectDirections = (
-  elm: HTMLElement,
-  justifyContent: Direction | "",
-  alignItems: Direction | "",
-) => {
+const expectDirections = (elm: HTMLElement, justifyContent: Direction | "", alignItems: Direction | "") => {
   const headerClass = elm.className;
   const headerRoot = document.getElementsByClassName(headerClass);
   const style = window.getComputedStyle(headerRoot[0]);

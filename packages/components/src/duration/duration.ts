@@ -21,8 +21,7 @@ class Duration {
   static daysPerMonth = 365.25 / 12;
   static monthsPerYear = 12;
 
-  static microsecondsPerSecond =
-    Duration.microsecondsPerMillisecond * Duration.millisecondsPerSecond;
+  static microsecondsPerSecond = Duration.microsecondsPerMillisecond * Duration.millisecondsPerSecond;
   static microsecondsPerMinute = Duration.microsecondsPerSecond * Duration.secondsPerMinute;
   static microsecondsPerHour = Duration.microsecondsPerMinute * Duration.minutesPerHour;
   static microsecondsPerDay = Duration.microsecondsPerHour * Duration.hoursPerDay;

@@ -23,8 +23,7 @@ export const scrollLeftToStep = (scrollStep: number, itemRefs: HTMLElement[]) =>
 export const scrollRightToStep = (scrollStep: number, itemRefs: HTMLElement[]) => {
   const lastVisibleIndex = findLastVisibleIndex(itemRefs);
   const lastIndex = itemRefs.length - 1;
-  const actualScrollForIndex =
-    lastIndex - lastVisibleIndex < scrollStep ? lastIndex : lastVisibleIndex + scrollStep;
+  const actualScrollForIndex = lastIndex - lastVisibleIndex < scrollStep ? lastIndex : lastVisibleIndex + scrollStep;
   itemRefs[actualScrollForIndex].scrollIntoView({ behavior: "smooth" });
 };
 

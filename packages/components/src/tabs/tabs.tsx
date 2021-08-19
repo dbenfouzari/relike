@@ -79,11 +79,7 @@ export const Tabs: TabsComponent = ({
   activeColor = Colors.blue[500],
   inactiveColor = Colors.black87,
 }) => {
-  const { activeIndex, barRef, handleTabChange, itemRef } = useTabs(
-    children,
-    defaultActiveKey,
-    space,
-  );
+  const { activeIndex, barRef, handleTabChange, itemRef } = useTabs(children, defaultActiveKey, space);
 
   const activeItem: ReactElement<TabItemProps> = children[activeIndex];
   const activeItemColor = activeItem.props.activeColor ?? activeColor;

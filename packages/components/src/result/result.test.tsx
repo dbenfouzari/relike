@@ -12,9 +12,7 @@ describe("Result", () => {
   });
 
   it("should render successfully with warning", () => {
-    render(
-      <Result title="There are some problems with your operation." status={ResultStatus.WARNING} />,
-    );
+    render(<Result title="There are some problems with your operation." status={ResultStatus.WARNING} />);
   });
 
   it("should render successfully with error", () => {

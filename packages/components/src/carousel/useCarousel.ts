@@ -1,19 +1,10 @@
 import { Children, useEffect, useMemo, useRef, useState } from "react";
 
-import {
-  scrollLeftToStep,
-  scrollRightToStep,
-  scrollToStep,
-  showHideIndicator,
-  THRESHOLD,
-} from "./utils";
+import { scrollLeftToStep, scrollRightToStep, scrollToStep, showHideIndicator, THRESHOLD } from "./utils";
 
 const useCarousel = (children: JSX.Element | JSX.Element[]) => {
   const listRef = useRef<HTMLUListElement>(null);
-  const itemRefs = useMemo<HTMLElement[]>(
-    () => Array.from({ length: Children.toArray(children).length }),
-    [children],
-  );
+  const itemRefs = useMemo<HTMLElement[]>(() => Array.from({ length: Children.toArray(children).length }), [children]);
   const [leftIndicator, setLeftIndicator] = useState(false);
   const [rightIndicator, setRightIndicator] = useState(false);
 

@@ -1,15 +1,5 @@
 import classnames from "classnames";
-import React, {
-  FC,
-  HTMLProps,
-  MouseEvent,
-  ReactText,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { FC, HTMLProps, MouseEvent, ReactText, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import useOnClickOutside from "../hooks";
 import Icon from "../icon";
@@ -118,10 +108,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [maxW, setMaxW] = useState(0);
 
-  const valueLabel = useMemo(
-    () => value && items.find((item) => item.value === value)?.text,
-    [items, value],
-  );
+  const valueLabel = useMemo(() => value && items.find((item) => item.value === value)?.text, [items, value]);
 
   const handleSelect = useCallback(
     (nextValue: string) => (event: MouseEvent<HTMLLIElement>) => {
@@ -172,11 +159,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
       onClick={handleOpen}
     >
       <span style={{ minWidth: maxW }}>
-        {valueLabel ? (
-          <span>{valueLabel}</span>
-        ) : (
-          <span className={classes.value_placeholder}>{placeholder}</span>
-        )}
+        {valueLabel ? <span>{valueLabel}</span> : <span className={classes.value_placeholder}>{placeholder}</span>}
         <Icon icon={icon} size={iconSize} />
       </span>
 

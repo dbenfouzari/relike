@@ -42,10 +42,7 @@ export const Calendar: React.FC<CalendarProps> = ({
   dark,
 }) => {
   const date = useMemo<DateTime>(
-    () =>
-      typeof initialValue === "number"
-        ? DateTime.fromMillisecondsSinceEpoch(initialValue)
-        : initialValue,
+    () => (typeof initialValue === "number" ? DateTime.fromMillisecondsSinceEpoch(initialValue) : initialValue),
     [initialValue],
   );
 

@@ -3,16 +3,9 @@ import { Children, ReactElement, useCallback, useEffect, useMemo, useRef } from 
 import { TabItemProps } from "../components/tab-item";
 import useDefaultState from "./useDefaultState";
 
-const useTabs = <T extends ReactElement<TabItemProps>[]>(
-  children: T,
-  defaultActiveKey?: string,
-  space: number = 0,
-) => {
+const useTabs = <T extends ReactElement<TabItemProps>[]>(children: T, defaultActiveKey?: string, space: number = 0) => {
   const [activeIndex, setActiveIndex] = useDefaultState(children, defaultActiveKey);
-  const itemRefs = useMemo<HTMLElement[]>(
-    () => Array.from({ length: Children.toArray(children).length }),
-    [children],
-  );
+  const itemRefs = useMemo<HTMLElement[]>(() => Array.from({ length: Children.toArray(children).length }), [children]);
   const barRef = useRef<HTMLDivElement>(null);
 
   const itemRef = (index: number) => (elm: HTMLElement | null) => {

@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn workspaces run build",
-    "test": "TZ=UTC jest"
+    "test": "TZ=UTC jest",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -17,7 +18,12 @@
     "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
     "babel-jest": "^27.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^27.0.6",
+    "prettier": "^2.3.2",
     "typescript": "^4.1.2"
   },
   "workspaces": [

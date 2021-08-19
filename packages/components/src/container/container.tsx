@@ -95,24 +95,12 @@ const useStyles = createUseStyles({
  * @see Color
  * @see Alignment
  */
-export const Container: React.FC<ContainerProps> = ({
-  children,
-  as = "div",
-  alignment,
-  className,
-  ...rest
-}) => {
+export const Container: React.FC<ContainerProps> = ({ children, as = "div", alignment, className, ...rest }) => {
   const styles = useStyles(rest);
 
   return createElement(as, {
     className: classnames(styles.container, className),
-    children: children ? (
-      alignment ? (
-        <Align alignment={alignment}>{children}</Align>
-      ) : (
-        children
-      )
-    ) : null,
+    children: children ? alignment ? <Align alignment={alignment}>{children}</Align> : children : null,
   });
 };
 

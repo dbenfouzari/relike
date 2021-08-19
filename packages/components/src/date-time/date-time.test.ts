@@ -239,9 +239,7 @@ describe("DateTime", () => {
     });
 
     it("`toIso8601String` should work", () => {
-      expect(new DateTime({ year: 2021, month: 8, day: 6 }).toIso8601String()).toBe(
-        "2021-08-06T00:00:00.000",
-      );
+      expect(new DateTime({ year: 2021, month: 8, day: 6 }).toIso8601String()).toBe("2021-08-06T00:00:00.000");
       expect(
         new DateTime({
           year: 2021,

@@ -11,13 +11,7 @@ it("should render successfully without props", () => {
 
 it("should render successfully with all props", () => {
   render(
-    <Container
-      color={Colors.blueGrey[300]}
-      height={100}
-      width={100}
-      padding={Padding.all(12)}
-      margin={Margin.all(24)}
-    >
+    <Container color={Colors.blueGrey[300]} height={100} width={100} padding={Padding.all(12)} margin={Margin.all(24)}>
       <p>Hello, Test</p>
     </Container>,
   );

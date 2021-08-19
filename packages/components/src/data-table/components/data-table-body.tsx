@@ -12,17 +12,11 @@ interface DataTableBodyProps<D extends DataTableData> {
   classNames?: DataTableClassNames;
 }
 
-const DataTableBody = <D extends DataTableData>({
-  data,
-  children,
-  renderRow,
-  classNames,
-}: DataTableBodyProps<D>) => {
+const DataTableBody = <D extends DataTableData>({ data, children, renderRow, classNames }: DataTableBodyProps<D>) => {
   const mandatoryColumns = filterChildren(children);
 
   const Wrapper =
-    renderRow ??
-    (({ children }) => <div className={classnames(classes.row, classNames?.row)}>{children}</div>);
+    renderRow ?? (({ children }) => <div className={classnames(classes.row, classNames?.row)}>{children}</div>);
 
   return (
     <div className={classes.content}>
@@ -37,11 +31,7 @@ const DataTableBody = <D extends DataTableData>({
             return RenderCell ? (
               <RenderCell key={value} value={format(item[value], item)} />
             ) : (
-              <div
-                key={value}
-                className={classnames(classes.cell, classNames?.cell, className)}
-                style={{ flex }}
-              >
+              <div key={value} className={classnames(classes.cell, classNames?.cell, className)} style={{ flex }}>
                 {format(item[value], item)}
               </div>
             );

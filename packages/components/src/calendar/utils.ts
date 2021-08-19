@@ -41,7 +41,5 @@ export const getEventsThatDay = (date: DateTime, events: CalendarEvent[]) => {
     second: 59,
   });
 
-  return events.filter(
-    (event) => event.date.isBetween(start, end) || event.endDate?.isBetween(start, end),
-  );
+  return events.filter((event) => event.date.isBetween(start, end) || event.endDate?.isBetween(start, end));
 };

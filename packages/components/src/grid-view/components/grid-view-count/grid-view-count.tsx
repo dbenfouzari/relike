@@ -41,13 +41,7 @@ type StylesProps = Pick<
 >;
 
 const useStyles = createUseStyles({
-  wrapper: ({
-    scrollDirection,
-    crossAxisSpacing,
-    mainAxisSpacing,
-    crossAxisCount,
-    padding,
-  }: StylesProps) => ({
+  wrapper: ({ scrollDirection, crossAxisSpacing, mainAxisSpacing, crossAxisCount, padding }: StylesProps) => ({
     // Since we want a grid
     display: "grid",
     // Here we handle gaps between each child
@@ -55,10 +49,8 @@ const useStyles = createUseStyles({
     rowGap: scrollDirection === Axis.vertical ? mainAxisSpacing : crossAxisSpacing,
     // Define how many columns or rows we should draw.
     // Based on `scrollDirection`.
-    gridTemplateColumns:
-      scrollDirection === Axis.vertical ? `repeat(${crossAxisCount}, 1fr)` : undefined,
-    gridTemplateRows:
-      scrollDirection === Axis.horizontal ? `repeat(${crossAxisCount}, 1fr)` : undefined,
+    gridTemplateColumns: scrollDirection === Axis.vertical ? `repeat(${crossAxisCount}, 1fr)` : undefined,
+    gridTemplateRows: scrollDirection === Axis.horizontal ? `repeat(${crossAxisCount}, 1fr)` : undefined,
     // We want the parent scrollable if content overflow
     overflow: "auto",
     // This is where we define global padding.

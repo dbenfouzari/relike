@@ -45,11 +45,7 @@ const useStyles = createUseStyles({
   }),
 });
 
-export const TimelineItem: FC<TimelineItemProps> = ({
-  children,
-  color = Colors.blue[500],
-  dot,
-}) => {
+export const TimelineItem: FC<TimelineItemProps> = ({ children, color = Colors.blue[500], dot }) => {
   const styles = useStyles({ color });
 
   return (

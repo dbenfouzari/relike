@@ -9,12 +9,7 @@ export const buildDataColumn =
   <K extends keyof T[number]>(_props: DataTableColumnProps<T, K>) =>
     null;
 
-export const DataTable = <D extends DataTableData>({
-  data,
-  children,
-  renderRow,
-  classNames,
-}: DataTableProps<D>) => (
+export const DataTable = <D extends DataTableData>({ data, children, renderRow, classNames }: DataTableProps<D>) => (
   <div>
     <DataTableHeader children={children} classNames={classNames} />
     <DataTableBody data={data} renderRow={renderRow} classNames={classNames}>

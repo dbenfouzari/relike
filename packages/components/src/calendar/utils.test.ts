@@ -13,9 +13,7 @@ describe("Calendar Utils", function () {
 
     const expectedResult = [{ date: DateTime.now(), title: "Storybook Event That Rocks !" }];
 
-    expect(JSON.stringify(filterCalendarEvents(date, events))).toEqual(
-      JSON.stringify(expectedResult),
-    );
+    expect(JSON.stringify(filterCalendarEvents(date, events))).toEqual(JSON.stringify(expectedResult));
   });
 
   it("`getEventsThatDay` should return correct value", () => {

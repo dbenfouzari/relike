@@ -1,7 +1,4 @@
-const IconDataConstructor = (
-  name: string,
-  variant?: "sharp" | "rounded" | "outlined" | "screen",
-) => {
+const IconDataConstructor = (name: string, variant?: "sharp" | "rounded" | "outlined" | "screen") => {
   return {
     name,
     variant,
@@ -273,14 +270,8 @@ class Icons {
   static "account_balance_outlined" = IconDataConstructor("account_balance", "outlined");
   static "account_balance_wallet" = IconDataConstructor("account_balance_wallet");
   static "account_balance_wallet_sharp" = IconDataConstructor("account_balance_wallet", "sharp");
-  static "account_balance_wallet_rounded" = IconDataConstructor(
-    "account_balance_wallet",
-    "rounded",
-  );
-  static "account_balance_wallet_outlined" = IconDataConstructor(
-    "account_balance_wallet",
-    "outlined",
-  );
+  static "account_balance_wallet_rounded" = IconDataConstructor("account_balance_wallet", "rounded");
+  static "account_balance_wallet_outlined" = IconDataConstructor("account_balance_wallet", "outlined");
   static "account_box" = IconDataConstructor("account_box");
   static "account_box_sharp" = IconDataConstructor("account_box", "sharp");
   static "account_box_rounded" = IconDataConstructor("account_box", "rounded");
@@ -423,96 +414,33 @@ class Icons {
   static "airline_seat_flat_rounded" = IconDataConstructor("airline_seat_flat", "rounded");
   static "airline_seat_flat_outlined" = IconDataConstructor("airline_seat_flat", "outlined");
   static "airline_seat_flat_angled" = IconDataConstructor("airline_seat_flat_angled");
-  static "airline_seat_flat_angled_sharp" = IconDataConstructor(
-    "airline_seat_flat_angled",
-    "sharp",
-  );
-  static "airline_seat_flat_angled_rounded" = IconDataConstructor(
-    "airline_seat_flat_angled",
-    "rounded",
-  );
-  static "airline_seat_flat_angled_outlined" = IconDataConstructor(
-    "airline_seat_flat_angled",
-    "outlined",
-  );
+  static "airline_seat_flat_angled_sharp" = IconDataConstructor("airline_seat_flat_angled", "sharp");
+  static "airline_seat_flat_angled_rounded" = IconDataConstructor("airline_seat_flat_angled", "rounded");
+  static "airline_seat_flat_angled_outlined" = IconDataConstructor("airline_seat_flat_angled", "outlined");
   static "airline_seat_individual_suite" = IconDataConstructor("airline_seat_individual_suite");
-  static "airline_seat_individual_suite_sharp" = IconDataConstructor(
-    "airline_seat_individual_suite",
-    "sharp",
-  );
-  static "airline_seat_individual_suite_rounded" = IconDataConstructor(
-    "airline_seat_individual_suite",
-    "rounded",
-  );
-  static "airline_seat_individual_suite_outlined" = IconDataConstructor(
-    "airline_seat_individual_suite",
-    "outlined",
-  );
+  static "airline_seat_individual_suite_sharp" = IconDataConstructor("airline_seat_individual_suite", "sharp");
+  static "airline_seat_individual_suite_rounded" = IconDataConstructor("airline_seat_individual_suite", "rounded");
+  static "airline_seat_individual_suite_outlined" = IconDataConstructor("airline_seat_individual_suite", "outlined");
   static "airline_seat_legroom_extra" = IconDataConstructor("airline_seat_legroom_extra");
-  static "airline_seat_legroom_extra_sharp" = IconDataConstructor(
-    "airline_seat_legroom_extra",
-    "sharp",
-  );
-  static "airline_seat_legroom_extra_rounded" = IconDataConstructor(
-    "airline_seat_legroom_extra",
-    "rounded",
-  );
-  static "airline_seat_legroom_extra_outlined" = IconDataConstructor(
-    "airline_seat_legroom_extra",
-    "outlined",
-  );
+  static "airline_seat_legroom_extra_sharp" = IconDataConstructor("airline_seat_legroom_extra", "sharp");
+  static "airline_seat_legroom_extra_rounded" = IconDataConstructor("airline_seat_legroom_extra", "rounded");
+  static "airline_seat_legroom_extra_outlined" = IconDataConstructor("airline_seat_legroom_extra", "outlined");
   static "airline_seat_legroom_normal" = IconDataConstructor("airline_seat_legroom_normal");
-  static "airline_seat_legroom_normal_sharp" = IconDataConstructor(
-    "airline_seat_legroom_normal",
-    "sharp",
-  );
-  static "airline_seat_legroom_normal_rounded" = IconDataConstructor(
-    "airline_seat_legroom_normal",
-    "rounded",
-  );
-  static "airline_seat_legroom_normal_outlined" = IconDataConstructor(
-    "airline_seat_legroom_normal",
-    "outlined",
-  );
+  static "airline_seat_legroom_normal_sharp" = IconDataConstructor("airline_seat_legroom_normal", "sharp");
+  static "airline_seat_legroom_normal_rounded" = IconDataConstructor("airline_seat_legroom_normal", "rounded");
+  static "airline_seat_legroom_normal_outlined" = IconDataConstructor("airline_seat_legroom_normal", "outlined");
   static "airline_seat_legroom_reduced" = IconDataConstructor("airline_seat_legroom_reduced");
-  static "airline_seat_legroom_reduced_sharp" = IconDataConstructor(
-    "airline_seat_legroom_reduced",
-    "sharp",
-  );
-  static "airline_seat_legroom_reduced_rounded" = IconDataConstructor(
-    "airline_seat_legroom_reduced",
-    "rounded",
-  );
-  static "airline_seat_legroom_reduced_outlined" = IconDataConstructor(
-    "airline_seat_legroom_reduced",
-    "outlined",
-  );
+  static "airline_seat_legroom_reduced_sharp" = IconDataConstructor("airline_seat_legroom_reduced", "sharp");
+  static "airline_seat_legroom_reduced_rounded" = IconDataConstructor("airline_seat_legroom_reduced", "rounded");
+  static "airline_seat_legroom_reduced_outlined" = IconDataConstructor("airline_seat_legroom_reduced", "outlined");
   static "airline_seat_recline_extra" = IconDataConstructor("airline_seat_recline_extra");
-  static "airline_seat_recline_extra_sharp" = IconDataConstructor(
-    "airline_seat_recline_extra",
-    "sharp",
-  );
-  static "airline_seat_recline_extra_rounded" = IconDataConstructor(
-    "airline_seat_recline_extra",
-    "rounded",
-  );
-  static "airline_seat_recline_extra_outlined" = IconDataConstructor(
-    "airline_seat_recline_extra",
-    "outlined",
-  );
+  static "airline_seat_recline_extra_sharp" = IconDataConstructor("airline_seat_recline_extra", "sharp");
+  static "airline_seat_recline_extra_rounded" = IconDataConstructor("airline_seat_recline_extra", "rounded");
+  static "airline_seat_recline_extra_outlined" = IconDataConstructor("airline_seat_recline_extra", "outlined");
   static "airline_seat_recline_normal" = IconDataConstructor("airline_seat_recline_normal");
-  static "airline_seat_recline_normal_sharp" = IconDataConstructor(
-    "airline_seat_recline_normal",
-    "sharp",
-  );
-  static "airline_seat_recline_normal_rounded" = IconDataConstructor(
-    "airline_seat_recline_normal",
-    "rounded",
-  );
-  static "airline_seat_recline_normal_outlined" = IconDataConstructor(
-    "airline_seat_recline_normal",
-    "outlined",
-  );
+  static "airline_seat_recline_normal_sharp" = IconDataConstructor("airline_seat_recline_normal", "sharp");
+  static "airline_seat_recline_normal_rounded" = IconDataConstructor("airline_seat_recline_normal", "rounded");
+  static "airline_seat_recline_normal_outlined" = IconDataConstructor("airline_seat_recline_normal", "outlined");
   static "airplane_ticket" = IconDataConstructor("airplane_ticket");
   static "airplane_ticket_sharp" = IconDataConstructor("airplane_ticket", "sharp");
   static "airplane_ticket_rounded" = IconDataConstructor("airplane_ticket", "rounded");
@@ -524,10 +452,7 @@ class Icons {
   static "airplanemode_inactive" = IconDataConstructor("airplanemode_inactive");
   static "airplanemode_inactive_sharp" = IconDataConstructor("airplanemode_inactive", "sharp");
   static "airplanemode_inactive_rounded" = IconDataConstructor("airplanemode_inactive", "rounded");
-  static "airplanemode_inactive_outlined" = IconDataConstructor(
-    "airplanemode_inactive",
-    "outlined",
-  );
+  static "airplanemode_inactive_outlined" = IconDataConstructor("airplanemode_inactive", "outlined");
   static "airplanemode_off" = IconDataConstructor("airplanemode_off");
   static "airplanemode_off_sharp" = IconDataConstructor("airplanemode_off", "sharp");
   static "airplanemode_off_rounded" = IconDataConstructor("airplanemode_off", "rounded");
@@ -566,45 +491,24 @@ class Icons {
   static "album_outlined" = IconDataConstructor("album", "outlined");
   static "align_horizontal_center" = IconDataConstructor("align_horizontal_center");
   static "align_horizontal_center_sharp" = IconDataConstructor("align_horizontal_center", "sharp");
-  static "align_horizontal_center_rounded" = IconDataConstructor(
-    "align_horizontal_center",
-    "rounded",
-  );
-  static "align_horizontal_center_outlined" = IconDataConstructor(
-    "align_horizontal_center",
-    "outlined",
-  );
+  static "align_horizontal_center_rounded" = IconDataConstructor("align_horizontal_center", "rounded");
+  static "align_horizontal_center_outlined" = IconDataConstructor("align_horizontal_center", "outlined");
   static "align_horizontal_left" = IconDataConstructor("align_horizontal_left");
   static "align_horizontal_left_sharp" = IconDataConstructor("align_horizontal_left", "sharp");
   static "align_horizontal_left_rounded" = IconDataConstructor("align_horizontal_left", "rounded");
-  static "align_horizontal_left_outlined" = IconDataConstructor(
-    "align_horizontal_left",
-    "outlined",
-  );
+  static "align_horizontal_left_outlined" = IconDataConstructor("align_horizontal_left", "outlined");
   static "align_horizontal_right" = IconDataConstructor("align_horizontal_right");
   static "align_horizontal_right_sharp" = IconDataConstructor("align_horizontal_right", "sharp");
-  static "align_horizontal_right_rounded" = IconDataConstructor(
-    "align_horizontal_right",
-    "rounded",
-  );
-  static "align_horizontal_right_outlined" = IconDataConstructor(
-    "align_horizontal_right",
-    "outlined",
-  );
+  static "align_horizontal_right_rounded" = IconDataConstructor("align_horizontal_right", "rounded");
+  static "align_horizontal_right_outlined" = IconDataConstructor("align_horizontal_right", "outlined");
   static "align_vertical_bottom" = IconDataConstructor("align_vertical_bottom");
   static "align_vertical_bottom_sharp" = IconDataConstructor("align_vertical_bottom", "sharp");
   static "align_vertical_bottom_rounded" = IconDataConstructor("align_vertical_bottom", "rounded");
-  static "align_vertical_bottom_outlined" = IconDataConstructor(
-    "align_vertical_bottom",
-    "outlined",
-  );
+  static "align_vertical_bottom_outlined" = IconDataConstructor("align_vertical_bottom", "outlined");
   static "align_vertical_center" = IconDataConstructor("align_vertical_center");
   static "align_vertical_center_sharp" = IconDataConstructor("align_vertical_center", "sharp");
   static "align_vertical_center_rounded" = IconDataConstructor("align_vertical_center", "rounded");
-  static "align_vertical_center_outlined" = IconDataConstructor(
-    "align_vertical_center",
-    "outlined",
-  );
+  static "align_vertical_center_outlined" = IconDataConstructor("align_vertical_center", "outlined");
   static "align_vertical_top" = IconDataConstructor("align_vertical_top");
   static "align_vertical_top_sharp" = IconDataConstructor("align_vertical_top", "sharp");
   static "align_vertical_top_rounded" = IconDataConstructor("align_vertical_top", "rounded");
@@ -727,14 +631,8 @@ class Icons {
   static "arrow_drop_down_outlined" = IconDataConstructor("arrow_drop_down", "outlined");
   static "arrow_drop_down_circle" = IconDataConstructor("arrow_drop_down_circle");
   static "arrow_drop_down_circle_sharp" = IconDataConstructor("arrow_drop_down_circle", "sharp");
-  static "arrow_drop_down_circle_rounded" = IconDataConstructor(
-    "arrow_drop_down_circle",
-    "rounded",
-  );
-  static "arrow_drop_down_circle_outlined" = IconDataConstructor(
-    "arrow_drop_down_circle",
-    "outlined",
-  );
+  static "arrow_drop_down_circle_rounded" = IconDataConstructor("arrow_drop_down_circle", "rounded");
+  static "arrow_drop_down_circle_outlined" = IconDataConstructor("arrow_drop_down_circle", "outlined");
   static "arrow_drop_up" = IconDataConstructor("arrow_drop_up");
   static "arrow_drop_up_sharp" = IconDataConstructor("arrow_drop_up", "sharp");
   static "arrow_drop_up_rounded" = IconDataConstructor("arrow_drop_up", "rounded");
@@ -899,10 +797,7 @@ class Icons {
   static "baby_changing_station" = IconDataConstructor("baby_changing_station");
   static "baby_changing_station_sharp" = IconDataConstructor("baby_changing_station", "sharp");
   static "baby_changing_station_rounded" = IconDataConstructor("baby_changing_station", "rounded");
-  static "baby_changing_station_outlined" = IconDataConstructor(
-    "baby_changing_station",
-    "outlined",
-  );
+  static "baby_changing_station_outlined" = IconDataConstructor("baby_changing_station", "outlined");
   static "backpack" = IconDataConstructor("backpack");
   static "backpack_sharp" = IconDataConstructor("backpack", "sharp");
   static "backpack_rounded" = IconDataConstructor("backpack", "rounded");
@@ -958,10 +853,7 @@ class Icons {
   static "battery_charging_full" = IconDataConstructor("battery_charging_full");
   static "battery_charging_full_sharp" = IconDataConstructor("battery_charging_full", "sharp");
   static "battery_charging_full_rounded" = IconDataConstructor("battery_charging_full", "rounded");
-  static "battery_charging_full_outlined" = IconDataConstructor(
-    "battery_charging_full",
-    "outlined",
-  );
+  static "battery_charging_full_outlined" = IconDataConstructor("battery_charging_full", "outlined");
   static "battery_full" = IconDataConstructor("battery_full");
   static "battery_full_sharp" = IconDataConstructor("battery_full", "sharp");
   static "battery_full_rounded" = IconDataConstructor("battery_full", "rounded");
@@ -1218,10 +1110,7 @@ class Icons {
   static "browser_not_supported" = IconDataConstructor("browser_not_supported");
   static "browser_not_supported_sharp" = IconDataConstructor("browser_not_supported", "sharp");
   static "browser_not_supported_rounded" = IconDataConstructor("browser_not_supported", "rounded");
-  static "browser_not_supported_outlined" = IconDataConstructor(
-    "browser_not_supported",
-    "outlined",
-  );
+  static "browser_not_supported_outlined" = IconDataConstructor("browser_not_supported", "outlined");
   static "brunch_dining" = IconDataConstructor("brunch_dining");
   static "brunch_dining_sharp" = IconDataConstructor("brunch_dining", "sharp");
   static "brunch_dining_rounded" = IconDataConstructor("brunch_dining", "rounded");
@@ -1504,14 +1393,8 @@ class Icons {
   static "check_box_outlined" = IconDataConstructor("check_box", "outlined");
   static "check_box_outline_blank" = IconDataConstructor("check_box_outline_blank");
   static "check_box_outline_blank_sharp" = IconDataConstructor("check_box_outline_blank", "sharp");
-  static "check_box_outline_blank_rounded" = IconDataConstructor(
-    "check_box_outline_blank",
-    "rounded",
-  );
-  static "check_box_outline_blank_outlined" = IconDataConstructor(
-    "check_box_outline_blank",
-    "outlined",
-  );
+  static "check_box_outline_blank_rounded" = IconDataConstructor("check_box_outline_blank", "rounded");
+  static "check_box_outline_blank_outlined" = IconDataConstructor("check_box_outline_blank", "outlined");
   static "check_circle" = IconDataConstructor("check_circle");
   static "check_circle_sharp" = IconDataConstructor("check_circle", "sharp");
   static "check_circle_rounded" = IconDataConstructor("check_circle", "rounded");
@@ -1594,14 +1477,8 @@ class Icons {
   static "closed_caption_outlined" = IconDataConstructor("closed_caption", "outlined");
   static "closed_caption_disabled" = IconDataConstructor("closed_caption_disabled");
   static "closed_caption_disabled_sharp" = IconDataConstructor("closed_caption_disabled", "sharp");
-  static "closed_caption_disabled_rounded" = IconDataConstructor(
-    "closed_caption_disabled",
-    "rounded",
-  );
-  static "closed_caption_disabled_outlined" = IconDataConstructor(
-    "closed_caption_disabled",
-    "outlined",
-  );
+  static "closed_caption_disabled_rounded" = IconDataConstructor("closed_caption_disabled", "rounded");
+  static "closed_caption_disabled_outlined" = IconDataConstructor("closed_caption_disabled", "outlined");
   static "closed_caption_off" = IconDataConstructor("closed_caption_off");
   static "closed_caption_off_sharp" = IconDataConstructor("closed_caption_off", "sharp");
   static "closed_caption_off_rounded" = IconDataConstructor("closed_caption_off", "rounded");
@@ -1708,14 +1585,8 @@ class Icons {
   static "confirmation_number_outlined" = IconDataConstructor("confirmation_number", "outlined");
   static "connect_without_contact" = IconDataConstructor("connect_without_contact");
   static "connect_without_contact_sharp" = IconDataConstructor("connect_without_contact", "sharp");
-  static "connect_without_contact_rounded" = IconDataConstructor(
-    "connect_without_contact",
-    "rounded",
-  );
-  static "connect_without_contact_outlined" = IconDataConstructor(
-    "connect_without_contact",
-    "outlined",
-  );
+  static "connect_without_contact_rounded" = IconDataConstructor("connect_without_contact", "rounded");
+  static "connect_without_contact_outlined" = IconDataConstructor("connect_without_contact", "outlined");
   static "connected_tv" = IconDataConstructor("connected_tv");
   static "connected_tv_sharp" = IconDataConstructor("connected_tv", "sharp");
   static "connected_tv_rounded" = IconDataConstructor("connected_tv", "rounded");
@@ -1774,14 +1645,8 @@ class Icons {
   static "control_point_outlined" = IconDataConstructor("control_point", "outlined");
   static "control_point_duplicate" = IconDataConstructor("control_point_duplicate");
   static "control_point_duplicate_sharp" = IconDataConstructor("control_point_duplicate", "sharp");
-  static "control_point_duplicate_rounded" = IconDataConstructor(
-    "control_point_duplicate",
-    "rounded",
-  );
-  static "control_point_duplicate_outlined" = IconDataConstructor(
-    "control_point_duplicate",
-    "outlined",
-  );
+  static "control_point_duplicate_rounded" = IconDataConstructor("control_point_duplicate", "rounded");
+  static "control_point_duplicate_outlined" = IconDataConstructor("control_point_duplicate", "outlined");
   static "copy" = IconDataConstructor("copy");
   static "copy_sharp" = IconDataConstructor("copy", "sharp");
   static "copy_rounded" = IconDataConstructor("copy", "rounded");
@@ -1960,14 +1825,8 @@ class Icons {
   static "design_services_outlined" = IconDataConstructor("design_services", "outlined");
   static "desktop_access_disabled" = IconDataConstructor("desktop_access_disabled");
   static "desktop_access_disabled_sharp" = IconDataConstructor("desktop_access_disabled", "sharp");
-  static "desktop_access_disabled_rounded" = IconDataConstructor(
-    "desktop_access_disabled",
-    "rounded",
-  );
-  static "desktop_access_disabled_outlined" = IconDataConstructor(
-    "desktop_access_disabled",
-    "outlined",
-  );
+  static "desktop_access_disabled_rounded" = IconDataConstructor("desktop_access_disabled", "rounded");
+  static "desktop_access_disabled_outlined" = IconDataConstructor("desktop_access_disabled", "outlined");
   static "desktop_mac" = IconDataConstructor("desktop_mac");
   static "desktop_mac_sharp" = IconDataConstructor("desktop_mac", "sharp");
   static "desktop_mac_rounded" = IconDataConstructor("desktop_mac", "rounded");
@@ -2042,14 +1901,8 @@ class Icons {
   static "directions_boat_outlined" = IconDataConstructor("directions_boat", "outlined");
   static "directions_boat_filled" = IconDataConstructor("directions_boat_filled");
   static "directions_boat_filled_sharp" = IconDataConstructor("directions_boat_filled", "sharp");
-  static "directions_boat_filled_rounded" = IconDataConstructor(
-    "directions_boat_filled",
-    "rounded",
-  );
-  static "directions_boat_filled_outlined" = IconDataConstructor(
-    "directions_boat_filled",
-    "outlined",
-  );
+  static "directions_boat_filled_rounded" = IconDataConstructor("directions_boat_filled", "rounded");
+  static "directions_boat_filled_outlined" = IconDataConstructor("directions_boat_filled", "outlined");
   static "directions_bus" = IconDataConstructor("directions_bus");
   static "directions_bus_sharp" = IconDataConstructor("directions_bus", "sharp");
   static "directions_bus_rounded" = IconDataConstructor("directions_bus", "rounded");
@@ -2057,10 +1910,7 @@ class Icons {
   static "directions_bus_filled" = IconDataConstructor("directions_bus_filled");
   static "directions_bus_filled_sharp" = IconDataConstructor("directions_bus_filled", "sharp");
   static "directions_bus_filled_rounded" = IconDataConstructor("directions_bus_filled", "rounded");
-  static "directions_bus_filled_outlined" = IconDataConstructor(
-    "directions_bus_filled",
-    "outlined",
-  );
+  static "directions_bus_filled_outlined" = IconDataConstructor("directions_bus_filled", "outlined");
   static "directions_car" = IconDataConstructor("directions_car");
   static "directions_car_sharp" = IconDataConstructor("directions_car", "sharp");
   static "directions_car_rounded" = IconDataConstructor("directions_car", "rounded");
@@ -2068,10 +1918,7 @@ class Icons {
   static "directions_car_filled" = IconDataConstructor("directions_car_filled");
   static "directions_car_filled_sharp" = IconDataConstructor("directions_car_filled", "sharp");
   static "directions_car_filled_rounded" = IconDataConstructor("directions_car_filled", "rounded");
-  static "directions_car_filled_outlined" = IconDataConstructor(
-    "directions_car_filled",
-    "outlined",
-  );
+  static "directions_car_filled_outlined" = IconDataConstructor("directions_car_filled", "outlined");
   static "directions_ferry" = IconDataConstructor("directions_ferry");
   static "directions_ferry_sharp" = IconDataConstructor("directions_ferry", "sharp");
   static "directions_ferry_rounded" = IconDataConstructor("directions_ferry", "rounded");
@@ -2085,18 +1932,9 @@ class Icons {
   static "directions_railway_rounded" = IconDataConstructor("directions_railway", "rounded");
   static "directions_railway_outlined" = IconDataConstructor("directions_railway", "outlined");
   static "directions_railway_filled" = IconDataConstructor("directions_railway_filled");
-  static "directions_railway_filled_sharp" = IconDataConstructor(
-    "directions_railway_filled",
-    "sharp",
-  );
-  static "directions_railway_filled_rounded" = IconDataConstructor(
-    "directions_railway_filled",
-    "rounded",
-  );
-  static "directions_railway_filled_outlined" = IconDataConstructor(
-    "directions_railway_filled",
-    "outlined",
-  );
+  static "directions_railway_filled_sharp" = IconDataConstructor("directions_railway_filled", "sharp");
+  static "directions_railway_filled_rounded" = IconDataConstructor("directions_railway_filled", "rounded");
+  static "directions_railway_filled_outlined" = IconDataConstructor("directions_railway_filled", "outlined");
   static "directions_run" = IconDataConstructor("directions_run");
   static "directions_run_sharp" = IconDataConstructor("directions_run", "sharp");
   static "directions_run_rounded" = IconDataConstructor("directions_run", "rounded");
@@ -2106,18 +1944,9 @@ class Icons {
   static "directions_subway_rounded" = IconDataConstructor("directions_subway", "rounded");
   static "directions_subway_outlined" = IconDataConstructor("directions_subway", "outlined");
   static "directions_subway_filled" = IconDataConstructor("directions_subway_filled");
-  static "directions_subway_filled_sharp" = IconDataConstructor(
-    "directions_subway_filled",
-    "sharp",
-  );
-  static "directions_subway_filled_rounded" = IconDataConstructor(
-    "directions_subway_filled",
-    "rounded",
-  );
-  static "directions_subway_filled_outlined" = IconDataConstructor(
-    "directions_subway_filled",
-    "outlined",
-  );
+  static "directions_subway_filled_sharp" = IconDataConstructor("directions_subway_filled", "sharp");
+  static "directions_subway_filled_rounded" = IconDataConstructor("directions_subway_filled", "rounded");
+  static "directions_subway_filled_outlined" = IconDataConstructor("directions_subway_filled", "outlined");
   static "directions_train" = IconDataConstructor("directions_train");
   static "directions_train_sharp" = IconDataConstructor("directions_train", "sharp");
   static "directions_train_rounded" = IconDataConstructor("directions_train", "rounded");
@@ -2127,18 +1956,9 @@ class Icons {
   static "directions_transit_rounded" = IconDataConstructor("directions_transit", "rounded");
   static "directions_transit_outlined" = IconDataConstructor("directions_transit", "outlined");
   static "directions_transit_filled" = IconDataConstructor("directions_transit_filled");
-  static "directions_transit_filled_sharp" = IconDataConstructor(
-    "directions_transit_filled",
-    "sharp",
-  );
-  static "directions_transit_filled_rounded" = IconDataConstructor(
-    "directions_transit_filled",
-    "rounded",
-  );
-  static "directions_transit_filled_outlined" = IconDataConstructor(
-    "directions_transit_filled",
-    "outlined",
-  );
+  static "directions_transit_filled_sharp" = IconDataConstructor("directions_transit_filled", "sharp");
+  static "directions_transit_filled_rounded" = IconDataConstructor("directions_transit_filled", "rounded");
+  static "directions_transit_filled_outlined" = IconDataConstructor("directions_transit_filled", "outlined");
   static "directions_walk" = IconDataConstructor("directions_walk");
   static "directions_walk_sharp" = IconDataConstructor("directions_walk", "sharp");
   static "directions_walk_rounded" = IconDataConstructor("directions_walk", "rounded");
@@ -2196,14 +2016,8 @@ class Icons {
   static "do_not_disturb_on_rounded" = IconDataConstructor("do_not_disturb_on", "rounded");
   static "do_not_disturb_on_outlined" = IconDataConstructor("do_not_disturb_on", "outlined");
   static "do_not_disturb_on_total_silence" = IconDataConstructor("do_not_disturb_on_total_silence");
-  static "do_not_disturb_on_total_silence_sharp" = IconDataConstructor(
-    "do_not_disturb_on_total_silence",
-    "sharp",
-  );
-  static "do_not_disturb_on_total_silence_rounded" = IconDataConstructor(
-    "do_not_disturb_on_total_silence",
-    "rounded",
-  );
+  static "do_not_disturb_on_total_silence_sharp" = IconDataConstructor("do_not_disturb_on_total_silence", "sharp");
+  static "do_not_disturb_on_total_silence_rounded" = IconDataConstructor("do_not_disturb_on_total_silence", "rounded");
   static "do_not_disturb_on_total_silence_outlined" = IconDataConstructor(
     "do_not_disturb_on_total_silence",
     "outlined",
@@ -2318,18 +2132,9 @@ class Icons {
   static "drive_file_move_outlined" = IconDataConstructor("drive_file_move", "outlined");
   static "drive_file_move_outline" = IconDataConstructor("drive_file_move_outline");
   static "drive_file_rename_outline" = IconDataConstructor("drive_file_rename_outline");
-  static "drive_file_rename_outline_sharp" = IconDataConstructor(
-    "drive_file_rename_outline",
-    "sharp",
-  );
-  static "drive_file_rename_outline_rounded" = IconDataConstructor(
-    "drive_file_rename_outline",
-    "rounded",
-  );
-  static "drive_file_rename_outline_outlined" = IconDataConstructor(
-    "drive_file_rename_outline",
-    "outlined",
-  );
+  static "drive_file_rename_outline_sharp" = IconDataConstructor("drive_file_rename_outline", "sharp");
+  static "drive_file_rename_outline_rounded" = IconDataConstructor("drive_file_rename_outline", "rounded");
+  static "drive_file_rename_outline_outlined" = IconDataConstructor("drive_file_rename_outline", "outlined");
   static "drive_folder_upload" = IconDataConstructor("drive_folder_upload");
   static "drive_folder_upload_sharp" = IconDataConstructor("drive_folder_upload", "sharp");
   static "drive_folder_upload_rounded" = IconDataConstructor("drive_folder_upload", "rounded");
@@ -2496,14 +2301,8 @@ class Icons {
   static "engineering_outlined" = IconDataConstructor("engineering", "outlined");
   static "enhance_photo_translate" = IconDataConstructor("enhance_photo_translate");
   static "enhance_photo_translate_sharp" = IconDataConstructor("enhance_photo_translate", "sharp");
-  static "enhance_photo_translate_rounded" = IconDataConstructor(
-    "enhance_photo_translate",
-    "rounded",
-  );
-  static "enhance_photo_translate_outlined" = IconDataConstructor(
-    "enhance_photo_translate",
-    "outlined",
-  );
+  static "enhance_photo_translate_rounded" = IconDataConstructor("enhance_photo_translate", "rounded");
+  static "enhance_photo_translate_outlined" = IconDataConstructor("enhance_photo_translate", "outlined");
   static "enhanced_encryption" = IconDataConstructor("enhanced_encryption");
   static "enhanced_encryption_sharp" = IconDataConstructor("enhanced_encryption", "sharp");
   static "enhanced_encryption_rounded" = IconDataConstructor("enhanced_encryption", "rounded");
@@ -2634,14 +2433,8 @@ class Icons {
   static "face_outlined" = IconDataConstructor("face", "outlined");
   static "face_retouching_natural" = IconDataConstructor("face_retouching_natural");
   static "face_retouching_natural_sharp" = IconDataConstructor("face_retouching_natural", "sharp");
-  static "face_retouching_natural_rounded" = IconDataConstructor(
-    "face_retouching_natural",
-    "rounded",
-  );
-  static "face_retouching_natural_outlined" = IconDataConstructor(
-    "face_retouching_natural",
-    "outlined",
-  );
+  static "face_retouching_natural_rounded" = IconDataConstructor("face_retouching_natural", "rounded");
+  static "face_retouching_natural_outlined" = IconDataConstructor("face_retouching_natural", "outlined");
   static "face_retouching_off" = IconDataConstructor("face_retouching_off");
   static "face_retouching_off_sharp" = IconDataConstructor("face_retouching_off", "sharp");
   static "face_retouching_off_rounded" = IconDataConstructor("face_retouching_off", "rounded");
@@ -3029,24 +2822,12 @@ class Icons {
   static "format_color_text_outlined" = IconDataConstructor("format_color_text", "outlined");
   static "format_indent_decrease" = IconDataConstructor("format_indent_decrease");
   static "format_indent_decrease_sharp" = IconDataConstructor("format_indent_decrease", "sharp");
-  static "format_indent_decrease_rounded" = IconDataConstructor(
-    "format_indent_decrease",
-    "rounded",
-  );
-  static "format_indent_decrease_outlined" = IconDataConstructor(
-    "format_indent_decrease",
-    "outlined",
-  );
+  static "format_indent_decrease_rounded" = IconDataConstructor("format_indent_decrease", "rounded");
+  static "format_indent_decrease_outlined" = IconDataConstructor("format_indent_decrease", "outlined");
   static "format_indent_increase" = IconDataConstructor("format_indent_increase");
   static "format_indent_increase_sharp" = IconDataConstructor("format_indent_increase", "sharp");
-  static "format_indent_increase_rounded" = IconDataConstructor(
-    "format_indent_increase",
-    "rounded",
-  );
-  static "format_indent_increase_outlined" = IconDataConstructor(
-    "format_indent_increase",
-    "outlined",
-  );
+  static "format_indent_increase_rounded" = IconDataConstructor("format_indent_increase", "rounded");
+  static "format_indent_increase_outlined" = IconDataConstructor("format_indent_increase", "outlined");
   static "format_italic" = IconDataConstructor("format_italic");
   static "format_italic_sharp" = IconDataConstructor("format_italic", "sharp");
   static "format_italic_rounded" = IconDataConstructor("format_italic", "rounded");
@@ -3064,18 +2845,9 @@ class Icons {
   static "format_list_numbered_rounded" = IconDataConstructor("format_list_numbered", "rounded");
   static "format_list_numbered_outlined" = IconDataConstructor("format_list_numbered", "outlined");
   static "format_list_numbered_rtl" = IconDataConstructor("format_list_numbered_rtl");
-  static "format_list_numbered_rtl_sharp" = IconDataConstructor(
-    "format_list_numbered_rtl",
-    "sharp",
-  );
-  static "format_list_numbered_rtl_rounded" = IconDataConstructor(
-    "format_list_numbered_rtl",
-    "rounded",
-  );
-  static "format_list_numbered_rtl_outlined" = IconDataConstructor(
-    "format_list_numbered_rtl",
-    "outlined",
-  );
+  static "format_list_numbered_rtl_sharp" = IconDataConstructor("format_list_numbered_rtl", "sharp");
+  static "format_list_numbered_rtl_rounded" = IconDataConstructor("format_list_numbered_rtl", "rounded");
+  static "format_list_numbered_rtl_outlined" = IconDataConstructor("format_list_numbered_rtl", "outlined");
   static "format_paint" = IconDataConstructor("format_paint");
   static "format_paint_sharp" = IconDataConstructor("format_paint", "sharp");
   static "format_paint_rounded" = IconDataConstructor("format_paint", "rounded");
@@ -3097,31 +2869,13 @@ class Icons {
   static "format_strikethrough_rounded" = IconDataConstructor("format_strikethrough", "rounded");
   static "format_strikethrough_outlined" = IconDataConstructor("format_strikethrough", "outlined");
   static "format_textdirection_l_to_r" = IconDataConstructor("format_textdirection_l_to_r");
-  static "format_textdirection_l_to_r_sharp" = IconDataConstructor(
-    "format_textdirection_l_to_r",
-    "sharp",
-  );
-  static "format_textdirection_l_to_r_rounded" = IconDataConstructor(
-    "format_textdirection_l_to_r",
-    "rounded",
-  );
-  static "format_textdirection_l_to_r_outlined" = IconDataConstructor(
-    "format_textdirection_l_to_r",
-    "outlined",
-  );
+  static "format_textdirection_l_to_r_sharp" = IconDataConstructor("format_textdirection_l_to_r", "sharp");
+  static "format_textdirection_l_to_r_rounded" = IconDataConstructor("format_textdirection_l_to_r", "rounded");
+  static "format_textdirection_l_to_r_outlined" = IconDataConstructor("format_textdirection_l_to_r", "outlined");
   static "format_textdirection_r_to_l" = IconDataConstructor("format_textdirection_r_to_l");
-  static "format_textdirection_r_to_l_sharp" = IconDataConstructor(
-    "format_textdirection_r_to_l",
-    "sharp",
-  );
-  static "format_textdirection_r_to_l_rounded" = IconDataConstructor(
-    "format_textdirection_r_to_l",
-    "rounded",
-  );
-  static "format_textdirection_r_to_l_outlined" = IconDataConstructor(
-    "format_textdirection_r_to_l",
-    "outlined",
-  );
+  static "format_textdirection_r_to_l_sharp" = IconDataConstructor("format_textdirection_r_to_l", "sharp");
+  static "format_textdirection_r_to_l_rounded" = IconDataConstructor("format_textdirection_r_to_l", "rounded");
+  static "format_textdirection_r_to_l_outlined" = IconDataConstructor("format_textdirection_r_to_l", "outlined");
   static "format_underline" = IconDataConstructor("format_underline");
   static "format_underline_sharp" = IconDataConstructor("format_underline", "sharp");
   static "format_underline_rounded" = IconDataConstructor("format_underline", "rounded");
@@ -3498,10 +3252,7 @@ class Icons {
   static "horizontal_distribute" = IconDataConstructor("horizontal_distribute");
   static "horizontal_distribute_sharp" = IconDataConstructor("horizontal_distribute", "sharp");
   static "horizontal_distribute_rounded" = IconDataConstructor("horizontal_distribute", "rounded");
-  static "horizontal_distribute_outlined" = IconDataConstructor(
-    "horizontal_distribute",
-    "outlined",
-  );
+  static "horizontal_distribute_outlined" = IconDataConstructor("horizontal_distribute", "outlined");
   static "horizontal_rule" = IconDataConstructor("horizontal_rule");
   static "horizontal_rule_sharp" = IconDataConstructor("horizontal_rule", "sharp");
   static "horizontal_rule_rounded" = IconDataConstructor("horizontal_rule", "rounded");
@@ -3616,14 +3367,8 @@ class Icons {
   static "inbox_outlined" = IconDataConstructor("inbox", "outlined");
   static "indeterminate_check_box" = IconDataConstructor("indeterminate_check_box");
   static "indeterminate_check_box_sharp" = IconDataConstructor("indeterminate_check_box", "sharp");
-  static "indeterminate_check_box_rounded" = IconDataConstructor(
-    "indeterminate_check_box",
-    "rounded",
-  );
-  static "indeterminate_check_box_outlined" = IconDataConstructor(
-    "indeterminate_check_box",
-    "outlined",
-  );
+  static "indeterminate_check_box_rounded" = IconDataConstructor("indeterminate_check_box", "rounded");
+  static "indeterminate_check_box_outlined" = IconDataConstructor("indeterminate_check_box", "outlined");
   static "info" = IconDataConstructor("info");
   static "info_sharp" = IconDataConstructor("info", "sharp");
   static "info_rounded" = IconDataConstructor("info", "rounded");
@@ -3638,10 +3383,7 @@ class Icons {
   static "insert_chart" = IconDataConstructor("insert_chart");
   static "insert_chart_sharp" = IconDataConstructor("insert_chart", "sharp");
   static "insert_chart_rounded" = IconDataConstructor("insert_chart", "rounded");
-  static "insert_chart_outlined_outlined" = IconDataConstructor(
-    "insert_chart_outlined",
-    "outlined",
-  );
+  static "insert_chart_outlined_outlined" = IconDataConstructor("insert_chart_outlined", "outlined");
   static "insert_chart_outlined_sharp" = IconDataConstructor("insert_chart_outlined", "sharp");
   static "insert_chart_outlined_rounded" = IconDataConstructor("insert_chart_outlined", "rounded");
   static "insert_comment" = IconDataConstructor("insert_comment");
@@ -3673,18 +3415,9 @@ class Icons {
   static "insights_rounded" = IconDataConstructor("insights", "rounded");
   static "insights_outlined" = IconDataConstructor("insights", "outlined");
   static "integration_instructions" = IconDataConstructor("integration_instructions");
-  static "integration_instructions_sharp" = IconDataConstructor(
-    "integration_instructions",
-    "sharp",
-  );
-  static "integration_instructions_rounded" = IconDataConstructor(
-    "integration_instructions",
-    "rounded",
-  );
-  static "integration_instructions_outlined" = IconDataConstructor(
-    "integration_instructions",
-    "outlined",
-  );
+  static "integration_instructions_sharp" = IconDataConstructor("integration_instructions", "sharp");
+  static "integration_instructions_rounded" = IconDataConstructor("integration_instructions", "rounded");
+  static "integration_instructions_outlined" = IconDataConstructor("integration_instructions", "outlined");
   static "inventory" = IconDataConstructor("inventory");
   static "inventory_sharp" = IconDataConstructor("inventory", "sharp");
   static "inventory_rounded" = IconDataConstructor("inventory", "rounded");
@@ -3795,10 +3528,7 @@ class Icons {
   static "label_important_outlined" = IconDataConstructor("label_important", "outlined");
   static "label_important_outline" = IconDataConstructor("label_important_outline");
   static "label_important_outline_sharp" = IconDataConstructor("label_important_outline", "sharp");
-  static "label_important_outline_rounded" = IconDataConstructor(
-    "label_important_outline",
-    "rounded",
-  );
+  static "label_important_outline_rounded" = IconDataConstructor("label_important_outline", "rounded");
   static "label_off" = IconDataConstructor("label_off");
   static "label_off_sharp" = IconDataConstructor("label_off", "sharp");
   static "label_off_rounded" = IconDataConstructor("label_off", "rounded");
@@ -3983,14 +3713,8 @@ class Icons {
   static "local_car_wash_outlined" = IconDataConstructor("local_car_wash", "outlined");
   static "local_convenience_store" = IconDataConstructor("local_convenience_store");
   static "local_convenience_store_sharp" = IconDataConstructor("local_convenience_store", "sharp");
-  static "local_convenience_store_rounded" = IconDataConstructor(
-    "local_convenience_store",
-    "rounded",
-  );
-  static "local_convenience_store_outlined" = IconDataConstructor(
-    "local_convenience_store",
-    "outlined",
-  );
+  static "local_convenience_store_rounded" = IconDataConstructor("local_convenience_store", "rounded");
+  static "local_convenience_store_outlined" = IconDataConstructor("local_convenience_store", "outlined");
   static "local_dining" = IconDataConstructor("local_dining");
   static "local_dining_sharp" = IconDataConstructor("local_dining", "sharp");
   static "local_dining_rounded" = IconDataConstructor("local_dining", "rounded");
@@ -4002,10 +3726,7 @@ class Icons {
   static "local_fire_department" = IconDataConstructor("local_fire_department");
   static "local_fire_department_sharp" = IconDataConstructor("local_fire_department", "sharp");
   static "local_fire_department_rounded" = IconDataConstructor("local_fire_department", "rounded");
-  static "local_fire_department_outlined" = IconDataConstructor(
-    "local_fire_department",
-    "outlined",
-  );
+  static "local_fire_department_outlined" = IconDataConstructor("local_fire_department", "outlined");
   static "local_florist" = IconDataConstructor("local_florist");
   static "local_florist_sharp" = IconDataConstructor("local_florist", "sharp");
   static "local_florist_rounded" = IconDataConstructor("local_florist", "rounded");
@@ -4029,10 +3750,7 @@ class Icons {
   static "local_laundry_service" = IconDataConstructor("local_laundry_service");
   static "local_laundry_service_sharp" = IconDataConstructor("local_laundry_service", "sharp");
   static "local_laundry_service_rounded" = IconDataConstructor("local_laundry_service", "rounded");
-  static "local_laundry_service_outlined" = IconDataConstructor(
-    "local_laundry_service",
-    "outlined",
-  );
+  static "local_laundry_service_outlined" = IconDataConstructor("local_laundry_service", "outlined");
   static "local_library" = IconDataConstructor("local_library");
   static "local_library_sharp" = IconDataConstructor("local_library", "sharp");
   static "local_library_rounded" = IconDataConstructor("local_library", "rounded");
@@ -4371,14 +4089,8 @@ class Icons {
   static "minimize_outlined" = IconDataConstructor("minimize", "outlined");
   static "miscellaneous_services" = IconDataConstructor("miscellaneous_services");
   static "miscellaneous_services_sharp" = IconDataConstructor("miscellaneous_services", "sharp");
-  static "miscellaneous_services_rounded" = IconDataConstructor(
-    "miscellaneous_services",
-    "rounded",
-  );
-  static "miscellaneous_services_outlined" = IconDataConstructor(
-    "miscellaneous_services",
-    "outlined",
-  );
+  static "miscellaneous_services_rounded" = IconDataConstructor("miscellaneous_services", "rounded");
+  static "miscellaneous_services_outlined" = IconDataConstructor("miscellaneous_services", "outlined");
   static "missed_video_call" = IconDataConstructor("missed_video_call");
   static "missed_video_call_sharp" = IconDataConstructor("missed_video_call", "sharp");
   static "missed_video_call_rounded" = IconDataConstructor("missed_video_call", "rounded");
@@ -4700,18 +4412,9 @@ class Icons {
   static "no_encryption_rounded" = IconDataConstructor("no_encryption", "rounded");
   static "no_encryption_outlined" = IconDataConstructor("no_encryption", "outlined");
   static "no_encryption_gmailerrorred" = IconDataConstructor("no_encryption_gmailerrorred");
-  static "no_encryption_gmailerrorred_sharp" = IconDataConstructor(
-    "no_encryption_gmailerrorred",
-    "sharp",
-  );
-  static "no_encryption_gmailerrorred_rounded" = IconDataConstructor(
-    "no_encryption_gmailerrorred",
-    "rounded",
-  );
-  static "no_encryption_gmailerrorred_outlined" = IconDataConstructor(
-    "no_encryption_gmailerrorred",
-    "outlined",
-  );
+  static "no_encryption_gmailerrorred_sharp" = IconDataConstructor("no_encryption_gmailerrorred", "sharp");
+  static "no_encryption_gmailerrorred_rounded" = IconDataConstructor("no_encryption_gmailerrorred", "rounded");
+  static "no_encryption_gmailerrorred_outlined" = IconDataConstructor("no_encryption_gmailerrorred", "outlined");
   static "no_flash" = IconDataConstructor("no_flash");
   static "no_flash_sharp" = IconDataConstructor("no_flash", "sharp");
   static "no_flash_rounded" = IconDataConstructor("no_flash", "rounded");
@@ -4803,14 +4506,8 @@ class Icons {
   static "notification_add_outlined" = IconDataConstructor("notification_add", "outlined");
   static "notification_important" = IconDataConstructor("notification_important");
   static "notification_important_sharp" = IconDataConstructor("notification_important", "sharp");
-  static "notification_important_rounded" = IconDataConstructor(
-    "notification_important",
-    "rounded",
-  );
-  static "notification_important_outlined" = IconDataConstructor(
-    "notification_important",
-    "outlined",
-  );
+  static "notification_important_rounded" = IconDataConstructor("notification_important", "rounded");
+  static "notification_important_outlined" = IconDataConstructor("notification_important", "outlined");
   static "notifications" = IconDataConstructor("notifications");
   static "notifications_sharp" = IconDataConstructor("notifications", "sharp");
   static "notifications_rounded" = IconDataConstructor("notifications", "rounded");
@@ -4957,69 +4654,33 @@ class Icons {
   static "panorama_horizontal_rounded" = IconDataConstructor("panorama_horizontal", "rounded");
   static "panorama_horizontal_outlined" = IconDataConstructor("panorama_horizontal", "outlined");
   static "panorama_horizontal_select" = IconDataConstructor("panorama_horizontal_select");
-  static "panorama_horizontal_select_sharp" = IconDataConstructor(
-    "panorama_horizontal_select",
-    "sharp",
-  );
-  static "panorama_horizontal_select_rounded" = IconDataConstructor(
-    "panorama_horizontal_select",
-    "rounded",
-  );
-  static "panorama_horizontal_select_outlined" = IconDataConstructor(
-    "panorama_horizontal_select",
-    "outlined",
-  );
+  static "panorama_horizontal_select_sharp" = IconDataConstructor("panorama_horizontal_select", "sharp");
+  static "panorama_horizontal_select_rounded" = IconDataConstructor("panorama_horizontal_select", "rounded");
+  static "panorama_horizontal_select_outlined" = IconDataConstructor("panorama_horizontal_select", "outlined");
   static "panorama_photosphere" = IconDataConstructor("panorama_photosphere");
   static "panorama_photosphere_sharp" = IconDataConstructor("panorama_photosphere", "sharp");
   static "panorama_photosphere_rounded" = IconDataConstructor("panorama_photosphere", "rounded");
   static "panorama_photosphere_outlined" = IconDataConstructor("panorama_photosphere", "outlined");
   static "panorama_photosphere_select" = IconDataConstructor("panorama_photosphere_select");
-  static "panorama_photosphere_select_sharp" = IconDataConstructor(
-    "panorama_photosphere_select",
-    "sharp",
-  );
-  static "panorama_photosphere_select_rounded" = IconDataConstructor(
-    "panorama_photosphere_select",
-    "rounded",
-  );
-  static "panorama_photosphere_select_outlined" = IconDataConstructor(
-    "panorama_photosphere_select",
-    "outlined",
-  );
+  static "panorama_photosphere_select_sharp" = IconDataConstructor("panorama_photosphere_select", "sharp");
+  static "panorama_photosphere_select_rounded" = IconDataConstructor("panorama_photosphere_select", "rounded");
+  static "panorama_photosphere_select_outlined" = IconDataConstructor("panorama_photosphere_select", "outlined");
   static "panorama_vertical" = IconDataConstructor("panorama_vertical");
   static "panorama_vertical_sharp" = IconDataConstructor("panorama_vertical", "sharp");
   static "panorama_vertical_rounded" = IconDataConstructor("panorama_vertical", "rounded");
   static "panorama_vertical_outlined" = IconDataConstructor("panorama_vertical", "outlined");
   static "panorama_vertical_select" = IconDataConstructor("panorama_vertical_select");
-  static "panorama_vertical_select_sharp" = IconDataConstructor(
-    "panorama_vertical_select",
-    "sharp",
-  );
-  static "panorama_vertical_select_rounded" = IconDataConstructor(
-    "panorama_vertical_select",
-    "rounded",
-  );
-  static "panorama_vertical_select_outlined" = IconDataConstructor(
-    "panorama_vertical_select",
-    "outlined",
-  );
+  static "panorama_vertical_select_sharp" = IconDataConstructor("panorama_vertical_select", "sharp");
+  static "panorama_vertical_select_rounded" = IconDataConstructor("panorama_vertical_select", "rounded");
+  static "panorama_vertical_select_outlined" = IconDataConstructor("panorama_vertical_select", "outlined");
   static "panorama_wide_angle" = IconDataConstructor("panorama_wide_angle");
   static "panorama_wide_angle_sharp" = IconDataConstructor("panorama_wide_angle", "sharp");
   static "panorama_wide_angle_rounded" = IconDataConstructor("panorama_wide_angle", "rounded");
   static "panorama_wide_angle_outlined" = IconDataConstructor("panorama_wide_angle", "outlined");
   static "panorama_wide_angle_select" = IconDataConstructor("panorama_wide_angle_select");
-  static "panorama_wide_angle_select_sharp" = IconDataConstructor(
-    "panorama_wide_angle_select",
-    "sharp",
-  );
-  static "panorama_wide_angle_select_rounded" = IconDataConstructor(
-    "panorama_wide_angle_select",
-    "rounded",
-  );
-  static "panorama_wide_angle_select_outlined" = IconDataConstructor(
-    "panorama_wide_angle_select",
-    "outlined",
-  );
+  static "panorama_wide_angle_select_sharp" = IconDataConstructor("panorama_wide_angle_select", "sharp");
+  static "panorama_wide_angle_select_rounded" = IconDataConstructor("panorama_wide_angle_select", "rounded");
+  static "panorama_wide_angle_select_outlined" = IconDataConstructor("panorama_wide_angle_select", "outlined");
   static "paragliding" = IconDataConstructor("paragliding");
   static "paragliding_sharp" = IconDataConstructor("paragliding", "sharp");
   static "paragliding_rounded" = IconDataConstructor("paragliding", "rounded");
@@ -5107,10 +4768,7 @@ class Icons {
   static "perm_contact_calendar" = IconDataConstructor("perm_contact_calendar");
   static "perm_contact_calendar_sharp" = IconDataConstructor("perm_contact_calendar", "sharp");
   static "perm_contact_calendar_rounded" = IconDataConstructor("perm_contact_calendar", "rounded");
-  static "perm_contact_calendar_outlined" = IconDataConstructor(
-    "perm_contact_calendar",
-    "outlined",
-  );
+  static "perm_contact_calendar_outlined" = IconDataConstructor("perm_contact_calendar", "outlined");
   static "perm_data_setting" = IconDataConstructor("perm_data_setting");
   static "perm_data_setting_sharp" = IconDataConstructor("perm_data_setting", "sharp");
   static "perm_data_setting_rounded" = IconDataConstructor("perm_data_setting", "rounded");
@@ -5121,14 +4779,8 @@ class Icons {
   static "perm_device_info_outlined" = IconDataConstructor("perm_device_info", "outlined");
   static "perm_device_information" = IconDataConstructor("perm_device_information");
   static "perm_device_information_sharp" = IconDataConstructor("perm_device_information", "sharp");
-  static "perm_device_information_rounded" = IconDataConstructor(
-    "perm_device_information",
-    "rounded",
-  );
-  static "perm_device_information_outlined" = IconDataConstructor(
-    "perm_device_information",
-    "outlined",
-  );
+  static "perm_device_information_rounded" = IconDataConstructor("perm_device_information", "rounded");
+  static "perm_device_information_outlined" = IconDataConstructor("perm_device_information", "outlined");
   static "perm_identity" = IconDataConstructor("perm_identity");
   static "perm_identity_sharp" = IconDataConstructor("perm_identity", "sharp");
   static "perm_identity_rounded" = IconDataConstructor("perm_identity", "rounded");
@@ -5223,14 +4875,8 @@ class Icons {
   static "phone_android_outlined" = IconDataConstructor("phone_android", "outlined");
   static "phone_bluetooth_speaker" = IconDataConstructor("phone_bluetooth_speaker");
   static "phone_bluetooth_speaker_sharp" = IconDataConstructor("phone_bluetooth_speaker", "sharp");
-  static "phone_bluetooth_speaker_rounded" = IconDataConstructor(
-    "phone_bluetooth_speaker",
-    "rounded",
-  );
-  static "phone_bluetooth_speaker_outlined" = IconDataConstructor(
-    "phone_bluetooth_speaker",
-    "outlined",
-  );
+  static "phone_bluetooth_speaker_rounded" = IconDataConstructor("phone_bluetooth_speaker", "rounded");
+  static "phone_bluetooth_speaker_outlined" = IconDataConstructor("phone_bluetooth_speaker", "outlined");
   static "phone_callback" = IconDataConstructor("phone_callback");
   static "phone_callback_sharp" = IconDataConstructor("phone_callback", "sharp");
   static "phone_callback_rounded" = IconDataConstructor("phone_callback", "rounded");
@@ -5320,38 +4966,17 @@ class Icons {
   static "photo_library_rounded" = IconDataConstructor("photo_library", "rounded");
   static "photo_library_outlined" = IconDataConstructor("photo_library", "outlined");
   static "photo_size_select_actual" = IconDataConstructor("photo_size_select_actual");
-  static "photo_size_select_actual_sharp" = IconDataConstructor(
-    "photo_size_select_actual",
-    "sharp",
-  );
-  static "photo_size_select_actual_rounded" = IconDataConstructor(
-    "photo_size_select_actual",
-    "rounded",
-  );
-  static "photo_size_select_actual_outlined" = IconDataConstructor(
-    "photo_size_select_actual",
-    "outlined",
-  );
+  static "photo_size_select_actual_sharp" = IconDataConstructor("photo_size_select_actual", "sharp");
+  static "photo_size_select_actual_rounded" = IconDataConstructor("photo_size_select_actual", "rounded");
+  static "photo_size_select_actual_outlined" = IconDataConstructor("photo_size_select_actual", "outlined");
   static "photo_size_select_large" = IconDataConstructor("photo_size_select_large");
   static "photo_size_select_large_sharp" = IconDataConstructor("photo_size_select_large", "sharp");
-  static "photo_size_select_large_rounded" = IconDataConstructor(
-    "photo_size_select_large",
-    "rounded",
-  );
-  static "photo_size_select_large_outlined" = IconDataConstructor(
-    "photo_size_select_large",
-    "outlined",
-  );
+  static "photo_size_select_large_rounded" = IconDataConstructor("photo_size_select_large", "rounded");
+  static "photo_size_select_large_outlined" = IconDataConstructor("photo_size_select_large", "outlined");
   static "photo_size_select_small" = IconDataConstructor("photo_size_select_small");
   static "photo_size_select_small_sharp" = IconDataConstructor("photo_size_select_small", "sharp");
-  static "photo_size_select_small_rounded" = IconDataConstructor(
-    "photo_size_select_small",
-    "rounded",
-  );
-  static "photo_size_select_small_outlined" = IconDataConstructor(
-    "photo_size_select_small",
-    "outlined",
-  );
+  static "photo_size_select_small_rounded" = IconDataConstructor("photo_size_select_small", "rounded");
+  static "photo_size_select_small_outlined" = IconDataConstructor("photo_size_select_small", "outlined");
   static "piano" = IconDataConstructor("piano");
   static "piano_sharp" = IconDataConstructor("piano", "sharp");
   static "piano_rounded" = IconDataConstructor("piano", "rounded");
@@ -5370,14 +4995,8 @@ class Icons {
   static "picture_in_picture_outlined" = IconDataConstructor("picture_in_picture", "outlined");
   static "picture_in_picture_alt" = IconDataConstructor("picture_in_picture_alt");
   static "picture_in_picture_alt_sharp" = IconDataConstructor("picture_in_picture_alt", "sharp");
-  static "picture_in_picture_alt_rounded" = IconDataConstructor(
-    "picture_in_picture_alt",
-    "rounded",
-  );
-  static "picture_in_picture_alt_outlined" = IconDataConstructor(
-    "picture_in_picture_alt",
-    "outlined",
-  );
+  static "picture_in_picture_alt_rounded" = IconDataConstructor("picture_in_picture_alt", "rounded");
+  static "picture_in_picture_alt_outlined" = IconDataConstructor("picture_in_picture_alt", "outlined");
   static "pie_chart" = IconDataConstructor("pie_chart");
   static "pie_chart_sharp" = IconDataConstructor("pie_chart", "sharp");
   static "pie_chart_rounded" = IconDataConstructor("pie_chart", "rounded");
@@ -5512,14 +5131,8 @@ class Icons {
   static "power_settings_new_outlined" = IconDataConstructor("power_settings_new", "outlined");
   static "precision_manufacturing" = IconDataConstructor("precision_manufacturing");
   static "precision_manufacturing_sharp" = IconDataConstructor("precision_manufacturing", "sharp");
-  static "precision_manufacturing_rounded" = IconDataConstructor(
-    "precision_manufacturing",
-    "rounded",
-  );
-  static "precision_manufacturing_outlined" = IconDataConstructor(
-    "precision_manufacturing",
-    "outlined",
-  );
+  static "precision_manufacturing_rounded" = IconDataConstructor("precision_manufacturing", "rounded");
+  static "precision_manufacturing_outlined" = IconDataConstructor("precision_manufacturing", "outlined");
   static "pregnant_woman" = IconDataConstructor("pregnant_woman");
   static "pregnant_woman_sharp" = IconDataConstructor("pregnant_woman", "sharp");
   static "pregnant_woman_rounded" = IconDataConstructor("pregnant_woman", "rounded");
@@ -5557,18 +5170,9 @@ class Icons {
   static "privacy_tip_rounded" = IconDataConstructor("privacy_tip", "rounded");
   static "privacy_tip_outlined" = IconDataConstructor("privacy_tip", "outlined");
   static "production_quantity_limits" = IconDataConstructor("production_quantity_limits");
-  static "production_quantity_limits_sharp" = IconDataConstructor(
-    "production_quantity_limits",
-    "sharp",
-  );
-  static "production_quantity_limits_rounded" = IconDataConstructor(
-    "production_quantity_limits",
-    "rounded",
-  );
-  static "production_quantity_limits_outlined" = IconDataConstructor(
-    "production_quantity_limits",
-    "outlined",
-  );
+  static "production_quantity_limits_sharp" = IconDataConstructor("production_quantity_limits", "sharp");
+  static "production_quantity_limits_rounded" = IconDataConstructor("production_quantity_limits", "rounded");
+  static "production_quantity_limits_outlined" = IconDataConstructor("production_quantity_limits", "outlined");
   static "psychology" = IconDataConstructor("psychology");
   static "psychology_sharp" = IconDataConstructor("psychology", "sharp");
   static "psychology_rounded" = IconDataConstructor("psychology", "rounded");
@@ -5587,14 +5191,8 @@ class Icons {
   static "publish_outlined" = IconDataConstructor("publish", "outlined");
   static "published_with_changes" = IconDataConstructor("published_with_changes");
   static "published_with_changes_sharp" = IconDataConstructor("published_with_changes", "sharp");
-  static "published_with_changes_rounded" = IconDataConstructor(
-    "published_with_changes",
-    "rounded",
-  );
-  static "published_with_changes_outlined" = IconDataConstructor(
-    "published_with_changes",
-    "outlined",
-  );
+  static "published_with_changes_rounded" = IconDataConstructor("published_with_changes", "rounded");
+  static "published_with_changes_outlined" = IconDataConstructor("published_with_changes", "outlined");
   static "push_pin" = IconDataConstructor("push_pin");
   static "push_pin_sharp" = IconDataConstructor("push_pin", "sharp");
   static "push_pin_rounded" = IconDataConstructor("push_pin", "rounded");
@@ -5638,10 +5236,7 @@ class Icons {
   static "quick_contacts_dialer" = IconDataConstructor("quick_contacts_dialer");
   static "quick_contacts_dialer_sharp" = IconDataConstructor("quick_contacts_dialer", "sharp");
   static "quick_contacts_dialer_rounded" = IconDataConstructor("quick_contacts_dialer", "rounded");
-  static "quick_contacts_dialer_outlined" = IconDataConstructor(
-    "quick_contacts_dialer",
-    "outlined",
-  );
+  static "quick_contacts_dialer_outlined" = IconDataConstructor("quick_contacts_dialer", "outlined");
   static "quick_contacts_mail" = IconDataConstructor("quick_contacts_mail");
   static "quick_contacts_mail_sharp" = IconDataConstructor("quick_contacts_mail", "sharp");
   static "quick_contacts_mail_rounded" = IconDataConstructor("quick_contacts_mail", "rounded");
@@ -5680,14 +5275,8 @@ class Icons {
   static "radio_button_on_outlined" = IconDataConstructor("radio_button_on", "outlined");
   static "radio_button_unchecked" = IconDataConstructor("radio_button_unchecked");
   static "radio_button_unchecked_sharp" = IconDataConstructor("radio_button_unchecked", "sharp");
-  static "radio_button_unchecked_rounded" = IconDataConstructor(
-    "radio_button_unchecked",
-    "rounded",
-  );
-  static "radio_button_unchecked_outlined" = IconDataConstructor(
-    "radio_button_unchecked",
-    "outlined",
-  );
+  static "radio_button_unchecked_rounded" = IconDataConstructor("radio_button_unchecked", "rounded");
+  static "radio_button_unchecked_outlined" = IconDataConstructor("radio_button_unchecked", "outlined");
   static "railway_alert" = IconDataConstructor("railway_alert");
   static "railway_alert_sharp" = IconDataConstructor("railway_alert", "sharp");
   static "railway_alert_rounded" = IconDataConstructor("railway_alert", "rounded");
@@ -5767,10 +5356,7 @@ class Icons {
   static "remove_circle_outline" = IconDataConstructor("remove_circle_outline");
   static "remove_circle_outline_sharp" = IconDataConstructor("remove_circle_outline", "sharp");
   static "remove_circle_outline_rounded" = IconDataConstructor("remove_circle_outline", "rounded");
-  static "remove_circle_outline_outlined" = IconDataConstructor(
-    "remove_circle_outline",
-    "outlined",
-  );
+  static "remove_circle_outline_outlined" = IconDataConstructor("remove_circle_outline", "outlined");
   static "remove_done" = IconDataConstructor("remove_done");
   static "remove_done_sharp" = IconDataConstructor("remove_done", "sharp");
   static "remove_done_rounded" = IconDataConstructor("remove_done", "rounded");
@@ -5922,10 +5508,7 @@ class Icons {
   static "rotate_90_degrees_ccw" = IconDataConstructor("rotate_90_degrees_ccw");
   static "rotate_90_degrees_ccw_sharp" = IconDataConstructor("rotate_90_degrees_ccw", "sharp");
   static "rotate_90_degrees_ccw_rounded" = IconDataConstructor("rotate_90_degrees_ccw", "rounded");
-  static "rotate_90_degrees_ccw_outlined" = IconDataConstructor(
-    "rotate_90_degrees_ccw",
-    "outlined",
-  );
+  static "rotate_90_degrees_ccw_outlined" = IconDataConstructor("rotate_90_degrees_ccw", "outlined");
   static "rotate_left" = IconDataConstructor("rotate_left");
   static "rotate_left_sharp" = IconDataConstructor("rotate_left", "sharp");
   static "rotate_left_rounded" = IconDataConstructor("rotate_left", "rounded");
@@ -6045,10 +5628,7 @@ class Icons {
   static "screen_lock_landscape" = IconDataConstructor("screen_lock_landscape");
   static "screen_lock_landscape_sharp" = IconDataConstructor("screen_lock_landscape", "sharp");
   static "screen_lock_landscape_rounded" = IconDataConstructor("screen_lock_landscape", "rounded");
-  static "screen_lock_landscape_outlined" = IconDataConstructor(
-    "screen_lock_landscape",
-    "outlined",
-  );
+  static "screen_lock_landscape_outlined" = IconDataConstructor("screen_lock_landscape", "outlined");
   static "screen_lock_portrait" = IconDataConstructor("screen_lock_portrait");
   static "screen_lock_portrait_sharp" = IconDataConstructor("screen_lock_portrait", "sharp");
   static "screen_lock_portrait_rounded" = IconDataConstructor("screen_lock_portrait", "rounded");
@@ -6064,10 +5644,7 @@ class Icons {
   static "screen_search_desktop" = IconDataConstructor("screen_search_desktop");
   static "screen_search_desktop_sharp" = IconDataConstructor("screen_search_desktop", "sharp");
   static "screen_search_desktop_rounded" = IconDataConstructor("screen_search_desktop", "rounded");
-  static "screen_search_desktop_outlined" = IconDataConstructor(
-    "screen_search_desktop",
-    "outlined",
-  );
+  static "screen_search_desktop_outlined" = IconDataConstructor("screen_search_desktop", "outlined");
   static "screen_share" = IconDataConstructor("screen_share");
   static "screen_share_sharp" = IconDataConstructor("screen_share", "sharp");
   static "screen_share_rounded" = IconDataConstructor("screen_share", "rounded");
@@ -6114,14 +5691,8 @@ class Icons {
   static "security_update_good_outlined" = IconDataConstructor("security_update_good", "outlined");
   static "security_update_warning" = IconDataConstructor("security_update_warning");
   static "security_update_warning_sharp" = IconDataConstructor("security_update_warning", "sharp");
-  static "security_update_warning_rounded" = IconDataConstructor(
-    "security_update_warning",
-    "rounded",
-  );
-  static "security_update_warning_outlined" = IconDataConstructor(
-    "security_update_warning",
-    "outlined",
-  );
+  static "security_update_warning_rounded" = IconDataConstructor("security_update_warning", "rounded");
+  static "security_update_warning_outlined" = IconDataConstructor("security_update_warning", "outlined");
   static "segment" = IconDataConstructor("segment");
   static "segment_sharp" = IconDataConstructor("segment", "sharp");
   static "segment_rounded" = IconDataConstructor("segment", "rounded");
@@ -6168,14 +5739,8 @@ class Icons {
   static "sensors_off_outlined" = IconDataConstructor("sensors_off", "outlined");
   static "sentiment_dissatisfied" = IconDataConstructor("sentiment_dissatisfied");
   static "sentiment_dissatisfied_sharp" = IconDataConstructor("sentiment_dissatisfied", "sharp");
-  static "sentiment_dissatisfied_rounded" = IconDataConstructor(
-    "sentiment_dissatisfied",
-    "rounded",
-  );
-  static "sentiment_dissatisfied_outlined" = IconDataConstructor(
-    "sentiment_dissatisfied",
-    "outlined",
-  );
+  static "sentiment_dissatisfied_rounded" = IconDataConstructor("sentiment_dissatisfied", "rounded");
+  static "sentiment_dissatisfied_outlined" = IconDataConstructor("sentiment_dissatisfied", "outlined");
   static "sentiment_neutral" = IconDataConstructor("sentiment_neutral");
   static "sentiment_neutral_sharp" = IconDataConstructor("sentiment_neutral", "sharp");
   static "sentiment_neutral_rounded" = IconDataConstructor("sentiment_neutral", "rounded");
@@ -6186,40 +5751,16 @@ class Icons {
   static "sentiment_satisfied_outlined" = IconDataConstructor("sentiment_satisfied", "outlined");
   static "sentiment_satisfied_alt" = IconDataConstructor("sentiment_satisfied_alt");
   static "sentiment_satisfied_alt_sharp" = IconDataConstructor("sentiment_satisfied_alt", "sharp");
-  static "sentiment_satisfied_alt_rounded" = IconDataConstructor(
-    "sentiment_satisfied_alt",
-    "rounded",
-  );
-  static "sentiment_satisfied_alt_outlined" = IconDataConstructor(
-    "sentiment_satisfied_alt",
-    "outlined",
-  );
+  static "sentiment_satisfied_alt_rounded" = IconDataConstructor("sentiment_satisfied_alt", "rounded");
+  static "sentiment_satisfied_alt_outlined" = IconDataConstructor("sentiment_satisfied_alt", "outlined");
   static "sentiment_very_dissatisfied" = IconDataConstructor("sentiment_very_dissatisfied");
-  static "sentiment_very_dissatisfied_sharp" = IconDataConstructor(
-    "sentiment_very_dissatisfied",
-    "sharp",
-  );
-  static "sentiment_very_dissatisfied_rounded" = IconDataConstructor(
-    "sentiment_very_dissatisfied",
-    "rounded",
-  );
-  static "sentiment_very_dissatisfied_outlined" = IconDataConstructor(
-    "sentiment_very_dissatisfied",
-    "outlined",
-  );
+  static "sentiment_very_dissatisfied_sharp" = IconDataConstructor("sentiment_very_dissatisfied", "sharp");
+  static "sentiment_very_dissatisfied_rounded" = IconDataConstructor("sentiment_very_dissatisfied", "rounded");
+  static "sentiment_very_dissatisfied_outlined" = IconDataConstructor("sentiment_very_dissatisfied", "outlined");
   static "sentiment_very_satisfied" = IconDataConstructor("sentiment_very_satisfied");
-  static "sentiment_very_satisfied_sharp" = IconDataConstructor(
-    "sentiment_very_satisfied",
-    "sharp",
-  );
-  static "sentiment_very_satisfied_rounded" = IconDataConstructor(
-    "sentiment_very_satisfied",
-    "rounded",
-  );
-  static "sentiment_very_satisfied_outlined" = IconDataConstructor(
-    "sentiment_very_satisfied",
-    "outlined",
-  );
+  static "sentiment_very_satisfied_sharp" = IconDataConstructor("sentiment_very_satisfied", "sharp");
+  static "sentiment_very_satisfied_rounded" = IconDataConstructor("sentiment_very_satisfied", "rounded");
+  static "sentiment_very_satisfied_outlined" = IconDataConstructor("sentiment_very_satisfied", "outlined");
   static "set_meal" = IconDataConstructor("set_meal");
   static "set_meal_sharp" = IconDataConstructor("set_meal", "sharp");
   static "set_meal_rounded" = IconDataConstructor("set_meal", "rounded");
@@ -6230,31 +5771,16 @@ class Icons {
   static "settings_outlined" = IconDataConstructor("settings", "outlined");
   static "settings_accessibility" = IconDataConstructor("settings_accessibility");
   static "settings_accessibility_sharp" = IconDataConstructor("settings_accessibility", "sharp");
-  static "settings_accessibility_rounded" = IconDataConstructor(
-    "settings_accessibility",
-    "rounded",
-  );
-  static "settings_accessibility_outlined" = IconDataConstructor(
-    "settings_accessibility",
-    "outlined",
-  );
+  static "settings_accessibility_rounded" = IconDataConstructor("settings_accessibility", "rounded");
+  static "settings_accessibility_outlined" = IconDataConstructor("settings_accessibility", "outlined");
   static "settings_applications" = IconDataConstructor("settings_applications");
   static "settings_applications_sharp" = IconDataConstructor("settings_applications", "sharp");
   static "settings_applications_rounded" = IconDataConstructor("settings_applications", "rounded");
-  static "settings_applications_outlined" = IconDataConstructor(
-    "settings_applications",
-    "outlined",
-  );
+  static "settings_applications_outlined" = IconDataConstructor("settings_applications", "outlined");
   static "settings_backup_restore" = IconDataConstructor("settings_backup_restore");
   static "settings_backup_restore_sharp" = IconDataConstructor("settings_backup_restore", "sharp");
-  static "settings_backup_restore_rounded" = IconDataConstructor(
-    "settings_backup_restore",
-    "rounded",
-  );
-  static "settings_backup_restore_outlined" = IconDataConstructor(
-    "settings_backup_restore",
-    "outlined",
-  );
+  static "settings_backup_restore_rounded" = IconDataConstructor("settings_backup_restore", "rounded");
+  static "settings_backup_restore_outlined" = IconDataConstructor("settings_backup_restore", "outlined");
   static "settings_bluetooth" = IconDataConstructor("settings_bluetooth");
   static "settings_bluetooth_sharp" = IconDataConstructor("settings_bluetooth", "sharp");
   static "settings_bluetooth_rounded" = IconDataConstructor("settings_bluetooth", "rounded");
@@ -6277,40 +5803,16 @@ class Icons {
   static "settings_ethernet_outlined" = IconDataConstructor("settings_ethernet", "outlined");
   static "settings_input_antenna" = IconDataConstructor("settings_input_antenna");
   static "settings_input_antenna_sharp" = IconDataConstructor("settings_input_antenna", "sharp");
-  static "settings_input_antenna_rounded" = IconDataConstructor(
-    "settings_input_antenna",
-    "rounded",
-  );
-  static "settings_input_antenna_outlined" = IconDataConstructor(
-    "settings_input_antenna",
-    "outlined",
-  );
+  static "settings_input_antenna_rounded" = IconDataConstructor("settings_input_antenna", "rounded");
+  static "settings_input_antenna_outlined" = IconDataConstructor("settings_input_antenna", "outlined");
   static "settings_input_component" = IconDataConstructor("settings_input_component");
-  static "settings_input_component_sharp" = IconDataConstructor(
-    "settings_input_component",
-    "sharp",
-  );
-  static "settings_input_component_rounded" = IconDataConstructor(
-    "settings_input_component",
-    "rounded",
-  );
-  static "settings_input_component_outlined" = IconDataConstructor(
-    "settings_input_component",
-    "outlined",
-  );
+  static "settings_input_component_sharp" = IconDataConstructor("settings_input_component", "sharp");
+  static "settings_input_component_rounded" = IconDataConstructor("settings_input_component", "rounded");
+  static "settings_input_component_outlined" = IconDataConstructor("settings_input_component", "outlined");
   static "settings_input_composite" = IconDataConstructor("settings_input_composite");
-  static "settings_input_composite_sharp" = IconDataConstructor(
-    "settings_input_composite",
-    "sharp",
-  );
-  static "settings_input_composite_rounded" = IconDataConstructor(
-    "settings_input_composite",
-    "rounded",
-  );
-  static "settings_input_composite_outlined" = IconDataConstructor(
-    "settings_input_composite",
-    "outlined",
-  );
+  static "settings_input_composite_sharp" = IconDataConstructor("settings_input_composite", "sharp");
+  static "settings_input_composite_rounded" = IconDataConstructor("settings_input_composite", "rounded");
+  static "settings_input_composite_outlined" = IconDataConstructor("settings_input_composite", "outlined");
   static "settings_input_hdmi" = IconDataConstructor("settings_input_hdmi");
   static "settings_input_hdmi_sharp" = IconDataConstructor("settings_input_hdmi", "sharp");
   static "settings_input_hdmi_rounded" = IconDataConstructor("settings_input_hdmi", "rounded");
@@ -6318,10 +5820,7 @@ class Icons {
   static "settings_input_svideo" = IconDataConstructor("settings_input_svideo");
   static "settings_input_svideo_sharp" = IconDataConstructor("settings_input_svideo", "sharp");
   static "settings_input_svideo_rounded" = IconDataConstructor("settings_input_svideo", "rounded");
-  static "settings_input_svideo_outlined" = IconDataConstructor(
-    "settings_input_svideo",
-    "outlined",
-  );
+  static "settings_input_svideo_outlined" = IconDataConstructor("settings_input_svideo", "outlined");
   static "settings_overscan" = IconDataConstructor("settings_overscan");
   static "settings_overscan_sharp" = IconDataConstructor("settings_overscan", "sharp");
   static "settings_overscan_rounded" = IconDataConstructor("settings_overscan", "rounded");
@@ -6343,18 +5842,9 @@ class Icons {
   static "settings_suggest_rounded" = IconDataConstructor("settings_suggest", "rounded");
   static "settings_suggest_outlined" = IconDataConstructor("settings_suggest", "outlined");
   static "settings_system_daydream" = IconDataConstructor("settings_system_daydream");
-  static "settings_system_daydream_sharp" = IconDataConstructor(
-    "settings_system_daydream",
-    "sharp",
-  );
-  static "settings_system_daydream_rounded" = IconDataConstructor(
-    "settings_system_daydream",
-    "rounded",
-  );
-  static "settings_system_daydream_outlined" = IconDataConstructor(
-    "settings_system_daydream",
-    "outlined",
-  );
+  static "settings_system_daydream_sharp" = IconDataConstructor("settings_system_daydream", "sharp");
+  static "settings_system_daydream_rounded" = IconDataConstructor("settings_system_daydream", "rounded");
+  static "settings_system_daydream_outlined" = IconDataConstructor("settings_system_daydream", "outlined");
   static "settings_voice" = IconDataConstructor("settings_voice");
   static "settings_voice_sharp" = IconDataConstructor("settings_voice", "sharp");
   static "settings_voice_rounded" = IconDataConstructor("settings_voice", "rounded");
@@ -6434,57 +5924,33 @@ class Icons {
   static "signal_cellular_0_bar" = IconDataConstructor("signal_cellular_0_bar");
   static "signal_cellular_0_bar_sharp" = IconDataConstructor("signal_cellular_0_bar", "sharp");
   static "signal_cellular_0_bar_rounded" = IconDataConstructor("signal_cellular_0_bar", "rounded");
-  static "signal_cellular_0_bar_outlined" = IconDataConstructor(
-    "signal_cellular_0_bar",
-    "outlined",
-  );
+  static "signal_cellular_0_bar_outlined" = IconDataConstructor("signal_cellular_0_bar", "outlined");
   static "signal_cellular_4_bar" = IconDataConstructor("signal_cellular_4_bar");
   static "signal_cellular_4_bar_sharp" = IconDataConstructor("signal_cellular_4_bar", "sharp");
   static "signal_cellular_4_bar_rounded" = IconDataConstructor("signal_cellular_4_bar", "rounded");
-  static "signal_cellular_4_bar_outlined" = IconDataConstructor(
-    "signal_cellular_4_bar",
-    "outlined",
-  );
+  static "signal_cellular_4_bar_outlined" = IconDataConstructor("signal_cellular_4_bar", "outlined");
   static "signal_cellular_alt" = IconDataConstructor("signal_cellular_alt");
   static "signal_cellular_alt_sharp" = IconDataConstructor("signal_cellular_alt", "sharp");
   static "signal_cellular_alt_rounded" = IconDataConstructor("signal_cellular_alt", "rounded");
   static "signal_cellular_alt_outlined" = IconDataConstructor("signal_cellular_alt", "outlined");
-  static "signal_cellular_connected_no_internet_0_bar" =
-    "signal_cellular_connected_no_internet_0_bar";
-  static "signal_cellular_connected_no_internet_0_bar_sharp" =
-    "signal_cellular_connected_no_internet_0_bar sharp";
-  static "signal_cellular_connected_no_internet_0_bar_rounded" =
-    "signal_cellular_connected_no_internet_0_bar rounded";
+  static "signal_cellular_connected_no_internet_0_bar" = "signal_cellular_connected_no_internet_0_bar";
+  static "signal_cellular_connected_no_internet_0_bar_sharp" = "signal_cellular_connected_no_internet_0_bar sharp";
+  static "signal_cellular_connected_no_internet_0_bar_rounded" = "signal_cellular_connected_no_internet_0_bar rounded";
   static "signal_cellular_connected_no_internet_0_bar_outlined" =
     "signal_cellular_connected_no_internet_0_bar outlined";
-  static "signal_cellular_connected_no_internet_4_bar" =
-    "signal_cellular_connected_no_internet_4_bar";
-  static "signal_cellular_connected_no_internet_4_bar_sharp" =
-    "signal_cellular_connected_no_internet_4_bar sharp";
-  static "signal_cellular_connected_no_internet_4_bar_rounded" =
-    "signal_cellular_connected_no_internet_4_bar rounded";
+  static "signal_cellular_connected_no_internet_4_bar" = "signal_cellular_connected_no_internet_4_bar";
+  static "signal_cellular_connected_no_internet_4_bar_sharp" = "signal_cellular_connected_no_internet_4_bar sharp";
+  static "signal_cellular_connected_no_internet_4_bar_rounded" = "signal_cellular_connected_no_internet_4_bar rounded";
   static "signal_cellular_connected_no_internet_4_bar_outlined" =
     "signal_cellular_connected_no_internet_4_bar outlined";
   static "signal_cellular_no_sim" = IconDataConstructor("signal_cellular_no_sim");
   static "signal_cellular_no_sim_sharp" = IconDataConstructor("signal_cellular_no_sim", "sharp");
-  static "signal_cellular_no_sim_rounded" = IconDataConstructor(
-    "signal_cellular_no_sim",
-    "rounded",
-  );
-  static "signal_cellular_no_sim_outlined" = IconDataConstructor(
-    "signal_cellular_no_sim",
-    "outlined",
-  );
+  static "signal_cellular_no_sim_rounded" = IconDataConstructor("signal_cellular_no_sim", "rounded");
+  static "signal_cellular_no_sim_outlined" = IconDataConstructor("signal_cellular_no_sim", "outlined");
   static "signal_cellular_nodata" = IconDataConstructor("signal_cellular_nodata");
   static "signal_cellular_nodata_sharp" = IconDataConstructor("signal_cellular_nodata", "sharp");
-  static "signal_cellular_nodata_rounded" = IconDataConstructor(
-    "signal_cellular_nodata",
-    "rounded",
-  );
-  static "signal_cellular_nodata_outlined" = IconDataConstructor(
-    "signal_cellular_nodata",
-    "outlined",
-  );
+  static "signal_cellular_nodata_rounded" = IconDataConstructor("signal_cellular_nodata", "rounded");
+  static "signal_cellular_nodata_outlined" = IconDataConstructor("signal_cellular_nodata", "outlined");
   static "signal_cellular_null" = IconDataConstructor("signal_cellular_null");
   static "signal_cellular_null_sharp" = IconDataConstructor("signal_cellular_null", "sharp");
   static "signal_cellular_null_rounded" = IconDataConstructor("signal_cellular_null", "rounded");
@@ -6503,67 +5969,37 @@ class Icons {
   static "signal_wifi_4_bar_outlined" = IconDataConstructor("signal_wifi_4_bar", "outlined");
   static "signal_wifi_4_bar_lock" = IconDataConstructor("signal_wifi_4_bar_lock");
   static "signal_wifi_4_bar_lock_sharp" = IconDataConstructor("signal_wifi_4_bar_lock", "sharp");
-  static "signal_wifi_4_bar_lock_rounded" = IconDataConstructor(
-    "signal_wifi_4_bar_lock",
-    "rounded",
-  );
-  static "signal_wifi_4_bar_lock_outlined" = IconDataConstructor(
-    "signal_wifi_4_bar_lock",
-    "outlined",
-  );
+  static "signal_wifi_4_bar_lock_rounded" = IconDataConstructor("signal_wifi_4_bar_lock", "rounded");
+  static "signal_wifi_4_bar_lock_outlined" = IconDataConstructor("signal_wifi_4_bar_lock", "outlined");
   static "signal_wifi_bad" = IconDataConstructor("signal_wifi_bad");
   static "signal_wifi_bad_sharp" = IconDataConstructor("signal_wifi_bad", "sharp");
   static "signal_wifi_bad_rounded" = IconDataConstructor("signal_wifi_bad", "rounded");
   static "signal_wifi_bad_outlined" = IconDataConstructor("signal_wifi_bad", "outlined");
-  static "signal_wifi_connected_no_internet_4" = IconDataConstructor(
-    "signal_wifi_connected_no_internet_4",
-  );
+  static "signal_wifi_connected_no_internet_4" = IconDataConstructor("signal_wifi_connected_no_internet_4");
   static "signal_wifi_connected_no_internet_4_sharp" = IconDataConstructor(
     "signal_wifi_connected_no_internet_4",
     "sharp",
   );
-  static "signal_wifi_connected_no_internet_4_rounded" =
-    "signal_wifi_connected_no_internet_4 rounded";
-  static "signal_wifi_connected_no_internet_4_outlined" =
-    "signal_wifi_connected_no_internet_4 outlined";
+  static "signal_wifi_connected_no_internet_4_rounded" = "signal_wifi_connected_no_internet_4 rounded";
+  static "signal_wifi_connected_no_internet_4_outlined" = "signal_wifi_connected_no_internet_4 outlined";
   static "signal_wifi_off" = IconDataConstructor("signal_wifi_off");
   static "signal_wifi_off_sharp" = IconDataConstructor("signal_wifi_off", "sharp");
   static "signal_wifi_off_rounded" = IconDataConstructor("signal_wifi_off", "rounded");
   static "signal_wifi_off_outlined" = IconDataConstructor("signal_wifi_off", "outlined");
   static "signal_wifi_statusbar_4_bar" = IconDataConstructor("signal_wifi_statusbar_4_bar");
-  static "signal_wifi_statusbar_4_bar_sharp" = IconDataConstructor(
-    "signal_wifi_statusbar_4_bar",
-    "sharp",
-  );
-  static "signal_wifi_statusbar_4_bar_rounded" = IconDataConstructor(
-    "signal_wifi_statusbar_4_bar",
-    "rounded",
-  );
-  static "signal_wifi_statusbar_4_bar_outlined" = IconDataConstructor(
-    "signal_wifi_statusbar_4_bar",
-    "outlined",
-  );
-  static "signal_wifi_statusbar_connected_no_internet_4" =
-    "signal_wifi_statusbar_connected_no_internet_4";
-  static "signal_wifi_statusbar_connected_no_internet_4_sharp" =
-    "signal_wifi_statusbar_connected_no_internet_4 sharp";
+  static "signal_wifi_statusbar_4_bar_sharp" = IconDataConstructor("signal_wifi_statusbar_4_bar", "sharp");
+  static "signal_wifi_statusbar_4_bar_rounded" = IconDataConstructor("signal_wifi_statusbar_4_bar", "rounded");
+  static "signal_wifi_statusbar_4_bar_outlined" = IconDataConstructor("signal_wifi_statusbar_4_bar", "outlined");
+  static "signal_wifi_statusbar_connected_no_internet_4" = "signal_wifi_statusbar_connected_no_internet_4";
+  static "signal_wifi_statusbar_connected_no_internet_4_sharp" = "signal_wifi_statusbar_connected_no_internet_4 sharp";
   static "signal_wifi_statusbar_connected_no_internet_4_rounded" =
     "signal_wifi_statusbar_connected_no_internet_4 rounded";
   static "signal_wifi_statusbar_connected_no_internet_4_outlined" =
     "signal_wifi_statusbar_connected_no_internet_4 outlined";
   static "signal_wifi_statusbar_null" = IconDataConstructor("signal_wifi_statusbar_null");
-  static "signal_wifi_statusbar_null_sharp" = IconDataConstructor(
-    "signal_wifi_statusbar_null",
-    "sharp",
-  );
-  static "signal_wifi_statusbar_null_rounded" = IconDataConstructor(
-    "signal_wifi_statusbar_null",
-    "rounded",
-  );
-  static "signal_wifi_statusbar_null_outlined" = IconDataConstructor(
-    "signal_wifi_statusbar_null",
-    "outlined",
-  );
+  static "signal_wifi_statusbar_null_sharp" = IconDataConstructor("signal_wifi_statusbar_null", "sharp");
+  static "signal_wifi_statusbar_null_rounded" = IconDataConstructor("signal_wifi_statusbar_null", "rounded");
+  static "signal_wifi_statusbar_null_outlined" = IconDataConstructor("signal_wifi_statusbar_null", "outlined");
   static "sim_card" = IconDataConstructor("sim_card");
   static "sim_card_sharp" = IconDataConstructor("sim_card", "sharp");
   static "sim_card_rounded" = IconDataConstructor("sim_card", "rounded");
@@ -6839,10 +6275,7 @@ class Icons {
   static "star_border_purple500" = IconDataConstructor("star_border_purple500");
   static "star_border_purple500_sharp" = IconDataConstructor("star_border_purple500", "sharp");
   static "star_border_purple500_rounded" = IconDataConstructor("star_border_purple500", "rounded");
-  static "star_border_purple500_outlined" = IconDataConstructor(
-    "star_border_purple500",
-    "outlined",
-  );
+  static "star_border_purple500_outlined" = IconDataConstructor("star_border_purple500", "outlined");
   static "star_half" = IconDataConstructor("star_half");
   static "star_half_sharp" = IconDataConstructor("star_half", "sharp");
   static "star_half_rounded" = IconDataConstructor("star_half", "rounded");
@@ -6865,38 +6298,20 @@ class Icons {
   static "stars_outlined" = IconDataConstructor("stars", "outlined");
   static "stay_current_landscape" = IconDataConstructor("stay_current_landscape");
   static "stay_current_landscape_sharp" = IconDataConstructor("stay_current_landscape", "sharp");
-  static "stay_current_landscape_rounded" = IconDataConstructor(
-    "stay_current_landscape",
-    "rounded",
-  );
-  static "stay_current_landscape_outlined" = IconDataConstructor(
-    "stay_current_landscape",
-    "outlined",
-  );
+  static "stay_current_landscape_rounded" = IconDataConstructor("stay_current_landscape", "rounded");
+  static "stay_current_landscape_outlined" = IconDataConstructor("stay_current_landscape", "outlined");
   static "stay_current_portrait" = IconDataConstructor("stay_current_portrait");
   static "stay_current_portrait_sharp" = IconDataConstructor("stay_current_portrait", "sharp");
   static "stay_current_portrait_rounded" = IconDataConstructor("stay_current_portrait", "rounded");
-  static "stay_current_portrait_outlined" = IconDataConstructor(
-    "stay_current_portrait",
-    "outlined",
-  );
+  static "stay_current_portrait_outlined" = IconDataConstructor("stay_current_portrait", "outlined");
   static "stay_primary_landscape" = IconDataConstructor("stay_primary_landscape");
   static "stay_primary_landscape_sharp" = IconDataConstructor("stay_primary_landscape", "sharp");
-  static "stay_primary_landscape_rounded" = IconDataConstructor(
-    "stay_primary_landscape",
-    "rounded",
-  );
-  static "stay_primary_landscape_outlined" = IconDataConstructor(
-    "stay_primary_landscape",
-    "outlined",
-  );
+  static "stay_primary_landscape_rounded" = IconDataConstructor("stay_primary_landscape", "rounded");
+  static "stay_primary_landscape_outlined" = IconDataConstructor("stay_primary_landscape", "outlined");
   static "stay_primary_portrait" = IconDataConstructor("stay_primary_portrait");
   static "stay_primary_portrait_sharp" = IconDataConstructor("stay_primary_portrait", "sharp");
   static "stay_primary_portrait_rounded" = IconDataConstructor("stay_primary_portrait", "rounded");
-  static "stay_primary_portrait_outlined" = IconDataConstructor(
-    "stay_primary_portrait",
-    "outlined",
-  );
+  static "stay_primary_portrait_outlined" = IconDataConstructor("stay_primary_portrait", "outlined");
   static "sticky_note_2" = IconDataConstructor("sticky_note_2");
   static "sticky_note_2_sharp" = IconDataConstructor("sticky_note_2", "sharp");
   static "sticky_note_2_rounded" = IconDataConstructor("sticky_note_2", "rounded");
@@ -6959,27 +6374,12 @@ class Icons {
   static "style_outlined" = IconDataConstructor("style", "outlined");
   static "subdirectory_arrow_left" = IconDataConstructor("subdirectory_arrow_left");
   static "subdirectory_arrow_left_sharp" = IconDataConstructor("subdirectory_arrow_left", "sharp");
-  static "subdirectory_arrow_left_rounded" = IconDataConstructor(
-    "subdirectory_arrow_left",
-    "rounded",
-  );
-  static "subdirectory_arrow_left_outlined" = IconDataConstructor(
-    "subdirectory_arrow_left",
-    "outlined",
-  );
+  static "subdirectory_arrow_left_rounded" = IconDataConstructor("subdirectory_arrow_left", "rounded");
+  static "subdirectory_arrow_left_outlined" = IconDataConstructor("subdirectory_arrow_left", "outlined");
   static "subdirectory_arrow_right" = IconDataConstructor("subdirectory_arrow_right");
-  static "subdirectory_arrow_right_sharp" = IconDataConstructor(
-    "subdirectory_arrow_right",
-    "sharp",
-  );
-  static "subdirectory_arrow_right_rounded" = IconDataConstructor(
-    "subdirectory_arrow_right",
-    "rounded",
-  );
-  static "subdirectory_arrow_right_outlined" = IconDataConstructor(
-    "subdirectory_arrow_right",
-    "outlined",
-  );
+  static "subdirectory_arrow_right_sharp" = IconDataConstructor("subdirectory_arrow_right", "sharp");
+  static "subdirectory_arrow_right_rounded" = IconDataConstructor("subdirectory_arrow_right", "rounded");
+  static "subdirectory_arrow_right_outlined" = IconDataConstructor("subdirectory_arrow_right", "outlined");
   static "subject" = IconDataConstructor("subject");
   static "subject_sharp" = IconDataConstructor("subject", "sharp");
   static "subject_rounded" = IconDataConstructor("subject", "rounded");
@@ -7014,14 +6414,8 @@ class Icons {
   static "superscript_outlined" = IconDataConstructor("superscript", "outlined");
   static "supervised_user_circle" = IconDataConstructor("supervised_user_circle");
   static "supervised_user_circle_sharp" = IconDataConstructor("supervised_user_circle", "sharp");
-  static "supervised_user_circle_rounded" = IconDataConstructor(
-    "supervised_user_circle",
-    "rounded",
-  );
-  static "supervised_user_circle_outlined" = IconDataConstructor(
-    "supervised_user_circle",
-    "outlined",
-  );
+  static "supervised_user_circle_rounded" = IconDataConstructor("supervised_user_circle", "rounded");
+  static "supervised_user_circle_outlined" = IconDataConstructor("supervised_user_circle", "outlined");
   static "supervisor_account" = IconDataConstructor("supervisor_account");
   static "supervisor_account_sharp" = IconDataConstructor("supervisor_account", "sharp");
   static "supervisor_account_rounded" = IconDataConstructor("supervisor_account", "rounded");
@@ -7052,14 +6446,8 @@ class Icons {
   static "swap_horiz_outlined" = IconDataConstructor("swap_horiz", "outlined");
   static "swap_horizontal_circle" = IconDataConstructor("swap_horizontal_circle");
   static "swap_horizontal_circle_sharp" = IconDataConstructor("swap_horizontal_circle", "sharp");
-  static "swap_horizontal_circle_rounded" = IconDataConstructor(
-    "swap_horizontal_circle",
-    "rounded",
-  );
-  static "swap_horizontal_circle_outlined" = IconDataConstructor(
-    "swap_horizontal_circle",
-    "outlined",
-  );
+  static "swap_horizontal_circle_rounded" = IconDataConstructor("swap_horizontal_circle", "rounded");
+  static "swap_horizontal_circle_outlined" = IconDataConstructor("swap_horizontal_circle", "outlined");
   static "swap_vert" = IconDataConstructor("swap_vert");
   static "swap_vert_sharp" = IconDataConstructor("swap_vert", "sharp");
   static "swap_vert_rounded" = IconDataConstructor("swap_vert", "rounded");
@@ -7114,40 +6502,16 @@ class Icons {
   static "sync_problem_outlined" = IconDataConstructor("sync_problem", "outlined");
   static "system_security_update" = IconDataConstructor("system_security_update");
   static "system_security_update_sharp" = IconDataConstructor("system_security_update", "sharp");
-  static "system_security_update_rounded" = IconDataConstructor(
-    "system_security_update",
-    "rounded",
-  );
-  static "system_security_update_outlined" = IconDataConstructor(
-    "system_security_update",
-    "outlined",
-  );
+  static "system_security_update_rounded" = IconDataConstructor("system_security_update", "rounded");
+  static "system_security_update_outlined" = IconDataConstructor("system_security_update", "outlined");
   static "system_security_update_good" = IconDataConstructor("system_security_update_good");
-  static "system_security_update_good_sharp" = IconDataConstructor(
-    "system_security_update_good",
-    "sharp",
-  );
-  static "system_security_update_good_rounded" = IconDataConstructor(
-    "system_security_update_good",
-    "rounded",
-  );
-  static "system_security_update_good_outlined" = IconDataConstructor(
-    "system_security_update_good",
-    "outlined",
-  );
+  static "system_security_update_good_sharp" = IconDataConstructor("system_security_update_good", "sharp");
+  static "system_security_update_good_rounded" = IconDataConstructor("system_security_update_good", "rounded");
+  static "system_security_update_good_outlined" = IconDataConstructor("system_security_update_good", "outlined");
   static "system_security_update_warning" = IconDataConstructor("system_security_update_warning");
-  static "system_security_update_warning_sharp" = IconDataConstructor(
-    "system_security_update_warning",
-    "sharp",
-  );
-  static "system_security_update_warning_rounded" = IconDataConstructor(
-    "system_security_update_warning",
-    "rounded",
-  );
-  static "system_security_update_warning_outlined" = IconDataConstructor(
-    "system_security_update_warning",
-    "outlined",
-  );
+  static "system_security_update_warning_sharp" = IconDataConstructor("system_security_update_warning", "sharp");
+  static "system_security_update_warning_rounded" = IconDataConstructor("system_security_update_warning", "rounded");
+  static "system_security_update_warning_outlined" = IconDataConstructor("system_security_update_warning", "outlined");
   static "system_update" = IconDataConstructor("system_update");
   static "system_update_sharp" = IconDataConstructor("system_update", "sharp");
   static "system_update_rounded" = IconDataConstructor("system_update", "rounded");
@@ -7246,21 +6610,12 @@ class Icons {
   static "text_rotate_vertical_outlined" = IconDataConstructor("text_rotate_vertical", "outlined");
   static "text_rotation_angledown" = IconDataConstructor("text_rotation_angledown");
   static "text_rotation_angledown_sharp" = IconDataConstructor("text_rotation_angledown", "sharp");
-  static "text_rotation_angledown_rounded" = IconDataConstructor(
-    "text_rotation_angledown",
-    "rounded",
-  );
-  static "text_rotation_angledown_outlined" = IconDataConstructor(
-    "text_rotation_angledown",
-    "outlined",
-  );
+  static "text_rotation_angledown_rounded" = IconDataConstructor("text_rotation_angledown", "rounded");
+  static "text_rotation_angledown_outlined" = IconDataConstructor("text_rotation_angledown", "outlined");
   static "text_rotation_angleup" = IconDataConstructor("text_rotation_angleup");
   static "text_rotation_angleup_sharp" = IconDataConstructor("text_rotation_angleup", "sharp");
   static "text_rotation_angleup_rounded" = IconDataConstructor("text_rotation_angleup", "rounded");
-  static "text_rotation_angleup_outlined" = IconDataConstructor(
-    "text_rotation_angleup",
-    "outlined",
-  );
+  static "text_rotation_angleup_outlined" = IconDataConstructor("text_rotation_angleup", "outlined");
   static "text_rotation_down" = IconDataConstructor("text_rotation_down");
   static "text_rotation_down_sharp" = IconDataConstructor("text_rotation_down", "sharp");
   static "text_rotation_down_rounded" = IconDataConstructor("text_rotation_down", "rounded");
@@ -7422,18 +6777,9 @@ class Icons {
   static "tram_rounded" = IconDataConstructor("tram", "rounded");
   static "tram_outlined" = IconDataConstructor("tram", "outlined");
   static "transfer_within_a_station" = IconDataConstructor("transfer_within_a_station");
-  static "transfer_within_a_station_sharp" = IconDataConstructor(
-    "transfer_within_a_station",
-    "sharp",
-  );
-  static "transfer_within_a_station_rounded" = IconDataConstructor(
-    "transfer_within_a_station",
-    "rounded",
-  );
-  static "transfer_within_a_station_outlined" = IconDataConstructor(
-    "transfer_within_a_station",
-    "outlined",
-  );
+  static "transfer_within_a_station_sharp" = IconDataConstructor("transfer_within_a_station", "sharp");
+  static "transfer_within_a_station_rounded" = IconDataConstructor("transfer_within_a_station", "rounded");
+  static "transfer_within_a_station_outlined" = IconDataConstructor("transfer_within_a_station", "outlined");
   static "transform" = IconDataConstructor("transform");
   static "transform_sharp" = IconDataConstructor("transform", "sharp");
   static "transform_rounded" = IconDataConstructor("transform", "rounded");
@@ -7581,17 +6927,11 @@ class Icons {
   static "vertical_align_bottom" = IconDataConstructor("vertical_align_bottom");
   static "vertical_align_bottom_sharp" = IconDataConstructor("vertical_align_bottom", "sharp");
   static "vertical_align_bottom_rounded" = IconDataConstructor("vertical_align_bottom", "rounded");
-  static "vertical_align_bottom_outlined" = IconDataConstructor(
-    "vertical_align_bottom",
-    "outlined",
-  );
+  static "vertical_align_bottom_outlined" = IconDataConstructor("vertical_align_bottom", "outlined");
   static "vertical_align_center" = IconDataConstructor("vertical_align_center");
   static "vertical_align_center_sharp" = IconDataConstructor("vertical_align_center", "sharp");
   static "vertical_align_center_rounded" = IconDataConstructor("vertical_align_center", "rounded");
-  static "vertical_align_center_outlined" = IconDataConstructor(
-    "vertical_align_center",
-    "outlined",
-  );
+  static "vertical_align_center_outlined" = IconDataConstructor("vertical_align_center", "outlined");
   static "vertical_align_top" = IconDataConstructor("vertical_align_top");
   static "vertical_align_top_sharp" = IconDataConstructor("vertical_align_top", "sharp");
   static "vertical_align_top_rounded" = IconDataConstructor("vertical_align_top", "rounded");
@@ -7931,18 +7271,9 @@ class Icons {
   static "wifi_tethering_rounded" = IconDataConstructor("wifi_tethering", "rounded");
   static "wifi_tethering_outlined" = IconDataConstructor("wifi_tethering", "outlined");
   static "wifi_tethering_error_rounded" = IconDataConstructor("wifi_tethering_error", "rounded");
-  static "wifi_tethering_error_rounded_sharp" = IconDataConstructor(
-    "wifi_tethering_error_rounded",
-    "sharp",
-  );
-  static "wifi_tethering_error_rounded_rounded" = IconDataConstructor(
-    "wifi_tethering_error_rounded",
-    "rounded",
-  );
-  static "wifi_tethering_error_rounded_outlined" = IconDataConstructor(
-    "wifi_tethering_error_rounded",
-    "outlined",
-  );
+  static "wifi_tethering_error_rounded_sharp" = IconDataConstructor("wifi_tethering_error_rounded", "sharp");
+  static "wifi_tethering_error_rounded_rounded" = IconDataConstructor("wifi_tethering_error_rounded", "rounded");
+  static "wifi_tethering_error_rounded_outlined" = IconDataConstructor("wifi_tethering_error_rounded", "outlined");
   static "wifi_tethering_off" = IconDataConstructor("wifi_tethering_off");
   static "wifi_tethering_off_sharp" = IconDataConstructor("wifi_tethering_off", "sharp");
   static "wifi_tethering_off_rounded" = IconDataConstructor("wifi_tethering_off", "rounded");

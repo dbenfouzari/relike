@@ -23,12 +23,7 @@ interface StyledIconProps {
 
 type IconButtonProps = IconButtonBaseProps & StyledIconProps;
 
-export const IconButtonBase: FC<IconButtonProps> = ({
-  icon: IconComponent,
-  onPress,
-  className,
-  ...props
-}) => (
+export const IconButtonBase: FC<IconButtonProps> = ({ icon: IconComponent, onPress, className, ...props }) => (
   <button className={className} onClick={onPress} {...props}>
     {IconComponent}
   </button>

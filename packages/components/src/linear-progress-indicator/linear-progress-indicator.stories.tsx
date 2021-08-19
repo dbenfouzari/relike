@@ -31,13 +31,9 @@ const AnimatedComponent = (props: ComponentProps<typeof LinearProgressIndicator>
   return <AnimatedLinearProgressIndicator {...props} value={value.to((x) => x)} />;
 };
 
-const Template: ComponentStory<typeof LinearProgressIndicator> = (args) => (
-  <LinearProgressIndicator {...args} />
-);
+const Template: ComponentStory<typeof LinearProgressIndicator> = (args) => <LinearProgressIndicator {...args} />;
 
-const AnimatedTemplate: ComponentStory<typeof LinearProgressIndicator> = (args) => (
-  <AnimatedComponent {...args} />
-);
+const AnimatedTemplate: ComponentStory<typeof LinearProgressIndicator> = (args) => <AnimatedComponent {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

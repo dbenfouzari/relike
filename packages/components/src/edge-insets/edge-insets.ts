@@ -1,11 +1,6 @@
 import { Maybe } from "../types";
 
-type NewEdgeInsets<T> = new (
-  top: Maybe<number>,
-  right: Maybe<number>,
-  bottom: Maybe<number>,
-  left: Maybe<number>,
-) => T;
+type NewEdgeInsets<T> = new (top: Maybe<number>, right: Maybe<number>, bottom: Maybe<number>, left: Maybe<number>) => T;
 
 abstract class EdgeInsets {
   top: Maybe<number>;
@@ -13,12 +8,7 @@ abstract class EdgeInsets {
   bottom: Maybe<number>;
   left: Maybe<number>;
 
-  constructor(
-    top: Maybe<number>,
-    right: Maybe<number>,
-    bottom: Maybe<number>,
-    left: Maybe<number>,
-  ) {
+  constructor(top: Maybe<number>, right: Maybe<number>, bottom: Maybe<number>, left: Maybe<number>) {
     this.top = top;
     this.right = right;
     this.bottom = bottom;

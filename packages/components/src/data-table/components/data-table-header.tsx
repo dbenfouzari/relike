@@ -10,10 +10,7 @@ interface DataTableHeaderProps<C> {
   classNames?: DataTableClassNames;
 }
 
-const DataTableHeader = <C extends DataTableColumnProps>({
-  children,
-  classNames,
-}: DataTableHeaderProps<C>) => {
+const DataTableHeader = <C extends DataTableColumnProps>({ children, classNames }: DataTableHeaderProps<C>) => {
   const mandatoryColumns = filterChildren(children);
 
   return (

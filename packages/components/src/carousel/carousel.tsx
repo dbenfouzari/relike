@@ -24,8 +24,7 @@ interface CarouselProps {
  * You can use it to show a really simple carousel that you can control with chevrons.
  */
 export const Carousel: FC<CarouselProps> = ({ children, gap = 12 }) => {
-  const { leftIndicator, rightIndicator, listRef, scrollLeft, scrollRight, itemRef } =
-    useCarousel(children);
+  const { leftIndicator, rightIndicator, listRef, scrollLeft, scrollRight, itemRef } = useCarousel(children);
 
   const onScrollLeft = () => scrollLeft(1);
   const onScrollRight = () => scrollRight(1);

@@ -4,9 +4,7 @@ import useTextEditingController from "./useTextEditingController";
 
 describe("TextField/useTextEditingController", () => {
   it("should clear input", () => {
-    const { result } = renderHook(() =>
-      useTextEditingController({ listenValue: true, initialValue: "Hello Tests" }),
-    );
+    const { result } = renderHook(() => useTextEditingController({ listenValue: true, initialValue: "Hello Tests" }));
 
     expect(result.current.value).toBe("Hello Tests");
 
@@ -18,9 +16,7 @@ describe("TextField/useTextEditingController", () => {
   });
 
   it("should handle selection", () => {
-    const { result } = renderHook(() =>
-      useTextEditingController({ listenValue: false, initialValue: "Hello Tests" }),
-    );
+    const { result } = renderHook(() => useTextEditingController({ listenValue: false, initialValue: "Hello Tests" }));
 
     act(() => {
       result.current.handleSelectionChange({
@@ -32,9 +28,7 @@ describe("TextField/useTextEditingController", () => {
   });
 
   it("should handle change", () => {
-    const { result } = renderHook(() =>
-      useTextEditingController({ listenValue: true, initialValue: "Hello Tests" }),
-    );
+    const { result } = renderHook(() => useTextEditingController({ listenValue: true, initialValue: "Hello Tests" }));
 
     act(() => {
       result.current.handleChange({
@@ -46,9 +40,7 @@ describe("TextField/useTextEditingController", () => {
   });
 
   it("should return correct value", () => {
-    const { result } = renderHook(() =>
-      useTextEditingController({ listenValue: false, initialValue: "Hello Tests" }),
-    );
+    const { result } = renderHook(() => useTextEditingController({ listenValue: false, initialValue: "Hello Tests" }));
 
     // It's undefined since we have no ref to give.
     expect(result.current.getValue()).toBe(undefined);
