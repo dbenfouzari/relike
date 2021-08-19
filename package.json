@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "tsc -b"
+    "build": "yarn workspaces foreach run prepare && tsc -b"
   },
   "devDependencies": {
     "@types/node": "^16.6.1",

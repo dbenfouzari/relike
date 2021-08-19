@@ -27,6 +27,9 @@
   },
   "references": [
     {
+      "path": "packages/cli"
+    },
+    {
       "path": "packages/client"
     },
     {

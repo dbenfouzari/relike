@@ -1,0 +1,9 @@
+import { FC } from 'react';
+
+interface __name__Props {}
+
+const __name__: FC<__name__Props> = () => (
+  <span>Hello __name__</span>
+);
+
+export default __name__;

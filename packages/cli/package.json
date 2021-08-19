@@ -1,0 +1,32 @@
+{
+  "name": "@fastics/cli",
+  "description": "Some CLI to help your development process",
+  "version": "0.0.1",
+  "author": "Donovan BENFOUZARI <d.benfouzari@gmail.com>",
+  "bugs": "https://github.com/fastics/fastics/issues",
+  "homepage": "https://github.com/fastics/fastics",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "fastics": "dist/index"
+  },
+  "scripts": {
+    "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates"
+  },
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastics/fastics.git",
+    "directory": "packages/cli"
+  },
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "commander": "^8.1.0",
+    "inquirer": "^8.1.2",
+    "inquirer-fuzzy-path": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/node": "^16.6.1"
+  }
+}

@@ -1,0 +1,13 @@
+import { FC } from 'react';
+
+import classes from './__name__(kebabCase).module.scss';
+
+interface __name__Props {}
+
+const __name__: FC<__name__Props> = () => (
+  <div className={classes.__name__(snakeCase)}>
+    <span>Hello, World!</span>
+  </div>
+)
+
+export default __name__;
