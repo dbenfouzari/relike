@@ -8,7 +8,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "bin": {
-    "fastics": "dist/index"
+    "fastics": "dist/index.js"
   },
   "scripts": {
     "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates"

@@ -19,6 +19,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "paths": {
       "@fastics/*": [
         "packages/*/src/index.ts"

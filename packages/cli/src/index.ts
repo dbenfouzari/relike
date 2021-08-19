@@ -1,19 +1,24 @@
-import { program } from 'commander';
+#!/usr/bin/env node
 
-import { generateComponent } from './commands';
+import { program } from "commander";
 
-program.version('0.0.1');
+import { generateComponent } from "./commands";
 
-program.name('yarn fastics');
+program.version("0.0.1");
+
+program.name("yarn fastics");
 
 /// Generate React Component.
 /// $ fastics generate:component --name Button --path src/components
 /// $ fastics g:c --name Button --path src/components
 program
-  .command('generate:component')
-  .alias('g:c')
-  .description('Generate React Component. It includes Storybook\'s story, CSS module stylesheet, and test file.')
-  .usage(`
+  .command("generate:component")
+  .alias("g:c")
+  .description(
+    "Generate React Component. It includes Storybook's story, CSS module stylesheet, and test file."
+  )
+  .usage(
+    `
   # By passing arguments
   $ fastics generate:component button src/components
    
@@ -26,20 +31,21 @@ program
   ? What is the component name ? button
   ? Select a target directory src/components/
   ✨  Done in 4.24s.
-`)
+`
+  )
 
-  .argument('[component]', 'Component name')
-  .argument('[path]', 'Your component\'s path')
+  .argument("[component]", "Component name")
+  .argument("[path]", "Your component's path")
 
-  .option('-n, --name <component>', 'Component name')
-  .option('-p, --path <path>', 'Your component\'s path')
-  .option('--no-style', 'Do not generate CSS module')
-  .option('--no-story', 'Do not generate story')
-  .option('--no-test', 'Do not generate test')
-  .option('-d, --debug', 'Output extra debugging')
+  .option("-n, --name <component>", "Component name")
+  .option("-p, --path <path>", "Your component's path")
+  .option("--no-style", "Do not generate CSS module")
+  .option("--no-story", "Do not generate story")
+  .option("--no-test", "Do not generate test")
+  .option("-d, --debug", "Output extra debugging")
 
   .action(generateComponent)
 
-  .showHelpAfterError('(add --help for additional information)');
+  .showHelpAfterError("(add --help for additional information)");
 
 program.parse();
