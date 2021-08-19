@@ -11,7 +11,8 @@
     "fastics": "dist/index.js"
   },
   "scripts": {
-    "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates"
+    "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates",
+    "build": "yarn prepare && babel --source-maps --no-comments --quiet --root-mode upward --extensions \".js,.ts\" src -d dist"
   },
   "types": "dist/index.d.ts",
   "repository": {
