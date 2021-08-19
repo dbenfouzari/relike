@@ -1,10 +1,10 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from '../colors';
-import Loader from './loader';
+import Colors from "../colors";
+import Loader from "./loader";
 
 export default {
-  title: 'Loader',
+  title: "Loader",
   component: Loader,
   argTypes: {
     color: {

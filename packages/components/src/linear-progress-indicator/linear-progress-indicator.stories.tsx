@@ -1,12 +1,12 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React, { ComponentProps } from 'react';
-import { animated, config, useSpring } from 'react-spring';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React, { ComponentProps } from "react";
+import { animated, config, useSpring } from "react-spring";
 
-import Duration from '../duration';
-import LinearProgressIndicator from './linear-progress-indicator';
+import Duration from "../duration";
+import LinearProgressIndicator from "./linear-progress-indicator";
 
 export default {
-  title: 'LinearProgressIndicator',
+  title: "LinearProgressIndicator",
   component: LinearProgressIndicator,
   argTypes: {
     backgroundColor: { control: { disable: true } },

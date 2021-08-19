@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import TextField from './text-field';
+import TextField from "./text-field";
 
-it('should render successfully', () => {
+it("should render successfully", () => {
   render(<TextField />);
 });

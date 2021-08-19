@@ -1,4 +1,4 @@
-import { ComponentType, ReactElement, ReactText } from 'react';
+import { ComponentType, ReactElement, ReactText } from "react";
 
 export type DataTableData = Readonly<Array<{ [k: string]: string | number }>>;
 
@@ -31,5 +31,5 @@ export interface DataTableProps<D extends DataTableData> {
   classNames?: DataTableClassNames;
 }
 
-export type SortDirection = 'asc' | 'desc';
+export type SortDirection = "asc" | "desc";
 export type Sort<D extends DataTableData> = [keyof D[number], SortDirection];

@@ -1,15 +1,15 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import Colors from '../colors';
-import Margin from '../margin';
-import Padding from '../padding';
-import Container from './container';
+import Colors from "../colors";
+import Margin from "../margin";
+import Padding from "../padding";
+import Container from "./container";
 
-it('should render successfully without props', () => {
+it("should render successfully without props", () => {
   render(<Container />);
 });
 
-it('should render successfully with all props', () => {
+it("should render successfully with all props", () => {
   render(
     <Container
       color={Colors.blueGrey[300]}

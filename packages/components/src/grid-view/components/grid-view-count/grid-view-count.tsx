@@ -37,11 +37,7 @@ interface GridViewCountProps {
 
 type StylesProps = Pick<
   GridViewCountProps,
-  | "crossAxisCount"
-  | "crossAxisSpacing"
-  | "mainAxisSpacing"
-  | "padding"
-  | "scrollDirection"
+  "crossAxisCount" | "crossAxisSpacing" | "mainAxisSpacing" | "padding" | "scrollDirection"
 >;
 
 const useStyles = createUseStyles({
@@ -55,20 +51,14 @@ const useStyles = createUseStyles({
     // Since we want a grid
     display: "grid",
     // Here we handle gaps between each child
-    columnGap:
-      scrollDirection === Axis.vertical ? crossAxisSpacing : mainAxisSpacing,
-    rowGap:
-      scrollDirection === Axis.vertical ? mainAxisSpacing : crossAxisSpacing,
+    columnGap: scrollDirection === Axis.vertical ? crossAxisSpacing : mainAxisSpacing,
+    rowGap: scrollDirection === Axis.vertical ? mainAxisSpacing : crossAxisSpacing,
     // Define how many columns or rows we should draw.
     // Based on `scrollDirection`.
     gridTemplateColumns:
-      scrollDirection === Axis.vertical
-        ? `repeat(${crossAxisCount}, 1fr)`
-        : undefined,
+      scrollDirection === Axis.vertical ? `repeat(${crossAxisCount}, 1fr)` : undefined,
     gridTemplateRows:
-      scrollDirection === Axis.horizontal
-        ? `repeat(${crossAxisCount}, 1fr)`
-        : undefined,
+      scrollDirection === Axis.horizontal ? `repeat(${crossAxisCount}, 1fr)` : undefined,
     // We want the parent scrollable if content overflow
     overflow: "auto",
     // This is where we define global padding.
@@ -111,11 +101,7 @@ const useStyles = createUseStyles({
 /**
  * Creates a scrollable, 2D array of widgets with a fixed number of tiles in the cross axis.
  */
-export const GridViewCount: FC<GridViewCountProps> = ({
-  children,
-  className,
-  ...props
-}) => {
+export const GridViewCount: FC<GridViewCountProps> = ({ children, className, ...props }) => {
   const styles = useStyles(props);
 
   /**
@@ -125,7 +111,7 @@ export const GridViewCount: FC<GridViewCountProps> = ({
   useEffect(() => {
     if (props.scrollDirection === Axis.horizontal) {
       console.warn(
-        "[GridView.Count] You used Axis.horizontal as scrollDirection. Be warned that strange behaviour may occur with this."
+        "[GridView.Count] You used Axis.horizontal as scrollDirection. Be warned that strange behaviour may occur with this.",
       );
     }
   }, [props.scrollDirection]);
@@ -135,7 +121,7 @@ export const GridViewCount: FC<GridViewCountProps> = ({
       {Children.map<JSX.Element, any>(children, (child) =>
         cloneElement(child, {
           className: classNames(child.props.className, styles.child),
-        })
+        }),
       )}
     </div>
   );

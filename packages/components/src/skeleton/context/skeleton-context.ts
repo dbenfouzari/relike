@@ -1,7 +1,7 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
-import Color from '../../color';
-import Colors from '../../colors';
+import Color from "../../color";
+import Colors from "../../colors";
 
 type SkeletonContextValue = {
   active?: boolean;

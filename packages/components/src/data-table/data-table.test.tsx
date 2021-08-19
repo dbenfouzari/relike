@@ -1,14 +1,14 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import Icon from '../icon';
-import Icons from '../icons';
-import DataTable, { buildDataColumn } from './data-table';
+import Icon from "../icon";
+import Icons from "../icons";
+import DataTable, { buildDataColumn } from "./data-table";
 
-const data = [{ name: 'John Doe', age: 23, gender: 'male' }] as const;
+const data = [{ name: "John Doe", age: 23, gender: "male" }] as const;
 
 type Data = typeof data;
 
-it('should render successfully', () => {
+it("should render successfully", () => {
   const DataColumn = buildDataColumn<Data>();
 
   render(
@@ -29,7 +29,7 @@ it('should render successfully', () => {
   );
 });
 
-it('DataColumn should return null', () => {
+it("DataColumn should return null", () => {
   const DataColumn = buildDataColumn<Data>();
 
   expect(render(<DataColumn label="Name" value="name" />).container.firstChild).toBe(null);

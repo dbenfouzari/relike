@@ -1,12 +1,12 @@
-import classnames from 'classnames';
-import React, { createElement, ReactHTML, ReactNode } from 'react';
-import { createUseStyles } from 'react-jss';
+import classnames from "classnames";
+import React, { createElement, ReactHTML, ReactNode } from "react";
+import { createUseStyles } from "react-jss";
 
-import Align from '../align';
-import Alignment from '../alignment';
-import Color from '../color';
-import Margin from '../margin';
-import Padding from '../padding';
+import Align from "../align";
+import Alignment from "../alignment";
+import Color from "../color";
+import Margin from "../margin";
+import Padding from "../padding";
 
 interface ContainerProps {
   /**
@@ -56,8 +56,8 @@ interface ContainerStylesProps {
 
 const useStyles = createUseStyles({
   container: ({ color, height, margin, padding, width }: ContainerStylesProps) => ({
-    boxSizing: 'border-box',
-    display: 'flex',
+    boxSizing: "border-box",
+    display: "flex",
 
     paddingTop: padding?.top ?? null,
     paddingRight: padding?.right ?? null,
@@ -97,7 +97,7 @@ const useStyles = createUseStyles({
  */
 export const Container: React.FC<ContainerProps> = ({
   children,
-  as = 'div',
+  as = "div",
   alignment,
   className,
   ...rest

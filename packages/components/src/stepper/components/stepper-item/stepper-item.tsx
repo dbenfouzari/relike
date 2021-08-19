@@ -1,11 +1,11 @@
-import classnames from 'classnames';
-import React, { FC } from 'react';
-import { createUseStyles } from 'react-jss';
+import classnames from "classnames";
+import React, { FC } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../../../color';
-import Icon from '../../../icon';
-import Icons, { IconData } from '../../../icons';
-import classes from './stepper-item.module.scss';
+import Color from "../../../color";
+import Icon from "../../../icon";
+import Icons, { IconData } from "../../../icons";
+import classes from "./stepper-item.module.scss";
 
 export interface StepperItemProps {
   /**
@@ -45,10 +45,10 @@ const makeCreateUseStyles = ({
 }) =>
   createUseStyles({
     wrapper: {
-      '--stepper-main-color': primaryColor.toRGBA(),
-      '--stepper-secondary-color': secondaryColor.toRGBA(),
-      '--stepper-disabled-color': disabledColor.toRGBA(),
-      '--stepper-title-color': titleColor.toRGBA(),
+      "--stepper-main-color": primaryColor.toRGBA(),
+      "--stepper-secondary-color": secondaryColor.toRGBA(),
+      "--stepper-disabled-color": disabledColor.toRGBA(),
+      "--stepper-title-color": titleColor.toRGBA(),
     },
   });
 

@@ -1,1 +1,1 @@
-export { default } from './loader-screen';
+export { default } from "./loader-screen";

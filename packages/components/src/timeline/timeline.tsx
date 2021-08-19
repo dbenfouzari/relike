@@ -1,9 +1,9 @@
-import classnames from 'classnames';
-import React, { FC, ReactElement } from 'react';
+import classnames from "classnames";
+import React, { FC, ReactElement } from "react";
 
-import TimelineItem from './components/timeline-item';
-import classes from './timeline.module.scss';
-import { TimelineMode } from './types';
+import TimelineItem from "./components/timeline-item";
+import classes from "./timeline.module.scss";
+import { TimelineMode } from "./types";
 
 interface TimelineProps {
   /**
@@ -36,12 +36,12 @@ export type TimelineComponent = FC<TimelineProps> & {
  *
  * @see TimelineItem
  */
-export const Timeline: TimelineComponent = ({ children, mode = 'left' }) => (
+export const Timeline: TimelineComponent = ({ children, mode = "left" }) => (
   <div
     className={classnames(classes.timeline, {
-      timeline__left: mode === 'left',
-      timeline__right: mode === 'right',
-      timeline__alternate: mode === 'alternate',
+      timeline__left: mode === "left",
+      timeline__right: mode === "right",
+      timeline__alternate: mode === "alternate",
     })}
   >
     {children}

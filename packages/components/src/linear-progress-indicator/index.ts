@@ -1,1 +1,1 @@
-export { default } from './linear-progress-indicator';
+export { default } from "./linear-progress-indicator";

@@ -1,13 +1,13 @@
-import classnames from 'classnames';
-import React, { useCallback, useMemo, useState } from 'react';
+import classnames from "classnames";
+import React, { useCallback, useMemo, useState } from "react";
 
-import DateTime from '../date-time';
-import Duration from '../duration';
-import classes from './calendar.module.scss';
-import { CalendarTop, Days, MonthDays } from './components';
-import { SupportedLocales } from './constants';
-import { CalendarEvent, Day } from './types';
-import { filterCalendarEvents } from './utils';
+import DateTime from "../date-time";
+import Duration from "../duration";
+import classes from "./calendar.module.scss";
+import { CalendarTop, Days, MonthDays } from "./components";
+import { SupportedLocales } from "./constants";
+import { CalendarEvent, Day } from "./types";
+import { filterCalendarEvents } from "./utils";
 
 interface CalendarProps {
   /**
@@ -43,7 +43,7 @@ export const Calendar: React.FC<CalendarProps> = ({
 }) => {
   const date = useMemo<DateTime>(
     () =>
-      typeof initialValue === 'number'
+      typeof initialValue === "number"
         ? DateTime.fromMillisecondsSinceEpoch(initialValue)
         : initialValue,
     [initialValue],

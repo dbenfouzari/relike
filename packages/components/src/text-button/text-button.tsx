@@ -1,11 +1,5 @@
 import classNames from "classnames";
-import React, {
-  FC,
-  MouseEvent,
-  MouseEventHandler,
-  ReactChild,
-  useCallback,
-} from "react";
+import React, { FC, MouseEvent, MouseEventHandler, ReactChild, useCallback } from "react";
 
 import { Maybe } from "../types";
 import styles from "./text-button.module.scss";
@@ -31,11 +25,7 @@ export interface TextButtonProps {
  * @see [OutlinedButton], a [TextButton] with a border outline.
  * @see [ElevatedButton], a filled button whose material elevates when pressed.
  */
-export const TextButton: FC<TextButtonProps> = ({
-  onPress,
-  children,
-  className,
-}) => {
+export const TextButton: FC<TextButtonProps> = ({ onPress, children, className }) => {
   // Handle click event
   const handleClick = useCallback(
     (event: MouseEvent<HTMLButtonElement>) => {
@@ -45,16 +35,12 @@ export const TextButton: FC<TextButtonProps> = ({
         onPress(event);
       }
     },
-    [onPress]
+    [onPress],
   );
 
   return (
     <button
-      className={classNames(
-        styles.wrapper,
-        { [styles.wrapper__disabled]: !onPress },
-        className
-      )}
+      className={classNames(styles.wrapper, { [styles.wrapper__disabled]: !onPress }, className)}
       onClick={handleClick}
       data-testid="text-button"
     >

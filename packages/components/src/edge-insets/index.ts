@@ -1,1 +1,1 @@
-export { default } from './edge-insets';
+export { default } from "./edge-insets";

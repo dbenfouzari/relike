@@ -1,11 +1,11 @@
-import classnames from 'classnames';
-import React, { FC } from 'react';
-import { createUseStyles } from 'react-jss';
+import classnames from "classnames";
+import React, { FC } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../../../color';
-import Colors from '../../../colors';
-import useSkeletonContext from '../../hooks/useSkeletonContext';
-import classes from './title.module.scss';
+import Color from "../../../color";
+import Colors from "../../../colors";
+import useSkeletonContext from "../../hooks/useSkeletonContext";
+import classes from "./title.module.scss";
 
 interface SkeletonTitleProps {}
 

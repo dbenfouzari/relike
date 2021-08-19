@@ -1,1 +1,1 @@
-export { default } from './align';
+export { default } from "./align";

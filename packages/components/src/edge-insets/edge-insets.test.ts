@@ -1,14 +1,14 @@
-import AbstractEdgeInsets from './edge-insets';
+import AbstractEdgeInsets from "./edge-insets";
 
 class EdgeInsets extends AbstractEdgeInsets {
   toto() {
-    return 'toto';
+    return "toto";
   }
 }
 
-describe('EdgeInsets', () => {
-  describe('.all constructor', () => {
-    it('.all should return correct value', () => {
+describe("EdgeInsets", () => {
+  describe(".all constructor", () => {
+    it(".all should return correct value", () => {
       const { left, bottom, right, top } = EdgeInsets.all(32);
 
       expect(left).toEqual(32);
@@ -18,8 +18,8 @@ describe('EdgeInsets', () => {
     });
   });
 
-  describe('.symmetric constructor', () => {
-    it('.symmetric should return correct value without vertical', () => {
+  describe(".symmetric constructor", () => {
+    it(".symmetric should return correct value without vertical", () => {
       const { top, right, bottom, left } = EdgeInsets.symmetric({ horizontal: 12 });
 
       expect(top).toEqual(null);
@@ -28,7 +28,7 @@ describe('EdgeInsets', () => {
       expect(left).toEqual(12);
     });
 
-    it('.symmetric should return correct value without horizontal', () => {
+    it(".symmetric should return correct value without horizontal", () => {
       const { top, right, bottom, left } = EdgeInsets.symmetric({ vertical: 12 });
 
       expect(top).toEqual(12);
@@ -37,7 +37,7 @@ describe('EdgeInsets', () => {
       expect(left).toEqual(null);
     });
 
-    it('.symmetric should return correct value with horizontal & vertical', () => {
+    it(".symmetric should return correct value with horizontal & vertical", () => {
       const { top, right, bottom, left } = EdgeInsets.symmetric({ horizontal: 12, vertical: 6 });
 
       expect(top).toEqual(6);
@@ -47,8 +47,8 @@ describe('EdgeInsets', () => {
     });
   });
 
-  describe('.only constructor', () => {
-    it('should return correct value in all cases', () => {
+  describe(".only constructor", () => {
+    it("should return correct value in all cases", () => {
       const onlyNothing = EdgeInsets.only();
       expect(onlyNothing.top).toEqual(null);
       expect(onlyNothing.right).toEqual(null);
@@ -81,8 +81,8 @@ describe('EdgeInsets', () => {
     });
   });
 
-  describe('.fromLTRB constructor', () => {
-    it('should return correct value', () => {
+  describe(".fromLTRB constructor", () => {
+    it("should return correct value", () => {
       const { top, right, bottom, left } = EdgeInsets.fromLTRB(1, 2, 3, 4);
 
       expect(top).toEqual(2);
@@ -92,7 +92,7 @@ describe('EdgeInsets', () => {
     });
   });
 
-  describe('.zero constructor', () => {
+  describe(".zero constructor", () => {
     const { top, right, bottom, left } = EdgeInsets.zero();
 
     expect(top).toEqual(0);

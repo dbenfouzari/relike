@@ -1,4 +1,4 @@
-import { Children, useEffect, useMemo, useRef, useState } from 'react';
+import { Children, useEffect, useMemo, useRef, useState } from "react";
 
 import {
   scrollLeftToStep,
@@ -6,7 +6,7 @@ import {
   scrollToStep,
   showHideIndicator,
   THRESHOLD,
-} from './utils';
+} from "./utils";
 
 const useCarousel = (children: JSX.Element | JSX.Element[]) => {
   const listRef = useRef<HTMLUListElement>(null);
@@ -22,8 +22,8 @@ const useCarousel = (children: JSX.Element | JSX.Element[]) => {
       (entries) => {
         entries.forEach((entry) => {
           entry.intersectionRatio >= THRESHOLD
-            ? entry.target.setAttribute('visible', 'true')
-            : entry.target.removeAttribute('visible');
+            ? entry.target.setAttribute("visible", "true")
+            : entry.target.removeAttribute("visible");
 
           showHideIndicator(itemRefs, setLeftIndicator, setRightIndicator);
         });

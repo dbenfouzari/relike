@@ -2,8 +2,8 @@
 
 import { css } from "styled-components";
 
-import { Maybe } from "../types";
 import EdgeInsets from "../edge-insets";
+import { Maybe } from "../types";
 
 const isNull = <T extends any>(value: Maybe<T>) => value === null;
 
@@ -12,12 +12,7 @@ class Margin extends EdgeInsets {
    * Generates CSS string based on data.
    */
   toCSSString() {
-    if (
-      isNull(this.top) &&
-      isNull(this.right) &&
-      isNull(this.bottom) &&
-      isNull(this.left)
-    )
+    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left))
       return null;
 
     const result = [];
@@ -38,12 +33,7 @@ class Margin extends EdgeInsets {
    * Generates `styled-components` CSS based on data.
    */
   toStyledCSS() {
-    if (
-      isNull(this.top) &&
-      isNull(this.right) &&
-      isNull(this.bottom) &&
-      isNull(this.left)
-    )
+    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left))
       return null;
 
     return css`
@@ -69,7 +59,7 @@ class Margin extends EdgeInsets {
       top ?? this.top,
       right ?? this.right,
       bottom ?? this.bottom,
-      left ?? this.left
+      left ?? this.left,
     );
   }
 

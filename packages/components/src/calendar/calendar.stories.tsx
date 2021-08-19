@@ -1,19 +1,19 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import DateTime from '../date-time';
-import Duration from '../duration';
-import Calendar from './calendar';
-import classes from './calendar.stories.module.scss';
-import { SupportedLocales } from './constants';
+import DateTime from "../date-time";
+import Duration from "../duration";
+import Calendar from "./calendar";
+import classes from "./calendar.stories.module.scss";
+import { SupportedLocales } from "./constants";
 
 export default {
-  title: 'Calendar',
+  title: "Calendar",
   component: Calendar,
   argTypes: {
-    initialValue: { control: { type: 'date' } },
+    initialValue: { control: { type: "date" } },
   },
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
   decorators: [(story) => <div className={classes.wrapper}>{story()}</div>],
 } as ComponentMeta<typeof Calendar>;
@@ -32,8 +32,8 @@ WithEvents.args = {
   locale: SupportedLocales.FR,
   initialValue: DateTime.now(),
   events: [
-    { date: DateTime.now().subtract(Duration.days(60)), title: 'Past Event' },
-    { date: DateTime.now(), title: 'Storybook Event That Rocks !' },
+    { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
+    { date: DateTime.now(), title: "Storybook Event That Rocks !" },
   ],
 };
 
@@ -43,7 +43,7 @@ Dark.args = {
   initialValue: DateTime.now(),
   dark: true,
   events: [
-    { date: DateTime.now().subtract(Duration.days(60)), title: 'Past Event' },
-    { date: DateTime.now(), title: 'Storybook Event That Rocks !' },
+    { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
+    { date: DateTime.now(), title: "Storybook Event That Rocks !" },
   ],
 };

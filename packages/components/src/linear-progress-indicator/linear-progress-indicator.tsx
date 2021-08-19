@@ -1,9 +1,9 @@
-import classNames from 'classnames';
-import React, { FC } from 'react';
-import { createUseStyles } from 'react-jss';
+import classNames from "classnames";
+import React, { FC } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../color';
-import Colors from '../colors';
+import Color from "../color";
+import Colors from "../colors";
 
 interface LinearProgressIndicatorProps {
   /**
@@ -33,19 +33,19 @@ const defaultColor = Colors.blue[500];
 const defaultHeight = 4;
 
 const useBasicStyles = createUseStyles({
-  wrapper: (props: Omit<LinearProgressIndicatorProps, 'value'>) => ({
-    width: '100%',
+  wrapper: (props: Omit<LinearProgressIndicatorProps, "value">) => ({
+    width: "100%",
     height: props.height ?? defaultHeight,
     backgroundColor: props.backgroundColor?.toRGBA() ?? defaultBackgroundColor.toRGBA(),
   }),
-  inner: (props: Omit<LinearProgressIndicatorProps, 'value'>) => ({
+  inner: (props: Omit<LinearProgressIndicatorProps, "value">) => ({
     backgroundColor: props.backgroundColor?.toRGBA() ?? defaultColor.toRGBA(),
     height: props.height ?? defaultHeight,
   }),
 });
 
 const useValueStyles = createUseStyles({
-  inner: (props: Pick<LinearProgressIndicatorProps, 'value'>) => ({
+  inner: (props: Pick<LinearProgressIndicatorProps, "value">) => ({
     width: `${props.value}%`,
   }),
 });
@@ -58,7 +58,7 @@ const useValueStyles = createUseStyles({
  */
 export const LinearProgressIndicator: FC<LinearProgressIndicatorProps> = ({ value, ...rest }) => {
   if (value > 100)
-    throw new RangeError('[LinearProgressIndicator] - The value should not exceed 100');
+    throw new RangeError("[LinearProgressIndicator] - The value should not exceed 100");
 
   const basicStyles = useBasicStyles(rest);
   const valueStyles = useValueStyles({ value });

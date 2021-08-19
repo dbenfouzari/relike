@@ -1,8 +1,8 @@
-import { action } from '@storybook/addon-actions';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { action } from "@storybook/addon-actions";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Modal from './modal';
-import classes from './modal.stories.module.scss';
+import Modal from "./modal";
+import classes from "./modal.stories.module.scss";
 
 const children = (
   <p>
@@ -47,7 +47,7 @@ const children = (
 );
 
 export default {
-  title: 'Modal',
+  title: "Modal",
   component: Modal,
   decorators: [(story) => <div style={{ height: 300 }}>{story()}</div>],
   argTypes: {
@@ -60,22 +60,22 @@ const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  onClose: action('close'),
-  title: 'Default modal',
+  onClose: action("close"),
+  title: "Default modal",
   children,
 };
 
 export const WithoutOverlay = Template.bind({});
 WithoutOverlay.args = {
-  title: 'Without overlay modal',
+  title: "Without overlay modal",
   withOverlay: false,
   children,
 };
 
 export const WithCustomClassNames = Template.bind({});
 WithCustomClassNames.args = {
-  onClose: action('close'),
-  title: 'Without overlay modal',
+  onClose: action("close"),
+  title: "Without overlay modal",
   children,
   classNames: classes,
 };

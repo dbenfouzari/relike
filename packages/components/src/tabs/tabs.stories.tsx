@@ -1,20 +1,20 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
 
-import Color from '../color';
-import Colors from '../colors';
-import Icons from '../icons';
-import Tabs from './tabs';
+import Color from "../color";
+import Colors from "../colors";
+import Icons from "../icons";
+import Tabs from "./tabs";
 
 export default {
-  title: 'Tabs',
+  title: "Tabs",
   component: Tabs,
   argTypes: {
     children: { control: { disable: true } },
     activeColor: { control: { disable: true } },
     inactiveColor: { control: { disable: true } },
   },
-  subcomponents: { 'Tabs.Item': Tabs.Item },
+  subcomponents: { "Tabs.Item": Tabs.Item },
 } as ComponentMeta<typeof Tabs>;
 
 const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;

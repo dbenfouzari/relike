@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import TextField from './text-field';
+import TextField from "./text-field";
 
 export default {
-  title: 'TextField',
+  title: "TextField",
   component: TextField,
   args: {
     obscureText: false,
@@ -17,5 +17,5 @@ const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args
 
 export const Default = Template.bind({});
 Default.args = {
-  placeholder: 'Hello Storybook',
+  placeholder: "Hello Storybook",
 };

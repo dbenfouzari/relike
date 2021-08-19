@@ -1,9 +1,9 @@
-import { action } from '@storybook/addon-actions';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { action } from "@storybook/addon-actions";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Icons from '../icons';
-import DropdownButton from './dropdown-button';
-import classes from './dropdown-button.stories.module.scss';
+import Icons from "../icons";
+import DropdownButton from "./dropdown-button";
+import classes from "./dropdown-button.stories.module.scss";
 
 const generateItems = (n = 100) => {
   let result = [];
@@ -14,12 +14,12 @@ const generateItems = (n = 100) => {
 };
 
 export default {
-  title: 'DropdownButton',
+  title: "DropdownButton",
   component: DropdownButton,
   decorators: [(story) => <div style={{ padding: 32 }}>{story()}</div>],
   args: {
     items: generateItems(),
-    onChange: action('select'),
+    onChange: action("select"),
   },
   argTypes: {
     items: { control: { disable: true } },
@@ -33,25 +33,25 @@ const Template: ComponentStory<typeof DropdownButton> = (args) => <DropdownButto
 
 export const Default = Template.bind({});
 Default.args = {
-  value: '12',
+  value: "12",
 };
 
 export const WithEmptyValue = Template.bind({});
 WithEmptyValue.args = {
-  value: '',
+  value: "",
   allowEmpty: true,
-  placeholder: 'Please select an option',
+  placeholder: "Please select an option",
 };
 
 export const WithCustomIcon = Template.bind({});
 WithCustomIcon.args = {
-  value: '12',
+  value: "12",
   icon: Icons.auto_graph,
 };
 
 export const WithCustomClassNames = Template.bind({});
 WithCustomClassNames.args = {
-  value: '12',
+  value: "12",
   classNames: {
     wrapper: classes.wrapper,
     item_list: classes.item_list,

@@ -1,15 +1,15 @@
 // TODO: Replace styled-components by react-jss
 
-import React, { FC, InputHTMLAttributes } from 'react';
-import styled from 'styled-components';
+import React, { FC, InputHTMLAttributes } from "react";
+import styled from "styled-components";
 
-import Input from '../input';
-import * as styles from './text-field.styles';
+import Input from "../input";
+import * as styles from "./text-field.styles";
 
 /**
  * I intentionally remove the `type` prop, since it will break the `TextField`
  */
-type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
+type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type">;
 
 interface TextFieldProps extends InputProps {
   /**
@@ -23,7 +23,7 @@ interface TextFieldProps extends InputProps {
 }
 
 export const TextFieldBase: FC<TextFieldProps> = ({ className, obscureText, ...props }) => {
-  return <Input type={obscureText ? 'password' : 'text'} className={className} {...props} />;
+  return <Input type={obscureText ? "password" : "text"} className={className} {...props} />;
 };
 
 const StyledTextField = styled(TextFieldBase)`

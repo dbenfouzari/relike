@@ -1,11 +1,11 @@
-import classnames from 'classnames';
-import React, { FC, ReactChild, ReactChildren } from 'react';
+import classnames from "classnames";
+import React, { FC, ReactChild, ReactChildren } from "react";
 
-import Icon from '../icon';
-import IconButton from '../icon-button';
-import Icons from '../icons';
-import Padding from '../padding';
-import classes from './modal.module.scss';
+import Icon from "../icon";
+import IconButton from "../icon-button";
+import Icons from "../icons";
+import Padding from "../padding";
+import classes from "./modal.module.scss";
 
 interface ModalClassNames {
   overlay?: string;

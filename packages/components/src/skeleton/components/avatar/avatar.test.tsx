@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import SkeletonAvatar from './avatar';
+import SkeletonAvatar from "./avatar";
 
-it('should render successfully', () => {
+it("should render successfully", () => {
   render(<SkeletonAvatar />);
 });

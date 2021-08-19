@@ -1,5 +1,5 @@
-import DateTime from '../date-time';
-import { CalendarEvent } from './types';
+import DateTime from "../date-time";
+import { CalendarEvent } from "./types";
 
 /**
  * Returns all events occurring `month` month.

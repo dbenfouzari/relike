@@ -1,9 +1,9 @@
-import React, { FC, useMemo } from 'react';
-import { createUseStyles } from 'react-jss';
+import React, { FC, useMemo } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../../../color';
-import Colors from '../../../colors';
-import Duration from '../../../duration';
+import Color from "../../../color";
+import Colors from "../../../colors";
+import Duration from "../../../duration";
 
 interface LoaderScreenProps {
   /**
@@ -51,60 +51,60 @@ const makeUseStyles = ({
   const durationInMs = animationDuration.inMilliseconds;
 
   return createUseStyles({
-    '@keyframes rotateScale': {
-      '0%': { transform: 'rotate(0deg) scale(0.8)' },
-      '50%': { transform: 'rotate(360deg) scale(1.2)' },
-      '100%': { transform: 'rotate(720deg) scale(0.8)' },
+    "@keyframes rotateScale": {
+      "0%": { transform: "rotate(0deg) scale(0.8)" },
+      "50%": { transform: "rotate(360deg) scale(1.2)" },
+      "100%": { transform: "rotate(720deg) scale(0.8)" },
     },
-    '@keyframes shadowone': {
-      '0%': {
+    "@keyframes shadowone": {
+      "0%": {
         boxShadow: `1.875rem 0 0 ${color3.toRGB()}`,
       },
-      '50%': {
+      "50%": {
         boxShadow: `0 0 0 ${color3.toRGB()}`,
         marginBottom: 0,
-        transform: 'translate(0.9375rem, 0.9375rem)',
+        transform: "translate(0.9375rem, 0.9375rem)",
       },
-      '100%': {
+      "100%": {
         boxShadow: `1.875rem 0 0 ${color3.toRGB()}`,
-        marginBottom: '0.625rem',
+        marginBottom: "0.625rem",
       },
     },
-    '@keyframes shadowtwo': {
-      '0%': {
+    "@keyframes shadowtwo": {
+      "0%": {
         boxShadow: `1.875rem 0 0 ${color4.toRGB()}`,
       },
-      '50%': {
+      "50%": {
         boxShadow: `0 0 0 ${color4.toRGB()}`,
-        marginTop: '-1.25rem',
-        transform: 'translate(0.9375rem, 0.9375rem)',
+        marginTop: "-1.25rem",
+        transform: "translate(0.9375rem, 0.9375rem)",
       },
-      '100%': {
+      "100%": {
         boxShadow: `1.875rem 0 0 ${color4.toRGB()}`,
         marginTop: 0,
       },
     },
     wrapper: {
-      width: '3.125rem',
-      height: '3.125rem',
+      width: "3.125rem",
+      height: "3.125rem",
       animation: `${durationInMs}ms ease 0s infinite normal none running $rotateScale`,
-      '&:before': {
-        borderRadius: '50%',
+      "&:before": {
+        borderRadius: "50%",
         content: '""',
-        display: 'block',
-        height: '1.25rem',
-        width: '1.25rem',
+        display: "block",
+        height: "1.25rem",
+        width: "1.25rem",
         backgroundColor: color1.toRGB(),
         boxShadow: `1.875rem 0 0 ${color1.toRGB()}`,
-        marginBottom: '0.625rem',
+        marginBottom: "0.625rem",
         animation: `${durationInMs}ms ease 0s infinite normal none running $shadowone`,
       },
-      '&:after': {
-        borderRadius: '50%',
+      "&:after": {
+        borderRadius: "50%",
         content: '""',
-        display: 'block',
-        height: '1.25rem',
-        width: '1.25rem',
+        display: "block",
+        height: "1.25rem",
+        width: "1.25rem",
         backgroundColor: color2.toRGB(),
         boxShadow: `1.875rem 0 0 ${color2.toRGB()}`,
         animation: `${durationInMs}ms ease 0s infinite normal none running $shadowtwo`,

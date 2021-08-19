@@ -1,11 +1,11 @@
-import classnames from 'classnames';
-import React, { FC, forwardRef, ReactNode, RefObject } from 'react';
-import { createUseStyles } from 'react-jss';
+import classnames from "classnames";
+import React, { FC, forwardRef, ReactNode, RefObject } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../../../color';
-import { Icon } from '../../../icon';
-import { IconData } from '../../../icons';
-import classes from './tab-item.module.scss';
+import Color from "../../../color";
+import { Icon } from "../../../icon";
+import { IconData } from "../../../icons";
+import classes from "./tab-item.module.scss";
 
 export interface TabItemProps {
   /**
@@ -37,7 +37,7 @@ export interface TabItemProps {
   inactiveColor?: Color;
 }
 
-export interface InnerTabItemProps extends Omit<TabItemProps, 'key'> {
+export interface InnerTabItemProps extends Omit<TabItemProps, "key"> {
   ref: RefObject<HTMLDivElement>;
   onChange: () => void;
   active: boolean;
@@ -47,7 +47,7 @@ export interface InnerTabItemProps extends Omit<TabItemProps, 'key'> {
 const useStyles = createUseStyles({
   item: ({ inactiveColor }: { inactiveColor?: Color }) =>
     inactiveColor && {
-      '--inactive-color': inactiveColor.toRGBA(),
+      "--inactive-color": inactiveColor.toRGBA(),
     },
 });
 

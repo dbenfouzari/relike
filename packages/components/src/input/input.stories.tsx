@@ -1,10 +1,10 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Input from './input';
-import useTextEditingController from './useTextEditingController';
+import Input from "./input";
+import useTextEditingController from "./useTextEditingController";
 
 export default {
-  title: 'Input',
+  title: "Input",
   component: Input,
   argTypes: {
     controller: { control: { disable: true } },

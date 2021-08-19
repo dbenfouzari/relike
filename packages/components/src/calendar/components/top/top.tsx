@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import Color from '../../../color';
-import DateTime from '../../../date-time';
-import Icon from '../../../icon';
-import IconButton from '../../../icon-button';
-import Icons from '../../../icons';
-import { MONTHS, SupportedLocales } from '../../constants';
-import classes from './top.module.scss';
+import Color from "../../../color";
+import DateTime from "../../../date-time";
+import Icon from "../../../icon";
+import IconButton from "../../../icon-button";
+import Icons from "../../../icons";
+import { MONTHS, SupportedLocales } from "../../constants";
+import classes from "./top.module.scss";
 
 interface TopProps {
   currentDate: DateTime;

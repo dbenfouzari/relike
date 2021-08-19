@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 const getChildrenHeight = (parent?: HTMLElement | null) => {
   if (!parent) return;
@@ -6,7 +6,7 @@ const getChildrenHeight = (parent?: HTMLElement | null) => {
   // We clone de root div since it will be removed with manipulations
   const parentClone = parent.cloneNode(true);
 
-  const div = document.createElement('div');
+  const div = document.createElement("div");
 
   for (let i = 0; i < parentClone.childNodes.length; i++) {
     const child = parentClone.childNodes[i];

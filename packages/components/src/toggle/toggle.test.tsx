@@ -1,17 +1,17 @@
-import { act, fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render } from "@testing-library/react";
 
-import Toggle from './toggle';
+import Toggle from "./toggle";
 
-describe('toggle', () => {
-  it('should render successfully', () => {
+describe("toggle", () => {
+  it("should render successfully", () => {
     render(<Toggle />);
   });
 
-  it('should handle click', () => {
+  it("should handle click", () => {
     const { getByTestId } = render(<Toggle />);
 
     act(() => {
-      fireEvent.click(getByTestId('toggle'));
+      fireEvent.click(getByTestId("toggle"));
     });
   });
 });

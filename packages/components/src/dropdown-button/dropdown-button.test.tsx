@@ -1,6 +1,6 @@
-import { act, fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render } from "@testing-library/react";
 
-import DropdownButton from './dropdown-button';
+import DropdownButton from "./dropdown-button";
 
 const generateItems = (n = 100) => {
   let result = [];
@@ -10,14 +10,14 @@ const generateItems = (n = 100) => {
   return result;
 };
 
-describe('DropdownButton', () => {
-  it('should render successfully', () => {
+describe("DropdownButton", () => {
+  it("should render successfully", () => {
     render(<DropdownButton items={generateItems()} />);
   });
 
-  it('should open', () => {
+  it("should open", () => {
     const { getByTestId, rerender } = render(<DropdownButton items={generateItems()} />);
-    const button = getByTestId('button');
+    const button = getByTestId("button");
 
     act(() => {
       fireEvent.click(button);

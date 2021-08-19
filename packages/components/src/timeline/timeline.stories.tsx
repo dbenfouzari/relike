@@ -1,14 +1,14 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from '../colors';
-import Icon from '../icon';
-import Icons from '../icons';
-import Timeline from './timeline';
+import Colors from "../colors";
+import Icon from "../icon";
+import Icons from "../icons";
+import Timeline from "./timeline";
 
 export default {
-  title: 'Timeline',
+  title: "Timeline",
   component: Timeline,
-  subcomponents: { 'Timeline.Item': Timeline.Item },
+  subcomponents: { "Timeline.Item": Timeline.Item },
   argTypes: {
     children: { control: { disable: true } },
   },
@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof Timeline> = (args) => <Timeline {...args} 
 
 export const Default = Template.bind({});
 Default.args = {
-  mode: 'left',
+  mode: "left",
   children: (
     <>
       <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
@@ -39,7 +39,7 @@ Default.args = {
 
 export const CustomDot = Template.bind({});
 CustomDot.args = {
-  mode: 'left',
+  mode: "left",
   children: (
     <>
       <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>

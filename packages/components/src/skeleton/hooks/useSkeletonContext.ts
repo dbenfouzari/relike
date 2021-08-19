@@ -1,6 +1,6 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 
-import SkeletonContext from '../context/skeleton-context';
+import SkeletonContext from "../context/skeleton-context";
 
 const useSkeletonContext = () => {
   return useContext(SkeletonContext);

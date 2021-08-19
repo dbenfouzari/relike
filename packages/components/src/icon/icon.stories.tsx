@@ -27,12 +27,7 @@ const Template: ComponentStory<any> = ({ icon, ...args }: { icon: string }) => {
   return <Icon icon={originalIcon} {...args} />;
 };
 
-const WithCustomColorTemplate: ComponentStory<any> = ({
-  icon,
-  ...args
-}: {
-  icon: string;
-}) => {
+const WithCustomColorTemplate: ComponentStory<any> = ({ icon, ...args }: { icon: string }) => {
   const originalIcon = Icons[icon as keyof Icons];
 
   return <Icon color={Colors.red[500]} icon={originalIcon} {...args} />;

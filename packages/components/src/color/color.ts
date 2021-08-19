@@ -1,4 +1,4 @@
-import assert from 'assert';
+import assert from "assert";
 
 /**
  * The [Color] class allows you to handle colors easily.
@@ -31,14 +31,14 @@ class Color {
   }
 
   static assert = (a: number, r: number, g: number, b: number) => {
-    assert(a >= 0, 'Alpha channel should be between 0 and 255');
-    assert(a <= 255, 'Alpha channel should be between 0 and 255');
-    assert(r >= 0, 'Red channel should be between 0 and 255');
-    assert(r <= 255, 'Red channel should be between 0 and 255');
-    assert(g >= 0, 'Green channel should be between 0 and 255');
-    assert(g <= 255, 'Green channel should be between 0 and 255');
-    assert(b >= 0, 'Blue channel should be between 0 and 255');
-    assert(b <= 255, 'Blue channel should be between 0 and 255');
+    assert(a >= 0, "Alpha channel should be between 0 and 255");
+    assert(a <= 255, "Alpha channel should be between 0 and 255");
+    assert(r >= 0, "Red channel should be between 0 and 255");
+    assert(r <= 255, "Red channel should be between 0 and 255");
+    assert(g >= 0, "Green channel should be between 0 and 255");
+    assert(g <= 255, "Green channel should be between 0 and 255");
+    assert(b >= 0, "Blue channel should be between 0 and 255");
+    assert(b <= 255, "Blue channel should be between 0 and 255");
   };
 
   /**
@@ -57,12 +57,12 @@ class Color {
    * Create a [Color] from hue, saturation and lightness.
    */
   static fromHSLA(hue: number, saturation: number, lightness: number, alpha: number = 255) {
-    assert(hue >= 0, 'Hue should be between 0 and 360');
-    assert(hue <= 360, 'Hue should be between 0 and 360');
-    assert(saturation >= 0, 'Saturation should be between 0 and 100');
-    assert(saturation <= 100, 'Saturation should be between 0 and 100');
-    assert(lightness >= 0, 'Lightness should be between 0 and 100');
-    assert(lightness <= 100, 'Lightness should be between 0 and 100');
+    assert(hue >= 0, "Hue should be between 0 and 360");
+    assert(hue <= 360, "Hue should be between 0 and 360");
+    assert(saturation >= 0, "Saturation should be between 0 and 100");
+    assert(saturation <= 100, "Saturation should be between 0 and 100");
+    assert(lightness >= 0, "Lightness should be between 0 and 100");
+    assert(lightness <= 100, "Lightness should be between 0 and 100");
 
     const s1 = saturation / 100;
     const l1 = lightness / 100;
@@ -110,11 +110,11 @@ class Color {
    * Converts the [Color] instance to CSS `#rrggbbaa`.
    */
   toRGB = () => {
-    const r = this.red.toString(16).padStart(2, '0');
-    const g = this.green.toString(16).padStart(2, '0');
-    const b = this.blue.toString(16).padStart(2, '0');
-    const a = this.alpha.toString(16).padStart(2, '0');
-    return '#' + r + g + b + a;
+    const r = this.red.toString(16).padStart(2, "0");
+    const g = this.green.toString(16).padStart(2, "0");
+    const b = this.blue.toString(16).padStart(2, "0");
+    const a = this.alpha.toString(16).padStart(2, "0");
+    return "#" + r + g + b + a;
   };
 
   /**
@@ -134,8 +134,8 @@ class Color {
    * Returns a new color that matches this color with the alpha channel replaced with a (which ranges from 0 to 255).
    */
   withAlpha = (a: number) => {
-    assert(a >= 0, 'Alpha channel should be between 0 and 255');
-    assert(a <= 255, 'Alpha channel should be between 0 and 255');
+    assert(a >= 0, "Alpha channel should be between 0 and 255");
+    assert(a <= 255, "Alpha channel should be between 0 and 255");
 
     return Color.fromARGB(a, this.red, this.green, this.blue);
   };
@@ -144,8 +144,8 @@ class Color {
    * Returns a new color that matches this color with the alpha channel replaced with the given opacity (which ranges from 0.0 to 1.0).
    */
   withOpacity = (o: number) => {
-    assert(o >= 0, 'Opacity should be between 0 and 1');
-    assert(o <= 1, 'Opacity should be between 0 and 1');
+    assert(o >= 0, "Opacity should be between 0 and 1");
+    assert(o <= 1, "Opacity should be between 0 and 1");
 
     return this.withAlpha(Math.round(255 * o));
   };
@@ -154,8 +154,8 @@ class Color {
    * Returns a new color that matches this color with the red channel replaced with r (which ranges from 0 to 255).
    */
   withRed = (r: number) => {
-    assert(r >= 0, 'Red channel should be between 0 and 255');
-    assert(r <= 255, 'Red channel should be between 0 and 255');
+    assert(r >= 0, "Red channel should be between 0 and 255");
+    assert(r <= 255, "Red channel should be between 0 and 255");
 
     return Color.fromARGB(this.alpha, r, this.green, this.blue);
   };
@@ -164,8 +164,8 @@ class Color {
    * Returns a new color that matches this color with the green channel replaced with g (which ranges from 0 to 255).
    */
   withGreen = (g: number) => {
-    assert(g >= 0, 'Green channel should be between 0 and 255');
-    assert(g <= 255, 'Green channel should be between 0 and 255');
+    assert(g >= 0, "Green channel should be between 0 and 255");
+    assert(g <= 255, "Green channel should be between 0 and 255");
 
     return Color.fromARGB(this.alpha, this.red, g, this.blue);
   };
@@ -174,8 +174,8 @@ class Color {
    * Returns a new color that matches this color with the blue channel replaced with b (which ranges from 0 to 255).
    */
   withBlue = (b: number) => {
-    assert(b >= 0, 'Blue channel should be between 0 and 255');
-    assert(b <= 255, 'Blue channel should be between 0 and 255');
+    assert(b >= 0, "Blue channel should be between 0 and 255");
+    assert(b <= 255, "Blue channel should be between 0 and 255");
 
     return Color.fromARGB(this.alpha, this.red, this.green, b);
   };
@@ -214,8 +214,8 @@ class Color {
     // Design spec shows for its color palette on
     // <https://material.io/go/design-theming#color-color-palette>.
     const kThreshold = 0.15;
-    if ((relativeLuminance + 0.05) * (relativeLuminance + 0.05) > kThreshold) return 'light';
-    return 'dark';
+    if ((relativeLuminance + 0.05) * (relativeLuminance + 0.05) > kThreshold) return "light";
+    return "dark";
   }
 }
 

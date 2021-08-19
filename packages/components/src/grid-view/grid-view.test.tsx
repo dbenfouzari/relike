@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import GridView from './grid-view';
+import GridView from "./grid-view";
 
-it('should render successfully', () => {
+it("should render successfully", () => {
   render(<GridView />);
 });

@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import TimelineItem from './timeline-item';
+import TimelineItem from "./timeline-item";
 
 export default {
-  title: 'Timeline.Item',
+  title: "Timeline.Item",
   component: TimelineItem,
 } as ComponentMeta<typeof TimelineItem>;
 

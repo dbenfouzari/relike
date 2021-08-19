@@ -1,10 +1,10 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import TextButton from './text-button';
-import styles from './text-button.stories.module.scss';
+import TextButton from "./text-button";
+import styles from "./text-button.stories.module.scss";
 
 export default {
-  title: 'TextButton',
+  title: "TextButton",
   component: TextButton,
   argTypes: {
     onPress: { control: { disable: true } },
@@ -23,35 +23,35 @@ const WithContentTemplate: ComponentStory<typeof TextButton> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Hello World',
+  children: "Hello World",
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  children: 'Disabled',
+  children: "Disabled",
   onPress: null,
 };
 
 export const WithContent = WithContentTemplate.bind({});
 WithContent.args = {
-  children: 'Hello',
+  children: "Hello",
 };
 
 export const WithContentDisabled = WithContentTemplate.bind({});
 WithContentDisabled.args = {
-  children: 'Hello',
+  children: "Hello",
   onPress: null,
 };
 
 export const WithCustomStyle = WithContentTemplate.bind({});
 WithCustomStyle.args = {
-  children: 'Hello',
+  children: "Hello",
   className: styles.wrapper,
 };
 
 export const WithCustomStyleDisabled = WithContentTemplate.bind({});
 WithCustomStyleDisabled.args = {
-  children: 'Hello',
+  children: "Hello",
   className: styles.wrapper,
   onPress: null,
 };

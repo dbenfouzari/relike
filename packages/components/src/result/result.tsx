@@ -1,17 +1,17 @@
-import classnames from 'classnames';
-import React, { FC, ReactElement, ReactNode } from 'react';
+import classnames from "classnames";
+import React, { FC, ReactElement, ReactNode } from "react";
 
-import Colors from '../colors';
-import Icon, { IconProps } from '../icon';
-import Icons from '../icons';
-import { Color } from '../index';
-import classes from './result.module.scss';
+import Colors from "../colors";
+import Icon, { IconProps } from "../icon";
+import Icons from "../icons";
+import { Color } from "../index";
+import classes from "./result.module.scss";
 
 export enum ResultStatus {
-  SUCCESS = '@result-status_success',
-  INFO = '@result-status_info',
-  WARNING = '@result-status_warning',
-  ERROR = '@result-status_error',
+  SUCCESS = "@result-status_success",
+  INFO = "@result-status_info",
+  WARNING = "@result-status_warning",
+  ERROR = "@result-status_error",
 }
 
 export interface ResultClassnames {

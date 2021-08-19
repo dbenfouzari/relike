@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-import GridViewCount from './components/grid-view-count';
+import GridViewCount from "./components/grid-view-count";
 
 interface GridViewProps {}
 

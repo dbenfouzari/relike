@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from '../../../colors';
-import SkeletonContext from '../../context/skeleton-context';
-import SkeletonParagraph from './paragraph';
+import Colors from "../../../colors";
+import SkeletonContext from "../../context/skeleton-context";
+import SkeletonParagraph from "./paragraph";
 
 export default {
-  title: 'Skeleton.Paragraph',
+  title: "Skeleton.Paragraph",
   component: SkeletonParagraph,
 } as ComponentMeta<typeof SkeletonParagraph>;
 

@@ -1,4 +1,4 @@
-import { ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
+import { ChangeEvent, useCallback, useMemo, useRef, useState } from "react";
 
 interface UseTextEditingControllerProps<B extends boolean> {
   initialValue?: string;
@@ -18,12 +18,12 @@ interface UseTextEditingControllerProps<B extends boolean> {
  * @param {Boolean} listenValue Do you want to listen the value ?
  */
 const useTextEditingController = <B extends boolean>({
-  initialValue = '',
+  initialValue = "",
   listenValue,
 }: UseTextEditingControllerProps<B> = {}) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [value, setValue] = useState(initialValue);
-  const [selectedText, setSelectedText] = useState('');
+  const [selectedText, setSelectedText] = useState("");
 
   const handleSelectionChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.selectionStart === null) return null;
@@ -39,8 +39,8 @@ const useTextEditingController = <B extends boolean>({
   }, []);
 
   const clear = () => {
-    setValue('');
-    inputRef.current && (inputRef.current.value = '');
+    setValue("");
+    inputRef.current && (inputRef.current.value = "");
   };
 
   const getValue = useCallback(() => {

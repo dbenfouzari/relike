@@ -1,1 +1,1 @@
-export { default } from './alignment';
+export { default } from "./alignment";

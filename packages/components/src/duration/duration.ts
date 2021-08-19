@@ -244,11 +244,11 @@ class Duration {
 
   public toString(): string {
     function sixDigits(n: number): string {
-      return n.toString().padStart(6, '0');
+      return n.toString().padStart(6, "0");
     }
 
     function twoDigits(n: number): string {
-      return n.toString().padStart(2, '0');
+      return n.toString().padStart(2, "0");
     }
 
     if (this.inMicroseconds < 0) return `-${this.abs().toString()}`;

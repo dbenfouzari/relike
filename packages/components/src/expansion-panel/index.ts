@@ -1,1 +1,1 @@
-export { default } from './expansion-panel';
+export { default } from "./expansion-panel";

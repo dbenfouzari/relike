@@ -1,11 +1,11 @@
-import classnames from 'classnames';
-import React from 'react';
+import classnames from "classnames";
+import React from "react";
 
-import DateTime from '../../../date-time';
-import { CalendarEvent } from '../../types';
-import { getEventsThatDay } from '../../utils';
-import Event from '../event';
-import classes from './month-days.module.scss';
+import DateTime from "../../../date-time";
+import { CalendarEvent } from "../../types";
+import { getEventsThatDay } from "../../utils";
+import Event from "../event";
+import classes from "./month-days.module.scss";
 
 interface MonthDaysProps {
   currentDate: DateTime;

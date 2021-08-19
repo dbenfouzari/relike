@@ -1,13 +1,13 @@
-import classnames from 'classnames';
-import React, { FC } from 'react';
-import { createUseStyles } from 'react-jss';
+import classnames from "classnames";
+import React, { FC } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../../../color';
-import Colors from '../../../colors';
-import useSkeletonContext from '../../hooks/useSkeletonContext';
-import classes from './avatar.module.scss';
+import Color from "../../../color";
+import Colors from "../../../colors";
+import useSkeletonContext from "../../hooks/useSkeletonContext";
+import classes from "./avatar.module.scss";
 
-type AvatarSize = 'small' | 'default' | 'large';
+type AvatarSize = "small" | "default" | "large";
 type AvatarSizes = Record<AvatarSize, number>;
 
 interface AvatarProps {
@@ -15,7 +15,7 @@ interface AvatarProps {
    * Defines the **[Skeleton.Avatar]** shape.
    * @default circle
    */
-  shape?: 'square' | 'circle';
+  shape?: "square" | "circle";
   /**
    * Defines the **[Skeleton.Avatar]** size.
    *
@@ -46,8 +46,8 @@ interface AvatarProps {
 
 interface AvatarStylesProps {
   active: boolean;
-  shape: 'square' | 'circle';
-  size: number | 'small' | 'default' | 'large';
+  shape: "square" | "circle";
+  size: number | "small" | "default" | "large";
   color: Color;
   sizes: AvatarSizes;
 }
@@ -60,7 +60,7 @@ const DEFAULT_SIZES: AvatarSizes = {
 
 const useStyles = createUseStyles({
   wrapper: ({ color, sizes, size }: AvatarStylesProps) => {
-    const finalSize = typeof size === 'number' ? size : sizes[size];
+    const finalSize = typeof size === "number" ? size : sizes[size];
 
     return {
       backgroundColor: color.toRGBA(),
@@ -75,8 +75,8 @@ const useStyles = createUseStyles({
  * You can display a **[Skeleton.Avatar]** to mimic an avatar while content is loading.
  */
 export const SkeletonAvatar: FC<AvatarProps> = ({
-  size = 'default',
-  shape = 'circle',
+  size = "default",
+  shape = "circle",
   sizes = DEFAULT_SIZES,
 }) => {
   const { active = false, color = Colors.grey[200] } = useSkeletonContext();
@@ -85,7 +85,7 @@ export const SkeletonAvatar: FC<AvatarProps> = ({
   return (
     <div
       className={classnames(classes.wrapper, styles.wrapper, {
-        [classes.wrapper__circle]: shape === 'circle',
+        [classes.wrapper__circle]: shape === "circle",
         [classes.wrapper__active]: active,
       })}
     />

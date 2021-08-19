@@ -1,9 +1,9 @@
-import classnames from 'classnames';
-import React, { Children, ReactElement } from 'react';
+import classnames from "classnames";
+import React, { Children, ReactElement } from "react";
 
-import classes from '../data-table.module.scss';
-import { DataTableClassNames, DataTableColumnProps } from '../types';
-import { filterChildren } from '../utils';
+import classes from "../data-table.module.scss";
+import { DataTableClassNames, DataTableColumnProps } from "../types";
+import { filterChildren } from "../utils";
 
 interface DataTableHeaderProps<C> {
   children: ReactElement<C>[];

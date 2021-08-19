@@ -1,25 +1,25 @@
-import 'intersection-observer';
+import "intersection-observer";
 
-import { render } from '@testing-library/react';
-import React, { CSSProperties } from 'react';
+import { render } from "@testing-library/react";
+import React, { CSSProperties } from "react";
 
-import Colors from '../colors';
-import Carousel from './carousel';
+import Colors from "../colors";
+import Carousel from "./carousel";
 
 const styles: Record<string, CSSProperties> = {
   element: {
-    width: '20rem',
-    height: '12rem',
+    width: "20rem",
+    height: "12rem",
     borderRadius: 4,
     backgroundColor: Colors.grey[200].toRGBA(),
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 };
 
-describe('Carousel', function () {
-  it('should render successfully', () => {
+describe("Carousel", function () {
+  it("should render successfully", () => {
     render(
       <Carousel>
         <div key={1} style={styles.element}>

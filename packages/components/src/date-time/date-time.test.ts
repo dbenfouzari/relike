@@ -1,11 +1,11 @@
-import Duration from '../duration';
-import DateTime from './date-time';
+import Duration from "../duration";
+import DateTime from "./date-time";
 
-describe('DateTime', () => {
-  describe('Constructors', () => {
+describe("DateTime", () => {
+  describe("Constructors", () => {
     afterEach(() => jest.restoreAllMocks());
 
-    it('should construct with default values', () => {
+    it("should construct with default values", () => {
       const date = new DateTime({ year: 2021 });
 
       expect(date.year).toEqual(2021);
@@ -13,7 +13,7 @@ describe('DateTime', () => {
       expect(date.day).toEqual(1);
     });
 
-    it('`fromMillisecondsSinceEpoch` should return correct date', () => {
+    it("`fromMillisecondsSinceEpoch` should return correct date", () => {
       const now = new Date(2021, 7, 6);
       const date = DateTime.fromMillisecondsSinceEpoch(now.getTime());
 
@@ -22,9 +22,9 @@ describe('DateTime', () => {
       expect(date.day).toEqual(6);
     });
 
-    it('`now` should return today', () => {
+    it("`now` should return today", () => {
       // Since it uses `Date.now()` and the test can be ran anytime, we have to mock it !
-      jest.spyOn(Date, 'now').mockImplementationOnce(() => new Date(2021, 7, 5).getTime());
+      jest.spyOn(Date, "now").mockImplementationOnce(() => new Date(2021, 7, 5).getTime());
 
       const now = DateTime.now();
 
@@ -33,8 +33,8 @@ describe('DateTime', () => {
       expect(now.day).toEqual(5);
     });
 
-    it('`parse` should work', () => {
-      const dateString = '2021-08-06';
+    it("`parse` should work", () => {
+      const dateString = "2021-08-06";
       const date = DateTime.parse(dateString);
 
       expect(date.year).toEqual(2021);
@@ -42,16 +42,16 @@ describe('DateTime', () => {
       expect(date.day).toEqual(6);
     });
 
-    it('`parse` should throw if cannot be parsed', () => {
-      const dateString = 'hello testing world';
+    it("`parse` should throw if cannot be parsed", () => {
+      const dateString = "hello testing world";
 
       expect(() => {
         DateTime.parse(dateString);
-      }).toThrow(EvalError('[DateTime] - Cannot parse string `hello testing world`'));
+      }).toThrow(EvalError("[DateTime] - Cannot parse string `hello testing world`"));
     });
 
-    it('`tryParse` should work', () => {
-      const dateString = '2021-08-06';
+    it("`tryParse` should work", () => {
+      const dateString = "2021-08-06";
       const date = DateTime.tryParse(dateString);
 
       expect(date?.year).toEqual(2021);
@@ -59,8 +59,8 @@ describe('DateTime', () => {
       expect(date?.day).toEqual(6);
     });
 
-    it('`tryParse` should not throw if cannot be parsed', () => {
-      const dateString = 'hello testing world';
+    it("`tryParse` should not throw if cannot be parsed", () => {
+      const dateString = "hello testing world";
 
       expect(() => {
         DateTime.tryParse(dateString);
@@ -70,7 +70,7 @@ describe('DateTime', () => {
     });
   });
 
-  describe('Properties', () => {
+  describe("Properties", () => {
     const date = new DateTime({
       year: 2021,
       month: 8,
@@ -81,53 +81,53 @@ describe('DateTime', () => {
       millisecond: 912,
     });
 
-    it('`year` should return correct value', () => {
+    it("`year` should return correct value", () => {
       expect(date.year).toEqual(2021);
     });
 
-    it('`month` should return correct value', () => {
+    it("`month` should return correct value", () => {
       expect(date.month).toEqual(8);
     });
 
-    it('`day` should return correct value', () => {
+    it("`day` should return correct value", () => {
       expect(date.day).toEqual(6);
     });
 
-    it('`hour` should return correct value', () => {
+    it("`hour` should return correct value", () => {
       expect(date.hour).toEqual(11);
     });
 
-    it('`minute` should return correct value', () => {
+    it("`minute` should return correct value", () => {
       expect(date.minute).toEqual(1);
     });
 
-    it('`second` should return correct value', () => {
+    it("`second` should return correct value", () => {
       expect(date.second).toEqual(24);
     });
 
-    it('`millisecond` should return correct value', () => {
+    it("`millisecond` should return correct value", () => {
       expect(date.millisecond).toEqual(912);
     });
 
-    it('`weekDay` should return correct value', () => {
+    it("`weekDay` should return correct value", () => {
       expect(date.weekDay).toEqual(5);
     });
 
-    it('`millisecondsSinceEpoch` should return correct value', () => {
+    it("`millisecondsSinceEpoch` should return correct value", () => {
       expect(date.millisecondsSinceEpoch).toEqual(1628247684912);
     });
 
-    it('`timeZoneName` should return correct value', () => {
-      expect(date.timeZoneName).toEqual('GMT');
+    it("`timeZoneName` should return correct value", () => {
+      expect(date.timeZoneName).toEqual("GMT");
     });
 
-    it('`timeZoneOffset` should return correct value', () => {
+    it("`timeZoneOffset` should return correct value", () => {
       expect(date.timeZoneOffset).toEqual(Duration.hours(0));
     });
   });
 
-  describe('Methods', () => {
-    it('`add` should add a date', () => {
+  describe("Methods", () => {
+    it("`add` should add a date", () => {
       // For example, I can set month my using constant `DateTime.august`
       const date = new DateTime({ year: 2021, month: DateTime.august, day: 6 });
       const duration = Duration.days(3);
@@ -139,7 +139,7 @@ describe('DateTime', () => {
       expect(finalDate.day).toEqual(9);
     });
 
-    it('`add` should add 1 year', () => {
+    it("`add` should add 1 year", () => {
       const date = new DateTime({ year: 2021, month: DateTime.august, day: 6 });
       const duration = Duration.years(1);
 
@@ -150,7 +150,7 @@ describe('DateTime', () => {
       expect(finalDate.day).toEqual(6);
     });
 
-    it('`subtract` should subtract a date', () => {
+    it("`subtract` should subtract a date", () => {
       // Date is 2021-08-06
       // 50 days ago was 2021-06-17
       const date = new DateTime({ year: 2021, month: 8, day: 6 });
@@ -167,14 +167,14 @@ describe('DateTime', () => {
       expect(finalDate.isAtSameMomentAs(expected50daysAgo)).toBe(true);
     });
 
-    it('`set` with no param should return same date', () => {
+    it("`set` with no param should return same date", () => {
       const date = new DateTime({ year: 2021, month: 8, day: 6 });
       const nextDate = date.set({});
 
       expect(date.isAtSameMomentAs(nextDate)).toBe(true);
     });
 
-    it('`set` should return correct value', () => {
+    it("`set` should return correct value", () => {
       const date = new DateTime({ year: 2021, month: 8, day: 6 });
       const nextDate = date.set({ day: 1 });
 
@@ -184,7 +184,7 @@ describe('DateTime', () => {
       expect(nextDate.day).toBe(1);
     });
 
-    it('`difference` should return correct value', () => {
+    it("`difference` should return correct value", () => {
       const date1 = new DateTime({ year: 2021, month: 8, day: 6 });
       const date2 = new DateTime({ year: 2021, month: 8, day: 9 });
 
@@ -195,21 +195,21 @@ describe('DateTime', () => {
       expect(duration2.inDays).toEqual(3);
     });
 
-    it('`isAfter` should return true', () => {
+    it("`isAfter` should return true", () => {
       const now = DateTime.now();
       const later = now.add(Duration.seconds(5));
 
       expect(later.isAfter(now)).toBe(true);
     });
 
-    it('`isAfter` should return false', () => {
+    it("`isAfter` should return false", () => {
       const now = DateTime.now();
       const later = now.add(Duration.seconds(5));
 
       expect(now.isAfter(later)).toBe(false);
     });
 
-    it('`isAtSameMomentAs` should return correct value', () => {
+    it("`isAtSameMomentAs` should return correct value", () => {
       const now = DateTime.now();
       const later = now.add(Duration.seconds(5));
 
@@ -217,7 +217,7 @@ describe('DateTime', () => {
       expect(now.isAtSameMomentAs(now)).toBe(true);
     });
 
-    it('`isBefore` should return correct value', () => {
+    it("`isBefore` should return correct value", () => {
       const now = DateTime.now();
       const later = now.add(Duration.seconds(5));
 
@@ -226,7 +226,7 @@ describe('DateTime', () => {
       expect(now.isBefore(now)).toBe(false);
     });
 
-    it('`isBetween` should return correct value', () => {
+    it("`isBetween` should return correct value", () => {
       const now = DateTime.now();
       const earlier = now.subtract(Duration.days(2));
       const later = now.add(Duration.days(2));
@@ -238,9 +238,9 @@ describe('DateTime', () => {
       expect(now.isBetween(now, later)).toBe(true);
     });
 
-    it('`toIso8601String` should work', () => {
+    it("`toIso8601String` should work", () => {
       expect(new DateTime({ year: 2021, month: 8, day: 6 }).toIso8601String()).toBe(
-        '2021-08-06T00:00:00.000',
+        "2021-08-06T00:00:00.000",
       );
       expect(
         new DateTime({
@@ -252,7 +252,7 @@ describe('DateTime', () => {
           second: 21,
           millisecond: 123,
         }).toIso8601String(),
-      ).toBe('2021-08-06T09:36:21.123');
+      ).toBe("2021-08-06T09:36:21.123");
       expect(
         new DateTime({
           year: 122021,
@@ -263,26 +263,26 @@ describe('DateTime', () => {
           second: 21,
           millisecond: 123,
         }).toIso8601String(),
-      ).toBe('122021-08-06T09:36:21.123');
+      ).toBe("122021-08-06T09:36:21.123");
     });
   });
 
-  describe('Utils', () => {
-    it('`getFirstDayOfMonthWeek` should return correct value', () => {
+  describe("Utils", () => {
+    it("`getFirstDayOfMonthWeek` should return correct value", () => {
       const date = new DateTime({ year: 2021, month: 8, day: 6 });
       const expectedDate = new DateTime({ year: 2021, month: 7, day: 26 });
 
       expect(date.getFirstDayOfMonthWeek().isAtSameMomentAs(expectedDate)).toBe(true);
     });
 
-    it('`getLastDayOfMonthWeek` should return correct value', () => {
+    it("`getLastDayOfMonthWeek` should return correct value", () => {
       const date = new DateTime({ year: 2021, month: 8, day: 6 });
       const expectedDate = new DateTime({ year: 2021, month: 9, day: 5 });
 
       expect(date.getLastDayOfMonthWeek().isAtSameMomentAs(expectedDate)).toBe(true);
     });
 
-    it('`getDaysInMonth` should return correct value', () => {
+    it("`getDaysInMonth` should return correct value", () => {
       const date = new DateTime({ year: 2021, month: 8, day: 6 });
       const expectedDates = [
         new DateTime({ year: 2021, month: 7, day: 26 }),

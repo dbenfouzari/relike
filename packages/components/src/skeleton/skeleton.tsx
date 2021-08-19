@@ -1,13 +1,13 @@
-import classnames from 'classnames';
-import React, { FC, ReactChild, ReactChildren } from 'react';
+import classnames from "classnames";
+import React, { FC, ReactChild, ReactChildren } from "react";
 
-import Color from '../color';
-import SkeletonAvatar from './components/avatar';
-import SkeletonParagraph from './components/paragraph';
-import { SkeletonParagraphProps } from './components/paragraph/paragraph';
-import SkeletonTitle from './components/title';
-import SkeletonContext from './context/skeleton-context';
-import classes from './skeleton.module.scss';
+import Color from "../color";
+import SkeletonAvatar from "./components/avatar";
+import SkeletonParagraph from "./components/paragraph";
+import { SkeletonParagraphProps } from "./components/paragraph/paragraph";
+import SkeletonTitle from "./components/title";
+import SkeletonContext from "./context/skeleton-context";
+import classes from "./skeleton.module.scss";
 
 interface SkeletonProps {
   /**
@@ -71,7 +71,7 @@ export const Skeleton: SkeletonComponent = ({
 
           <div className={classes.content}>
             <SkeletonTitle />
-            {paragraph && <SkeletonParagraph rows={2} width={[undefined, '60%']} {...paragraph} />}
+            {paragraph && <SkeletonParagraph rows={2} width={[undefined, "60%"]} {...paragraph} />}
           </div>
         </div>
       )}

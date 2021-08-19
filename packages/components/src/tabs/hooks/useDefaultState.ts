@@ -1,6 +1,6 @@
-import { Children, ReactElement, useState } from 'react';
+import { Children, ReactElement, useState } from "react";
 
-import { TabItemProps } from '../components/tab-item';
+import { TabItemProps } from "../components/tab-item";
 
 const useDefaultState = <T extends ReactElement<TabItemProps>[]>(
   children: T,

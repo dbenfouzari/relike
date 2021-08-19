@@ -1,5 +1,5 @@
-import DateTime from '../date-time';
-import { DAYS, MONTHS, SupportedLocales } from './constants';
+import DateTime from "../date-time";
+import { DAYS, MONTHS, SupportedLocales } from "./constants";
 
 export type DaysType = typeof DAYS;
 export type MonthsType = typeof MONTHS;

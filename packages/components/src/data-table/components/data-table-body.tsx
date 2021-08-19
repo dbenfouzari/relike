@@ -1,14 +1,14 @@
-import classnames from 'classnames';
-import React, { ReactElement } from 'react';
+import classnames from "classnames";
+import React, { ReactElement } from "react";
 
-import classes from '../data-table.module.scss';
-import { DataTableClassNames, DataTableColumnProps, DataTableData, DataTableProps } from '../types';
-import { filterChildren } from '../utils';
+import classes from "../data-table.module.scss";
+import { DataTableClassNames, DataTableColumnProps, DataTableData, DataTableProps } from "../types";
+import { filterChildren } from "../utils";
 
 interface DataTableBodyProps<D extends DataTableData> {
   data: D;
   children: ReactElement<DataTableColumnProps>[];
-  renderRow?: DataTableProps<D>['renderRow'];
+  renderRow?: DataTableProps<D>["renderRow"];
   classNames?: DataTableClassNames;
 }
 

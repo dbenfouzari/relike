@@ -1,6 +1,6 @@
-import React, { FC, InputHTMLAttributes } from 'react';
+import React, { FC, InputHTMLAttributes } from "react";
 
-import useTextEditingController, { UseTextEditingController } from './useTextEditingController';
+import useTextEditingController, { UseTextEditingController } from "./useTextEditingController";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /**

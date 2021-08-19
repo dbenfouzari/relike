@@ -1,7 +1,7 @@
-import { act, fireEvent, render } from '@testing-library/react';
-import React from 'react';
+import { act, fireEvent, render } from "@testing-library/react";
+import React from "react";
 
-import Tabs from './tabs';
+import Tabs from "./tabs";
 
 const children = [
   <Tabs.Item key="1" name="Tab 1">
@@ -18,16 +18,16 @@ const children = [
   </Tabs.Item>,
 ];
 
-describe('Tabs', () => {
-  it('should render successfully', () => {
+describe("Tabs", () => {
+  it("should render successfully", () => {
     render(<Tabs>{children}</Tabs>);
   });
 
-  it('should work with defaultActiveKey', () => {
+  it("should work with defaultActiveKey", () => {
     render(<Tabs defaultActiveKey="3">{children}</Tabs>);
   });
 
-  it('should handle click', () => {
+  it("should handle click", () => {
     const { getByTestId } = render(<Tabs defaultActiveKey="3">{children}</Tabs>);
 
     act(() => {

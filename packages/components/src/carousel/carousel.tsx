@@ -1,11 +1,11 @@
-import React, { Children, FC } from 'react';
+import React, { Children, FC } from "react";
 
-import Colors from '../colors';
-import Icon from '../icon';
-import IconButton from '../icon-button';
-import Icons from '../icons';
-import classes from './carousel.module.scss';
-import useCarousel from './useCarousel';
+import Colors from "../colors";
+import Icon from "../icon";
+import IconButton from "../icon-button";
+import Icons from "../icons";
+import classes from "./carousel.module.scss";
+import useCarousel from "./useCarousel";
 
 interface CarouselProps {
   /**

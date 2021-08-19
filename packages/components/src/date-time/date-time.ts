@@ -1,4 +1,4 @@
-import Duration from '../duration';
+import Duration from "../duration";
 
 interface DateTimeConstructor {
   year: number;
@@ -20,10 +20,10 @@ interface DateTimeSetOptions {
   millisecond?: number;
 }
 
-const _twoDigits = (n: number) => n.toString().padStart(2, '0');
-const _threeDigits = (n: number) => n.toString().padStart(3, '0');
-const _fourDigits = (n: number) => n.toString().padStart(4, '0');
-const _sixDigits = (n: number) => n.toString().padStart(6, '0');
+const _twoDigits = (n: number) => n.toString().padStart(2, "0");
+const _threeDigits = (n: number) => n.toString().padStart(3, "0");
+const _fourDigits = (n: number) => n.toString().padStart(4, "0");
+const _sixDigits = (n: number) => n.toString().padStart(6, "0");
 
 class DateTime {
   private readonly date: Date;

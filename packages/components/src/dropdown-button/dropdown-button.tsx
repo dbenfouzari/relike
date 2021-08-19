@@ -95,9 +95,7 @@ interface DropdownButtonPropsWithoutAllowEmpty extends BaseDropdownButtonProps {
   placeholder?: undefined;
 }
 
-type DropdownButtonProps =
-  | DropdownButtonPropsWithAllowEmpty
-  | DropdownButtonPropsWithoutAllowEmpty;
+type DropdownButtonProps = DropdownButtonPropsWithAllowEmpty | DropdownButtonPropsWithoutAllowEmpty;
 
 /**
  * A button for selecting from a list of items.
@@ -122,7 +120,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
 
   const valueLabel = useMemo(
     () => value && items.find((item) => item.value === value)?.text,
-    [items, value]
+    [items, value],
   );
 
   const handleSelect = useCallback(
@@ -132,7 +130,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
       if (onChange) onChange(nextValue);
       setIsOpen(false);
     },
-    [onChange]
+    [onChange],
   );
 
   useOnClickOutside(ref, () => {
@@ -169,7 +167,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
         {
           [classes.wrapper__open]: isOpen,
         },
-        classNames?.wrapper
+        classNames?.wrapper,
       )}
       onClick={handleOpen}
     >
@@ -182,16 +180,10 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
         <Icon icon={icon} size={iconSize} />
       </span>
 
-      <ul
-        ref={ulRef}
-        className={classnames(classes.item_list, classNames?.item_list)}
-      >
+      <ul ref={ulRef} className={classnames(classes.item_list, classNames?.item_list)}>
         {allowEmpty && (
           <li
-            className={classnames(
-              classes.item_list_item,
-              classes.item_list_item__placeholder
-            )}
+            className={classnames(classes.item_list_item, classes.item_list_item__placeholder)}
             onClick={handleSelect("")}
           >
             {placeholder}
@@ -208,7 +200,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
               {
                 [classes.item_list_item__selected]: value === item.value,
               },
-              classNames?.item_list_item
+              classNames?.item_list_item,
             )}
           >
             {item.text}

@@ -1,6 +1,30 @@
 {
+  "plugins": [
+    "prettier",
+    "simple-import-sort"
+  ],
   "extends": [
     "react-app",
     "react-app/jest"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": "error"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist"
   ]
 }

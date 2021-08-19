@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import DataTableBody from './components/data-table-body';
-import DataTableHeader from './components/data-table-header';
-import { DataTableColumnProps, DataTableData, DataTableProps } from './types';
+import DataTableBody from "./components/data-table-body";
+import DataTableHeader from "./components/data-table-header";
+import { DataTableColumnProps, DataTableData, DataTableProps } from "./types";
 
 export const buildDataColumn =
   <T extends DataTableData>() =>

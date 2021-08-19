@@ -1,18 +1,18 @@
 // TODO: Replace styled-components by react-jss
 
-import React, { FC, useMemo } from 'react';
-import styled from 'styled-components';
+import React, { FC, useMemo } from "react";
+import styled from "styled-components";
 
-import Color from '../color';
-import Colors from '../colors';
-import { IconData } from '../icons';
-import * as styles from './icon.styles';
+import Color from "../color";
+import Colors from "../colors";
+import { IconData } from "../icons";
+import * as styles from "./icon.styles";
 
-const mapIcon = (variant?: 'rounded' | 'outlined' | 'sharp' | 'screen') => {
-  if (variant === 'rounded') return 'material-icons-round';
-  if (variant === 'outlined') return 'material-icons-outlined';
-  if (variant === 'sharp') return 'material-icons-sharp';
-  return 'material-icons';
+const mapIcon = (variant?: "rounded" | "outlined" | "sharp" | "screen") => {
+  if (variant === "rounded") return "material-icons-round";
+  if (variant === "outlined") return "material-icons-outlined";
+  if (variant === "sharp") return "material-icons-sharp";
+  return "material-icons";
 };
 
 export interface IconProps {
@@ -40,7 +40,7 @@ export interface IconInnerProps {
 
 export const IconInner: FC<IconInnerProps> = ({ className, icon, semanticLabel }) => {
   const classes = useMemo(
-    () => [mapIcon(icon.variant), className].filter(Boolean).join(' '),
+    () => [mapIcon(icon.variant), className].filter(Boolean).join(" "),
     [className, icon.variant],
   );
 

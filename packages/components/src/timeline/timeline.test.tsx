@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import Colors from '../colors';
-import Timeline from './timeline';
+import Colors from "../colors";
+import Timeline from "./timeline";
 
-it('should render successfully', () => {
+it("should render successfully", () => {
   render(
     <Timeline>
       <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>

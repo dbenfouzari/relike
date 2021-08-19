@@ -2,9 +2,9 @@ import classnames from "classnames";
 import React from "react";
 import { createUseStyles } from "react-jss";
 
-import { Tuple } from "../../../types";
 import Color from "../../../color";
 import Colors from "../../../colors";
+import { Tuple } from "../../../types";
 import useSkeletonContext from "../../hooks/useSkeletonContext";
 import classes from "./paragraph.module.scss";
 
@@ -33,7 +33,7 @@ const useStyles = createUseStyles({
 const getWidth = <R extends number>(
   rows: number,
   rowIndex: number,
-  width?: number | Tuple<number | undefined | string, R>
+  width?: number | Tuple<number | undefined | string, R>,
 ) => {
   if (!width) return undefined; // Easy. If no width given, just do nothing.
   if (Array.isArray(width)) return width[rowIndex]; // If width is an array, get the width by index.
@@ -44,10 +44,7 @@ const getWidth = <R extends number>(
 /**
  * You can display a **[Skeleton.Paragraph]** to mimic a paragraph while content is loading.
  */
-export const SkeletonParagraph = <R extends number>({
-  rows,
-  width,
-}: SkeletonParagraphProps<R>) => {
+export const SkeletonParagraph = <R extends number>({ rows, width }: SkeletonParagraphProps<R>) => {
   const { active = false, color = Colors.grey[200] } = useSkeletonContext();
 
   const rowsNumber = rows ?? 1;

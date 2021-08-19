@@ -1,9 +1,9 @@
-import classnames from 'classnames';
-import React, { useMemo } from 'react';
+import classnames from "classnames";
+import React, { useMemo } from "react";
 
-import { DAYS, SupportedLocales } from '../../constants';
-import { Day } from '../../types';
-import classes from './days.module.scss';
+import { DAYS, SupportedLocales } from "../../constants";
+import { Day } from "../../types";
+import classes from "./days.module.scss";
 
 interface DaysProps {
   locale: SupportedLocales;

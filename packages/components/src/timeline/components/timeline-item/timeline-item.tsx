@@ -1,11 +1,11 @@
-import classnames from 'classnames';
-import React, { cloneElement, FC, ReactElement, ReactNode } from 'react';
-import { createUseStyles } from 'react-jss';
+import classnames from "classnames";
+import React, { cloneElement, FC, ReactElement, ReactNode } from "react";
+import { createUseStyles } from "react-jss";
 
-import Color from '../../../color';
-import Colors from '../../../colors';
-import { IconInnerProps } from '../../../icon';
-import classes from './timeline-item.module.scss';
+import Color from "../../../color";
+import Colors from "../../../colors";
+import { IconInnerProps } from "../../../icon";
+import classes from "./timeline-item.module.scss";
 
 interface TimelineItemPropsWithoutDot {
   /**
@@ -41,7 +41,7 @@ interface TimelineItemStylesProps {
 
 const useStyles = createUseStyles({
   item: (props: TimelineItemStylesProps) => ({
-    '--dot-color': props.color.toRGBA(),
+    "--dot-color": props.color.toRGBA(),
   }),
 });
 

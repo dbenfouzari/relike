@@ -2,9 +2,9 @@ import classnames from "classnames";
 import React, { FC, ReactNode, useCallback } from "react";
 import { createUseStyles } from "react-jss";
 
-import useMergedState from "../hooks/useMergedState";
 import Color from "../color";
 import Colors from "../colors";
+import useMergedState from "../hooks/useMergedState";
 import Loader from "../loader";
 import classes from "./toggle.module.scss";
 
@@ -59,8 +59,7 @@ interface ControlledToggleProps {
   onChange: (nextValue: boolean) => void;
 }
 
-type ToggleProps = BaseToggleProps &
-  (UncontrolledToggleProps | ControlledToggleProps);
+type ToggleProps = BaseToggleProps & (UncontrolledToggleProps | ControlledToggleProps);
 
 interface ToggleStylesProps {
   value: boolean;
@@ -70,12 +69,7 @@ interface ToggleStylesProps {
 }
 
 const useStyles = createUseStyles({
-  button: ({
-    checkedColor,
-    unCheckedColor,
-    value,
-    disabled,
-  }: ToggleStylesProps) => {
+  button: ({ checkedColor, unCheckedColor, value, disabled }: ToggleStylesProps) => {
     let color = value ? checkedColor : unCheckedColor;
 
     return {
@@ -142,9 +136,7 @@ export const Toggle: FC<ToggleProps> = ({
           />
         ) : null}
       </span>
-      <span className={classes.inner}>
-        {value ? checkedLabel ?? null : unCheckedLabel ?? null}
-      </span>
+      <span className={classes.inner}>{value ? checkedLabel ?? null : unCheckedLabel ?? null}</span>
     </button>
   );
 };

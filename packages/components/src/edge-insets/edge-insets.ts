@@ -4,7 +4,7 @@ type NewEdgeInsets<T> = new (
   top: Maybe<number>,
   right: Maybe<number>,
   bottom: Maybe<number>,
-  left: Maybe<number>
+  left: Maybe<number>,
 ) => T;
 
 abstract class EdgeInsets {
@@ -17,7 +17,7 @@ abstract class EdgeInsets {
     top: Maybe<number>,
     right: Maybe<number>,
     bottom: Maybe<number>,
-    left: Maybe<number>
+    left: Maybe<number>,
   ) {
     this.top = top;
     this.right = right;
@@ -29,10 +29,7 @@ abstract class EdgeInsets {
    * Creates insets where all the offsets are value.
    * @param {Number} value
    */
-  public static all<T extends EdgeInsets>(
-    this: NewEdgeInsets<T>,
-    value: number
-  ): T {
+  public static all<T extends EdgeInsets>(this: NewEdgeInsets<T>, value: number): T {
     return new this(value, value, value, value);
   }
 
@@ -49,7 +46,7 @@ abstract class EdgeInsets {
     }: {
       horizontal?: Maybe<number>;
       vertical?: Maybe<number>;
-    }
+    },
   ) {
     return new this(vertical, horizontal, vertical, horizontal);
   }
@@ -73,7 +70,7 @@ abstract class EdgeInsets {
       right?: Maybe<number>;
       bottom?: Maybe<number>;
       left?: Maybe<number>;
-    } = {}
+    } = {},
   ) {
     return new this(top, right, bottom, left);
   }
@@ -90,7 +87,7 @@ abstract class EdgeInsets {
     left: Maybe<number>,
     top: Maybe<number>,
     right: Maybe<number>,
-    bottom: Maybe<number>
+    bottom: Maybe<number>,
   ) {
     return new this(top, right, bottom, left);
   }

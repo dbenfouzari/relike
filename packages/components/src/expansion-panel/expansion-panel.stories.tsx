@@ -1,12 +1,12 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import ExpansionPanel from './expansion-panel';
-import classes from './expansion-panel.stories.module.scss';
+import ExpansionPanel from "./expansion-panel";
+import classes from "./expansion-panel.stories.module.scss";
 
 const Header = () => <span>Hello Panel</span>;
 
 export default {
-  title: 'ExpansionPanel',
+  title: "ExpansionPanel",
   component: ExpansionPanel,
   argTypes: {
     headerBuilder: { control: { disable: true } },

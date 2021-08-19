@@ -1,10 +1,10 @@
 // TODO: Replace styled-components by react-jss
 
-import React, { FC } from 'react';
-import styled, { css } from 'styled-components';
+import React, { FC } from "react";
+import styled, { css } from "styled-components";
 
-import Icon from '../icon';
-import Padding from '../padding';
+import Icon from "../icon";
+import Padding from "../padding";
 
 interface IconButtonBaseProps {
   icon: ReturnType<typeof Icon>;

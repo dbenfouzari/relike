@@ -1,1 +1,1 @@
-export { default } from './paragraph';
+export { default } from "./paragraph";

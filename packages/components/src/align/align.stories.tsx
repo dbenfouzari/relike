@@ -1,13 +1,13 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
 
-import Alignment from '../alignment';
-import Colors from '../colors';
-import Container from '../container';
-import Align from './align';
+import Alignment from "../alignment";
+import Colors from "../colors";
+import Container from "../container";
+import Align from "./align";
 
 export default {
-  title: 'Align',
+  title: "Align",
   component: Align,
   argTypes: {
     children: { control: { disable: true } },

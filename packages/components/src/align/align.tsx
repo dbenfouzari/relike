@@ -1,7 +1,7 @@
-import React, { CSSProperties, ReactNode } from 'react';
-import { createUseStyles } from 'react-jss';
+import React, { CSSProperties, ReactNode } from "react";
+import { createUseStyles } from "react-jss";
 
-import Alignment from '../alignment';
+import Alignment from "../alignment";
 
 interface AlignProps {
   /**
@@ -22,44 +22,44 @@ interface AlignStylesProps {
   alignment: Alignment;
 }
 
-const getJustifyContent = (alignment: Alignment): CSSProperties['justifyContent'] | null => {
+const getJustifyContent = (alignment: Alignment): CSSProperties["justifyContent"] | null => {
   switch (alignment) {
     case Alignment.topLeft:
     case Alignment.bottomLeft:
     case Alignment.centerLeft:
-      return 'flex-start';
+      return "flex-start";
 
     case Alignment.center:
     case Alignment.bottomCenter:
     case Alignment.topCenter:
-      return 'center';
+      return "center";
 
     case Alignment.bottomRight:
     case Alignment.centerRight:
     case Alignment.topRight:
-      return 'flex-end';
+      return "flex-end";
 
     default:
       return null;
   }
 };
 
-const getAlignItems = (alignment: Alignment): CSSProperties['alignItems'] | null => {
+const getAlignItems = (alignment: Alignment): CSSProperties["alignItems"] | null => {
   switch (alignment) {
     case Alignment.topLeft:
     case Alignment.topCenter:
     case Alignment.topRight:
-      return 'flex-start';
+      return "flex-start";
 
     case Alignment.centerLeft:
     case Alignment.center:
     case Alignment.centerRight:
-      return 'center';
+      return "center";
 
     case Alignment.bottomLeft:
     case Alignment.bottomCenter:
     case Alignment.bottomRight:
-      return 'flex-end';
+      return "flex-end";
 
     default:
       return null;
@@ -68,7 +68,7 @@ const getAlignItems = (alignment: Alignment): CSSProperties['alignItems'] | null
 
 const useStyles = createUseStyles({
   wrapper: ({ alignment }: AlignStylesProps) => ({
-    display: 'flex',
+    display: "flex",
     flex: 1,
     justifyContent: getJustifyContent(alignment) ?? null,
     alignItems: getAlignItems(alignment) ?? null,

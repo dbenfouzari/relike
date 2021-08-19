@@ -1,17 +1,17 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from '../../../colors';
-import Icon from '../../../icon';
-import Icons from '../../../icons';
-import Padding from '../../../padding';
-import GridViewCount, { Axis } from './grid-view-count';
+import Colors from "../../../colors";
+import Icon from "../../../icon";
+import Icons from "../../../icons";
+import Padding from "../../../padding";
+import GridViewCount, { Axis } from "./grid-view-count";
 
 const generateItems = (n: number) =>
   Array.from({ length: n }, (_, index) => {
     const color = Colors.primaries[Math.floor(Math.random() * Colors.primaries.length)];
 
     return (
-      <div key={index} style={{ backgroundColor: color['400'].toRGBA() }}>
+      <div key={index} style={{ backgroundColor: color["400"].toRGBA() }}>
         <div>
           <Icon icon={Icons.person} />
           Item {index}
@@ -21,16 +21,16 @@ const generateItems = (n: number) =>
   });
 
 export default {
-  title: 'GridView.Count',
+  title: "GridView.Count",
   component: GridViewCount,
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     viewport: {
       /**
        * Large mobile
        * @see https://github.com/storybookjs/storybook/blob/main/addons/viewport/src/defaults.ts#L176
        */
-      defaultViewport: 'mobile2',
+      defaultViewport: "mobile2",
     },
   },
   argTypes: {

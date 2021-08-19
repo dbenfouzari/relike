@@ -1,10 +1,10 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Duration from '../../../duration';
-import LoaderScreen from './loader-screen';
+import Duration from "../../../duration";
+import LoaderScreen from "./loader-screen";
 
 export default {
-  title: 'Loader.Screen',
+  title: "Loader.Screen",
   component: LoaderScreen,
   argTypes: {
     color1: { control: false },

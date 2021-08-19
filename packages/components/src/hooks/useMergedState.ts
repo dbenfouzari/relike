@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useMergedState = <T extends any = unknown>(value: T) => {
   const [internalValue, setInternalValue] = useState(value);

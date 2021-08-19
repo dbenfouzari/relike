@@ -1,1 +1,1 @@
-export type TimelineMode = 'left' | 'right' | 'alternate';
+export type TimelineMode = "left" | "right" | "alternate";

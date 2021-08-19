@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from '../colors';
-import Stepper from './stepper';
-import classes from './stepper.stories.module.scss';
+import Colors from "../colors";
+import Stepper from "./stepper";
+import classes from "./stepper.stories.module.scss";
 
 export default {
-  title: 'Stepper',
+  title: "Stepper",
   component: Stepper,
   decorators: [(story) => <div className={classes.wrapper}>{story()}</div>],
   argTypes: {
@@ -15,7 +15,7 @@ export default {
     titleColor: { control: { disable: true } },
     children: { control: { disable: true } },
   },
-  subcomponents: { 'Stepper.Item': Stepper.Item },
+  subcomponents: { "Stepper.Item": Stepper.Item },
 } as ComponentMeta<typeof Stepper>;
 
 const Template: ComponentStory<typeof Stepper> = (args) => <Stepper {...args} />;

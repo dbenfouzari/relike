@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
 
-import Colors from '../colors';
-import Skeleton from './skeleton';
+import Colors from "../colors";
+import Skeleton from "./skeleton";
 
 export default {
-  title: 'Skeleton',
+  title: "Skeleton",
   component: Skeleton,
   argTypes: {
     children: { control: { disable: true } },
