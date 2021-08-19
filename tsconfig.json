@@ -4,7 +4,7 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "moduleResolution": "Node",
-    "module": "CommonJS",
+    "module": "esnext",
     "target": "ES2018",
     "sourceMap": true,
     "lib": [
@@ -20,11 +20,13 @@
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "paths": {
-      "@fastics/*": [
-        "packages/*/src/index.ts"
-      ]
-    }
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx"
   },
   "references": [
     {
@@ -39,5 +41,8 @@
     "node_modules",
     "dist",
     "*.d.ts"
+  ],
+  "include": [
+    "src"
   ]
 }

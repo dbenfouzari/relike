@@ -4,7 +4,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspaces run build"
+    "build": "yarn workspaces run build",
+    "test": "TZ=UTC jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -12,7 +13,11 @@
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
     "typescript": "^4.1.2"
   },
   "workspaces": [
@@ -21,6 +26,10 @@
   "engines": {
     "node": ">= 14.7",
     "yarn": ">= 1.22"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0",
+    "webpack": "4.44.2"
   },
   "packageManager": "yarn@1.22.11"
 }
