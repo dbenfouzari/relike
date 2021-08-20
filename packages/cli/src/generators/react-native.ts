@@ -1,4 +1,4 @@
-import { paramCase, snakeCase } from "change-case";
+import { paramCase } from "change-case";
 import fs from "fs";
 import path from "path";
 
@@ -15,19 +15,8 @@ export const generateIndexFile = (key: string, componentName: string) => {
   };
 };
 
-export const generateStyleFile = (key: string, componentName: string) => {
-  const templateStylePath = path.resolve(__dirname, "../templates/react-style/__name__.module.scss.txt");
-
-  const templateStyle = fs.readFileSync(templateStylePath, { encoding: "utf-8" });
-
-  return {
-    path: path.basename(replaceFileName(templateStylePath, key, componentName)),
-    content: replace(templateStyle, key, componentName, snakeCase),
-  };
-};
-
 export const generateStoryFile = (key: string, componentName: string) => {
-  const templateStoryPath = path.resolve(__dirname, "../templates/react-story/__name__.stories.tsx.txt.txt");
+  const templateStoryPath = path.resolve(__dirname, "../templates/react-native-story/__name__.stories.tsx.txt");
 
   const templateStory = fs.readFileSync(templateStoryPath, { encoding: "utf-8" });
 
@@ -38,7 +27,7 @@ export const generateStoryFile = (key: string, componentName: string) => {
 };
 
 export const generateTestFile = (key: string, componentName: string) => {
-  const templateTestPath = path.resolve(__dirname, "../templates/react-test/__name__.test.tsx.txt");
+  const templateTestPath = path.resolve(__dirname, "../templates/react-native-test/__name__.test.tsx.txt");
 
   const templateTest = fs.readFileSync(templateTestPath, { encoding: "utf-8" });
 
@@ -48,10 +37,8 @@ export const generateTestFile = (key: string, componentName: string) => {
   };
 };
 
-export const generateComponentFile = (key: string, componentName: string, hasStyle: boolean) => {
-  const templateComponentPath = hasStyle
-    ? path.resolve(__dirname, "../templates/react-component/__name__(if:style).tsx.txt")
-    : path.resolve(__dirname, "../templates/react-component/__name__.tsx.txt");
+export const generateComponentFile = (key: string, componentName: string) => {
+  const templateComponentPath = path.resolve(__dirname, "../templates/react-native-component/__name__.tsx.txt");
 
   const templateComponent = fs.readFileSync(templateComponentPath, { encoding: "utf-8" });
 

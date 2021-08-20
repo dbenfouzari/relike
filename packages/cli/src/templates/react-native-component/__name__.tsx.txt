@@ -1,0 +1,18 @@
+import React, {FC} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+interface __name__Props {}
+
+const __name__: FC<__name__Props> = () => (
+  <View style={styles.wrapper}>
+    <Text>Hello __name__</Text>
+  </View>
+);
+
+const styles = StyleSheet.create({
+  wrapper: {
+    backgroundColor: '#fff',
+  },
+});
+
+export default __name__;

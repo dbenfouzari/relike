@@ -1,0 +1,6 @@
+import { storiesOf } from "@storybook/react-native";
+import React from "react";
+
+import __name__ from "./__name__(kebabCase)";
+
+storiesOf("__name__", module).add("default", () => <__name__ />);

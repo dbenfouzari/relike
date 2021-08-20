@@ -2,7 +2,7 @@
 
 import { program } from "commander";
 
-import { generateComponent } from "./commands";
+import { generateComponent, generateNativeComponent } from "./commands";
 
 program.version("0.0.1");
 
@@ -43,6 +43,43 @@ program
   .option("-d, --debug", "Output extra debugging")
 
   .action(generateComponent)
+
+  .showHelpAfterError("(add --help for additional information)");
+
+/// Generate React-Native Component.
+/// $ fastics generate:native-component --name Button --path src/components
+/// $ fastics g:nc --name Button --path src/components
+program
+  .command("generate:native-component")
+  .alias("g:nc")
+  .description("Generate React-Native Component. It includes Storybook's story and test file.")
+  .usage(
+    `
+  # By passing arguments
+  $ fastics generate:native-component button src/components
+   
+  # By passing flags
+  $ fastics generate:native-component --name=button --path=src/components
+   
+  # By following wizard
+  $ fastics generate:native-component
+
+  ? What is the component name ? button
+  ? Select a target directory src/components/
+  ✨  Done in 4.24s.
+`,
+  )
+
+  .argument("[component]", "Component name")
+  .argument("[path]", "Your component's path")
+
+  .option("-n, --name <component>", "Component name")
+  .option("-p, --path <path>", "Your component's path")
+  .option("--no-story", "Do not generate story")
+  .option("--no-test", "Do not generate test")
+  .option("-d, --debug", "Output extra debugging")
+
+  .action(generateNativeComponent)
 
   .showHelpAfterError("(add --help for additional information)");
 
