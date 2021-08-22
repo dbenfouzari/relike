@@ -5,7 +5,7 @@ import { createUseStyles } from "react-jss";
 import Color from "../color";
 import Colors from "../colors";
 
-interface LinearProgressIndicatorProps {
+export interface LinearProgressIndicatorProps {
   /**
    * Current value.
    * Should be between 0 and 100.

@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react-native';
 
 import __name__ from './__name__(kebabCase)';
 

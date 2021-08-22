@@ -27,7 +27,7 @@ export const generateStyleFile = (key: string, componentName: string) => {
 };
 
 export const generateStoryFile = (key: string, componentName: string) => {
-  const templateStoryPath = path.resolve(__dirname, "../templates/react-story/__name__.stories.tsx.txt.txt");
+  const templateStoryPath = path.resolve(__dirname, "../templates/react-story/__name__.stories.tsx.txt");
 
   const templateStory = fs.readFileSync(templateStoryPath, { encoding: "utf-8" });
 
