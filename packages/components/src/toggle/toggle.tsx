@@ -59,7 +59,7 @@ interface ControlledToggleProps {
   onChange: (nextValue: boolean) => void;
 }
 
-type ToggleProps = BaseToggleProps & (UncontrolledToggleProps | ControlledToggleProps);
+export type ToggleProps = BaseToggleProps & (UncontrolledToggleProps | ControlledToggleProps);
 
 interface ToggleStylesProps {
   value: boolean;

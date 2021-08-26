@@ -16,7 +16,7 @@ const expectDirections = (elm: HTMLElement, justifyContent: Direction | "", alig
 
 describe("Align", () => {
   it("should render successfully with top left", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.topLeft}>
         <span>Hello Test</span>
       </Align>,
@@ -25,10 +25,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "flex-start", "flex-start");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with top center", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.topCenter}>
         <span>Hello Test</span>
       </Align>,
@@ -37,10 +38,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "center", "flex-start");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with top right", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.topRight}>
         <span>Hello Test</span>
       </Align>,
@@ -49,10 +51,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "flex-end", "flex-start");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with center left", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.centerLeft}>
         <span>Hello Test</span>
       </Align>,
@@ -61,10 +64,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "flex-start", "center");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with center", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.center}>
         <span>Hello Test</span>
       </Align>,
@@ -73,10 +77,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "center", "center");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with center right", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.centerRight}>
         <span>Hello Test</span>
       </Align>,
@@ -85,10 +90,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "flex-end", "center");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with bottom left", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.bottomLeft}>
         <span>Hello Test</span>
       </Align>,
@@ -97,10 +103,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "flex-start", "flex-end");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with bottom center", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.bottomCenter}>
         <span>Hello Test</span>
       </Align>,
@@ -109,10 +116,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "center", "flex-end");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with bottom right", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Align alignment={Alignment.bottomRight}>
         <span>Hello Test</span>
       </Align>,
@@ -121,10 +129,11 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "flex-end", "flex-end");
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should render successfully with bad alignment", () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       // @ts-expect-error
       <Align alignment={undefined}>
         <span>Hello Test</span>
@@ -134,5 +143,6 @@ describe("Align", () => {
     const divElement = getByTestId("align");
 
     expectDirections(divElement, "", "");
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

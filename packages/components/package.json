@@ -1,9 +1,9 @@
 {
-  "name": "@fastics/components",
+  "name": "@relike/components",
   "version": "0.0.1",
   "author": "Donovan BENFOUZARI <d.benfouzari@gmail.com>",
-  "bugs": "https://github.com/fastics/fastics/issues",
-  "homepage": "https://github.com/fastics/fastics",
+  "bugs": "https://github.com/relike/relike/issues",
+  "homepage": "https://github.com/relike/relike",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,14 +12,14 @@
     "/dist"
   ],
   "scripts": {
-    "prepare": "echo \"Nothing to prepare\"",
+    "prepare": "yarn relike generate:index src --exclude hooks,index.ts,introduction.stories.mdx,react-app-env.d.ts,setupTests.ts,types.ts",
     "build:cjs": "babel --source-maps --quiet --root-mode upward src -d dist/cjs --env-name cjs --extensions \".ts,.tsx,.js,.jsx\"",
     "build:esm": "babel --source-maps --quiet --root-mode upward src -d dist/esm --extensions \".ts,.tsx,.js,.jsx\"",
     "build:js": "yarn build:cjs && yarn build:esm",
     "build:ts:esm": "tsc -p tsconfig.build.json",
     "build:ts:cjs": "tsc -p tsconfig.build.json -module commonjs --outDir dist/cjs",
     "build:ts": "yarn build:ts:esm && yarn build:ts:cjs",
-    "build": "npx rimraf dist && yarn build:js && yarn build:ts",
+    "build": "yarn prepare && npx rimraf dist && yarn build:js && yarn build:ts",
     "storybook:dev": "start-storybook -p 6006 -s public",
     "storybook:build": "build-storybook -s public",
     "storybook:deploy": "storybook-to-ghpages"
@@ -35,7 +35,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
-    "@fastics/cli": "^0.0.1",
+    "@relike/cli": "^0.0.1",
     "@mdx-js/react": "^1.6.22",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-docs": "^6.3.7",
@@ -47,6 +47,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^7.0.1",
     "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^27.0.1",
     "@types/mdx-js__react": "^1",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
@@ -66,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fastics/fastics.git",
+    "url": "git+https://github.com/relike/relike.git",
     "directory": "packages/cli"
   },
   "browserslist": {

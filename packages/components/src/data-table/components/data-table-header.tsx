@@ -5,7 +5,7 @@ import classes from "../data-table.module.scss";
 import { DataTableClassNames, DataTableColumnProps } from "../types";
 import { filterChildren } from "../utils";
 
-interface DataTableHeaderProps<C> {
+export interface DataTableHeaderProps<C> {
   children: ReactElement<C>[];
   classNames?: DataTableClassNames;
 }

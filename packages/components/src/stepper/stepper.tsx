@@ -30,7 +30,7 @@ import classes from "./stepper.module.scss";
 //   _NumbersFrom0ToN<From>
 // >;
 
-interface StepperProps {
+export interface StepperProps {
   /**
    * The [StepperItem] children. At least 2.
    */

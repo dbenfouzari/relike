@@ -1,16 +1,16 @@
 import classnames from "classnames";
-import { useMemo } from "react";
+import { FC, useMemo } from "react";
 
 import { DAYS, SupportedLocales } from "../../constants";
 import { Day } from "../../types";
 import classes from "./days.module.scss";
 
-interface DaysProps {
+export interface DaysProps {
   locale: SupportedLocales;
   formatDay?: (day: Day) => string;
 }
 
-const Days: React.FC<DaysProps> = ({ locale, formatDay = (value) => value.substr(0, 3) }) => {
+const Days: FC<DaysProps> = ({ locale, formatDay = (value) => value.substr(0, 3) }) => {
   const localizedDays = useMemo(() => DAYS[locale], [locale]);
 
   return (

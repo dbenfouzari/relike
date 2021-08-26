@@ -5,7 +5,7 @@ import Color from "../../../color";
 import Colors from "../../../colors";
 import Duration from "../../../duration";
 
-interface LoaderScreenProps {
+export interface LoaderScreenProps {
   /**
    * The first color.
    * @default Colors.red[200]
@@ -50,7 +50,7 @@ const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: Lo
       "50%": { transform: "rotate(360deg) scale(1.2)" },
       "100%": { transform: "rotate(720deg) scale(0.8)" },
     },
-    "@keyframes shadowone": {
+    "@keyframes shadowOne": {
       "0%": {
         boxShadow: `1.875rem 0 0 ${color3.toRGB()}`,
       },
@@ -64,7 +64,7 @@ const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: Lo
         marginBottom: "0.625rem",
       },
     },
-    "@keyframes shadowtwo": {
+    "@keyframes shadowTwo": {
       "0%": {
         boxShadow: `1.875rem 0 0 ${color4.toRGB()}`,
       },
@@ -91,7 +91,7 @@ const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: Lo
         backgroundColor: color1.toRGB(),
         boxShadow: `1.875rem 0 0 ${color1.toRGB()}`,
         marginBottom: "0.625rem",
-        animation: `${durationInMs}ms ease 0s infinite normal none running $shadowone`,
+        animation: `${durationInMs}ms ease 0s infinite normal none running $shadowOne`,
       },
       "&:after": {
         borderRadius: "50%",
@@ -101,7 +101,7 @@ const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: Lo
         width: "1.25rem",
         backgroundColor: color2.toRGB(),
         boxShadow: `1.875rem 0 0 ${color2.toRGB()}`,
-        animation: `${durationInMs}ms ease 0s infinite normal none running $shadowtwo`,
+        animation: `${durationInMs}ms ease 0s infinite normal none running $shadowTwo`,
       },
     },
   });

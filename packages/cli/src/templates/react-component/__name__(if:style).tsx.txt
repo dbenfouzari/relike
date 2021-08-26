@@ -1,13 +1,25 @@
-import { FC } from 'react';
+import { forwardRef } from "react";
 
-import classes from './__name__(kebabCase).module.scss';
+import classes from "./__name__(kebabCase).module.scss";
 
-interface __name__Props {}
+export interface __name__Props {}
 
-const __name__: FC<__name__Props> = () => (
-  <div className={classes.__name__(snakeCase)}>
-    <span>Hello, World!</span>
+/**
+ * Component display name.
+ */
+const COMPONENT_NAME = "__name__";
+
+/**
+ * Component default props.
+ */
+const DEFAULT_PROPS: Partial<__name__Props> = {};
+
+const __name__ = forwardRef<HTMLDivElement, __name__Props>((props, ref) => (
+  <div ref={ref} className={classes.dialog_two} {...props}>
+    Hello __name__
   </div>
-)
+));
+__name__.displayName = COMPONENT_NAME;
+__name__.defaultProps = DEFAULT_PROPS;
 
 export default __name__;

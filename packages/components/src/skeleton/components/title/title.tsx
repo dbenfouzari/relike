@@ -7,7 +7,7 @@ import Colors from "../../../colors";
 import useSkeletonContext from "../../hooks/useSkeletonContext";
 import classes from "./title.module.scss";
 
-interface SkeletonTitleProps {}
+export interface SkeletonTitleProps {}
 
 interface SkeletonTitleStylesProps {
   color: Color;

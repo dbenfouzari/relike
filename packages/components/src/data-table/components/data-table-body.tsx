@@ -5,7 +5,7 @@ import classes from "../data-table.module.scss";
 import { DataTableClassNames, DataTableColumnProps, DataTableData, DataTableProps } from "../types";
 import { filterChildren } from "../utils";
 
-interface DataTableBodyProps<D extends DataTableData> {
+export interface DataTableBodyProps<D extends DataTableData> {
   data: D;
   children: ReactElement<DataTableColumnProps>[];
   renderRow?: DataTableProps<D>["renderRow"];

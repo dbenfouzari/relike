@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Align should render successfully with bad alignment 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d9-0-2-11"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with bottom center 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d7-0-2-9"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with bottom left 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d6-0-2-8"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with bottom right 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d8-0-2-10"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with center 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d4-0-2-6"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with center left 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d3-0-2-5"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with center right 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d5-0-2-7"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with top center 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d1-0-2-3"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with top left 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d0-0-2-2"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;
+
+exports[`Align should render successfully with top right 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d2-0-2-4"
+  data-testid="align"
+>
+  <span>
+    Hello Test
+  </span>
+</div>
+`;

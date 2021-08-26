@@ -4,6 +4,8 @@ import __name__ from './__name__(kebabCase)';
 
 describe('__name__', () => {
   it('should render successfully', () => {
-    render(<__name__ />);
+    const { container } = render(<__name__ />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

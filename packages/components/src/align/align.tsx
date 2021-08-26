@@ -1,9 +1,9 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, FC, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Alignment from "../alignment";
 
-interface AlignProps {
+export interface AlignProps {
   /**
    * The `alignment` prop is mandatory. It sets the children alignment.
    *
@@ -78,7 +78,7 @@ const useStyles = createUseStyles({
 /**
  * Use this component to align items in a container.
  */
-export const Align: React.FC<AlignProps> = ({ alignment, children }) => {
+export const Align: FC<AlignProps> = ({ alignment, children }) => {
   const styles = useStyles({ alignment });
 
   return (

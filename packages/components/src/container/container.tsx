@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { createElement, ReactHTML, ReactNode } from "react";
+import { createElement, FC, ReactHTML, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Align from "../align";
@@ -8,7 +8,7 @@ import Color from "../color";
 import Margin from "../margin";
 import Padding from "../padding";
 
-interface ContainerProps {
+export interface ContainerProps {
   /**
    * Add inner padding.
    */
@@ -95,7 +95,7 @@ const useStyles = createUseStyles({
  * @see Color
  * @see Alignment
  */
-export const Container: React.FC<ContainerProps> = ({ children, as = "div", alignment, className, ...rest }) => {
+export const Container: FC<ContainerProps> = ({ children, as = "div", alignment, className, ...rest }) => {
   const styles = useStyles(rest);
 
   return createElement(as, {

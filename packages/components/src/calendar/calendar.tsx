@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { useCallback, useMemo, useState } from "react";
+import { FC, useCallback, useMemo, useState } from "react";
 
 import DateTime from "../date-time";
 import Duration from "../duration";
@@ -9,7 +9,7 @@ import { SupportedLocales } from "./constants";
 import { CalendarEvent, Day } from "./types";
 import { filterCalendarEvents } from "./utils";
 
-interface CalendarProps {
+export interface CalendarProps {
   /**
    * Initial selected date. Can be a timestamp or a [DateTime].
    * @default DateTime.now()
@@ -34,7 +34,7 @@ interface CalendarProps {
  * A **[Calendar]** that uses no external dependency.
  * @see DateTime
  */
-export const Calendar: React.FC<CalendarProps> = ({
+export const Calendar: FC<CalendarProps> = ({
   initialValue = DateTime.now(),
   locale = SupportedLocales.EN,
   formatDay = (value) => value.substr(0, 3),

@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback, useMemo, useRef, useState } from "react";
 
-interface UseTextEditingControllerProps<B extends boolean> {
+export interface UseTextEditingControllerProps<B extends boolean> {
   initialValue?: string;
   /**
    * Update this to `true` if you want to listen the value.

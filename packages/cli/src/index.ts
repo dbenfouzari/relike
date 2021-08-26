@@ -2,15 +2,15 @@
 
 import { program } from "commander";
 
-import { generateComponent, generateNativeComponent } from "./commands";
+import { generateComponent, generateIndexFile, generateNativeComponent } from "./commands";
 
 program.version("0.0.1");
 
-program.name("yarn fastics");
+program.name("yarn relike");
 
 /// Generate React Component.
-/// $ fastics generate:component --name Button --path src/components
-/// $ fastics g:c --name Button --path src/components
+/// $ relike generate:component --name Button --path src/components
+/// $ relike g:c --name Button --path src/components
 program
   .command("generate:component")
   .alias("g:c")
@@ -18,13 +18,13 @@ program
   .usage(
     `
   # By passing arguments
-  $ fastics generate:component button src/components
+  $ relike generate:component button src/components
    
   # By passing flags
-  $ fastics generate:component --name=button --path=src/components
+  $ relike generate:component --name=button --path=src/components
    
   # By following wizard
-  $ fastics generate:component
+  $ relike generate:component
 
   ? What is the component name ? button
   ? Select a target directory src/components/
@@ -47,8 +47,8 @@ program
   .showHelpAfterError("(add --help for additional information)");
 
 /// Generate React-Native Component.
-/// $ fastics generate:native-component --name Button --path src/components
-/// $ fastics g:nc --name Button --path src/components
+/// $ relike generate:native-component --name Button --path src/components
+/// $ relike g:nc --name Button --path src/components
 program
   .command("generate:native-component")
   .alias("g:nc")
@@ -56,13 +56,13 @@ program
   .usage(
     `
   # By passing arguments
-  $ fastics generate:native-component button src/components
+  $ relike generate:native-component button src/components
    
   # By passing flags
-  $ fastics generate:native-component --name=button --path=src/components
+  $ relike generate:native-component --name=button --path=src/components
    
   # By following wizard
-  $ fastics generate:native-component
+  $ relike generate:native-component
 
   ? What is the component name ? button
   ? Select a target directory src/components/
@@ -81,6 +81,33 @@ program
 
   .action(generateNativeComponent)
 
+  .showHelpAfterError("(add --help for additional information)");
+
+/// Generate exports index file.
+/// $ relike generate:index --path src/components
+/// $ relike g:i --path src/components
+program
+  .command("generate:index")
+  .alias("g:i")
+  .description("Generate exports index file.")
+  .usage(
+    `
+  # By passing arguments
+  $ relike generate:index src/components
+   
+  # By passing flags
+  $ relike generate:index --path=src/components
+   
+  # By following wizard
+  $ relike generate:index
+`,
+  )
+
+  .argument("[path]", "Your folder path")
+  .argument("[excluded]", "Excluded files and folders, comma separated")
+  .option("-p, --path <path>", "Your folder path")
+  .option("-e, --exclude <excluded>", "Excluded files and folders, comma separated")
+  .action(generateIndexFile)
   .showHelpAfterError("(add --help for additional information)");
 
 program.parse();
