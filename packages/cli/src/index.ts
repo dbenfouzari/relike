@@ -2,7 +2,7 @@
 
 import { program } from "commander";
 
-import { generateComponent, generateNativeComponent } from "./commands";
+import { generateComponent, generateIndexFile, generateNativeComponent } from "./commands";
 
 program.version("0.0.1");
 
@@ -81,6 +81,33 @@ program
 
   .action(generateNativeComponent)
 
+  .showHelpAfterError("(add --help for additional information)");
+
+/// Generate exports index file.
+/// $ relike generate:index --path src/components
+/// $ relike g:i --path src/components
+program
+  .command("generate:index")
+  .alias("g:i")
+  .description("Generate exports index file.")
+  .usage(
+    `
+  # By passing arguments
+  $ relike generate:index src/components
+   
+  # By passing flags
+  $ relike generate:index --path=src/components
+   
+  # By following wizard
+  $ relike generate:index
+`,
+  )
+
+  .argument("[path]", "Your folder path")
+  .argument("[excluded]", "Excluded files and folders, comma separated")
+  .option("-p, --path <path>", "Your folder path")
+  .option("-e, --exclude <excluded>", "Excluded files and folders, comma separated")
+  .action(generateIndexFile)
   .showHelpAfterError("(add --help for additional information)");
 
 program.parse();
