@@ -15,6 +15,7 @@
     "build": "yarn prepare && babel --source-maps --no-comments --quiet --root-mode upward --extensions \".js,.ts\" src -d dist"
   },
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/relike/relike.git",
