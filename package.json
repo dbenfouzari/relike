@@ -10,7 +10,8 @@
     "test:components": "yarn test packages/components",
     "lint": "eslint .",
     "lint:cli": "eslint packages/cli",
-    "lint:components": "eslint packages/components"
+    "lint:components": "eslint packages/components",
+    "chromatic:components": "yarn workspace @relike/components storybook:build && yarn chromatic --project-token 97eda06526d3 --storybook-build-dir packages/components/storybook-static"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -23,6 +24,7 @@
     "@types/node": "^16.6.1",
     "babel-jest": "^27.0.6",
     "caniuse-lite": "^1.0.30001251",
+    "chromatic": "^5.9.2",
     "eslint": "^7.32.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-prettier": "^3.4.0",
