@@ -13,7 +13,7 @@ export enum Axis {
   horizontal = "horizontal",
 }
 
-interface GridViewCountProps {
+export interface GridViewCountProps {
   children: JSX.Element[];
   className?: string;
   /**

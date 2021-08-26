@@ -11,7 +11,7 @@ import * as styles from "./text-field.styles";
  */
 type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type">;
 
-interface TextFieldProps extends InputProps {
+export interface TextFieldProps extends InputProps {
   /**
    * Override style
    */

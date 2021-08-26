@@ -6,7 +6,11 @@
   "scripts": {
     "build": "yarn workspaces run build",
     "test": "TZ=UTC jest",
-    "lint": "eslint ."
+    "test:cli": "yarn test packages/cli",
+    "test:components": "yarn test packages/components",
+    "lint": "eslint .",
+    "lint:cli": "eslint packages/cli",
+    "lint:components": "eslint packages/components"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -25,6 +29,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
+    "react-test-renderer": "^17.0.2",
     "typescript": "^4.1.2"
   },
   "workspaces": [

@@ -7,7 +7,7 @@ import Colors from "../../../colors";
 import { IconInnerProps } from "../../../icon";
 import classes from "./timeline-item.module.scss";
 
-interface TimelineItemPropsWithoutDot {
+export interface TimelineItemPropsWithoutDot {
   /**
    * What's the dot color ?
    *
@@ -20,7 +20,7 @@ interface TimelineItemPropsWithoutDot {
   children: ReactNode;
 }
 
-interface TimelineItemPropsWithDot {
+export interface TimelineItemPropsWithDot {
   /**
    * What's the dot color ?
    *
@@ -33,7 +33,7 @@ interface TimelineItemPropsWithDot {
   children: ReactNode;
 }
 
-type TimelineItemProps = TimelineItemPropsWithoutDot | TimelineItemPropsWithDot;
+export type TimelineItemProps = TimelineItemPropsWithoutDot | TimelineItemPropsWithDot;
 
 interface TimelineItemStylesProps {
   color: Color;

@@ -7,7 +7,7 @@ import Icons from "../icons";
 import classes from "./carousel.module.scss";
 import useCarousel from "./useCarousel";
 
-interface CarouselProps {
+export interface CarouselProps {
   /**
    * The elements you want to display in the carousel.
    */

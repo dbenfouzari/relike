@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 import Color from "../../../color";
 import DateTime from "../../../date-time";
 import Icon from "../../../icon";
@@ -6,14 +8,14 @@ import Icons from "../../../icons";
 import { MONTHS, SupportedLocales } from "../../constants";
 import classes from "./top.module.scss";
 
-interface TopProps {
+export interface CalendarTopProps {
   currentDate: DateTime;
   onPrevClick: VoidFunction;
   onNextClick: VoidFunction;
   locale: SupportedLocales;
 }
 
-const CalendarTop: React.FC<TopProps> = ({ currentDate, locale, onNextClick, onPrevClick }) => (
+const CalendarTop: FC<CalendarTopProps> = ({ currentDate, locale, onNextClick, onPrevClick }) => (
   <div className={classes.top}>
     <IconButton
       data-testid="prev-month"

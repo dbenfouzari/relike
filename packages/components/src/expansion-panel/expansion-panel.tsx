@@ -8,7 +8,7 @@ import Padding from "../padding";
 import classes from "./expansion-panel.module.scss";
 import useExpansion from "./useExpansion";
 
-interface ExpansionPanelClassNames {
+export interface ExpansionPanelClassNames {
   wrapper?: string;
   header?: string;
   headerIconButton?: string;
@@ -16,7 +16,7 @@ interface ExpansionPanelClassNames {
   contentInner?: string;
 }
 
-interface ExpansionPanelProps {
+export interface ExpansionPanelProps {
   /**
    * The component builder that builds the expansion panels' header.
    */

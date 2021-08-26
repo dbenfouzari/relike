@@ -1,17 +1,45 @@
 import classNames from "classnames";
-import { FC } from "react";
+import { forwardRef, ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 import Duration from "../duration";
 import useDelayedUnmount from "../hooks/useDelayedUnmount";
 import classes from "./dialog.module.scss";
 
-interface DialogProps {
+export interface DialogProps {
+  /**
+   * Whether the dialog is open or not.
+   */
   isOpen: boolean;
+
+  /**
+   * What should it do when dialog wants to close?
+   *
+   * This is called when user clicks on overlay.
+   */
   onClose?: VoidFunction;
+
+  /**
+   * The **Dialog** children.
+   */
+  children: ReactNode;
 }
 
-const Dialog: FC<DialogProps> = ({ isOpen, onClose }) => {
+/**
+ * Component display name.
+ */
+const COMPONENT_NAME = "Dialog";
+
+/**
+ * Component default props.
+ */
+const DEFAULT_PROPS: Partial<DialogProps> = {};
+
+/**
+ * In user interfaces, a **Dialog** is a "conversation" between the system and the user,
+ * and often requests information or an action from the user.
+ */
+export const Dialog = forwardRef<HTMLDivElement, DialogProps>(({ isOpen, onClose, children }, ref) => {
   const shouldRender = useDelayedUnmount(isOpen, Duration.seconds(0.3));
 
   return shouldRender
@@ -24,16 +52,19 @@ const Dialog: FC<DialogProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
           />
           <div
+            ref={ref}
             className={classNames(classes.dialog, {
               [classes.dialog__unmounting]: !isOpen,
             })}
           >
-            Dialog
+            {children}
           </div>
         </>,
         document.body,
       )
     : null;
-};
+});
+Dialog.displayName = COMPONENT_NAME;
+Dialog.defaultProps = DEFAULT_PROPS;
 
 export default Dialog;

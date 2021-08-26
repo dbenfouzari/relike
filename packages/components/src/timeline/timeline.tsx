@@ -5,7 +5,7 @@ import TimelineItem from "./components/timeline-item";
 import classes from "./timeline.module.scss";
 import { TimelineMode } from "./types";
 
-interface TimelineProps {
+export interface TimelineProps {
   /**
    * Choose at which side of the text the line should be.
    *

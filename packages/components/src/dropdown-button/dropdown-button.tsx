@@ -85,7 +85,7 @@ interface DropdownButtonPropsWithoutAllowEmpty extends BaseDropdownButtonProps {
   placeholder?: undefined;
 }
 
-type DropdownButtonProps = DropdownButtonPropsWithAllowEmpty | DropdownButtonPropsWithoutAllowEmpty;
+export type DropdownButtonProps = DropdownButtonPropsWithAllowEmpty | DropdownButtonPropsWithoutAllowEmpty;
 
 /**
  * A button for selecting from a list of items.

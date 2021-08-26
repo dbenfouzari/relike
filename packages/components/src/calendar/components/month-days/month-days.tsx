@@ -1,4 +1,5 @@
 import classnames from "classnames";
+import { FC } from "react";
 
 import DateTime from "../../../date-time";
 import { CalendarEvent } from "../../types";
@@ -6,12 +7,12 @@ import { getEventsThatDay } from "../../utils";
 import Event from "../event";
 import classes from "./month-days.module.scss";
 
-interface MonthDaysProps {
+export interface MonthDaysProps {
   currentDate: DateTime;
   events?: CalendarEvent[];
 }
 
-const MonthDays: React.FC<MonthDaysProps> = ({ currentDate, events }) => (
+const MonthDays: FC<MonthDaysProps> = ({ currentDate, events }) => (
   <>
     {currentDate.getDaysInMonth().map((dateTime) => {
       const eventsThatDay = events && getEventsThatDay(dateTime, events);

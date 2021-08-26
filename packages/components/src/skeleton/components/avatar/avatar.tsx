@@ -10,7 +10,7 @@ import classes from "./avatar.module.scss";
 type AvatarSize = "small" | "default" | "large";
 type AvatarSizes = Record<AvatarSize, number>;
 
-interface AvatarProps {
+export interface AvatarProps {
   /**
    * Defines the **[Skeleton.Avatar]** shape.
    * @default circle

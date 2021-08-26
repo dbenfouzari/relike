@@ -7,11 +7,12 @@ import { MONTHS } from "./constants";
 
 describe("Calendar", () => {
   it("should render successfully", () => {
-    render(<Calendar />);
+    const { container } = render(<Calendar />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should handle previous month", async () => {
-    const { getByTestId } = render(
+    const { container, getByTestId } = render(
       <Calendar
         events={[
           { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
@@ -27,6 +28,7 @@ describe("Calendar", () => {
     const nextCurrMonth = MONTHS.en[currDate.getMonth() + 1];
 
     expect(month.textContent).toEqual(currMonth);
+    expect(container.firstChild).toMatchSnapshot();
 
     const prevMonth = getByTestId("prev-month");
     const nextMonth = getByTestId("next-month");
@@ -36,6 +38,7 @@ describe("Calendar", () => {
     });
 
     expect(month.textContent).toEqual(prevCurrMonth);
+    expect(container.firstChild).toMatchSnapshot();
 
     act(() => {
       fireEvent.click(nextMonth);
@@ -43,5 +46,6 @@ describe("Calendar", () => {
     });
 
     expect(month.textContent).toEqual(nextCurrMonth);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

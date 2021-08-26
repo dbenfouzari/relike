@@ -21,7 +21,7 @@ interface StyledIconProps {
   padding?: Padding;
 }
 
-type IconButtonProps = IconButtonBaseProps & StyledIconProps;
+export type IconButtonProps = IconButtonBaseProps & StyledIconProps;
 
 export const IconButtonBase: FC<IconButtonProps> = ({ icon: IconComponent, onPress, className, ...props }) => (
   <button className={className} onClick={onPress} {...props}>

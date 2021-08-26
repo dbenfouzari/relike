@@ -1,11 +1,13 @@
+import { FC } from "react";
+
 import { CalendarEvent } from "../../types";
 import classes from "./event.module.scss";
 
-interface EventProps {
+export interface EventProps {
   event: CalendarEvent;
 }
 
-const Event: React.FC<EventProps> = ({ event }) => (
+const Event: FC<EventProps> = ({ event }) => (
   <div className={classes.wrapper}>
     <span>{event.title}</span>
     <span className={classes.hour}>

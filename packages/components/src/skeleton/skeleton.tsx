@@ -9,7 +9,7 @@ import SkeletonTitle from "./components/title";
 import SkeletonContext from "./context/skeleton-context";
 import classes from "./skeleton.module.scss";
 
-interface SkeletonProps {
+export interface SkeletonProps {
   /**
    * If `true`, an infinite animation runs on every child.
    *

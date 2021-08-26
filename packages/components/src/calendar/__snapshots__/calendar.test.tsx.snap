@@ -1,0 +1,1856 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calendar should handle previous month 1`] = `
+<div
+  class=""
+>
+  <div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="prev-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_left
+      </span>
+    </button>
+    <div>
+      <span
+        data-testid="month"
+      >
+        august
+      </span>
+      <span>
+        2021
+      </span>
+    </div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="next-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_right
+      </span>
+    </button>
+  </div>
+  <div>
+    <span
+      class=""
+    >
+      mon
+    </span>
+    <span
+      class=""
+    >
+      tue
+    </span>
+    <span
+      class=""
+    >
+      wed
+    </span>
+    <span
+      class=""
+    >
+      thu
+    </span>
+    <span
+      class=""
+    >
+      fri
+    </span>
+    <span
+      class=""
+    >
+      sat
+    </span>
+    <span
+      class=""
+    >
+      sun
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        26
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        27
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        31
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        4
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        5
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        6
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        7
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        8
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        9
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        10
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        11
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        12
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        13
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        14
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        15
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        16
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        17
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        18
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        19
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        20
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        21
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        22
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        23
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        24
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        25
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class="undefined"
+      >
+        26
+      </span>
+      <div>
+        <div>
+          <span>
+            Storybook Event That Rocks !
+          </span>
+          <span>
+            19
+            :
+            45
+          </span>
+        </div>
+      </div>
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        27
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        31
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        4
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        5
+      </span>
+      <div />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Calendar should handle previous month 2`] = `
+<div
+  class=""
+>
+  <div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="prev-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_left
+      </span>
+    </button>
+    <div>
+      <span
+        data-testid="month"
+      >
+        july
+      </span>
+      <span>
+        2021
+      </span>
+    </div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="next-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_right
+      </span>
+    </button>
+  </div>
+  <div>
+    <span
+      class=""
+    >
+      mon
+    </span>
+    <span
+      class=""
+    >
+      tue
+    </span>
+    <span
+      class=""
+    >
+      wed
+    </span>
+    <span
+      class=""
+    >
+      thu
+    </span>
+    <span
+      class=""
+    >
+      fri
+    </span>
+    <span
+      class=""
+    >
+      sat
+    </span>
+    <span
+      class=""
+    >
+      sun
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        4
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        5
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        6
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        7
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        8
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        9
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        10
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        11
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        12
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        13
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        14
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        15
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        16
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        17
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        18
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        19
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        20
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        21
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        22
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        23
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        24
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        25
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        26
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        27
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        31
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Calendar should handle previous month 3`] = `
+<div
+  class=""
+>
+  <div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="prev-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_left
+      </span>
+    </button>
+    <div>
+      <span
+        data-testid="month"
+      >
+        september
+      </span>
+      <span>
+        2021
+      </span>
+    </div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="next-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_right
+      </span>
+    </button>
+  </div>
+  <div>
+    <span
+      class=""
+    >
+      mon
+    </span>
+    <span
+      class=""
+    >
+      tue
+    </span>
+    <span
+      class=""
+    >
+      wed
+    </span>
+    <span
+      class=""
+    >
+      thu
+    </span>
+    <span
+      class=""
+    >
+      fri
+    </span>
+    <span
+      class=""
+    >
+      sat
+    </span>
+    <span
+      class=""
+    >
+      sun
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        31
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        4
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        5
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        6
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        7
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        8
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        9
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        10
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        11
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        12
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        13
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        14
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        15
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        16
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        17
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        18
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        19
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        20
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        21
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        22
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        23
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        24
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        25
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        26
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        27
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Calendar should render successfully 1`] = `
+<div
+  class=""
+>
+  <div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="prev-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_left
+      </span>
+    </button>
+    <div>
+      <span
+        data-testid="month"
+      >
+        august
+      </span>
+      <span>
+        2021
+      </span>
+    </div>
+    <button
+      class="sc-gtsrHT dtPxGD"
+      data-testid="next-month"
+    >
+      <span
+        class="material-icons sc-bdnxRM cbDTns"
+      >
+        arrow_right
+      </span>
+    </button>
+  </div>
+  <div>
+    <span
+      class=""
+    >
+      mon
+    </span>
+    <span
+      class=""
+    >
+      tue
+    </span>
+    <span
+      class=""
+    >
+      wed
+    </span>
+    <span
+      class=""
+    >
+      thu
+    </span>
+    <span
+      class=""
+    >
+      fri
+    </span>
+    <span
+      class=""
+    >
+      sat
+    </span>
+    <span
+      class=""
+    >
+      sun
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        26
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        27
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        31
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        4
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        5
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        6
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        7
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        8
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        9
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        10
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        11
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        12
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        13
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        14
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        15
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        16
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        17
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        18
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        19
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        20
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        21
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        22
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        23
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        24
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        25
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class="undefined"
+      >
+        26
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        27
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        28
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        29
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        30
+      </span>
+      <div />
+    </span>
+    <span
+      class=""
+    >
+      <span
+        class=""
+      >
+        31
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        1
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        2
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        3
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        4
+      </span>
+      <div />
+    </span>
+    <span
+      class="undefined"
+    >
+      <span
+        class=""
+      >
+        5
+      </span>
+      <div />
+    </span>
+  </div>
+</div>
+`;
