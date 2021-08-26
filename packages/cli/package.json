@@ -1,14 +1,14 @@
 {
-  "name": "@fastics/cli",
+  "name": "@relike/cli",
   "description": "Some CLI to help your development process",
   "version": "0.0.1",
   "author": "Donovan BENFOUZARI <d.benfouzari@gmail.com>",
-  "bugs": "https://github.com/fastics/fastics/issues",
-  "homepage": "https://github.com/fastics/fastics",
+  "bugs": "https://github.com/relike/relike/issues",
+  "homepage": "https://github.com/relike/relike",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": {
-    "fastics": "dist/index.js"
+    "relike": "dist/index.js"
   },
   "scripts": {
     "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates",
@@ -17,7 +17,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fastics/fastics.git",
+    "url": "git+https://github.com/relike/relike.git",
     "directory": "packages/cli"
   },
   "dependencies": {

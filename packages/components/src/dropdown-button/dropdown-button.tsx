@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import { FC, HTMLProps, MouseEvent, ReactText, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import useOnClickOutside from "../hooks";
+import { useOnClickOutside } from "../hooks";
 import Icon from "../icon";
 import Icons, { IconData } from "../icons";
 import classes from "./dropdown-button.module.scss";
