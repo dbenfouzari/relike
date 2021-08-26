@@ -27,23 +27,26 @@ Default.args = {
   // initialValue: new Date(1991, 10, 21),
 };
 
+const now =
+  process.env.NODE_ENV === "test" ? new DateTime({ year: 2021, month: DateTime.august, day: 26 }) : DateTime.now();
+
 export const WithEvents = Template.bind({});
 WithEvents.args = {
   locale: SupportedLocales.FR,
-  initialValue: DateTime.now(),
+  initialValue: now,
   events: [
-    { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
-    { date: DateTime.now(), title: "Storybook Event That Rocks !" },
+    { date: now.subtract(Duration.days(60)), title: "Past Event" },
+    { date: now, title: "Storybook Event That Rocks !" },
   ],
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
   locale: SupportedLocales.FR,
-  initialValue: DateTime.now(),
+  initialValue: now,
   dark: true,
   events: [
-    { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
-    { date: DateTime.now(), title: "Storybook Event That Rocks !" },
+    { date: now.subtract(Duration.days(60)), title: "Past Event" },
+    { date: now, title: "Storybook Event That Rocks !" },
   ],
 };

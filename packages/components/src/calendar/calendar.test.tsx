@@ -5,6 +5,8 @@ import Duration from "../duration";
 import Calendar from "./calendar";
 import { MONTHS } from "./constants";
 
+const currDate = new Date(2021, 7, 26);
+
 describe("Calendar", () => {
   it("should render successfully", () => {
     const { container } = render(<Calendar />);
@@ -22,7 +24,6 @@ describe("Calendar", () => {
     );
 
     const month = getByTestId("month");
-    const currDate = new Date();
     const currMonth = MONTHS.en[currDate.getMonth()];
     const prevCurrMonth = MONTHS.en[currDate.getMonth() - 1];
     const nextCurrMonth = MONTHS.en[currDate.getMonth() + 1];

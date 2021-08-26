@@ -15,7 +15,7 @@ const COMPONENT_NAME = "__name__";
 const DEFAULT_PROPS: Partial<__name__Props> = {};
 
 const __name__ = forwardRef<HTMLDivElement, __name__Props>((props, ref) => (
-  <div ref={ref} className={classes.dialog_two} {...props}>
+  <div ref={ref} className={classes.__name__(kebabCase)} {...props}>
     Hello __name__
   </div>
 ));

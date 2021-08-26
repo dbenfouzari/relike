@@ -1,6 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { useCallback, useState } from "react";
 
+import Container from "../container";
+import Padding from "../padding";
+import Toolbar from "../toolbar";
 import Dialog, { DialogProps } from "./dialog";
 
 export default {
@@ -37,9 +40,12 @@ Default.args = {
   children: (
     <>
       <header>
-        <h3>Important Information</h3>
+        <Toolbar>
+          <h3>Important Information</h3>
+        </Toolbar>
       </header>
-      <div>
+
+      <Container padding={Padding.symmetric({ horizontal: 24 })}>
         Nihil hic munitissimus habendi senatus locus, nihil horum? At nos hinc posthac, sitientis piros Afros. Magna
         pars studiorum, prodita quaerimus. Integer legentibus erat a ante historiarum dapibus. Praeterea iter est
         quasdam res quas ex communi. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Inmensae subtilitatis,
@@ -51,10 +57,17 @@ Default.args = {
         nihil! Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus sit amet
         fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Quisque ut dolor gravida, placerat libero
         vel, euismod.
-      </div>
+      </Container>
+
       <footer>
-        <button>Cancel</button>
-        <button>Accept</button>
+        <Toolbar
+          after={
+            <>
+              <button>Cancel</button>
+              <button>Accept</button>
+            </>
+          }
+        />
       </footer>
     </>
   ),

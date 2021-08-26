@@ -1,0 +1,33 @@
+.toolbar {
+  display: flex;
+  height: 68px;
+  align-items: center;
+  padding: 0 24px;
+
+  &__hasAfter {
+    padding-right: 16px;
+  }
+
+  &__hasBefore {
+    padding-left: 16px;
+  }
+
+  &__hasLabel &_after {
+    margin-left: 16px;
+  }
+
+  &_after {
+    justify-self: flex-end;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  &_before {
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+
+  &_label {
+    flex: 1;
+  }
+}
