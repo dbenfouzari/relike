@@ -5,6 +5,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Colors from "../colors";
 import Container from "../container";
 import Duration from "../duration";
+import Padding from "../padding";
 import Tooltip, { TooltipPlacement } from "./tooltip";
 
 export default {
@@ -15,6 +16,7 @@ export default {
     closeAfter: { control: { disable: true } },
     delay: { control: { disable: true } },
   },
+  decorators: [(story) => <Container padding={Padding.all(96)}>{story()}</Container>],
 } as ComponentMeta<typeof Tooltip>;
 
 const Template: ComponentStory<typeof Tooltip> = (args) => <Tooltip {...args} />;
