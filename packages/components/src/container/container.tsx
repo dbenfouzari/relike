@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { createElement, FC, ReactHTML, ReactNode } from "react";
+import { createElement, forwardRef, ReactHTML, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Align from "../align";
@@ -95,13 +95,16 @@ const useStyles = createUseStyles({
  * @see Color
  * @see Alignment
  */
-export const Container: FC<ContainerProps> = ({ children, as = "div", alignment, className, ...rest }) => {
-  const styles = useStyles(rest);
+export const Container = forwardRef<unknown, ContainerProps>(
+  ({ children, as = "div", alignment, className, ...rest }, ref) => {
+    const styles = useStyles(rest);
 
-  return createElement(as, {
-    className: classnames(styles.container, className),
-    children: children ? alignment ? <Align alignment={alignment}>{children}</Align> : children : null,
-  });
-};
+    return createElement(as, {
+      ref,
+      className: classnames(styles.container, className),
+      children: children ? alignment ? <Align alignment={alignment}>{children}</Align> : children : null,
+    });
+  },
+);
 
 export default Container;

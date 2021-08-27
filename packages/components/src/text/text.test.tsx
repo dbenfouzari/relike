@@ -4,6 +4,8 @@ import Text from "./text";
 
 describe("Text", () => {
   it("should render successfully", () => {
-    render(<Text />);
+    const { container } = render(<Text>Hello Testing World</Text>);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
