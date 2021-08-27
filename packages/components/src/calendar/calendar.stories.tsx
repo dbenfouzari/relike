@@ -27,8 +27,7 @@ Default.args = {
   // initialValue: new Date(1991, 10, 21),
 };
 
-const now =
-  process.env.NODE_ENV === "test" ? new DateTime({ year: 2021, month: DateTime.august, day: 26 }) : DateTime.now();
+const now = process.env.CI ? new DateTime({ year: 2021, month: DateTime.august, day: 26 }) : DateTime.now();
 
 export const WithEvents = Template.bind({});
 WithEvents.args = {
