@@ -16,7 +16,7 @@ export default {
   subcomponents: { "Tabs.Item": Tabs.Item },
   parameters: {
     // Sets a delay for the component's stories
-    chromatic: { delay: 300 },
+    chromatic: { delay: 1000 },
   },
 } as ComponentMeta<typeof Tabs>;
 
