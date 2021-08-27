@@ -8,7 +8,7 @@ import TabItem, { InnerTabItem, TabItemProps } from "./components/tab-item";
 import useTabs from "./hooks/useTabs";
 import classes from "./tabs.module.scss";
 
-interface TabsProps {
+export interface TabsProps {
   /**
    * Select what tab should be selected first.
    *

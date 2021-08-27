@@ -14,6 +14,10 @@ export default {
     inactiveColor: { control: { disable: true } },
   },
   subcomponents: { "Tabs.Item": Tabs.Item },
+  parameters: {
+    // Sets a delay for the component's stories
+    chromatic: { delay: 300 },
+  },
 } as ComponentMeta<typeof Tabs>;
 
 const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
