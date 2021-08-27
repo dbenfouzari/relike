@@ -39,3 +39,4 @@ tsconfig.tsbuildinfo
 
 # Storybook
 storybook-static
+build-storybook.log

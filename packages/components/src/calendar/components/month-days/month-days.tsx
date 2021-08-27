@@ -1,3 +1,4 @@
+import isChromatic from "chromatic/isChromatic";
 import classnames from "classnames";
 import { FC } from "react";
 
@@ -11,6 +12,15 @@ export interface MonthDaysProps {
   currentDate: DateTime;
   events?: CalendarEvent[];
 }
+
+/**
+ * Since we don't want Chromatic to update every day when no change is made,
+ * I just define today to a defined date.
+ */
+const getIsToday = (dateTime: DateTime) => {
+  if (isChromatic()) return dateTime.isAtSameMomentAs(new DateTime({ year: 2021, month: DateTime.august, day: 26 }));
+  return dateTime.getIsToday();
+};
 
 const MonthDays: FC<MonthDaysProps> = ({ currentDate, events }) => (
   <>
@@ -26,7 +36,7 @@ const MonthDays: FC<MonthDaysProps> = ({ currentDate, events }) => (
         >
           <span
             className={classnames(classes.day_number, {
-              [classes.day_number__current]: dateTime.getIsToday(),
+              [classes.day_number__current]: getIsToday(dateTime),
             })}
           >
             {dateTime.day}

@@ -22,7 +22,8 @@
     "build": "yarn prepare && npx rimraf dist && yarn build:js && yarn build:ts",
     "storybook:dev": "start-storybook -p 6006 -s public",
     "storybook:build": "build-storybook -s public",
-    "storybook:deploy": "storybook-to-ghpages"
+    "storybook:deploy": "storybook-to-ghpages",
+    "chromatic": "CI=true npx chromatic --exit-once-uploaded --ci --project-token 97eda06526d3"
   },
   "dependencies": {
     "classnames": "^2.3.1",

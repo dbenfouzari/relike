@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import isChromatic from "chromatic/isChromatic";
 
 import Colors from "../../../colors";
 import Icon from "../../../icon";
@@ -8,7 +9,7 @@ import GridViewCount, { Axis } from "./grid-view-count";
 
 const generateItems = (n: number) =>
   Array.from({ length: n }, (_, index) => {
-    const color = Colors.primaries[Math.floor(Math.random() * Colors.primaries.length)];
+    const color = isChromatic() ? Colors.grey : Colors.primaries[Math.floor(Math.random() * Colors.primaries.length)];
 
     return (
       <div key={index} style={{ backgroundColor: color["400"].toRGBA() }}>
