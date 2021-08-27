@@ -40,4 +40,5 @@ export { default as ThemeData } from "./theme-data";
 export { default as Timeline } from "./timeline";
 export { default as Toggle } from "./toggle";
 export { default as Toolbar } from "./toolbar";
+export { default as Tooltip } from "./tooltip";
 export { default as Typography } from "./typography";

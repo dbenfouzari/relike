@@ -2,6 +2,6 @@
 
 exports[`Toolbar should render successfully 1`] = `
 <div
-  class=""
+  class="toolbar"
 />
 `;

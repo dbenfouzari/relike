@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render successfully 1`] = `
+<span
+  class="elm-0-2-1 elm-d0-0-2-2"
+>
+  Hello Testing World
+</span>
+`;
