@@ -1,15 +1,15 @@
+import "./tooltip.stories.module.scss";
+
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Colors from "../colors";
 import Container from "../container";
 import Duration from "../duration";
 import Tooltip, { TooltipPlacement } from "./tooltip";
-import classes from "./tooltip.stories.module.scss";
 
 export default {
   title: "Tooltip",
   component: Tooltip,
-  decorators: [(story) => <div className={classes.container}>{story()}</div>],
   argTypes: {
     children: { control: { disable: true } },
     closeAfter: { control: { disable: true } },

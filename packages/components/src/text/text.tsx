@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { CSSProperties, ForwardedRef, forwardRef } from "react";
+import { CSSProperties, ForwardedRef, forwardRef, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import TextOverflow from "../text-overflow";
@@ -18,7 +18,7 @@ export interface TextProps {
   /**
    * The text to display.
    */
-  children: string;
+  children: string | ReactNode;
   /**
    * Override styles with this className.
    * Prefer using `style` prop since it's easier.

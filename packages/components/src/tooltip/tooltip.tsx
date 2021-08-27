@@ -3,7 +3,10 @@ import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
 import { uid } from "uid";
 
+import Colors from "../colors";
 import Duration from "../duration";
+import Text from "../text";
+import TextStyle from "../text-style";
 import { Maybe } from "../types";
 import classes from "./tooltip.module.scss";
 import { useInjectTooltipRef } from "./useInjectTooltipRef";
@@ -119,11 +122,12 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
               {...attributes.popper}
             >
               <div className="tooltip__arrow" />
-              <div className={classes.tooltip_inner}>
+
+              <Text style={new TextStyle({ fontFamily: "Roboto", fontSize: 10, color: Colors.white })}>
                 {label.indexOf("\n") !== -1
                   ? label.split("\n").map((sentence: string) => <p key={sentence}>{sentence}</p>)
                   : label}
-              </div>
+              </Text>
             </div>,
             document.body,
           )}
