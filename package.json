@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "lint:cli": "eslint packages/cli",
     "lint:components": "eslint packages/components",
-    "chromatic:components": "yarn workspace @relike/components storybook:build && yarn chromatic --project-token 97eda06526d3 --storybook-build-dir packages/components/storybook-static"
+    "chromatic:components": "yarn workspace @relike/components storybook:build && yarn chromatic --project-token 97eda06526d3 --storybook-build-dir packages/components/storybook-static --exit-once-uploaded --ci"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
