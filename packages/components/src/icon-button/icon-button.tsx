@@ -1,6 +1,6 @@
 // TODO: Replace styled-components by react-jss
 
-import { FC } from "react";
+import { FC, forwardRef } from "react";
 import styled, { css } from "styled-components";
 
 import Icon from "../icon";
@@ -23,10 +23,12 @@ interface StyledIconProps {
 
 export type IconButtonProps = IconButtonBaseProps & StyledIconProps;
 
-export const IconButtonBase: FC<IconButtonProps> = ({ icon: IconComponent, onPress, className, ...props }) => (
-  <button className={className} onClick={onPress} {...props}>
-    {IconComponent}
-  </button>
+export const IconButtonBase = forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ icon: IconComponent, onPress, className, ...props }, ref) => (
+    <button ref={ref} className={className} onClick={onPress} {...props}>
+      {IconComponent}
+    </button>
+  ),
 );
 
 const StyledIconButton = styled(IconButtonBase)<IconButtonProps>`
@@ -63,6 +65,8 @@ const StyledIconButton = styled(IconButtonBase)<IconButtonProps>`
  *
  * @see Icon
  */
-export const IconButton: FC<IconButtonProps> = (props) => <StyledIconButton {...props} />;
+export const IconButton: FC<IconButtonProps> = forwardRef<HTMLButtonElement, IconButtonBaseProps>((props, ref) => (
+  <StyledIconButton ref={ref} {...props} />
+));
 
 export default IconButton;

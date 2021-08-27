@@ -65,3 +65,58 @@ export const MONTHS = {
   'zh-CN': ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
   'zh-TW': ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
 } as const;
+
+export const STRINGS = {
+  fr: {
+    'prev-month': 'Mois précédent',
+    'next-month': 'Mois suivant',
+  },
+    en: {
+    'prev-month': 'Previous month',
+    'next-month': 'Next month',
+  },
+  es: {
+    'prev-month': 'Mes anterior',
+    'next-month': 'Mes siguiente',
+  },
+  it: {
+    'prev-month': 'Mese precedente',
+    'next-month': 'Mese successivo',
+  },
+  de: {
+    'prev-month': 'Voriger Monat',
+    'next-month': 'Nächster Monat',
+  },
+  nl: {
+    'prev-month': 'Vorige maand',
+    'next-month': 'Volgende maand',
+  },
+  pt: {
+    'prev-month': 'Mês anterior',
+    'next-month': 'Mês seguinte',
+  },
+  ru: {
+    'prev-month': 'Предыдущий месяц',
+    'next-month': 'Следующий месяц',
+  },
+  zh: {
+    'prev-month': '上个月',
+    'next-month': '下个月',
+  },
+  ja: {
+    'prev-month': '前の月',
+    'next-month': '次の月',
+  },
+  ko: {
+    'prev-month': '이전 달',
+    'next-month': '다음 달',
+  },
+  'zh-CN': {
+    'prev-month': '上个月',
+    'next-month': '下个月',
+  },
+  'zh-TW': {
+    'prev-month': '上個月',
+    'next-month': '下個月',
+  },
+} as const;

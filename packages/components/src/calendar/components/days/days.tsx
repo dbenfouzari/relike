@@ -1,6 +1,7 @@
 import classnames from "classnames";
 import { FC, useMemo } from "react";
 
+import Tooltip from "../../../tooltip";
 import { DAYS, SupportedLocales } from "../../constants";
 import { Day } from "../../types";
 import classes from "./days.module.scss";
@@ -17,7 +18,9 @@ const Days: FC<DaysProps> = ({ locale, formatDay = (value) => value.substr(0, 3)
     <>
       {localizedDays.map((day) => (
         <span key={day} className={classnames(classes.day_name)}>
-          {formatDay(day)}
+          <Tooltip label={day}>
+            <span>{formatDay(day)}</span>
+          </Tooltip>
         </span>
       ))}
     </>

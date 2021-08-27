@@ -46,37 +46,51 @@ exports[`Calendar should handle previous month 1`] = `
     <span
       class="day_name"
     >
-      mon
+      <span>
+        mon
+      </span>
     </span>
     <span
       class="day_name"
     >
-      tue
+      <span>
+        tue
+      </span>
     </span>
     <span
       class="day_name"
     >
-      wed
+      <span>
+        wed
+      </span>
     </span>
     <span
       class="day_name"
     >
-      thu
+      <span>
+        thu
+      </span>
     </span>
     <span
       class="day_name"
     >
-      fri
+      <span>
+        fri
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sat
+      <span>
+        sat
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sun
+      <span>
+        sun
+      </span>
     </span>
     <span
       class="cell cell__out_of_range"
@@ -482,9 +496,9 @@ exports[`Calendar should handle previous month 1`] = `
           <span
             class="hour"
           >
-            20
+            21
             :
-            54
+            14
           </span>
         </div>
       </div>
@@ -647,37 +661,51 @@ exports[`Calendar should handle previous month 2`] = `
     <span
       class="day_name"
     >
-      mon
+      <span>
+        mon
+      </span>
     </span>
     <span
       class="day_name"
     >
-      tue
+      <span>
+        tue
+      </span>
     </span>
     <span
       class="day_name"
     >
-      wed
+      <span>
+        wed
+      </span>
     </span>
     <span
       class="day_name"
     >
-      thu
+      <span>
+        thu
+      </span>
     </span>
     <span
       class="day_name"
     >
-      fri
+      <span>
+        fri
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sat
+      <span>
+        sat
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sun
+      <span>
+        sun
+      </span>
     </span>
     <span
       class="cell cell__out_of_range"
@@ -699,9 +727,9 @@ exports[`Calendar should handle previous month 2`] = `
           <span
             class="hour"
           >
-            20
+            21
             :
-            54
+            14
           </span>
         </div>
       </div>
@@ -1164,37 +1192,51 @@ exports[`Calendar should handle previous month 3`] = `
     <span
       class="day_name"
     >
-      mon
+      <span>
+        mon
+      </span>
     </span>
     <span
       class="day_name"
     >
-      tue
+      <span>
+        tue
+      </span>
     </span>
     <span
       class="day_name"
     >
-      wed
+      <span>
+        wed
+      </span>
     </span>
     <span
       class="day_name"
     >
-      thu
+      <span>
+        thu
+      </span>
     </span>
     <span
       class="day_name"
     >
-      fri
+      <span>
+        fri
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sat
+      <span>
+        sat
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sun
+      <span>
+        sun
+      </span>
     </span>
     <span
       class="cell cell__out_of_range"
@@ -1666,37 +1708,51 @@ exports[`Calendar should render successfully 1`] = `
     <span
       class="day_name"
     >
-      mon
+      <span>
+        mon
+      </span>
     </span>
     <span
       class="day_name"
     >
-      tue
+      <span>
+        tue
+      </span>
     </span>
     <span
       class="day_name"
     >
-      wed
+      <span>
+        wed
+      </span>
     </span>
     <span
       class="day_name"
     >
-      thu
+      <span>
+        thu
+      </span>
     </span>
     <span
       class="day_name"
     >
-      fri
+      <span>
+        fri
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sat
+      <span>
+        sat
+      </span>
     </span>
     <span
       class="day_name"
     >
-      sun
+      <span>
+        sun
+      </span>
     </span>
     <span
       class="cell cell__out_of_range"

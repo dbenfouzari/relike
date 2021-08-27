@@ -5,7 +5,8 @@ import DateTime from "../../../date-time";
 import Icon from "../../../icon";
 import IconButton from "../../../icon-button";
 import Icons from "../../../icons";
-import { MONTHS, SupportedLocales } from "../../constants";
+import Tooltip from "../../../tooltip";
+import { MONTHS, STRINGS, SupportedLocales } from "../../constants";
 import classes from "./top.module.scss";
 
 export interface CalendarTopProps {
@@ -17,22 +18,26 @@ export interface CalendarTopProps {
 
 const CalendarTop: FC<CalendarTopProps> = ({ currentDate, locale, onNextClick, onPrevClick }) => (
   <div className={classes.top}>
-    <IconButton
-      data-testid="prev-month"
-      onPress={onPrevClick}
-      icon={<Icon icon={Icons.arrow_left} color={new Color(0xff99a1a7)} />}
-    />
+    <Tooltip label={STRINGS[locale]["prev-month"]}>
+      <IconButton
+        data-testid="prev-month"
+        onPress={onPrevClick}
+        icon={<Icon icon={Icons.arrow_left} color={new Color(0xff99a1a7)} />}
+      />
+    </Tooltip>
 
     <div className={classes.center}>
       <span data-testid="month">{MONTHS[locale][currentDate.month - 1]}</span>
       <span>{currentDate.year}</span>
     </div>
 
-    <IconButton
-      data-testid="next-month"
-      onPress={onNextClick}
-      icon={<Icon icon={Icons.arrow_right} color={new Color(0xff99a1a7)} />}
-    />
+    <Tooltip label={STRINGS[locale]["next-month"]}>
+      <IconButton
+        data-testid="next-month"
+        onPress={onNextClick}
+        icon={<Icon icon={Icons.arrow_right} color={new Color(0xff99a1a7)} />}
+      />
+    </Tooltip>
   </div>
 );
 
