@@ -4,6 +4,8 @@ import { createUseStyles } from "react-jss";
 
 import Color from "../color";
 import Colors from "../colors";
+import { Icon } from "../icon";
+import { IconData } from "../icons";
 import Text from "../text";
 import Typography from "../typography";
 import classes from "./button.module.scss";
@@ -59,6 +61,12 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
    * Whether the button is disabled or not.
    */
   disabled?: boolean;
+
+  icon?: IconData;
+
+  block?: true;
+
+  className?: string;
 }
 
 interface ButtonStylesProps {
@@ -91,8 +99,8 @@ const useStyles = createUseStyles({
   }),
   buttonHigh: ({ color, disabled }: ButtonStylesProps) => {
     const currentLightness = color.lightness;
-    const hoverLightness = currentLightness - 5 < 0 ? 0 : currentLightness - 5;
-    const activeLightness = currentLightness - 10 < 0 ? 0 : currentLightness - 10;
+    const hoverLightness = currentLightness - 5 < 0 ? currentLightness + 5 : currentLightness - 5;
+    const activeLightness = currentLightness - 10 < 0 ? currentLightness + 10 : currentLightness - 10;
 
     return {
       border: `1px solid ${color.toRGBA()}`,
@@ -129,9 +137,14 @@ const useStyles = createUseStyles({
  * <Button emphasis={Emphasis.high}>
  *   Hello World!
  * </Button>
+ *
+ * @see https://material.io/archive/guidelines/components/buttons.html Material.io for guidelines.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ emphasis = Emphasis.medium, color = Colors.blue[500], children, disabled, ...props }, ref) => {
+  (
+    { block, emphasis = Emphasis.medium, className, color = Colors.blue[500], icon, children, disabled, ...props },
+    ref,
+  ) => {
     const styles = useStyles({ color, disabled });
 
     const foregroundColor = useMemo(() => {
@@ -146,20 +159,27 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         disabled={disabled}
         ref={ref}
-        className={classNames(classes.button, {
-          [classes.button__disabled]: disabled,
-          [classes.button__high]: emphasis === Emphasis.high,
-          [styles.buttonLow]: emphasis === Emphasis.low,
-          [styles.buttonMedium]: emphasis === Emphasis.medium,
-          [styles.buttonHigh]: emphasis === Emphasis.high,
-        })}
+        className={classNames(
+          classes.button,
+          {
+            [classes.button__disabled]: disabled,
+            [classes.button__block]: block,
+            [classes.button__high]: emphasis === Emphasis.high,
+            [styles.buttonLow]: emphasis === Emphasis.low,
+            [styles.buttonMedium]: emphasis === Emphasis.medium,
+            [styles.buttonHigh]: emphasis === Emphasis.high,
+          },
+          className,
+        )}
         {...props}
       >
+        {icon && <Icon icon={icon} color={foregroundColor} size={18} className={classes.icon} />}
         <Text style={Typography.blackMountainView.button?.copyWith({ color: foregroundColor })}>{children}</Text>
       </button>
     );
   },
 );
+
 Button.displayName = COMPONENT_NAME;
 
 export default Button;

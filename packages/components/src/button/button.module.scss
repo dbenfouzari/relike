@@ -1,3 +1,5 @@
+$padding-inline: 16px;
+
 .button {
   background-color: transparent;
   border: 1px solid transparent;
@@ -6,13 +8,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
-  padding: 0 16px;
+  padding: 0 $padding-inline;
   display: inline-flex;
   position: relative;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  min-width: 64px;
+  min-width: #{64px + $padding-inline * 1.5};
   outline: none;
   user-select: none;
   -webkit-appearance: none;
@@ -21,16 +23,22 @@
   border-radius: 4px;
 }
 
+.button__block {
+  display: flex;
+  width: 100%;
+}
+
 .button__disabled {
   opacity: .5;
+}
+
+.icon {
+  margin-left: -4px;
+  margin-right: 8px;
 }
 
 .button__high:not(.button__disabled) {
   box-shadow: 0 3px 1px -2px rgb(0, 0, 0, 0.2),
               0 2px 2px 0 rgb(0, 0, 0, 0.14),
               0 1px 5px 0 rgb(0, 0, 0, 0.12);
-}
-
-.button + .button {
-  margin-left: 8px;
 }
