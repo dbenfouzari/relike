@@ -5,28 +5,32 @@ import Duration from "../duration";
 import Calendar from "./calendar";
 import { MONTHS } from "./constants";
 
-const currDate = new Date(2021, 7, 26);
+const currDateTime = new DateTime({ year: 2021, month: DateTime.august, day: 26, hour: 21, minute: 14 });
 
 describe("Calendar", () => {
   it("should render successfully", () => {
-    const { container } = render(<Calendar />);
+    const { container } = render(<Calendar initialValue={currDateTime} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should handle previous month", async () => {
     const { container, getByTestId } = render(
       <Calendar
+        initialValue={currDateTime}
         events={[
-          { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
-          { date: DateTime.now(), title: "Storybook Event That Rocks !" },
+          { date: currDateTime.subtract(Duration.days(60)), title: "Past Event" },
+          { date: currDateTime, title: "Storybook Event That Rocks !" },
         ]}
       />,
     );
 
+    const currentMonth = currDateTime.month;
+    const currentMonthIndex = currentMonth - 1;
+
     const month = getByTestId("month");
-    const currMonth = MONTHS.en[currDate.getMonth()];
-    const prevCurrMonth = MONTHS.en[currDate.getMonth() - 1];
-    const nextCurrMonth = MONTHS.en[currDate.getMonth() + 1];
+    const currMonth = MONTHS.en[currentMonthIndex];
+    const prevCurrMonth = MONTHS.en[currentMonthIndex - 1];
+    const nextCurrMonth = MONTHS.en[currentMonthIndex + 1];
 
     expect(month.textContent).toEqual(currMonth);
     expect(container.firstChild).toMatchSnapshot();

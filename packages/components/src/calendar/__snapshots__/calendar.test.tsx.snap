@@ -474,18 +474,6 @@ exports[`Calendar should handle previous month 1`] = `
       </span>
       <div
         class="events"
-      />
-    </span>
-    <span
-      class="cell"
-    >
-      <span
-        class="day_number day_number__current"
-      >
-        27
-      </span>
-      <div
-        class="events"
       >
         <div
           class="wrapper"
@@ -508,6 +496,18 @@ exports[`Calendar should handle previous month 1`] = `
     >
       <span
         class="day_number"
+      >
+        27
+      </span>
+      <div
+        class="events"
+      />
+    </span>
+    <span
+      class="cell"
+    >
+      <span
+        class="day_number day_number__current"
       >
         28
       </span>
@@ -717,22 +717,7 @@ exports[`Calendar should handle previous month 2`] = `
       </span>
       <div
         class="events"
-      >
-        <div
-          class="wrapper"
-        >
-          <span>
-            Past Event
-          </span>
-          <span
-            class="hour"
-          >
-            21
-            :
-            14
-          </span>
-        </div>
-      </div>
+      />
     </span>
     <span
       class="cell cell__out_of_range"
@@ -2142,7 +2127,7 @@ exports[`Calendar should render successfully 1`] = `
       class="cell"
     >
       <span
-        class="day_number day_number__current"
+        class="day_number"
       >
         27
       </span>
@@ -2154,7 +2139,7 @@ exports[`Calendar should render successfully 1`] = `
       class="cell"
     >
       <span
-        class="day_number"
+        class="day_number day_number__current"
       >
         28
       </span>
