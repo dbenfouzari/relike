@@ -14,7 +14,7 @@ export interface __name__Props {
 const COMPONENT_NAME = "__name__";
 
 const __name__ = forwardRef<HTMLDivElement, __name__Props>(({ className, ...props }, ref) => (
-  <div ref={ref} className={classNames(classes.__name__(kebabCase), className)} {...props}>
+  <div ref={ref} className={classNames(classes.__name__(snakeCase), className)} {...props}>
     Hello __name__
   </div>
 ));
