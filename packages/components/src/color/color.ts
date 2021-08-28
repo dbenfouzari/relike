@@ -1,21 +1,28 @@
 import assert from "assert";
 
+import { toHsl } from "./utils";
+
 /**
  * The [Color] class allows you to handle colors easily.
  * You can manipulate a [Color] to add or subtract alpha, red, green or blue. And many other manipulations.
  */
 class Color {
   private value;
-  private readonly alpha;
-  private readonly red;
-  private readonly green;
-  private readonly blue;
+  public readonly alpha;
+  public readonly red;
+  public readonly green;
+  public readonly blue;
+  public readonly hue;
+  public readonly saturation;
+  public readonly lightness;
 
   constructor(color: number) {
     const a = color >>> 24;
     const r = (color >>> 16) & 0xff;
     const g = (color >>> 8) & 0xff;
     const b = color & 0xff;
+
+    const [h, s, l] = toHsl(r, g, b);
 
     Color.assert(a, r, g, b);
 
@@ -24,6 +31,9 @@ class Color {
     this.red = r;
     this.green = g;
     this.blue = b;
+    this.hue = h;
+    this.saturation = s;
+    this.lightness = l;
   }
 
   public toString() {
@@ -177,6 +187,26 @@ class Color {
     return Color.fromARGB(this.alpha, this.red, this.green, b);
   };
 
+  withHue = (h: number) => {
+    assert(h >= 0, "Hue should be between 0 and 360");
+
+    return Color.fromHSLA(h, this.saturation, this.lightness, this.alpha);
+  };
+
+  withSaturation = (s: number) => {
+    assert(s >= 0, "Saturation should be between 0 and 100");
+    assert(s <= 100, "Saturation should be between 0 and 100");
+
+    return Color.fromHSLA(this.hue, s, this.lightness, this.alpha);
+  };
+
+  withLightness = (l: number) => {
+    assert(l >= 0, "Lightness should be between 0 and 100");
+    assert(l <= 100, "Lightness should be between 0 and 100");
+
+    return Color.fromHSLA(this.hue, this.saturation, l, this.alpha);
+  };
+
   static _linearizeColorComponent(component: number) {
     if (component <= 0.03928) return component / 12.92;
     return Math.pow((component + 0.055) / 1.055, 2.4);
@@ -184,7 +214,7 @@ class Color {
 
   /**
    * Returns a brightness value between 0 for darkest and 1 for lightest.
-   * Represents the relative luminance of the color.
+   * Represents the relative lightness of the color.
    * This value is computationally expensive to calculate.
    */
   computeLuminance() {
