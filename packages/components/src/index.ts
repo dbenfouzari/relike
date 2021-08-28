@@ -3,6 +3,7 @@
 
 export { default as Align } from "./align";
 export { default as Alignment } from "./alignment";
+export { default as Button } from "./button";
 export { default as Calendar } from "./calendar";
 export { default as Carousel } from "./carousel";
 export { default as Color } from "./color";

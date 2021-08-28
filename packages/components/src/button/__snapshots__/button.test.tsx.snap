@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render successfully with high emphasis 1`] = `
+<button
+  class="button button__high buttonHigh-0-2-3 buttonHigh-d8-0-2-15"
+>
+  <span
+    class="elm-0-2-7 elm-d2-0-2-16"
+  >
+    Hello Test
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with low emphasis 1`] = `
+<button
+  class="button buttonLow-0-2-1 buttonLow-d0-0-2-4"
+>
+  <span
+    class="elm-0-2-7 elm-d0-0-2-8"
+  >
+    Hello Test
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with medium emphasis 1`] = `
+<button
+  class="button buttonMedium-0-2-2 buttonMedium-d4-0-2-10"
+>
+  <span
+    class="elm-0-2-7 elm-d1-0-2-12"
+  >
+    Hello Test
+  </span>
+</button>
+`;

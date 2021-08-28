@@ -1,6 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { useCallback, useState } from "react";
 
+import Button from "../button";
+import { Emphasis } from "../button/button";
+import Colors from "../colors";
 import Container from "../container";
 import Padding from "../padding";
 import Toolbar from "../toolbar";
@@ -63,8 +66,12 @@ Default.args = {
         <Toolbar
           after={
             <>
-              <button>Cancel</button>
-              <button>Accept</button>
+              <Button color={Colors.black} emphasis={Emphasis.low}>
+                Cancel
+              </Button>
+              <Button color={Colors.blueGrey[600]} emphasis={Emphasis.high}>
+                Accept
+              </Button>
             </>
           }
         />
