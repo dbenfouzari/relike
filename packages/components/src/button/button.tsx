@@ -54,10 +54,16 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
    * The button test. It has to be a `string` !
    */
   children: string;
+
+  /**
+   * Whether the button is disabled or not.
+   */
+  disabled?: boolean;
 }
 
 interface ButtonStylesProps {
   color: Color;
+  disabled?: boolean;
 }
 
 /**
@@ -66,24 +72,24 @@ interface ButtonStylesProps {
 const COMPONENT_NAME = "Button";
 
 const useStyles = createUseStyles({
-  buttonLow: ({ color }: ButtonStylesProps) => ({
+  buttonLow: ({ color, disabled }: ButtonStylesProps) => ({
     "&:hover, &:focus": {
-      backgroundColor: color.withOpacity(0.05).toRGBA(),
+      backgroundColor: disabled ? "transparent" : color.withOpacity(0.05).toRGBA(),
     },
     "&:active": {
-      backgroundColor: color.withOpacity(0.1).toRGBA(),
+      backgroundColor: disabled ? "transparent" : color.withOpacity(0.1).toRGBA(),
     },
   }),
-  buttonMedium: ({ color }: ButtonStylesProps) => ({
+  buttonMedium: ({ color, disabled }: ButtonStylesProps) => ({
     border: `1px solid ${color.toRGBA()}`,
     "&:hover, &:focus": {
-      backgroundColor: color.withOpacity(0.05).toRGBA(),
+      backgroundColor: disabled ? "transparent" : color.withOpacity(0.05).toRGBA(),
     },
     "&:active": {
-      backgroundColor: color.withOpacity(0.1).toRGBA(),
+      backgroundColor: disabled ? "transparent" : color.withOpacity(0.1).toRGBA(),
     },
   }),
-  buttonHigh: ({ color }: ButtonStylesProps) => {
+  buttonHigh: ({ color, disabled }: ButtonStylesProps) => {
     const currentLightness = color.lightness;
     const hoverLightness = currentLightness - 5 < 0 ? 0 : currentLightness - 5;
     const activeLightness = currentLightness - 10 < 0 ? 0 : currentLightness - 10;
@@ -92,10 +98,10 @@ const useStyles = createUseStyles({
       border: `1px solid ${color.toRGBA()}`,
       backgroundColor: color.toRGBA(),
       "&:hover, &:focus": {
-        backgroundColor: color.withLightness(hoverLightness).toRGBA(),
+        backgroundColor: disabled ? color.toRGBA() : color.withLightness(hoverLightness).toRGBA(),
       },
       "&:active": {
-        backgroundColor: color.withLightness(activeLightness).toRGBA(),
+        backgroundColor: disabled ? color.toRGBA() : color.withLightness(activeLightness).toRGBA(),
       },
     };
   },
@@ -125,8 +131,8 @@ const useStyles = createUseStyles({
  * </Button>
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ emphasis = Emphasis.medium, color = Colors.blue[500], children, ...props }, ref) => {
-    const styles = useStyles({ color });
+  ({ emphasis = Emphasis.medium, color = Colors.blue[500], children, disabled, ...props }, ref) => {
+    const styles = useStyles({ color, disabled });
 
     const foregroundColor = useMemo(() => {
       if (emphasis === Emphasis.high) {
@@ -138,8 +144,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <button
+        disabled={disabled}
         ref={ref}
         className={classNames(classes.button, {
+          [classes.button__disabled]: disabled,
           [classes.button__high]: emphasis === Emphasis.high,
           [styles.buttonLow]: emphasis === Emphasis.low,
           [styles.buttonMedium]: emphasis === Emphasis.medium,
