@@ -16,6 +16,7 @@ export { default as DropdownButton } from "./dropdown-button";
 export { default as Duration } from "./duration";
 export { default as EdgeInsets } from "./edge-insets";
 export { default as ExpansionPanel } from "./expansion-panel";
+export { default as FloatingActionButton } from "./floating-action-button";
 export { default as FontWeight } from "./font-weight";
 export { default as GridView } from "./grid-view";
 export { default as Icon } from "./icon";

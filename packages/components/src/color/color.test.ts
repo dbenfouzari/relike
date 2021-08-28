@@ -24,104 +24,98 @@ describe("Color", () => {
   it("should create a Color instance from ARGB", () => {
     const color = Color.fromARGB(255, 255, 255, 255);
 
-    // @ts-expect-error
     expect(color.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color.red).toBe(255);
-    // @ts-expect-error
+
     expect(color.green).toBe(255);
-    // @ts-expect-error
+
     expect(color.blue).toBe(255);
   });
 
   it("should change alpha", () => {
     const color = Color.fromARGB(255, 255, 255, 255);
 
-    // @ts-expect-error
     expect(color.alpha).toBe(255);
 
     const color2 = color.withAlpha(100);
 
     // Test that original color is unchanged
-    // @ts-expect-error
+
     expect(color.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color2.alpha).toBe(100);
-    // @ts-expect-error
+
     expect(color2.red).toBe(255);
-    // @ts-expect-error
+
     expect(color2.green).toBe(255);
-    // @ts-expect-error
+
     expect(color2.blue).toBe(255);
   });
 
   it("should change red", () => {
     const color = Color.fromARGB(255, 255, 255, 255);
 
-    // @ts-expect-error
     expect(color.red).toBe(255);
 
     const color2 = color.withRed(100);
 
     // Test that original color is unchanged
-    // @ts-expect-error
+
     expect(color.red).toBe(255);
-    // @ts-expect-error
+
     expect(color2.red).toBe(100);
-    // @ts-expect-error
+
     expect(color2.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color2.green).toBe(255);
-    // @ts-expect-error
+
     expect(color2.blue).toBe(255);
   });
 
   it("should change green", () => {
     const color = Color.fromARGB(255, 255, 255, 255);
 
-    // @ts-expect-error
     expect(color.green).toBe(255);
 
     const color2 = color.withGreen(100);
 
     // Test that original color is unchanged
-    // @ts-expect-error
+
     expect(color.green).toBe(255);
-    // @ts-expect-error
+
     expect(color2.green).toBe(100);
-    // @ts-expect-error
+
     expect(color2.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color2.red).toBe(255);
-    // @ts-expect-error
+
     expect(color2.blue).toBe(255);
   });
 
   it("should change blue", () => {
     const color = Color.fromARGB(255, 255, 255, 255);
 
-    // @ts-expect-error
     expect(color.blue).toBe(255);
 
     const color2 = color.withBlue(100);
 
     // Test that original color is unchanged
-    // @ts-expect-error
+
     expect(color.blue).toBe(255);
-    // @ts-expect-error
+
     expect(color2.blue).toBe(100);
-    // @ts-expect-error
+
     expect(color2.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color2.red).toBe(255);
-    // @ts-expect-error
+
     expect(color2.green).toBe(255);
   });
 
   it("should change opacity", () => {
     const color = Color.fromARGB(255, 255, 255, 255);
 
-    // @ts-expect-error
     expect(color.alpha).toBe(255);
 
     const color2 = color.withOpacity(0);
@@ -129,13 +123,13 @@ describe("Color", () => {
     const color4 = color3.withOpacity(0.5);
 
     // Test that original color is unchanged
-    // @ts-expect-error
+
     expect(color.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color2.alpha).toBe(0);
-    // @ts-expect-error
+
     expect(color3.alpha).toBe(255);
-    // @ts-expect-error
+
     expect(color4.alpha).toBe(128);
 
     expect(() => {
@@ -158,7 +152,6 @@ describe("Color", () => {
     it("should have alpha to 255 by default", () => {
       const colorHSLA = Color.fromHSLA(0, 100, 50);
 
-      // @ts-expect-error
       expect(colorHSLA.alpha).toBe(255);
     });
 

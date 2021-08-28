@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render successfully when extended 1`] = `
+<button
+  class="button button__extended button__high buttonHigh-0-2-3 buttonHigh-d5-0-2-9"
+>
+  <span
+    class="material-icons sc-bdnxRM iIoZMD icon"
+  >
+    check
+  </span>
+  <span
+    class="elm-0-2-10 elm-d0-0-2-11"
+  >
+    See all results
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with high emphasis 1`] = `
+<button
+  class="button button__high buttonHigh-0-2-3 buttonHigh-d2-0-2-6"
+>
+  <span
+    class="material-icons sc-bdnxRM iIoZMD icon"
+  >
+    add
+  </span>
+</button>
+`;

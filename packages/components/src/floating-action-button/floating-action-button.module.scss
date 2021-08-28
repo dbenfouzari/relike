@@ -1,0 +1,66 @@
+$padding-inline: 16px;
+$size: 56px;
+$mini-size: 40px;
+
+.button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 28px;
+  width: $size;
+  height: $size;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  padding: 0 $padding-inline;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: visible;
+  vertical-align: middle;
+
+  &__mini {
+    width: $mini-size;
+    height: $mini-size;
+    border-radius: 20px;
+  }
+
+  &__extended {
+    width: unset;
+
+    .icon {
+      margin-left: -4px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.button__block {
+  display: flex;
+  width: 100%;
+}
+
+.button__disabled {
+  opacity: .5;
+}
+
+.button__high:not(.button__disabled) {
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 15ms linear 30ms,
+              transform 270ms 0ms cubic-bezier(0, 0, 0.2, 1);
+
+  box-shadow: 0px 3px 5px -1px rgb(0, 0, 0, 0.2),
+              0px 6px 10px 0px rgb(0, 0, 0, 0.14),
+              0px 1px 18px 0px rgb(0, 0, 0, 0.12);
+
+  &:active {
+    box-shadow: 0 7px 8px -4px rgb(0, 0, 0, .20),
+                0 12px 17px 2px rgb(0, 0, 0, .14),
+                0 5px 22px 4px rgb(0, 0, 0, .12);
+  }
+}
