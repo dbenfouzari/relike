@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, { FC } from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 interface __name__Props {}
 
@@ -11,7 +11,7 @@ const __name__: FC<__name__Props> = () => (
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });
 

@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import __name__ from './__name__(kebabCase)';
+import __name__ from "./__name__(kebabCase)";
 
-describe('__name__', () => {
-  it('should render successfully', () => {
+describe("__name__", () => {
+  it("should render successfully", () => {
     const { container } = render(<__name__ />);
 
     expect(container.firstChild).toMatchSnapshot();

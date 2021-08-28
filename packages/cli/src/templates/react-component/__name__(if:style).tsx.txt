@@ -1,25 +1,23 @@
+import classNames from "classnames";
 import { forwardRef } from "react";
 
 import classes from "./__name__(kebabCase).module.scss";
 
-export interface __name__Props {}
+export interface __name__Props {
+  /** This prop is used to override the style */
+  className?: string;
+}
 
 /**
  * Component display name.
  */
 const COMPONENT_NAME = "__name__";
 
-/**
- * Component default props.
- */
-const DEFAULT_PROPS: Partial<__name__Props> = {};
-
-const __name__ = forwardRef<HTMLDivElement, __name__Props>((props, ref) => (
-  <div ref={ref} className={classes.__name__(kebabCase)} {...props}>
+const __name__ = forwardRef<HTMLDivElement, __name__Props>(({ className, ...props }, ref) => (
+  <div ref={ref} className={classNames(classes.__name__(kebabCase), className)} {...props}>
     Hello __name__
   </div>
 ));
 __name__.displayName = COMPONENT_NAME;
-__name__.defaultProps = DEFAULT_PROPS;
 
 export default __name__;

@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import __name__ from './__name__(kebabCase)';
+import __name__ from "./__name__(kebabCase)";
 
 export default {
-  title: '__name__',
+  title: "__name__",
   component: __name__,
 } as ComponentMeta<typeof __name__>;
 

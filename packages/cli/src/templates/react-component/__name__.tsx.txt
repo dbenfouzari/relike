@@ -1,21 +1,18 @@
 import { forwardRef } from "react";
 
-export interface __name__Props {}
+export interface __name__Props {
+  /** This prop is used to override the style */
+  className?: string;
+}
 
 /**
  * Component display name.
  */
 const COMPONENT_NAME = "__name__";
 
-/**
- * Component default props.
- */
-const DEFAULT_PROPS: Partial<__name__Props> = {};
-
-const __name__ = forwardRef<HTMLDivElement, __name__Props>((props, ref) => (
-  <div ref={ref} {...props}>Hello __name__</div>
+const __name__ = forwardRef<HTMLDivElement, __name__Props>(({ className, ...props }, ref) => (
+  <div ref={ref} className={className} {...props}>Hello __name__</div>
 ));
 __name__.displayName = COMPONENT_NAME;
-__name__.defaultProps = DEFAULT_PROPS;
 
 export default __name__;
