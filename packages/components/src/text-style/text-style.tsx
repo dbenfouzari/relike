@@ -222,6 +222,32 @@ class TextStyle {
   public toString() {
     return JSON.stringify(this);
   }
+
+  public copyWith({
+    backgroundColor,
+    color,
+    fontFamily,
+    fontFamilyFallback,
+    fontSize,
+    fontWeight,
+    height,
+    letterSpacing,
+    overflow,
+    wordSpacing,
+  }: TextStyleConstructor) {
+    return new TextStyle({
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      color: color ?? this.color,
+      fontFamily: fontFamily ?? this.fontFamily,
+      fontFamilyFallback: fontFamilyFallback ?? this.fontFamilyFallback,
+      fontSize: fontSize ?? this.fontSize,
+      fontWeight: fontWeight ?? this.fontWeight,
+      height: height ?? this.height,
+      letterSpacing: letterSpacing ?? this.letterSpacing,
+      overflow: overflow ?? this.overflow,
+      wordSpacing: wordSpacing ?? this.wordSpacing,
+    });
+  }
 }
 
 export default TextStyle;
