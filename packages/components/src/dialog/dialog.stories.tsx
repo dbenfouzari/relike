@@ -49,7 +49,7 @@ Default.args = {
       </header>
 
       <Container padding={Padding.symmetric({ horizontal: 24 })}>
-        Nihil hic munitissimus habendi senatus locus, nihil horum? At nos hinc posthac, sitientis piros Afros. Magna
+        Nihila hic munitissimus habendi senatus locus, nihil horum? At nos hinc posthac, sitientis piros Afros. Magna
         pars studiorum, prodita quaerimus. Integer legentibus erat a ante historiarum dapibus. Praeterea iter est
         quasdam res quas ex communi. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Inmensae subtilitatis,
         obscuris et malesuada fames. Me non paenitet nullum festiviorem excogitasse ad hoc. Cum ceteris in veneratione
