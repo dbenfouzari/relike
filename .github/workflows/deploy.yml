@@ -41,6 +41,8 @@ jobs:
 
       - name: Release Storybook
         run: yarn workspace @hastics/components storybook:deploy --ci
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.HASTICS_STORYBOOK_TOKEN }}
 
 #  release:
 #    name: Release
