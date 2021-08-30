@@ -8,6 +8,8 @@ import { MONTHS } from "./constants";
 const currDateTime = new DateTime({ year: 2021, month: DateTime.august, day: 26, hour: 21, minute: 14 });
 
 describe("Calendar", () => {
+  jest.spyOn(Date, "now").mockImplementation(() => new Date("2021-08-26T21:14:00.000Z").valueOf());
+
   it("should render successfully", () => {
     const { container } = render(<Calendar initialValue={currDateTime} />);
     expect(container.firstChild).toMatchSnapshot();

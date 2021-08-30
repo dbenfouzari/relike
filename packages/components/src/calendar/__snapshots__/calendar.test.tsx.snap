@@ -468,7 +468,7 @@ exports[`Calendar should handle previous month 1`] = `
       class="cell"
     >
       <span
-        class="day_number"
+        class="day_number day_number__current"
       >
         26
       </span>
@@ -507,7 +507,7 @@ exports[`Calendar should handle previous month 1`] = `
       class="cell"
     >
       <span
-        class="day_number day_number__current"
+        class="day_number"
       >
         28
       </span>
@@ -2115,7 +2115,7 @@ exports[`Calendar should render successfully 1`] = `
       class="cell"
     >
       <span
-        class="day_number"
+        class="day_number day_number__current"
       >
         26
       </span>
@@ -2139,7 +2139,7 @@ exports[`Calendar should render successfully 1`] = `
       class="cell"
     >
       <span
-        class="day_number day_number__current"
+        class="day_number"
       >
         28
       </span>
