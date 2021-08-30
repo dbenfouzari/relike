@@ -39,6 +39,18 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Build Storybook
+        run: yarn workspace @hastics/components storybook:build
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: packages/components/storybook-static
+          exitOnceUploaded: true
+          exitZeroOnChanges: true
+
       - name: Release Storybook
         run: yarn workspace @hastics/components storybook:deploy --ci
         env:
