@@ -1,14 +1,14 @@
 {
-  "name": "@relike/cli",
+  "name": "@hastics/cli",
   "description": "Some CLI to help your development process",
   "version": "0.0.1",
   "author": "Donovan BENFOUZARI <d.benfouzari@gmail.com>",
-  "bugs": "https://github.com/relike/relike/issues",
-  "homepage": "https://github.com/relike/relike",
+  "bugs": "https://github.com/hastics/hastics/issues",
+  "homepage": "https://github.com/hastics/hastics",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": {
-    "relike": "dist/index.js"
+    "hastics": "dist/index.js"
   },
   "scripts": {
     "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates",
@@ -18,7 +18,7 @@
   "files": ["dist"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/relike/relike.git",
+    "url": "git+https://github.com/hastics/hastics.git",
     "directory": "packages/cli"
   },
   "dependencies": {

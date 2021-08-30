@@ -1,5 +1,5 @@
 {
-  "name": "relike",
+  "name": "hastics",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "lint:cli": "eslint packages/cli",
     "lint:components": "eslint packages/components",
-    "chromatic:components": "yarn workspace @relike/components chromatic"
+    "chromatic:components": "yarn workspace @hastics/components chromatic"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",

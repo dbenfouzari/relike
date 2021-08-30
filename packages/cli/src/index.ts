@@ -6,11 +6,11 @@ import { generateComponent, generateIndexFile, generateNativeComponent } from ".
 
 program.version("0.0.1");
 
-program.name("yarn relike");
+program.name("yarn hastics");
 
 /// Generate React Component.
-/// $ relike generate:component --name Button --path src/components
-/// $ relike g:c --name Button --path src/components
+/// $ hastics generate:component --name Button --path src/components
+/// $ hastics g:c --name Button --path src/components
 program
   .command("generate:component")
   .alias("g:c")
@@ -18,13 +18,13 @@ program
   .usage(
     `
   # By passing arguments
-  $ relike generate:component button src/components
+  $ hastics generate:component button src/components
    
   # By passing flags
-  $ relike generate:component --name=button --path=src/components
+  $ hastics generate:component --name=button --path=src/components
    
   # By following wizard
-  $ relike generate:component
+  $ hastics generate:component
 
   ? What is the component name ? button
   ? Select a target directory src/components/
@@ -47,8 +47,8 @@ program
   .showHelpAfterError("(add --help for additional information)");
 
 /// Generate React-Native Component.
-/// $ relike generate:native-component --name Button --path src/components
-/// $ relike g:nc --name Button --path src/components
+/// $ hastics generate:native-component --name Button --path src/components
+/// $ hastics g:nc --name Button --path src/components
 program
   .command("generate:native-component")
   .alias("g:nc")
@@ -56,13 +56,13 @@ program
   .usage(
     `
   # By passing arguments
-  $ relike generate:native-component button src/components
+  $ hastics generate:native-component button src/components
    
   # By passing flags
-  $ relike generate:native-component --name=button --path=src/components
+  $ hastics generate:native-component --name=button --path=src/components
    
   # By following wizard
-  $ relike generate:native-component
+  $ hastics generate:native-component
 
   ? What is the component name ? button
   ? Select a target directory src/components/
@@ -84,8 +84,8 @@ program
   .showHelpAfterError("(add --help for additional information)");
 
 /// Generate exports index file.
-/// $ relike generate:index --path src/components
-/// $ relike g:i --path src/components
+/// $ hastics generate:index --path src/components
+/// $ hastics g:i --path src/components
 program
   .command("generate:index")
   .alias("g:i")
@@ -93,13 +93,13 @@ program
   .usage(
     `
   # By passing arguments
-  $ relike generate:index src/components
+  $ hastics generate:index src/components
    
   # By passing flags
-  $ relike generate:index --path=src/components
+  $ hastics generate:index --path=src/components
    
   # By following wizard
-  $ relike generate:index
+  $ hastics generate:index
 `,
   )
 
