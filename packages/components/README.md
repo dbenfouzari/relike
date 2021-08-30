@@ -48,12 +48,9 @@ const App = () => (
   />
 )
 ```
-
-[comment]: <> (## Documentation)
-
-[comment]: <> (You can see all documentation on https://fastics.github.io/components/.)
-
-[comment]: <> (It's a component library that exposes all available components.)
+## Documentation
+You can see all documentation on https://hastics.github.io/hastics/.
+It's a component library that exposes all available components.
 
 ## Contributors
 Made with ❤️ by [Donovan BENFOUZARI](https://dbenfouzari.tech)
