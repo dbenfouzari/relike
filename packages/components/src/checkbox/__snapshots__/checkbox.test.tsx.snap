@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render successfully 1`] = `
+<label
+  class="wrapper"
+>
+  <div
+    class="outer"
+  >
+    <input
+      class="checkbox checkbox-0-2-1 checkbox-d0-0-2-2"
+      data-testid="input"
+      type="checkbox"
+    />
+    <span
+      class="checkmark"
+    >
+      <span
+        class="material-icons sc-bdnxRM bYKVnq"
+      >
+        check
+      </span>
+    </span>
+  </div>
+</label>
+`;
+
+exports[`Checkbox should render successfully when default checked 1`] = `
+<label
+  class="wrapper"
+>
+  <div
+    class="outer"
+  >
+    <input
+      checked=""
+      class="checkbox checkbox-0-2-1 checkbox-d1-0-2-3"
+      data-testid="input"
+      type="checkbox"
+    />
+    <span
+      class="checkmark checkmark__checked"
+    >
+      <span
+        class="material-icons sc-bdnxRM bYKVnq"
+      >
+        check
+      </span>
+    </span>
+  </div>
+</label>
+`;
