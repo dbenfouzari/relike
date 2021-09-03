@@ -106,6 +106,9 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
 
     if (!label) return <>{children}</>; // Have to wrap with fragment <></> or TypeScript may think we return undefined.
 
+    const formattedLabel =
+      label.indexOf("\n") > -1 ? label.split("\n").map((sentence: string) => <p key={sentence}>{sentence}</p>) : label;
+
     return (
       <>
         {wrappedChildren}
@@ -124,9 +127,7 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
               <div className="tooltip__arrow" />
 
               <Text style={new TextStyle({ fontFamily: "Roboto", fontSize: 10, color: Colors.white })}>
-                {label.indexOf("\n") !== -1
-                  ? label.split("\n").map((sentence: string) => <p key={sentence}>{sentence}</p>)
-                  : label}
+                {formattedLabel}
               </Text>
             </div>,
             document.body,
