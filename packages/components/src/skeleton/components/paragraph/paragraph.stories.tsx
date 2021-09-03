@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Colors from "../../../colors";
-import SkeletonContext from "../../context/skeleton-context";
+import Skeleton from "../../skeleton";
 import SkeletonParagraph from "./paragraph";
 
 export default {
@@ -12,15 +12,15 @@ export default {
 const Template: ComponentStory<typeof SkeletonParagraph> = (args) => <SkeletonParagraph {...args} />;
 
 const ActiveTemplate: ComponentStory<typeof SkeletonParagraph> = (args) => (
-  <SkeletonContext.Provider value={{ active: true }}>
+  <Skeleton active>
     <SkeletonParagraph {...args} />
-  </SkeletonContext.Provider>
+  </Skeleton>
 );
 
 const CustomColorTemplate: ComponentStory<typeof SkeletonParagraph> = (args) => (
-  <SkeletonContext.Provider value={{ active: true, color: Colors.red[200] }}>
+  <Skeleton active color={Colors.red[200]}>
     <SkeletonParagraph {...args} />
-  </SkeletonContext.Provider>
+  </Skeleton>
 );
 
 export const Default = Template.bind({});
