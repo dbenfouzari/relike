@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import classnames from "classnames";
 import { forwardRef, useCallback, useState } from "react";
 import { createUseStyles } from "react-jss";
 
@@ -19,10 +19,47 @@ export interface CheckboxProps {
   color?: Color;
   label?: string;
   disabled?: boolean;
+  classNames?: ClassNames;
 }
 
 interface CheckboxStyleProps {
   color: Color;
+}
+
+interface ClassNames {
+  /**
+   * This is the component that wraps all content.
+   * By default, it aligns checkbox with label.
+   */
+  wrapper?: string;
+
+  /**
+   * This is the component that wraps the checkbox itself.
+   * By default, it applies some hover and active effects (box-shadow).
+   */
+  outer?: string;
+
+  /**
+   * This is the `input` component.
+   * By default, we apply some styling to `:before` to handle state and styling.
+   *
+   * This is where you may want to override styles.
+   *
+   * Same as passing `className` to `Checkbox` component.
+   */
+  input?: string;
+
+  /**
+   * This is the component that wraps the checked icon.
+   *
+   * By default, we apply some styles to position it in its container.
+   */
+  checkmark?: string;
+
+  /**
+   * This is the component that wraps the label you provided.
+   */
+  label?: string;
 }
 
 /**
@@ -40,7 +77,7 @@ const useStyles = createUseStyles({
 });
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ className, color = Colors.blue[400], defaultChecked = false, label, disabled, ...props }, ref) => {
+  ({ className, color = Colors.blue[400], classNames, defaultChecked = false, label, disabled, ...props }, ref) => {
     const [isChecked, setIsChecked] = useState(defaultChecked);
     const styles = useStyles({ color });
 
@@ -49,25 +86,31 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     }, []);
 
     return (
-      <label className={classNames(classes.wrapper, { [classes.wrapper__disabled]: disabled })}>
-        <div className={classes.outer}>
+      <label className={classnames(classes.wrapper, { [classes.wrapper__disabled]: disabled }, classNames?.wrapper)}>
+        <div className={classnames(classes.outer, classNames?.outer)}>
           <input
             ref={ref}
             data-testid="input"
             type="checkbox"
-            className={classNames(classes.checkbox, styles.checkbox, className)}
+            className={classnames(classes.checkbox, styles.checkbox, className, classNames?.input)}
             checked={isChecked}
             onChange={handleChange}
             disabled={disabled}
           />
 
-          <span className={classNames(classes.checkmark, { [classes.checkmark__checked]: isChecked })}>
+          <span
+            className={classnames(
+              classes.checkmark,
+              { [classes.checkmark__checked]: isChecked },
+              classNames?.checkmark,
+            )}
+          >
             <Icon icon={Icons.check} size={16} color={Colors.white} />
           </span>
         </div>
 
         {label && (
-          <span data-testid="label" className={classes.label}>
+          <span data-testid="label" className={classnames(classes.label, classNames?.label)}>
             {label}
           </span>
         )}
