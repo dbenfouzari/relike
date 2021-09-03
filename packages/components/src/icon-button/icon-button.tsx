@@ -1,18 +1,15 @@
-// TODO: Replace styled-components by react-jss
-
+import classNames from "classnames";
 import { FC, forwardRef } from "react";
-import styled, { css } from "styled-components";
+import { createUseStyles } from "react-jss";
 
 import Icon from "../icon";
 import Padding from "../padding";
+import classes from "./icon-button.module.scss";
 
-interface IconButtonBaseProps {
+export interface IconButtonBaseProps {
   icon: ReturnType<typeof Icon>;
   onPress?: VoidFunction;
   className?: string;
-}
-
-interface StyledIconProps {
   /**
    * The padding around the button's icon. The entire padded icon will react to input gestures.
    * This property must not be null. It defaults to 8.0 padding on all sides.
@@ -21,42 +18,15 @@ interface StyledIconProps {
   padding?: Padding;
 }
 
-export type IconButtonProps = IconButtonBaseProps & StyledIconProps;
+interface StyledIconProps {
+  padding: Padding;
+}
 
-export const IconButtonBase = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ icon: IconComponent, onPress, className, ...props }, ref) => (
-    <button ref={ref} className={className} onClick={onPress} {...props}>
-      {IconComponent}
-    </button>
-  ),
-);
-
-const StyledIconButton = styled(IconButtonBase)<IconButtonProps>`
-  ${(p) => p.padding?.toStyledCSS() || Padding.all(8).toStyledCSS()};
-  display: inline-grid;
-  place-items: center;
-  background-color: transparent;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  user-select: none;
-  border: none;
-
-  ${(p) =>
-    p.onPress &&
-    css`
-      cursor: pointer;
-
-      &:hover {
-        background-color: rgba(100, 100, 100, 0.1);
-        box-shadow: 0 0 0 10px rgba(100, 100, 100, 0.1);
-      }
-
-      &:active {
-        background-color: rgba(100, 100, 100, 0.2);
-        box-shadow: 0 0 0 10px rgba(100, 100, 100, 0.2);
-      }
-    `}
-`;
+const useStyles = createUseStyles({
+  wrapper: ({ padding }: StyledIconProps) => ({
+    ...padding.toStyle(),
+  }),
+});
 
 /**
  * An **IconButton** is a component that you can use to show a clickable **Icon**.
@@ -65,8 +35,28 @@ const StyledIconButton = styled(IconButtonBase)<IconButtonProps>`
  *
  * @see Icon
  */
-export const IconButton: FC<IconButtonProps> = forwardRef<HTMLButtonElement, IconButtonBaseProps>((props, ref) => (
-  <StyledIconButton ref={ref} {...props} />
-));
+export const IconButton: FC<IconButtonBaseProps> = forwardRef<HTMLButtonElement, IconButtonBaseProps>(
+  ({ padding = Padding.all(8), className, onPress, icon, ...props }, ref) => {
+    const styles = useStyles({ padding });
+
+    return (
+      <button
+        ref={ref}
+        onClick={onPress}
+        {...props}
+        className={classNames(
+          classes.wrapper,
+          styles.wrapper,
+          {
+            [classes.wrapper__clickable]: !!onPress,
+          },
+          className,
+        )}
+      >
+        {icon}
+      </button>
+    );
+  },
+);
 
 export default IconButton;

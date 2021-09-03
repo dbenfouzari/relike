@@ -1,5 +1,6 @@
 // TODO: Replace styled-components by react-jss
 
+import { CSSProperties } from "react";
 import { css } from "styled-components";
 
 import EdgeInsets from "../edge-insets";
@@ -26,6 +27,18 @@ class Padding extends EdgeInsets {
     if (!isNull(this.bottom)) result.push(`padding-bottom: ${this.bottom}px;`);
 
     return result.join("\n");
+  }
+
+  /**
+   * Generates React Style CSS.
+   */
+  toStyle(): CSSProperties {
+    return {
+      paddingTop: this.top ?? undefined,
+      paddingRight: this.right ?? undefined,
+      paddingBottom: this.bottom ?? undefined,
+      paddingLeft: this.left ?? undefined,
+    };
   }
 
   /**
