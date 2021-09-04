@@ -159,6 +159,7 @@ export const Chip = forwardRef<HTMLAnchorElement, ChipProps>(
             onPress={onDelete}
             icon={<Icon icon={Icons.cancel} color={iconColor} />}
             className={classes.icon}
+            data-testid="delete-icon"
           />
         )}
       </a>
