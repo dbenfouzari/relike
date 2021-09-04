@@ -1,0 +1,24 @@
+$size-s: 24px;
+$size-m: 40px;
+$size-l: 56px;
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+
+  &__size_s {
+    --size: $size-s;
+  }
+
+  &__size_m {
+    --size: $size-m;
+  }
+
+  &__size_l {
+    --size: $size-l;
+  }
+}
+
+.image {
+  object-fit: cover;
+}

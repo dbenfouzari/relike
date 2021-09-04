@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should render successfully 1`] = `
+<div
+  class="container-0-2-1 container-d0-0-2-2 avatar"
+>
+  <div
+    class="wrapper-0-2-3 wrapper-d0-0-2-4"
+    data-testid="align"
+  />
+</div>
+`;
