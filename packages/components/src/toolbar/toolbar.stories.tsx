@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { Icon } from "../icon";
+import Icon from "../icon";
 import Icons from "../icons";
 import Toolbar from "./toolbar";
 

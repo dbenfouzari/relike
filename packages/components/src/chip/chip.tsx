@@ -4,7 +4,7 @@ import { createUseStyles } from "react-jss";
 
 import Color from "../color";
 import Colors from "../colors";
-import { Icon } from "../icon";
+import Icon from "../icon";
 import IconButton from "../icon-button";
 import Icons from "../icons";
 import Text from "../text";
