@@ -2,16 +2,8 @@ import classNames from "classnames";
 import { Children, cloneElement, FC, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 
+import Axis from "../../../axis";
 import Padding from "../../../padding";
-
-/**
- * Here I'm using explicit enum values since it may help Storybook.
- * But we should forever use enum, not string.
- */
-export enum Axis {
-  vertical = "vertical",
-  horizontal = "horizontal",
-}
 
 export interface GridViewCountProps {
   children: JSX.Element[];

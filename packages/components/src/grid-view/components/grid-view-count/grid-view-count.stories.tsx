@@ -1,11 +1,12 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import isChromatic from "chromatic/isChromatic";
 
+import Axis from "../../../axis";
 import Colors from "../../../colors";
 import Icon from "../../../icon";
 import Icons from "../../../icons";
 import Padding from "../../../padding";
-import GridViewCount, { Axis } from "./grid-view-count";
+import GridViewCount from "./grid-view-count";
 
 const generateItems = (n: number) =>
   Array.from({ length: n }, (_, index) => {
