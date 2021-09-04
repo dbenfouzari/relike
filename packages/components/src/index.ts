@@ -31,7 +31,6 @@ export { default as LinearProgressIndicator } from "./linear-progress-indicator"
 export { default as Loader } from "./loader";
 export { default as MainAxisAlignment } from "./main-axis-alignment";
 export { default as Margin } from "./margin";
-export { default as Modal } from "./modal";
 export { default as Padding } from "./padding";
 export { default as Result } from "./result";
 export { default as Skeleton } from "./skeleton";
