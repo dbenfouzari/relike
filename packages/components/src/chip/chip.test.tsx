@@ -4,7 +4,7 @@ import Chip from "./chip";
 
 describe("Chip", () => {
   it("should render successfully", () => {
-    const { container } = render(<Chip />);
+    const { container } = render(<Chip>Hello</Chip>);
 
     expect(container.firstChild).toMatchSnapshot();
   });

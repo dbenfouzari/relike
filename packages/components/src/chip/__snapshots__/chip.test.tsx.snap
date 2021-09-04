@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chip should render successfully 1`] = `
-<div
-  class="chip"
+<a
+  class="chip chip-0-2-1 chip-d0-0-2-4"
 >
-  Hello Chip
-</div>
+  <span
+    class="elm-0-2-7 elm-d0-0-2-8 label"
+  >
+    Hello
+  </span>
+</a>
 `;
