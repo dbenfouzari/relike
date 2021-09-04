@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Colors from "../colors";
-import Skeleton from "./skeleton";
+import Skeleton, { SkeletonProps } from "./skeleton";
 
 export default {
   title: "Skeleton",
@@ -14,11 +14,19 @@ export default {
 
 const Template: ComponentStory<typeof Skeleton> = (args) => <Skeleton {...args} />;
 
+const defaultProps: Partial<SkeletonProps> = {
+  active: false,
+  color: Colors.grey[200],
+  avatar: false,
+  paragraph: true,
+};
+
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = defaultProps;
 
 export const WithCustomProps = Template.bind({});
 WithCustomProps.args = {
+  ...defaultProps,
   children: undefined,
   active: true,
   avatar: true,
@@ -30,6 +38,7 @@ WithCustomProps.args = {
 
 export const WithCustomChildren = Template.bind({});
 WithCustomChildren.args = {
+  ...defaultProps,
   children: (
     <>
       <Skeleton.Avatar />

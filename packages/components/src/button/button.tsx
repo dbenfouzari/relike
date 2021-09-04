@@ -64,7 +64,7 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
 
   icon?: IconData;
 
-  block?: true;
+  block?: boolean;
 
   className?: string;
 }

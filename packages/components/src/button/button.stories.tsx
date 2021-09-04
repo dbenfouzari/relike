@@ -1,28 +1,37 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Flex from "../flex";
 import Icons from "../icons";
-import Button, { Emphasis } from "./button";
+import Button, { ButtonProps, Emphasis } from "./button";
 
 export default {
   title: "Button",
   component: Button,
   argTypes: {
     color: { control: { disable: true } },
+    icon: { control: { disable: true } },
   },
 } as ComponentMeta<typeof Button>;
 
 const ExpoTemplate: ComponentStory<typeof Button> = (args) => (
-  <div>
+  <Flex.Row gap={8}>
     <Button {...args} emphasis={Emphasis.low} />
     <Button {...args} emphasis={Emphasis.medium} />
     <Button {...args} emphasis={Emphasis.high} />
-  </div>
+  </Flex.Row>
 );
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+const defaultProps: Partial<ButtonProps> = {
+  disabled: false,
+  block: false,
+  className: "",
+};
+
 export const Default = ExpoTemplate.bind({});
 Default.args = {
+  ...defaultProps,
   children: "Button",
 };
 Default.argTypes = {
@@ -31,6 +40,7 @@ Default.argTypes = {
 
 export const LowEmphasis = Template.bind({});
 LowEmphasis.args = {
+  ...defaultProps,
   children: "Button",
   emphasis: Emphasis.low,
 };
@@ -44,6 +54,7 @@ LowEmphasis.parameters = {
 
 export const MediumEmphasis = Template.bind({});
 MediumEmphasis.args = {
+  ...defaultProps,
   children: "Button",
   emphasis: Emphasis.medium,
 };
@@ -57,6 +68,7 @@ MediumEmphasis.parameters = {
 
 export const HighEmphasis = Template.bind({});
 HighEmphasis.args = {
+  ...defaultProps,
   children: "Button",
   emphasis: Emphasis.high,
 };
@@ -70,6 +82,7 @@ HighEmphasis.parameters = {
 
 export const WithIcon = ExpoTemplate.bind({});
 WithIcon.args = {
+  ...defaultProps,
   children: "Button",
   emphasis: Emphasis.high,
   icon: Icons.star,
@@ -80,6 +93,7 @@ WithIcon.argTypes = {
 
 export const Block = Template.bind({});
 Block.args = {
+  ...defaultProps,
   children: "Button",
   emphasis: Emphasis.high,
   icon: Icons.star,

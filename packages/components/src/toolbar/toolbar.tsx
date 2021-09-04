@@ -28,6 +28,7 @@ const COMPONENT_NAME = "Toolbar";
  */
 const DEFAULT_PROPS: Partial<ToolbarProps> = {};
 
+// TODO: Implement more stories and add documentation.
 export const Toolbar = forwardRef<HTMLDivElement, ToolbarProps>(({ before, after, children }, ref) => (
   <div
     ref={ref}

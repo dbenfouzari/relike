@@ -4,7 +4,7 @@ import Alignment from "../alignment";
 import Colors from "../colors";
 import Margin from "../margin";
 import Padding from "../padding";
-import Container from "./container";
+import Container, { ContainerProps } from "./container";
 
 export default {
   title: "Container",
@@ -21,37 +21,45 @@ export default {
 
 const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+const defaultProps: Partial<ContainerProps> = {
   color: Colors.blueGrey[200],
   children: <span>Hello, World !</span>,
+  className: "",
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  ...defaultProps,
+};
+Default.argTypes = {
+  alignment: { control: { disable: true } },
 };
 
 export const AsButton = Template.bind({});
 AsButton.args = {
-  color: Colors.blueGrey[200],
+  ...defaultProps,
   padding: Padding.symmetric({ horizontal: 24, vertical: 12 }),
-  children: <span>Hello, World !</span>,
   as: "button",
 };
 
 export const WithFixedSize = Template.bind({});
 WithFixedSize.args = {
+  ...defaultProps,
   height: 200,
   width: 200,
-  color: Colors.blueGrey[200],
   margin: Margin.all(24),
   padding: Padding.all(12),
-  children: <span>Hello, World !</span>,
+};
+WithFixedSize.argTypes = {
+  alignment: { control: { disable: true } },
 };
 
 export const WithAlignment = Template.bind({});
 WithAlignment.args = {
+  ...defaultProps,
   height: 200,
   width: 200,
-  color: Colors.blueGrey[200],
   margin: Margin.all(24),
   padding: Padding.all(12),
-  children: <span>Hello, World !</span>,
   alignment: Alignment.topRight,
 };

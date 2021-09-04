@@ -35,7 +35,7 @@ interface BaseToggleProps {
   /**
    * You can get a small `Toggle` component.
    */
-  size?: "small";
+  size?: "small" | "default";
   /**
    * Is the button loading ?
    * If true, it shows a loader and disabled the toggle actions.
@@ -94,7 +94,7 @@ export const Toggle: FC<ToggleProps> = ({
   disabled = false,
   checkedLabel,
   unCheckedLabel,
-  size,
+  size = "default",
   loading,
 }) => {
   const isDisabled = loading || disabled;

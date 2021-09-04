@@ -6,7 +6,7 @@ import Color from "../color";
 import Colors from "../colors";
 import LoaderScreen from "./components/loader-screen";
 
-interface LoaderProps {
+export interface LoaderProps {
   color?: Color;
   size?: number;
   thickness?: number;

@@ -11,6 +11,7 @@ export default {
   argTypes: {
     headerBuilder: { control: { disable: true } },
     children: { control: { disable: true } },
+    classNames: { control: { disable: true } },
   },
 } as ComponentMeta<typeof ExpansionPanel>;
 

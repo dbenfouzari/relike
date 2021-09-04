@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Colors from "../colors";
 import Icon from "../icon";
 import Icons from "../icons";
-import Toggle from "./toggle";
+import Toggle, { ToggleProps } from "./toggle";
 
 export default {
   title: "Toggle",
@@ -30,13 +30,17 @@ export default {
 
 const Template: ComponentStory<typeof Toggle> = (args) => <Toggle {...args} />;
 
-export const Uncontrolled = Template.bind({});
-Uncontrolled.args = {
+const defaultProps: Partial<ToggleProps> = {
   checked: undefined,
   checkedColor: undefined,
   loading: false,
-  size: undefined,
+  size: "default",
   disabled: false,
+};
+
+export const Uncontrolled = Template.bind({});
+Uncontrolled.args = {
+  ...defaultProps,
 };
 Uncontrolled.parameters = {
   docs: {
@@ -48,6 +52,7 @@ Uncontrolled.parameters = {
 
 export const Controlled = Template.bind({});
 Controlled.args = {
+  ...defaultProps,
   checked: true,
   onChange: action("change toggle"),
 };
@@ -61,8 +66,7 @@ Controlled.parameters = {
 
 export const Small = Template.bind({});
 Small.args = {
-  checked: undefined,
-  checkedColor: undefined,
+  ...defaultProps,
   size: "small",
 };
 Small.argTypes = {
@@ -71,6 +75,7 @@ Small.argTypes = {
 
 export const WithCheckedLabelString = Template.bind({});
 WithCheckedLabelString.args = {
+  ...defaultProps,
   checkedLabel: "1",
   unCheckedLabel: "0",
 };
@@ -84,6 +89,7 @@ WithCheckedLabelString.parameters = {
 
 export const WithCheckedLabelIcon = Template.bind({});
 WithCheckedLabelIcon.args = {
+  ...defaultProps,
   checkedLabel: <Icon icon={Icons.check} size={16} color={Colors.white} />,
   unCheckedLabel: <Icon icon={Icons.close} size={16} color={Colors.white} />,
 };

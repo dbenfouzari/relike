@@ -7,6 +7,11 @@ import Toolbar from "./toolbar";
 export default {
   title: "Toolbar",
   component: Toolbar,
+  argTypes: {
+    before: { control: { disable: true } },
+    after: { control: { disable: true } },
+    children: { control: { disable: true } },
+  },
 } as ComponentMeta<typeof Toolbar>;
 
 const Template: ComponentStory<typeof Toolbar> = (args) => <Toolbar {...args} />;

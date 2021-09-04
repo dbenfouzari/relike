@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Icons from "../icons";
-import DropdownButton from "./dropdown-button";
+import DropdownButton, { DropdownButtonProps } from "./dropdown-button";
 import classes from "./dropdown-button.stories.module.scss";
 
 const generateItems = (n = 100) => {
@@ -31,27 +31,34 @@ export default {
 
 const Template: ComponentStory<typeof DropdownButton> = (args) => <DropdownButton {...args} />;
 
+const defaultProps: Partial<DropdownButtonProps> = {
+  allowEmpty: false,
+  value: "12",
+  placeholder: undefined,
+  iconSize: 24,
+};
+
 export const Default = Template.bind({});
 Default.args = {
-  value: "12",
+  ...defaultProps,
 };
 
 export const WithEmptyValue = Template.bind({});
 WithEmptyValue.args = {
-  value: "",
+  ...defaultProps,
   allowEmpty: true,
   placeholder: "Please select an option",
 };
 
 export const WithCustomIcon = Template.bind({});
 WithCustomIcon.args = {
-  value: "12",
+  ...defaultProps,
   icon: Icons.auto_graph,
 };
 
 export const WithCustomClassNames = Template.bind({});
 WithCustomClassNames.args = {
-  value: "12",
+  ...defaultProps,
   classNames: {
     wrapper: classes.wrapper,
     item_list: classes.item_list,

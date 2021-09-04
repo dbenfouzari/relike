@@ -3,7 +3,7 @@ import isChromatic from "chromatic/isChromatic";
 
 import DateTime from "../date-time";
 import Duration from "../duration";
-import Calendar from "./calendar";
+import Calendar, { CalendarProps } from "./calendar";
 import classes from "./calendar.stories.module.scss";
 import { SupportedLocales } from "./constants";
 
@@ -23,16 +23,24 @@ const Template: ComponentStory<typeof Calendar> = (args) => <Calendar {...args} 
 
 const now = isChromatic() ? new DateTime({ year: 2021, month: DateTime.august, day: 26 }) : DateTime.now();
 
+const defaultProps: CalendarProps = {
+  locale: SupportedLocales.EN,
+  initialValue: now,
+  dark: false,
+  events: [],
+};
+
 export const Default = Template.bind({});
 Default.args = {
-  locale: SupportedLocales.FR,
-  initialValue: now,
+  ...defaultProps,
+};
+Default.argTypes = {
+  events: { control: { disable: true } },
 };
 
 export const WithEvents = Template.bind({});
 WithEvents.args = {
-  locale: SupportedLocales.FR,
-  initialValue: now,
+  ...defaultProps,
   events: [
     {
       date: now.subtract(Duration.days(60)),
@@ -47,8 +55,7 @@ WithEvents.args = {
 
 export const Dark = Template.bind({});
 Dark.args = {
-  locale: SupportedLocales.FR,
-  initialValue: now,
+  ...defaultProps,
   dark: true,
   events: [
     {
