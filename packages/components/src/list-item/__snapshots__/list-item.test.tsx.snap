@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem should render successfully 1`] = `
+<li
+  class="list_item"
+>
+  <div
+    class="content"
+  >
+    <div
+      class="flex flex-0-2-1 flex-d0-0-2-2 flex__vertical flex__cross_start flex__main_spaceEvenly flex__text_ltr flex__vertical_down content"
+    >
+      <span
+        class="elm-0-2-3 elm-d0-0-2-4"
+      >
+        John Doe
+      </span>
+      <span
+        class="elm-0-2-3 elm-d1-0-2-5"
+      >
+        Hey Storybook !
+      </span>
+    </div>
+  </div>
+</li>
+`;

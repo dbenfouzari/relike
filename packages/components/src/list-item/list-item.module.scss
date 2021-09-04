@@ -1,0 +1,29 @@
+.list_item {
+  padding-inline: 16px;
+  padding-block: 8px;
+  list-style: none;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 75ms ease;
+
+  &__clickable {
+    &:hover {
+      background-color: rgba(0, 0, 0, .04);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, .12);
+    }
+  }
+}
+
+.left {
+  min-width: 56px;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+}
