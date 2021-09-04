@@ -46,6 +46,7 @@ Default.args = {
 export const WithEmptyValue = Template.bind({});
 WithEmptyValue.args = {
   ...defaultProps,
+  value: undefined,
   allowEmpty: true,
   placeholder: "Please select an option",
 };
