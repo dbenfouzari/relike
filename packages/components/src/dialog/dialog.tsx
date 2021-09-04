@@ -23,6 +23,11 @@ export interface DialogProps {
    * The **Dialog** children.
    */
   children: ReactNode;
+
+  /**
+   * Remove overlay
+   */
+  withoutOverlay?: boolean;
 }
 
 /**
@@ -39,31 +44,35 @@ const DEFAULT_PROPS: Partial<DialogProps> = {};
  * In user interfaces, a **Dialog** is a "conversation" between the system and the user,
  * and often requests information or an action from the user.
  */
-export const Dialog = forwardRef<HTMLDivElement, DialogProps>(({ isOpen, onClose, children }, ref) => {
-  const shouldRender = useDelayedUnmount(isOpen, Duration.seconds(0.3));
+export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
+  ({ isOpen, withoutOverlay = false, onClose, children }, ref) => {
+    const shouldRender = useDelayedUnmount(isOpen, Duration.seconds(0.3));
 
-  return shouldRender
-    ? createPortal(
-        <>
-          <div
-            className={classNames(classes.overlay, {
-              [classes.overlay__unmounting]: !isOpen,
-            })}
-            onClick={onClose}
-          />
-          <div
-            ref={ref}
-            className={classNames(classes.dialog, {
-              [classes.dialog__unmounting]: !isOpen,
-            })}
-          >
-            {children}
-          </div>
-        </>,
-        document.body,
-      )
-    : null;
-});
+    return shouldRender
+      ? createPortal(
+          <>
+            {withoutOverlay ? null : (
+              <div
+                className={classNames(classes.overlay, {
+                  [classes.overlay__unmounting]: !isOpen,
+                })}
+                onClick={onClose}
+              />
+            )}
+            <div
+              ref={ref}
+              className={classNames(classes.dialog, {
+                [classes.dialog__unmounting]: !isOpen,
+              })}
+            >
+              {children}
+            </div>
+          </>,
+          document.body,
+        )
+      : null;
+  },
+);
 Dialog.displayName = COMPONENT_NAME;
 Dialog.defaultProps = DEFAULT_PROPS;
 
