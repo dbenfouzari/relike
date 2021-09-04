@@ -1,0 +1,34 @@
+.flex {
+  display: flex;
+  flex: 1;
+
+  // CrossAxisAlignment
+  &__cross_center { align-items: center; }
+  &__cross_start { align-items: flex-start; }
+  &__cross_end { align-items: flex-end; }
+  &__cross_stretch { align-items: stretch; }
+
+  // MainAxisAlignment
+  &__main_center { justify-content: center; }
+  &__main_end { justify-content: flex-end; }
+  &__main_start { justify-content: flex-start; }
+  &__main_spaceAround { justify-content: space-around; }
+  &__main_spaceBetween { justify-content: space-between; }
+  &__main_spaceEvenly { justify-content: space-evenly; }
+}
+
+// TextDirection
+.flex__text_ltr.flex__horizontal {
+  flex-direction: row;
+}
+.flex__text_rtl.flex__horizontal {
+  flex-direction: row-reverse;
+}
+
+// VerticalDirection
+.flex__vertical_down.flex__vertical {
+  flex-direction: column;
+}
+.flex__vertical_up.flex__vertical {
+  flex-direction: column-reverse;
+}

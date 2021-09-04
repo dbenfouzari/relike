@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex should render successfully 1`] = `
+<div
+  class="flex flex-0-2-1 flex-d0-0-2-2 flex__horizontal flex__cross_center flex__main_start flex__text_ltr flex__vertical_down"
+>
+  <div
+    class="container-0-2-3 container-d0-0-2-4"
+  />
+  <div
+    class="container-0-2-3 container-d1-0-2-5"
+  />
+  <div
+    class="container-0-2-3 container-d2-0-2-6"
+  />
+</div>
+`;
+
+exports[`Flex should render successfully with array gap 1`] = `
+<div
+  class="flex flex-0-2-1 flex-d1-0-2-7 flex__horizontal flex__cross_center flex__main_start flex__text_ltr flex__vertical_down"
+>
+  <div
+    class="container-0-2-3 container-d3-0-2-8"
+  />
+  <div
+    class="container-0-2-3 container-d4-0-2-9"
+  />
+  <div
+    class="container-0-2-3 container-d5-0-2-10"
+  />
+</div>
+`;
