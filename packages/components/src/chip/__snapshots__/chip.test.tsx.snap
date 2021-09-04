@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chip should render successfully 1`] = `
+<div
+  class="chip"
+>
+  Hello Chip
+</div>
+`;

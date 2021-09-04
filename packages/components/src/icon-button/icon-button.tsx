@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, forwardRef } from "react";
+import { FC, forwardRef, MouseEvent } from "react";
 import { createUseStyles } from "react-jss";
 
 import Icon from "../icon";
@@ -8,7 +8,7 @@ import classes from "./icon-button.module.scss";
 
 export interface IconButtonBaseProps {
   icon: ReturnType<typeof Icon>;
-  onPress?: VoidFunction;
+  onPress?: (event: MouseEvent<HTMLButtonElement>) => void;
   className?: string;
   /**
    * The padding around the button's icon. The entire padded icon will react to input gestures.

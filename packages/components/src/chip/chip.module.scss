@@ -1,0 +1,72 @@
+%hover {
+  box-shadow: 0 3px 1px -2px rgb(0, 0, 0, 0.2),
+              0 2px 2px 0 rgb(0, 0, 0, 0.14),
+              0 1px 5px 0 rgb(0, 0, 0, 0.12);
+}
+
+$height: 32px;
+
+.chip {
+  display: inline-flex;
+  height: $height;
+  border-radius: #{$height / 2};
+  align-items: center;
+  padding-right: 12px;
+  user-select: none;
+  transition: box-shadow .3s ease, background-color .3s ease;
+
+  &:hover, &:active {
+    @extend %hover;
+  }
+
+  &__with_avatar {
+    padding-left: 4px;
+
+    .label {
+      margin-left: 8px;
+    }
+  }
+
+  &__deletable {
+    padding-right: 0;
+
+    .label {
+      padding-right: 8px;
+    }
+  }
+
+  &__disabled {
+    opacity: 0.5;
+  }
+
+  .icon {
+    padding: 4px;
+  }
+}
+
+.chip:not(.chip__clickable) {
+  &:hover, &:active {
+    box-shadow: none;
+  }
+}
+
+.label {
+  margin-left: 12px;
+}
+
+.avatar {
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  & > img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+}
