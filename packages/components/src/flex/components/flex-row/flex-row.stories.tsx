@@ -8,7 +8,7 @@ import TextDirection from "../../../text-direction";
 import FlexRow, { FlexRowProps } from "./flex-row";
 
 export default {
-  title: "FlexRow",
+  title: "Flex.Row",
   component: FlexRow,
   argTypes: {
     children: { control: { disable: true } },

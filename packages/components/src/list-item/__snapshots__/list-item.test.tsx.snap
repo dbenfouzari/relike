@@ -8,7 +8,7 @@ exports[`ListItem should render successfully 1`] = `
     class="content"
   >
     <div
-      class="flex flex-0-2-1 flex-d0-0-2-2 flex__vertical flex__cross_start flex__main_spaceEvenly flex__text_ltr flex__vertical_down content"
+      class="flex flex-0-2-1 flex-d0-0-2-2 content"
     >
       <span
         class="elm-0-2-3 elm-d0-0-2-4"

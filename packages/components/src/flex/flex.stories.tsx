@@ -71,4 +71,5 @@ WithTupleGap.args = {
     </>
   ),
   gap: [20, "20%"],
+  className: undefined,
 };

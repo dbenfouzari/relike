@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { forwardRef, ForwardRefExoticComponent, ReactNode, RefAttributes } from "react";
+import { forwardRef, ForwardRefExoticComponent, HTMLProps, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Axis from "../axis";
@@ -10,6 +10,7 @@ import VerticalDirection from "../vertical-direction";
 import FlexColumn from "./components/flex-column";
 import FlexRow from "./components/flex-row";
 import classes from "./flex.module.scss";
+import { getAlignItems, getFlexDirection, getJustifyContent } from "./utils";
 
 export type GapProperty = string | number;
 export type FlexGap = GapProperty | [horizontal: GapProperty, vertical: GapProperty];
@@ -102,7 +103,13 @@ export interface FlexProps {
   children: ReactNode | ReactNode[];
 }
 
-type FlexStyleProps = Pick<FlexProps, "gap">;
+type FlexStyleProps = Pick<FlexProps, "gap"> & {
+  crossAxisAlignment: CrossAxisAlignment;
+  mainAxisAlignment: MainAxisAlignment;
+  textDirection: TextDirection;
+  direction: Axis;
+  verticalDirection: VerticalDirection;
+};
 
 /**
  * Component display name.
@@ -123,18 +130,48 @@ const computeGap = (gap?: FlexStyleProps["gap"]) => {
   return gap;
 };
 
+/**
+ * I do not do it with CSS since it compiles so much classes.
+ * This way, it only generates one className that changes.
+ *
+ * Does it really lighten the final bundle size ?
+ */
 const useStyles = createUseStyles({
-  flex: ({ gap }: FlexStyleProps) => ({
+  flex: ({
+    crossAxisAlignment,
+    gap,
+    mainAxisAlignment,
+    textDirection,
+    verticalDirection,
+    direction,
+  }: FlexStyleProps) => ({
     gap: computeGap(gap),
+    alignItems: getAlignItems(crossAxisAlignment) ?? null, // TODO: Investigate why I have to put `?? null`
+    justifyContent: getJustifyContent(mainAxisAlignment) ?? null,
+    flexDirection: getFlexDirection(textDirection, verticalDirection, direction) ?? null,
   }),
 });
 
-type FlexComponent = ForwardRefExoticComponent<FlexProps & RefAttributes<HTMLDivElement>> & {
+type FlexComponent = ForwardRefExoticComponent<FlexProps & HTMLProps<HTMLDivElement>> & {
   Row: typeof FlexRow;
   Column: typeof FlexColumn;
 };
 
-export const Flex: FlexComponent = forwardRef<HTMLDivElement, FlexProps>(
+/**
+ * A widget that displays its children in a one-dimensional array.
+ *
+ * The Flex widget allows you to control the axis along which the children are placed (horizontal or vertical).
+ * This is referred to as the main axis. If you know the main axis in advance, then consider using a
+ * Flex.Row (if it's horizontal) or Flex.Column (if it's vertical) instead, because that will be less verbose.
+ *
+ * If you only have one child, then rather than using Flex, Flex.Row, or Flex.Column, consider using Align
+ * to position the child.
+ *
+ * @see {@link Flex.Row} for a version of this widget that is always horizontal.
+ * @see {@link Flex.Column} for a version of this widget that is always vertical.
+ * @see {@link Align} if you only have one child.
+ */
+export const Flex: FlexComponent = forwardRef<HTMLDivElement, FlexProps & HTMLProps<HTMLDivElement>>(
   (
     {
       className,
@@ -149,45 +186,17 @@ export const Flex: FlexComponent = forwardRef<HTMLDivElement, FlexProps>(
     },
     ref,
   ) => {
-    const styles = useStyles({ gap });
+    const styles = useStyles({
+      gap,
+      crossAxisAlignment,
+      mainAxisAlignment,
+      textDirection,
+      verticalDirection,
+      direction,
+    });
 
     return (
-      <div
-        ref={ref}
-        className={classNames(
-          classes.flex,
-          styles.flex,
-          {
-            // Axis
-            [classes.flex__horizontal]: direction === Axis.horizontal,
-            [classes.flex__vertical]: direction === Axis.vertical,
-
-            // CrossAxisAlignment
-            [classes.flex__cross_center]: crossAxisAlignment === CrossAxisAlignment.center,
-            [classes.flex__cross_start]: crossAxisAlignment === CrossAxisAlignment.start,
-            [classes.flex__cross_end]: crossAxisAlignment === CrossAxisAlignment.end,
-            [classes.flex__cross_stretch]: crossAxisAlignment === CrossAxisAlignment.stretch,
-
-            // MainAxisAlignment
-            [classes.flex__main_center]: mainAxisAlignment === MainAxisAlignment.center,
-            [classes.flex__main_end]: mainAxisAlignment === MainAxisAlignment.end,
-            [classes.flex__main_start]: mainAxisAlignment === MainAxisAlignment.start,
-            [classes.flex__main_spaceAround]: mainAxisAlignment === MainAxisAlignment.spaceAround,
-            [classes.flex__main_spaceBetween]: mainAxisAlignment === MainAxisAlignment.spaceBetween,
-            [classes.flex__main_spaceEvenly]: mainAxisAlignment === MainAxisAlignment.spaceEvenly,
-
-            // TextDirection
-            [classes.flex__text_ltr]: textDirection === TextDirection.ltr,
-            [classes.flex__text_rtl]: textDirection === TextDirection.rtl,
-
-            // VerticalDirection
-            [classes.flex__vertical_down]: verticalDirection === VerticalDirection.down,
-            [classes.flex__vertical_up]: verticalDirection === VerticalDirection.up,
-          },
-          className,
-        )}
-        {...props}
-      >
+      <div ref={ref} className={classNames(classes.flex, styles.flex, className)} {...props}>
         {children}
       </div>
     );

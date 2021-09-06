@@ -8,7 +8,7 @@ import VerticalDirection from "../../../vertical-direction";
 import FlexColumn, { FlexColumnProps } from "./flex-column";
 
 export default {
-  title: "FlexColumn",
+  title: "Flex.Column",
   component: FlexColumn,
   argTypes: {
     children: { control: { disable: true } },
