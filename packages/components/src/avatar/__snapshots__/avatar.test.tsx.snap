@@ -7,6 +7,10 @@ exports[`Avatar should render successfully 1`] = `
   <div
     class="wrapper-0-2-3 wrapper-d0-0-2-4"
     data-testid="align"
-  />
+  >
+    <span>
+      M
+    </span>
+  </div>
 </div>
 `;
