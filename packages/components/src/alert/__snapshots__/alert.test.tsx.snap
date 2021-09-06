@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert should render successfully 1`] = `
+<div
+  class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2"
+  role="alert"
+>
+  <div
+    class="container-0-2-3 container-d0-0-2-4"
+  >
+    <div
+      class="icon_wrapper"
+    >
+      <span
+        class="material-icons sc-bdnxRM bBgaYg"
+      >
+        info_outline
+      </span>
+    </div>
+    <div
+      class="flex flex-0-2-5 flex-d0-0-2-6 message"
+    >
+      <div
+        class="content"
+      >
+        <span
+          class="elm-0-2-7 elm-d0-0-2-8"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
