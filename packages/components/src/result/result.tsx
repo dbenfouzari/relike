@@ -1,10 +1,9 @@
+import { Color, Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, ReactElement, ReactNode } from "react";
 
-import Colors from "../colors";
 import Icon, { IconProps } from "../icon";
 import Icons from "../icons";
-import { Color } from "../index";
 import classes from "./result.module.scss";
 
 export enum ResultStatus {

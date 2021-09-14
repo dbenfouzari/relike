@@ -1,9 +1,9 @@
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, MouseEvent, ReactNode, ReactText, useMemo } from "react";
 import { createUseStyles } from "react-jss";
 
-import Color from "../color";
-import Colors from "../colors";
 import Icon from "../icon";
 import IconButton from "../icon-button";
 import Icons from "../icons";

@@ -1,7 +1,7 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import classnames from "classnames";
 
-import Colors from "../colors";
 import Icon from "../icon";
 import Icons from "../icons";
 import Result, { ResultStatus } from "./result";

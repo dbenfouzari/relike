@@ -1,7 +1,7 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { CSSProperties } from "react";
 
-import Colors from "../colors";
 import Carousel from "./carousel";
 
 export default {

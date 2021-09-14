@@ -1,9 +1,9 @@
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { FC } from "react";
 import { createUseStyles } from "react-jss";
 
-import Color from "../../../color";
-import Colors from "../../../colors";
 import useSkeletonContext from "../../hooks/useSkeletonContext";
 import classes from "./title.module.scss";
 

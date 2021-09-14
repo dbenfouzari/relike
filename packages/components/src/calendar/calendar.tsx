@@ -1,8 +1,8 @@
+import { DateTime } from "@hastics/utils";
+import { Duration } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, useCallback, useMemo, useState } from "react";
 
-import DateTime from "../date-time";
-import Duration from "../duration";
 import classes from "./calendar.module.scss";
 import { CalendarTop, Days, MonthDays } from "./components";
 import { SupportedLocales } from "./constants";

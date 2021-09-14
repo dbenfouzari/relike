@@ -1,6 +1,6 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from "../../../colors";
 import Container from "../../../container";
 import CrossAxisAlignment from "../../../cross-axis-alignment";
 import MainAxisAlignment from "../../../main-axis-alignment";

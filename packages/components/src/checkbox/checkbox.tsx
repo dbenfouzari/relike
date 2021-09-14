@@ -1,9 +1,9 @@
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { forwardRef, useCallback, useState } from "react";
 import { createUseStyles } from "react-jss";
 
-import Color from "../color";
-import Colors from "../colors";
 import Icon from "../icon";
 import Icons from "../icons";
 import classes from "./checkbox.module.scss";

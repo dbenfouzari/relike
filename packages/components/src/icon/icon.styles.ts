@@ -1,8 +1,7 @@
 // TODO: Replace styled-components by react-jss
 
+import { Colors } from "@hastics/utils";
 import { css } from "styled-components";
-
-import Colors from "../colors";
 
 export const baseStyles = css`
   cursor: default;

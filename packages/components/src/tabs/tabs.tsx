@@ -1,9 +1,9 @@
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { Children, FC, ReactElement } from "react";
 import { createUseStyles } from "react-jss";
 
-import Color from "../color";
-import Colors from "../colors";
 import TabItem, { InnerTabItem, TabItemProps } from "./components/tab-item";
 import useTabs from "./hooks/useTabs";
 import classes from "./tabs.module.scss";

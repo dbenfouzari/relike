@@ -1,8 +1,8 @@
+import { Duration } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, ReactNode } from "react";
 import { createPortal } from "react-dom";
 
-import Duration from "../duration";
 import useDelayedUnmount from "../hooks/useDelayedUnmount";
 import classes from "./dialog.module.scss";
 

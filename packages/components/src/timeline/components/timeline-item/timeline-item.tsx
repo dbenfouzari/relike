@@ -1,9 +1,9 @@
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { cloneElement, FC, ReactElement, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
-import Color from "../../../color";
-import Colors from "../../../colors";
 import { IconInnerProps } from "../../../icon";
 import classes from "./timeline-item.module.scss";
 

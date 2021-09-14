@@ -1,6 +1,6 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from "../colors";
 import Checkbox, { CheckboxProps } from "./checkbox";
 
 export default {

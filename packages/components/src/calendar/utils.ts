@@ -1,4 +1,5 @@
-import DateTime from "../date-time";
+import { DateTime } from "@hastics/utils";
+
 import { CalendarEvent } from "./types";
 
 /**

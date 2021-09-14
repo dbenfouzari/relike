@@ -1,8 +1,8 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import isChromatic from "chromatic/isChromatic";
 
 import Axis from "../../../axis";
-import Colors from "../../../colors";
 import Icon from "../../../icon";
 import Icons from "../../../icons";
 import Padding from "../../../padding";

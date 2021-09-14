@@ -1,7 +1,7 @@
+import { Colors } from "@hastics/utils";
 import { render } from "@testing-library/react";
 
 import Axis from "../../../axis";
-import Colors from "../../../colors";
 import GridViewCount from "./grid-view-count";
 
 const items = Array.from({ length: 32 }, (_, index) => {

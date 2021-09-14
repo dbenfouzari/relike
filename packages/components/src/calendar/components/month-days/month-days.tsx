@@ -1,8 +1,8 @@
+import { DateTime } from "@hastics/utils";
 import isChromatic from "chromatic/isChromatic";
 import classnames from "classnames";
 import { FC } from "react";
 
-import DateTime from "../../../date-time";
 import { CalendarEvent } from "../../types";
 import { getEventsThatDay } from "../../utils";
 import Event from "../event";

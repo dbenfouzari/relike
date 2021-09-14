@@ -1,7 +1,7 @@
+import { Colors } from "@hastics/utils";
 import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Colors from "../colors";
 import Icon from "../icon";
 import Icons from "../icons";
 import Toggle, { ToggleProps } from "./toggle";

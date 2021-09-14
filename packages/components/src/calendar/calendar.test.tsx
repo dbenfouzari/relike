@@ -1,7 +1,7 @@
+import { DateTime } from "@hastics/utils";
+import { Duration } from "@hastics/utils";
 import { act, fireEvent, render } from "@testing-library/react";
 
-import DateTime from "../date-time";
-import Duration from "../duration";
 import Calendar from "./calendar";
 import { MONTHS } from "./constants";
 

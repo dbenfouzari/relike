@@ -1,6 +1,6 @@
+import { Duration } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import Duration from "../../../duration";
 import LoaderScreen from "./loader-screen";
 
 export default {

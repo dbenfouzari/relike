@@ -1,7 +1,7 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { EXCLUDED_CONTROLS } from "../../.storybook/constants";
-import Colors from "../colors";
 import Icons from "../icons";
 import Icon from "./icon";
 

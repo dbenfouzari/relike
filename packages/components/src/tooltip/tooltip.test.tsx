@@ -1,7 +1,7 @@
+import { Colors } from "@hastics/utils";
 import { render } from "@testing-library/react";
 import { createRef } from "react";
 
-import Colors from "../colors";
 import Container from "../container";
 import Tooltip from "./tooltip";
 

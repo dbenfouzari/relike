@@ -1,7 +1,6 @@
+import { Color, DateTime } from "@hastics/utils";
 import { FC } from "react";
 
-import Color from "../../../color";
-import DateTime from "../../../date-time";
 import Icon from "../../../icon";
 import IconButton from "../../../icon-button";
 import Icons from "../../../icons";

@@ -1,10 +1,9 @@
+import { Colors, Duration } from "@hastics/utils";
 import { forwardRef, MutableRefObject, ReactNode, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
 import { uid } from "uid";
 
-import Colors from "../colors";
-import Duration from "../duration";
 import Text from "../text";
 import TextStyle from "../text-style";
 import { Maybe } from "../types";

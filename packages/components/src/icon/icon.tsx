@@ -1,10 +1,10 @@
 // TODO: Replace styled-components by react-jss
 
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import { FC, useMemo } from "react";
 import styled from "styled-components";
 
-import Color from "../color";
-import Colors from "../colors";
 import { IconData } from "../icons";
 import * as styles from "./icon.styles";
 

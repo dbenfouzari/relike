@@ -1,6 +1,6 @@
+import { Colors } from "@hastics/utils";
 import { render } from "@testing-library/react";
 
-import Colors from "../colors";
 import Timeline from "./timeline";
 
 it("should render successfully", () => {

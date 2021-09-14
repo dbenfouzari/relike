@@ -1,7 +1,7 @@
+import { Color } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, ReactChild, ReactChildren } from "react";
 
-import Color from "../color";
 import SkeletonAvatar from "./components/avatar";
 import SkeletonParagraph from "./components/paragraph";
 import { SkeletonParagraphProps } from "./components/paragraph/paragraph";

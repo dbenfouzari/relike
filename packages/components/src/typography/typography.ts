@@ -1,4 +1,5 @@
-import Colors from "../colors";
+import { Colors } from "@hastics/utils";
+
 import FontWeight from "../font-weight";
 import TextStyle from "../text-style";
 import TextTheme from "../text-theme";

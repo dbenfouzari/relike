@@ -1,9 +1,9 @@
+import { Color } from "@hastics/utils";
+import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { FC } from "react";
 import { createUseStyles } from "react-jss";
 
-import Color from "../color";
-import Colors from "../colors";
 import LoaderScreen from "./components/loader-screen";
 
 export interface LoaderProps {

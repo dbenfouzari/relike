@@ -1,8 +1,8 @@
+import { DateTime } from "@hastics/utils";
+import { Duration } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import isChromatic from "chromatic/isChromatic";
 
-import DateTime from "../date-time";
-import Duration from "../duration";
 import Calendar, { CalendarProps } from "./calendar";
 import classes from "./calendar.stories.module.scss";
 import { SupportedLocales } from "./constants";
