@@ -1,5 +1,4 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
+import { Color, Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, ReactNode, useCallback } from "react";
 import { createUseStyles } from "react-jss";
