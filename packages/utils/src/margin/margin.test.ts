@@ -4,9 +4,9 @@ describe("Margin", () => {
   describe(".toCSSString method", () => {
     it("should return null when no value set", () => {
       // Since all other values default to null, it should return a Padding with all values to null.
-      const padding = Margin.only({ top: null });
+      const margin = Margin.only({ top: null });
 
-      expect(padding.toCSSString()).toBe(null);
+      expect(margin.toCSSString()).toBe(null);
     });
 
     it("should return correct value", () => {
@@ -22,26 +22,6 @@ margin-right: 32px;`);
 margin-right: 32px;
 margin-top: 32px;
 margin-bottom: 32px;`);
-    });
-  });
-
-  describe(".toStyledCSS method", () => {
-    it("should return null when no value set", () => {
-      // Since all other values default to null, it should return a Padding with all values to null.
-      const padding = Margin.only({ top: null });
-
-      expect(padding.toStyledCSS()).toBe(null);
-    });
-
-    it("should return correct value", () => {
-      expect(Margin.only({ top: 12 }).toStyledCSS()?.includes(`margin-top: 12px;`)).toBe(true);
-      // expect(Margin.all(12).toStyledCSS()?.includes(`margin-left: 12px;`)).toBe(true);
-      const m = Margin.all(12).toStyledCSS();
-
-      expect(m?.includes("margin-left: 12px;")).toBe(true);
-      expect(m?.includes("margin-right: 12px;")).toBe(true);
-      expect(m?.includes("margin-top: 12px;")).toBe(true);
-      expect(m?.includes("margin-bottom: 12px;")).toBe(true);
     });
   });
 

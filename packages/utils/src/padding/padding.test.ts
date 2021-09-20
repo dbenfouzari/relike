@@ -25,19 +25,6 @@ padding-bottom: 32px;`);
     });
   });
 
-  describe(".toStyledCSS method", () => {
-    it("should return null when no value set", () => {
-      // Since all other values default to null, it should return a Padding with all values to null.
-      const padding = Padding.only({ top: null });
-
-      expect(padding.toStyledCSS()).toBe(null);
-    });
-
-    it("should return correct value", () => {
-      expect(Padding.only({ top: 12 }).toStyledCSS()?.includes(`padding-top: 12px;`)).toBe(true);
-    });
-  });
-
   describe(".copyWith method", () => {
     it("should override correctly", () => {
       const { top, right, bottom, left } = Padding.all(32).copyWith({ top: 0 });
