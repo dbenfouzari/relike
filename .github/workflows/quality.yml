@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Build
+        run: yarn build
+
       - name: Check TypeScript
         run: yarn tsc -p .
 
@@ -77,6 +80,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+
+      - name: Build
+        run: yarn build
 
       - name: Test
         run: yarn test --watchAll=false --coverage

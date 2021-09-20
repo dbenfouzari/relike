@@ -12,14 +12,14 @@
         "/dist"
     ],
     "scripts": {
-        "prepare": "yarn hastics generate:index src --exclude index.ts,types.ts",
+        "generate-index": "yarn hastics generate:index src --exclude index.ts,types.ts",
         "build:cjs": "babel --source-maps --quiet --root-mode upward src -d dist/cjs --env-name cjs --extensions \".ts,.tsx,.js,.jsx\"",
         "build:esm": "babel --source-maps --quiet --root-mode upward src -d dist/esm --extensions \".ts,.tsx,.js,.jsx\"",
         "build:js": "yarn build:cjs && yarn build:esm",
         "build:ts:esm": "tsc -p tsconfig.build.json",
         "build:ts:cjs": "tsc -p tsconfig.build.json -module commonjs --outDir dist/cjs",
         "build:ts": "yarn build:ts:esm && yarn build:ts:cjs",
-        "build": "yarn prepare && npx rimraf dist && yarn build:js && yarn build:ts"
+        "build": "npx rimraf dist && yarn build:js && yarn build:ts"
     },
     "repository": {
         "type": "git",
