@@ -12,7 +12,7 @@
         "/dist"
     ],
     "scripts": {
-        "prepare": "yarn hastics generate:index src --exclude index.ts",
+        "prepare": "yarn hastics generate:index src --exclude index.ts,types.ts",
         "build:cjs": "babel --source-maps --quiet --root-mode upward src -d dist/cjs --env-name cjs --extensions \".ts,.tsx,.js,.jsx\"",
         "build:esm": "babel --source-maps --quiet --root-mode upward src -d dist/esm --extensions \".ts,.tsx,.js,.jsx\"",
         "build:js": "yarn build:cjs && yarn build:esm",

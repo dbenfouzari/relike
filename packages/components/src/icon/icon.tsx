@@ -1,12 +1,9 @@
-// TODO: Replace styled-components by react-jss
-
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
-import { FC, useMemo } from "react";
-import styled from "styled-components";
+import { Color, Colors } from "@hastics/utils";
+import classNames from "classnames";
+import { FC } from "react";
 
 import { IconData } from "../icons";
-import * as styles from "./icon.styles";
+import classes from "./icon.module.scss";
 
 const mapIcon = (variant?: "rounded" | "outlined" | "sharp" | "screen") => {
   if (variant === "rounded") return "material-icons-round";
@@ -30,33 +27,8 @@ export interface IconProps {
    */
   color?: Color;
   icon: IconData;
-}
-
-export interface IconInnerProps {
-  className?: string;
-  icon: IconData;
   semanticLabel?: string;
 }
-
-export const IconInner: FC<IconInnerProps> = ({ className, icon, semanticLabel }) => {
-  const classes = useMemo(
-    () => [mapIcon(icon.variant), className].filter(Boolean).join(" "),
-    [className, icon.variant],
-  );
-
-  return (
-    <span className={classes} aria-label={semanticLabel}>
-      {icon.name}
-    </span>
-  );
-};
-
-const StyledIcon = styled(IconInner)<IconProps>`
-  ${styles.baseStyles}
-  color: ${(p) => p.color?.toRGBA() || Colors.black.toRGBA()};
-  ${(p) => p.disabled && styles.disabledStyles}
-  font-size: ${(p) => p.size || 24}px;
-`;
 
 /**
  * A graphical **Icon** widget drawn with a glyph.
@@ -70,6 +42,30 @@ const StyledIcon = styled(IconInner)<IconProps>`
  * @see IconButton
  * @see Icons
  */
-export const Icon: FC<IconProps> = (props) => <StyledIcon {...props} />;
+export const Icon: FC<IconProps> = ({ className, icon, semanticLabel, color = Colors.black, disabled, size = 24 }) => {
+  return (
+    <>
+      <span
+        className={classNames(
+          classes.icon,
+          mapIcon(icon.variant),
+          {
+            [classes.icon__disabled]: disabled,
+          },
+          className,
+        )}
+        aria-label={semanticLabel}
+      >
+        {icon.name}
+      </span>
+
+      <style jsx>{`
+        --color: ${color.toRGBA()};
+        --disabled-color: ${Colors.black26.toRGBA()};
+        --size: ${size}px;
+      `}</style>
+    </>
+  );
+};
 
 export default Icon;

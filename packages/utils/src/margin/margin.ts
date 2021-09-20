@@ -1,7 +1,4 @@
-// TODO: Replace styled-components by react-jss
-
 import { CSSProperties } from "react";
-import { css } from "styled-components";
 
 import EdgeInsets from "../edge-insets";
 import { Maybe } from "../types";
@@ -34,25 +31,11 @@ class Margin extends EdgeInsets {
    */
   toStyle(): CSSProperties {
     return {
-      paddingTop: this.top ?? undefined,
-      paddingRight: this.right ?? undefined,
-      paddingBottom: this.bottom ?? undefined,
-      paddingLeft: this.left ?? undefined,
+      marginTop: this.top ?? undefined,
+      marginRight: this.right ?? undefined,
+      marginBottom: this.bottom ?? undefined,
+      marginLeft: this.left ?? undefined,
     };
-  }
-
-  /**
-   * Generates `styled-components` CSS based on data.
-   */
-  toStyledCSS() {
-    if (isNull(this.top) && isNull(this.right) && isNull(this.bottom) && isNull(this.left)) return null;
-
-    return css`
-      ${!isNull(this.left) && `margin-left: ${this.left}px;`}
-      ${!isNull(this.right) && `margin-right: ${this.right}px;`}
-      ${!isNull(this.top) && `margin-top: ${this.top}px;`}
-      ${!isNull(this.bottom) && `margin-bottom: ${this.bottom}px;`}
-    `;
   }
 
   copyWith({

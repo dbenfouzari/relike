@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "transform-scss"
+    "transform-scss",
+    "styled-jsx/babel"
   ],
   "presets": [
     [

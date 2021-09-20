@@ -4,7 +4,7 @@ import classnames from "classnames";
 import { cloneElement, FC, ReactElement, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
-import { IconInnerProps } from "../../../icon";
+import { IconProps } from "../../../icon";
 import classes from "./timeline-item.module.scss";
 
 export interface TimelineItemPropsWithoutDot {
@@ -28,7 +28,7 @@ export interface TimelineItemPropsWithDot {
    */
   color?: undefined;
 
-  dot?: ReactElement<IconInnerProps>;
+  dot?: ReactElement<IconProps>;
 
   children: ReactNode;
 }

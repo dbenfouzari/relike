@@ -1,0 +1,10 @@
+.icon {
+  cursor: default;
+  pointer-events: none;
+  color: var(--color);
+  font-size: var(--size);
+
+  &__disabled {
+    color: var(--disabled-color);
+  }
+}
