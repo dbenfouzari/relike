@@ -8,11 +8,11 @@ describe("Calendar Utils", function () {
     const date = DateTime.now();
 
     const events = [
-      { date: DateTime.now().subtract(Duration.days(60)), title: "Past Event" },
-      { date: DateTime.now(), title: "Storybook Event That Rocks !" },
+      { date: date.subtract(Duration.days(60)), title: "Past Event" },
+      { date: date, title: "Storybook Event That Rocks !" },
     ];
 
-    const expectedResult = [{ date: DateTime.now(), title: "Storybook Event That Rocks !" }];
+    const expectedResult = [{ date: date, title: "Storybook Event That Rocks !" }];
 
     expect(JSON.stringify(filterCalendarEvents(date, events))).toEqual(JSON.stringify(expectedResult));
   });
