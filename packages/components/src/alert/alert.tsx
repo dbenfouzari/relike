@@ -1,3 +1,4 @@
+import { Padding } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, ReactNode, useMemo } from "react";
 import { createUseStyles } from "react-jss";
@@ -8,7 +9,6 @@ import Flex from "../flex";
 import FontWeight from "../font-weight";
 import { Icon } from "../icon";
 import MainAxisAlignment from "../main-axis-alignment";
-import Padding from "../padding";
 import Text from "../text";
 import Typography from "../typography";
 import classes from "./alert.module.scss";

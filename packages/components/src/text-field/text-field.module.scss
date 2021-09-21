@@ -1,0 +1,20 @@
+.text_field {
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  transition: 300ms ease;
+  padding: 6px 12px;
+
+  &::placeholder {
+    color: var(--primary-color);
+    transition: 300ms ease;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--darker-color);
+
+    &::placeholder {
+      color: var(--darker-color);
+    }
+  }
+}

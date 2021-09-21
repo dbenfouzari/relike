@@ -1,12 +1,10 @@
-import { Color } from "@hastics/utils";
+import { Color, Margin, Padding } from "@hastics/utils";
 import classnames from "classnames";
 import { createElement, forwardRef, ReactHTML, ReactNode } from "react";
 import { createUseStyles } from "react-jss";
 
 import Align from "../align";
 import Alignment from "../alignment";
-import Margin from "../margin";
-import Padding from "../padding";
 
 export interface ContainerProps {
   /**

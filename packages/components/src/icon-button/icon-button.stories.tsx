@@ -1,9 +1,9 @@
+import { Padding } from "@hastics/utils";
 import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Icon from "../icon";
 import Icons from "../icons";
-import Padding from "../padding";
 import IconButton from "./icon-button";
 
 export default {

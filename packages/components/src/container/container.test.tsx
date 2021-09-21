@@ -1,8 +1,6 @@
-import { Colors } from "@hastics/utils";
+import { Colors, Margin, Padding } from "@hastics/utils";
 import { render } from "@testing-library/react";
 
-import Margin from "../margin";
-import Padding from "../padding";
 import Container from "./container";
 
 it("should render successfully without props", () => {

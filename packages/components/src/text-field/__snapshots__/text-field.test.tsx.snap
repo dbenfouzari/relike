@@ -2,8 +2,9 @@
 
 exports[`matches snapshot 1`] = `
 <input
-  class="sc-bdnxRM zLOVx"
+  class="text_field"
   data-testid="text-field"
+  style="--primary-color: rgba(176, 190, 197, 1.00); --darker-color: rgba(120, 144, 156, 1.00);"
   type="text"
 />
 `;

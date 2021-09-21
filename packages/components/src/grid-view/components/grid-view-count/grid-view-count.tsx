@@ -1,9 +1,9 @@
+import { Padding } from "@hastics/utils";
 import classNames from "classnames";
 import { Children, cloneElement, FC, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 
 import Axis from "../../../axis";
-import Padding from "../../../padding";
 
 export interface GridViewCountProps {
   children: JSX.Element[];

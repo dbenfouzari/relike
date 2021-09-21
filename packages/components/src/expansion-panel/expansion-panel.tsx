@@ -1,10 +1,10 @@
+import { Padding } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, ReactChild, ReactChildren } from "react";
 
 import Icon from "../icon";
 import IconButton from "../icon-button";
 import Icons from "../icons";
-import Padding from "../padding";
 import classes from "./expansion-panel.module.scss";
 import useExpansion from "./useExpansion";
 

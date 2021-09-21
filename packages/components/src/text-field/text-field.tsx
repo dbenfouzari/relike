@@ -1,10 +1,9 @@
-// TODO: Replace styled-components by react-jss
-
-import { FC, InputHTMLAttributes } from "react";
-import styled from "styled-components";
+import { Colors } from "@hastics/utils";
+import classNames from "classnames";
+import { CSSProperties, FC, InputHTMLAttributes } from "react";
 
 import Input from "../input";
-import * as styles from "./text-field.styles";
+import classes from "./text-field.module.scss";
 
 /**
  * I intentionally remove the `type` prop, since it will break the `TextField`
@@ -22,17 +21,21 @@ export interface TextFieldProps extends InputProps {
   obscureText?: boolean;
 }
 
-export const TextFieldBase: FC<TextFieldProps> = ({ className, obscureText, ...props }) => {
-  return <Input type={obscureText ? "password" : "text"} className={className} {...props} />;
-};
-
-const StyledTextField = styled(TextFieldBase)`
-  ${styles.baseStyles}
-`;
-
 /**
  * A **TextField** lets the user enter text, either with hardware keyboard or with an onscreen keyboard.
  */
-export const TextField: FC<TextFieldProps> = (props) => <StyledTextField {...props} />;
+export const TextField: FC<TextFieldProps> = ({ className, obscureText, ...props }) => (
+  <Input
+    type={obscureText ? "password" : "text"}
+    className={classNames(classes.text_field, className)}
+    style={
+      {
+        "--primary-color": Colors.blueGrey[200].toRGBA(),
+        "--darker-color": Colors.blueGrey[400].toRGBA(),
+      } as CSSProperties
+    }
+    {...props}
+  />
+);
 
 export default TextField;
