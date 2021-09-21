@@ -70,6 +70,8 @@ class Color {
     assert(saturation <= 100, "Saturation should be between 0 and 100");
     assert(lightness >= 0, "Lightness should be between 0 and 100");
     assert(lightness <= 100, "Lightness should be between 0 and 100");
+    assert(alpha >= 0, "Alpha should be between 0 and 255");
+    assert(alpha <= 255, "Alpha should be between 0 and 255");
 
     const s1 = saturation / 100;
     const l1 = lightness / 100;
@@ -189,6 +191,7 @@ class Color {
 
   withHue = (h: number) => {
     assert(h >= 0, "Hue should be between 0 and 360");
+    assert(h <= 360, "Hue should be between 0 and 360");
 
     return Color.fromHSLA(h, this.saturation, this.lightness, this.alpha);
   };

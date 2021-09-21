@@ -494,7 +494,7 @@ class DateTime {
   /**
    * Check if a given `day` [DateTime] is in the `other` [DateTime].
    */
-  public getIsInSameMonth = (other: DateTime) => this.month === other.month;
+  public getIsInSameMonth = (other: DateTime) => this.month === other.month && this.year === other.year;
 
   /**
    * Check if this instance of [DateTime] is today.
@@ -502,7 +502,7 @@ class DateTime {
   public getIsToday = () => {
     const today = DateTime.now();
 
-    return today.year === this.year && today.month === this.month && today.day === this.day;
+    return this.getIsInSameMonth(today) && today.day === this.day;
   };
   //#endregion
 }

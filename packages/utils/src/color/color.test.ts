@@ -6,6 +6,16 @@ describe("Color", () => {
     expect(color.toString()).toEqual("Color(0xffffffff)");
   });
 
+  it("should return correct RGB representation", () => {
+    const color = new Color(0xff123456);
+    expect(color.toRGB()).toEqual("#123456ff");
+  });
+
+  it("should return correct RGBA representation", () => {
+    const color = new Color(0xffffffff);
+    expect(color.toRGBA()).toEqual("rgba(255, 255, 255, 1.00)");
+  });
+
   it("should reject when incorrect value is passed", () => {
     expect(() => {
       Color.fromARGB(256, 255, 255, 255);
@@ -146,6 +156,37 @@ describe("Color", () => {
 
     expect(colorLight.estimateBrightness()).toBe("light");
     expect(colorDark.estimateBrightness()).toBe("dark");
+  });
+
+  it("should change hue", () => {
+    const colorLight = new Color(0xff6abf40); // Hue is 100 https://hslpicker.com/#6abf40
+    const nextColor = colorLight.withHue(200);
+
+    expect(colorLight.hue).toBe(100);
+    expect(nextColor.hue).toBe(200);
+
+    expect(colorLight.toRGB()).toEqual("#6abf40ff");
+    expect(nextColor.toRGB()).toEqual("#4095bfff");
+  });
+
+  it("should change saturation", () => {
+    const colorLight = new Color(0xff6abf40); // Hue is 100 https://hslpicker.com/#6abf40
+    const nextColor = colorLight.withSaturation(100);
+
+    expect(nextColor.saturation).toBe(100);
+
+    expect(colorLight.toRGB()).toEqual("#6abf40ff");
+    expect(nextColor.toRGB()).toEqual("#55ff00ff");
+  });
+
+  it("should change lightness", () => {
+    const colorLight = new Color(0xff6abf40); // Hue is 100 https://hslpicker.com/#6abf40
+    const nextColor = colorLight.withLightness(100);
+
+    expect(nextColor.lightness).toBe(100);
+
+    expect(colorLight.toRGB()).toEqual("#6abf40ff");
+    expect(nextColor.toRGB()).toEqual("#ffffffff");
   });
 
   describe("Red HSLA", () => {

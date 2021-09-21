@@ -175,13 +175,17 @@ describe("DateTime", () => {
     });
 
     it("`set` should return correct value", () => {
-      const date = new DateTime({ year: 2021, month: 8, day: 6 });
+      const date = new DateTime({ year: 2021, month: 8, day: 6, hour: 11, minute: 5, second: 35, millisecond: 100 });
       const nextDate = date.set({ day: 1 });
 
       expect(date.day).toBe(6);
       expect(nextDate.year).toBe(2021);
       expect(nextDate.month).toBe(8);
       expect(nextDate.day).toBe(1);
+      expect(nextDate.hour).toBe(11);
+      expect(nextDate.minute).toBe(5);
+      expect(nextDate.second).toBe(35);
+      expect(nextDate.millisecond).toBe(100);
     });
 
     it("`difference` should return correct value", () => {
@@ -328,6 +332,23 @@ describe("DateTime", () => {
       ];
 
       expect(JSON.stringify(date.getDaysInMonth())).toEqual(JSON.stringify(expectedDates));
+    });
+
+    it("`getIsInSameMonth` should return correct value", () => {
+      const dateTime = new DateTime({ year: 2021, month: 9, day: 21 });
+
+      expect(dateTime.getIsInSameMonth(new DateTime({ year: 2021, month: 8, day: 21 }))).toBe(false);
+      expect(dateTime.getIsInSameMonth(new DateTime({ year: 2020, month: 9, day: 21 }))).toBe(false);
+      expect(dateTime.getIsInSameMonth(new DateTime({ year: 2021, month: 9, day: 3 }))).toBe(true);
+    });
+
+    it("`getIsToday` should return correct value", () => {
+      jest.spyOn(Date, "now").mockImplementation(() => new Date(2021, 8, 21).getTime());
+
+      expect(new DateTime({ year: 2021, month: 9, day: 21 }).getIsToday()).toBe(true);
+      expect(new DateTime({ year: 2021, month: 9, day: 20 }).getIsToday()).toBe(false);
+
+      jest.restoreAllMocks();
     });
   });
 });
