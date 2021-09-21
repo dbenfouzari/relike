@@ -14,3 +14,22 @@ exports[`Avatar should render successfully 1`] = `
   </div>
 </div>
 `;
+
+exports[`Avatar should render successfully with an image 1`] = `
+<div
+  class="container-0-2-1 container-d1-0-2-5 avatar"
+>
+  <div
+    class="wrapper-0-2-3 wrapper-d1-0-2-6"
+    data-testid="align"
+  >
+    <img
+      alt="Avatar"
+      class="image"
+      height="40"
+      src="https://fakeimg.pl/250x100/"
+      width="40"
+    />
+  </div>
+</div>
+`;
