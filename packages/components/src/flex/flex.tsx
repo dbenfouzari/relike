@@ -146,9 +146,9 @@ const useStyles = createUseStyles({
     direction,
   }: FlexStyleProps) => ({
     gap: computeGap(gap),
-    alignItems: getAlignItems(crossAxisAlignment) ?? null, // TODO: Investigate why I have to put `?? null`
-    justifyContent: getJustifyContent(mainAxisAlignment) ?? null,
-    flexDirection: getFlexDirection(textDirection, verticalDirection, direction) ?? null,
+    alignItems: getAlignItems(crossAxisAlignment),
+    justifyContent: getJustifyContent(mainAxisAlignment),
+    flexDirection: getFlexDirection(textDirection, verticalDirection, direction),
   }),
 });
 

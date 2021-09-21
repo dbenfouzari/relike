@@ -6,7 +6,7 @@ import MainAxisAlignment from "../main-axis-alignment";
 import TextDirection from "../text-direction";
 import VerticalDirection from "../vertical-direction";
 
-export const getAlignItems = (crossAxisAlignment: CrossAxisAlignment): CSSProperties["alignItems"] => {
+export const getAlignItems = (crossAxisAlignment: CrossAxisAlignment): NonNullable<CSSProperties["alignItems"]> => {
   switch (crossAxisAlignment) {
     case CrossAxisAlignment.center:
     default:
@@ -20,7 +20,9 @@ export const getAlignItems = (crossAxisAlignment: CrossAxisAlignment): CSSProper
   }
 };
 
-export const getJustifyContent = (mainAxisAlignment: MainAxisAlignment): CSSProperties["justifyContent"] => {
+export const getJustifyContent = (
+  mainAxisAlignment: MainAxisAlignment,
+): NonNullable<CSSProperties["justifyContent"]> => {
   switch (mainAxisAlignment) {
     case MainAxisAlignment.start:
     default:
@@ -42,7 +44,7 @@ export const getFlexDirection = (
   textDirection: TextDirection,
   verticalDirection: VerticalDirection,
   direction: Axis,
-): CSSProperties["flexDirection"] => {
+): NonNullable<CSSProperties["flexDirection"]> => {
   if (textDirection === TextDirection.ltr && direction === Axis.horizontal) return "row";
   if (textDirection === TextDirection.rtl && direction === Axis.horizontal) return "row-reverse";
   if (verticalDirection === VerticalDirection.down && direction === Axis.vertical) return "column";
