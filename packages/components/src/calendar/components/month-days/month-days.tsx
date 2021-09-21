@@ -17,7 +17,7 @@ export interface MonthDaysProps {
  * Since we don't want Chromatic to update every day when no change is made,
  * I just define today to a defined date.
  */
-const getIsToday = (dateTime: DateTime) => {
+export const getIsToday = (dateTime: DateTime) => {
   if (isChromatic()) return dateTime.isAtSameMomentAs(new DateTime({ year: 2021, month: DateTime.august, day: 26 }));
   return dateTime.getIsToday();
 };
