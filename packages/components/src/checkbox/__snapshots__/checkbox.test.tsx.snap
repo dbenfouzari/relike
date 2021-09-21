@@ -16,17 +16,10 @@ exports[`Checkbox should render successfully 1`] = `
       class="checkmark"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1697339359 icon material-icons"
       >
         check
       </span>
-      <style>
-        
-        --color: rgba(255, 255, 255, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 16px;
-      
-      </style>
     </span>
   </div>
 </label>
@@ -49,17 +42,10 @@ exports[`Checkbox should render successfully when default checked 1`] = `
       class="checkmark checkmark__checked"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1697339359 icon material-icons"
       >
         check
       </span>
-      <style>
-        
-        --color: rgba(255, 255, 255, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 16px;
-      
-      </style>
     </span>
   </div>
 </label>

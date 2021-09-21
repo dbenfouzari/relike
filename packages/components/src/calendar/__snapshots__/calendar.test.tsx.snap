@@ -12,17 +12,10 @@ exports[`Calendar should handle previous month 1`] = `
       data-testid="prev-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_left
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
     <div
       class="center"
@@ -41,17 +34,10 @@ exports[`Calendar should handle previous month 1`] = `
       data-testid="next-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_right
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
   </div>
   <div
@@ -641,17 +627,10 @@ exports[`Calendar should handle previous month 2`] = `
       data-testid="prev-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_left
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
     <div
       class="center"
@@ -670,17 +649,10 @@ exports[`Calendar should handle previous month 2`] = `
       data-testid="next-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_right
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
   </div>
   <div
@@ -1171,17 +1143,10 @@ exports[`Calendar should handle previous month 3`] = `
       data-testid="prev-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_left
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
     <div
       class="center"
@@ -1200,17 +1165,10 @@ exports[`Calendar should handle previous month 3`] = `
       data-testid="next-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_right
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
   </div>
   <div
@@ -1701,17 +1659,10 @@ exports[`Calendar should render successfully 1`] = `
       data-testid="prev-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_left
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
     <div
       class="center"
@@ -1730,17 +1681,10 @@ exports[`Calendar should render successfully 1`] = `
       data-testid="next-month"
     >
       <span
-        class="icon material-icons"
+        class="jsx-1922660221 icon material-icons"
       >
         arrow_right
       </span>
-      <style>
-        
-        --color: rgba(153, 161, 167, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-      </style>
     </button>
   </div>
   <div

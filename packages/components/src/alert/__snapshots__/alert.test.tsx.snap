@@ -12,17 +12,10 @@ exports[`Alert should render successfully 1`] = `
       class="icon_wrapper"
     >
       <span
-        class="icon material-icons"
+        class="jsx-3319743189 icon material-icons"
       >
         info_outline
       </span>
-      <style>
-        
-        --color: rgba(3, 169, 244, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 22px;
-      
-      </style>
     </div>
     <div
       class="flex flex-0-2-5 flex-d0-0-2-6 message"

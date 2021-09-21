@@ -5,17 +5,10 @@ exports[`Button should render successfully when extended 1`] = `
   class="button button__extended button__high buttonHigh-0-2-3 buttonHigh-d5-0-2-9"
 >
   <span
-    class="icon material-icons icon"
+    class="jsx-1654271774 icon material-icons icon"
   >
     check
   </span>
-  <style>
-    
-        --color: rgba(255, 255, 255, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-  </style>
   <span
     class="elm-0-2-10 elm-d0-0-2-11"
   >
@@ -29,16 +22,9 @@ exports[`Button should render successfully with high emphasis 1`] = `
   class="button button__high buttonHigh-0-2-3 buttonHigh-d2-0-2-6"
 >
   <span
-    class="icon material-icons icon"
+    class="jsx-1654271774 icon material-icons icon"
   >
     add
   </span>
-  <style>
-    
-        --color: rgba(255, 255, 255, 1.00);
-        --disabled-color: rgba(0, 0, 0, 0.26);
-        --size: 24px;
-      
-  </style>
 </button>
 `;
