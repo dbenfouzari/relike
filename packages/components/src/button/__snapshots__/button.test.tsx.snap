@@ -1,11 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button should render successfully when disabled 1`] = `
+<button
+  class="button button__disabled buttonMedium-0-2-2 buttonMedium-d10-0-2-18"
+  disabled=""
+>
+  <span
+    class="elm-0-2-7 elm-d3-0-2-20"
+    data-testid="text-elm"
+  >
+    Hello Test
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully when lightness is high 1`] = `
+<button
+  class="button button__high buttonHigh-0-2-3 buttonHigh-d17-0-2-27"
+>
+  <span
+    class="elm-0-2-7 elm-d5-0-2-28"
+    data-testid="text-elm"
+  >
+    Hello Test
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully when lightness is low 1`] = `
+<button
+  class="button buttonMedium-0-2-2 buttonMedium-d13-0-2-22"
+>
+  <span
+    class="elm-0-2-7 elm-d4-0-2-24"
+    data-testid="text-elm"
+  >
+    Hello Test
+  </span>
+</button>
+`;
+
 exports[`Button should render successfully with high emphasis 1`] = `
 <button
   class="button button__high buttonHigh-0-2-3 buttonHigh-d8-0-2-15"
 >
   <span
     class="elm-0-2-7 elm-d2-0-2-16"
+    data-testid="text-elm"
+  >
+    Hello Test
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with icon 1`] = `
+<button
+  class="button buttonMedium-0-2-2 buttonMedium-d19-0-2-30"
+>
+  <span
+    class="jsx-2439414882 icon material-icons icon"
+  >
+    access_time
+  </span>
+  <span
+    class="elm-0-2-7 elm-d6-0-2-32"
     data-testid="text-elm"
   >
     Hello Test

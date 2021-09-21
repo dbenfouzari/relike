@@ -1,3 +1,4 @@
+import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Flex from "../flex";
@@ -78,6 +79,14 @@ HighEmphasis.parameters = {
       story: "Contained buttons have more emphasis, as they use a color fill and shadow.",
     },
   },
+};
+
+export const WithBrightColor = Template.bind({});
+WithBrightColor.args = {
+  ...defaultProps,
+  children: "Button",
+  color: Colors.white,
+  emphasis: Emphasis.high,
 };
 
 export const WithIcon = ExpoTemplate.bind({});
