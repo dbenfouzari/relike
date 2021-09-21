@@ -6,6 +6,7 @@ exports[`Button should render successfully with high emphasis 1`] = `
 >
   <span
     class="elm-0-2-7 elm-d2-0-2-16"
+    data-testid="text-elm"
   >
     Hello Test
   </span>
@@ -18,6 +19,7 @@ exports[`Button should render successfully with low emphasis 1`] = `
 >
   <span
     class="elm-0-2-7 elm-d0-0-2-8"
+    data-testid="text-elm"
   >
     Hello Test
   </span>
@@ -30,6 +32,7 @@ exports[`Button should render successfully with medium emphasis 1`] = `
 >
   <span
     class="elm-0-2-7 elm-d1-0-2-12"
+    data-testid="text-elm"
   >
     Hello Test
   </span>

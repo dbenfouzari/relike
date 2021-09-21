@@ -6,6 +6,7 @@ exports[`Chip should render successfully 1`] = `
 >
   <span
     class="elm-0-2-7 elm-d0-0-2-8 label"
+    data-testid="text-elm"
   >
     Hello
   </span>

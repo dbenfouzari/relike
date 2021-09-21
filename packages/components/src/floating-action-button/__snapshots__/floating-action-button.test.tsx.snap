@@ -11,6 +11,7 @@ exports[`Button should render successfully when extended 1`] = `
   </span>
   <span
     class="elm-0-2-10 elm-d0-0-2-11"
+    data-testid="text-elm"
   >
     See all results
   </span>

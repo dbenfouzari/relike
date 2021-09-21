@@ -42,7 +42,7 @@ const COMPONENT_NAME = "Text";
  */
 const DEFAULT_PROPS: Partial<TextProps> = {};
 
-const getCSSOverflow = (overflow?: TextOverflow): CSSProperties["textOverflow"] => {
+export const getCSSOverflow = (overflow?: TextOverflow): CSSProperties["textOverflow"] => {
   if (typeof overflow === "undefined") return undefined;
 
   switch (overflow) {
@@ -88,7 +88,7 @@ export const Text = forwardRef(
     const styles = useStyles({ style });
 
     return (
-      <AsElement ref={ref as any} className={classNames(styles.elm, className)}>
+      <AsElement data-testid="text-elm" ref={ref as any} className={classNames(styles.elm, className)}>
         {children}
       </AsElement>
     );
@@ -96,13 +96,5 @@ export const Text = forwardRef(
 );
 Text.displayName = COMPONENT_NAME;
 Text.defaultProps = DEFAULT_PROPS;
-
-/**
- * Theme(textTheme: TextTheme(headline1: TextStyle(fontSize: 16, color: Color(0xff999999))))
- *
- * Typography(style: TextTheme(...))
- * OU
- * Typography(theme: 'headline1')
- */
 
 export default Text;

@@ -11,7 +11,9 @@ export interface DaysProps {
   formatDay?: (day: Day) => string;
 }
 
-const Days: FC<DaysProps> = ({ locale, formatDay = (value) => value.substr(0, 3) }) => {
+export const threeFirstLetters = (str: string) => str.substr(0, 3);
+
+const Days: FC<DaysProps> = ({ locale, formatDay = threeFirstLetters }) => {
   const localizedDays = useMemo(() => DAYS[locale], [locale]);
 
   return (
@@ -19,7 +21,7 @@ const Days: FC<DaysProps> = ({ locale, formatDay = (value) => value.substr(0, 3)
       {localizedDays.map((day) => (
         <span key={day} className={classnames(classes.day_name)}>
           <Tooltip label={day}>
-            <span>{formatDay(day)}</span>
+            <span data-testid={day}>{formatDay(day)}</span>
           </Tooltip>
         </span>
       ))}

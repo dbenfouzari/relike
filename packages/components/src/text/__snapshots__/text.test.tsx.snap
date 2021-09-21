@@ -3,6 +3,7 @@
 exports[`Text should render successfully 1`] = `
 <span
   class="elm-0-2-1 elm-d0-0-2-2"
+  data-testid="text-elm"
 >
   Hello Testing World
 </span>

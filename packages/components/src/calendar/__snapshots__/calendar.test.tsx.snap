@@ -46,49 +46,63 @@ exports[`Calendar should handle previous month 1`] = `
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="monday"
+      >
         mon
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="tuesday"
+      >
         tue
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="wednesday"
+      >
         wed
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="thursday"
+      >
         thu
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="friday"
+      >
         fri
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="saturday"
+      >
         sat
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="sunday"
+      >
         sun
       </span>
     </span>
@@ -661,49 +675,63 @@ exports[`Calendar should handle previous month 2`] = `
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="monday"
+      >
         mon
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="tuesday"
+      >
         tue
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="wednesday"
+      >
         wed
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="thursday"
+      >
         thu
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="friday"
+      >
         fri
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="saturday"
+      >
         sat
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="sunday"
+      >
         sun
       </span>
     </span>
@@ -1177,49 +1205,63 @@ exports[`Calendar should handle previous month 3`] = `
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="monday"
+      >
         mon
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="tuesday"
+      >
         tue
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="wednesday"
+      >
         wed
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="thursday"
+      >
         thu
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="friday"
+      >
         fri
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="saturday"
+      >
         sat
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="sunday"
+      >
         sun
       </span>
     </span>
@@ -1693,49 +1735,63 @@ exports[`Calendar should render successfully 1`] = `
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="monday"
+      >
         mon
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="tuesday"
+      >
         tue
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="wednesday"
+      >
         wed
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="thursday"
+      >
         thu
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="friday"
+      >
         fri
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="saturday"
+      >
         sat
       </span>
     </span>
     <span
       class="day_name"
     >
-      <span>
+      <span
+        data-testid="sunday"
+      >
         sun
       </span>
     </span>
