@@ -1,7 +1,6 @@
 import { Padding } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, ReactNode, useMemo } from "react";
-import { createUseStyles } from "react-jss";
 
 import Container from "../container";
 import CrossAxisAlignment from "../cross-axis-alignment";
@@ -25,32 +24,20 @@ export interface AlertProps {
   children?: ReactNode | AlertChildren;
 }
 
-type AlertStyleProps = {
-  severity: AlertSeverities;
-};
-
 /**
  * Component display name.
  */
 const COMPONENT_NAME = "Alert";
 
-const useStyles = createUseStyles({
-  wrapper: ({ severity }: AlertStyleProps) => ({
-    backgroundColor: DEFAULT_COLORS[severity].background.toRGBA(),
-  }),
-});
-
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(
   ({ severity = AlertSeverities.info, title, className, children, ...props }, ref) => {
-    const styles = useStyles({ severity });
-
     const content = useMemo(() => {
       if (typeof children === "function") return children({ color: DEFAULT_COLORS[severity].font });
       return <Text>{children}</Text>;
     }, [children, severity]);
 
     return (
-      <div role="alert" ref={ref} className={classNames(classes.wrapper, styles.wrapper, className)} {...props}>
+      <div role="alert" ref={ref} className={classNames(classes.wrapper, className)} {...props}>
         <Container padding={Padding.symmetric({ horizontal: 16, vertical: 6 })}>
           <div className={classes.icon_wrapper}>
             <Icon icon={DEFAULT_ICONS[severity]} color={DEFAULT_COLORS[severity].icon} size={22} />
@@ -76,6 +63,10 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
             <div className={classes.content}>{content}</div>
           </Flex.Column>
         </Container>
+
+        <style jsx>{`
+          --alert-color: ${DEFAULT_COLORS[severity].background.toRGBA()};
+        `}</style>
       </div>
     );
   },
