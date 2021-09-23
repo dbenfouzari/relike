@@ -2,7 +2,6 @@ import { Color } from "@hastics/utils";
 import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { ButtonHTMLAttributes, forwardRef, useMemo } from "react";
-import { createUseStyles } from "react-jss";
 
 import Icon from "../icon";
 import { IconData } from "../icons";
@@ -69,51 +68,21 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
   className?: string;
 }
 
-interface ButtonStylesProps {
-  color: Color;
-  disabled?: boolean;
-}
-
 /**
  * Component display name.
  */
 const COMPONENT_NAME = "Button";
 
-const useStyles = createUseStyles({
-  buttonLow: ({ color, disabled }: ButtonStylesProps) => ({
-    "&:hover, &:focus": {
-      backgroundColor: disabled ? "transparent" : color.withOpacity(0.05).toRGBA(),
-    },
-    "&:active": {
-      backgroundColor: disabled ? "transparent" : color.withOpacity(0.1).toRGBA(),
-    },
-  }),
-  buttonMedium: ({ color, disabled }: ButtonStylesProps) => ({
-    border: `1px solid ${color.toRGBA()}`,
-    "&:hover, &:focus": {
-      backgroundColor: disabled ? "transparent" : color.withOpacity(0.05).toRGBA(),
-    },
-    "&:active": {
-      backgroundColor: disabled ? "transparent" : color.withOpacity(0.1).toRGBA(),
-    },
-  }),
-  buttonHigh: ({ color, disabled }: ButtonStylesProps) => {
-    const currentLightness = color.lightness;
-    const hoverLightness = currentLightness - 5 < 0 ? currentLightness + 5 : currentLightness - 5;
-    const activeLightness = currentLightness - 10 < 0 ? currentLightness + 10 : currentLightness - 10;
+export const getLightness = (color: Color) => {
+  const currentLightness = color.lightness;
+  const hoverLightness = currentLightness - 5 < 0 ? currentLightness + 5 : currentLightness - 5;
+  const activeLightness = currentLightness - 10 < 0 ? currentLightness + 10 : currentLightness - 10;
 
-    return {
-      border: `1px solid ${color.toRGBA()}`,
-      backgroundColor: color.toRGBA(),
-      "&:hover, &:focus": {
-        backgroundColor: disabled ? color.toRGBA() : color.withLightness(hoverLightness).toRGBA(),
-      },
-      "&:active": {
-        backgroundColor: disabled ? color.toRGBA() : color.withLightness(activeLightness).toRGBA(),
-      },
-    };
-  },
-});
+  return {
+    hover: hoverLightness,
+    active: activeLightness,
+  };
+};
 
 /**
  * Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like:
@@ -145,8 +114,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     { block, emphasis = Emphasis.medium, className, color = Colors.blue[500], icon, children, disabled, ...props },
     ref,
   ) => {
-    const styles = useStyles({ color, disabled });
-
     const foregroundColor = useMemo(() => {
       if (emphasis === Emphasis.high) {
         return color.estimateBrightness() === "dark" ? Colors.white : Colors.black;
@@ -165,9 +132,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             [classes.button__disabled]: disabled,
             [classes.button__block]: block,
             [classes.button__high]: emphasis === Emphasis.high,
-            [styles.buttonLow]: emphasis === Emphasis.low,
-            [styles.buttonMedium]: emphasis === Emphasis.medium,
-            [styles.buttonHigh]: emphasis === Emphasis.high,
+            [classes.button__medium]: emphasis === Emphasis.medium,
+            [classes.button__low]: emphasis === Emphasis.low,
           },
           className,
         )}
@@ -175,6 +141,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {icon && <Icon icon={icon} color={foregroundColor} size={18} className={classes.icon} />}
         <Text style={Typography.blackMountainView.button?.copyWith({ color: foregroundColor })}>{children}</Text>
+
+        <style jsx>{`
+          --button-color: ${color.toRGBA()};
+          --button-color--low-opacity: ${color?.withOpacity(0.05).toRGBA()};
+          --button-color--medium-opacity: ${color?.withOpacity(0.1).toRGBA()};
+          --button-color--high--hover: ${color?.withLightness(getLightness(color).hover).toRGBA()};
+          --button-color--high--active: ${color?.withLightness(getLightness(color).active).toRGBA()};
+        `}</style>
       </button>
     );
   },

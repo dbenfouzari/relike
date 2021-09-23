@@ -81,11 +81,19 @@ HighEmphasis.parameters = {
   },
 };
 
+export const WithWhiteColor = Template.bind({});
+WithWhiteColor.args = {
+  ...defaultProps,
+  children: "Button",
+  color: Colors.white,
+  emphasis: Emphasis.high,
+};
+
 export const WithBrightColor = Template.bind({});
 WithBrightColor.args = {
   ...defaultProps,
   children: "Button",
-  color: Colors.white,
+  color: Colors.pink[200],
   emphasis: Emphasis.high,
 };
 

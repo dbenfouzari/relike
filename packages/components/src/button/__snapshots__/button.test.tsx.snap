@@ -2,11 +2,11 @@
 
 exports[`Button should render successfully when disabled 1`] = `
 <button
-  class="button button__disabled buttonMedium-0-2-2 buttonMedium-d10-0-2-18"
+  class="jsx-3283879972 button button__disabled button__medium"
   disabled=""
 >
   <span
-    class="elm-0-2-7 elm-d3-0-2-20"
+    class="elm-0-2-1 elm-d3-0-2-5"
     data-testid="text-elm"
   >
     Hello Test
@@ -16,10 +16,10 @@ exports[`Button should render successfully when disabled 1`] = `
 
 exports[`Button should render successfully when lightness is high 1`] = `
 <button
-  class="button button__high buttonHigh-0-2-3 buttonHigh-d17-0-2-27"
+  class="jsx-422034462 button button__high"
 >
   <span
-    class="elm-0-2-7 elm-d5-0-2-28"
+    class="elm-0-2-1 elm-d5-0-2-7"
     data-testid="text-elm"
   >
     Hello Test
@@ -29,10 +29,10 @@ exports[`Button should render successfully when lightness is high 1`] = `
 
 exports[`Button should render successfully when lightness is low 1`] = `
 <button
-  class="button buttonMedium-0-2-2 buttonMedium-d13-0-2-22"
+  class="jsx-4112808095 button button__medium"
 >
   <span
-    class="elm-0-2-7 elm-d4-0-2-24"
+    class="elm-0-2-1 elm-d4-0-2-6"
     data-testid="text-elm"
   >
     Hello Test
@@ -42,10 +42,10 @@ exports[`Button should render successfully when lightness is low 1`] = `
 
 exports[`Button should render successfully with high emphasis 1`] = `
 <button
-  class="button button__high buttonHigh-0-2-3 buttonHigh-d8-0-2-15"
+  class="jsx-3283879972 button button__high"
 >
   <span
-    class="elm-0-2-7 elm-d2-0-2-16"
+    class="elm-0-2-1 elm-d2-0-2-4"
     data-testid="text-elm"
   >
     Hello Test
@@ -55,7 +55,7 @@ exports[`Button should render successfully with high emphasis 1`] = `
 
 exports[`Button should render successfully with icon 1`] = `
 <button
-  class="button buttonMedium-0-2-2 buttonMedium-d19-0-2-30"
+  class="jsx-3283879972 button button__medium"
 >
   <span
     class="jsx-2439414882 icon material-icons icon"
@@ -63,7 +63,7 @@ exports[`Button should render successfully with icon 1`] = `
     access_time
   </span>
   <span
-    class="elm-0-2-7 elm-d6-0-2-32"
+    class="elm-0-2-1 elm-d6-0-2-8"
     data-testid="text-elm"
   >
     Hello Test
@@ -73,10 +73,10 @@ exports[`Button should render successfully with icon 1`] = `
 
 exports[`Button should render successfully with low emphasis 1`] = `
 <button
-  class="button buttonLow-0-2-1 buttonLow-d0-0-2-4"
+  class="jsx-3283879972 button button__low"
 >
   <span
-    class="elm-0-2-7 elm-d0-0-2-8"
+    class="elm-0-2-1 elm-d0-0-2-2"
     data-testid="text-elm"
   >
     Hello Test
@@ -86,10 +86,10 @@ exports[`Button should render successfully with low emphasis 1`] = `
 
 exports[`Button should render successfully with medium emphasis 1`] = `
 <button
-  class="button buttonMedium-0-2-2 buttonMedium-d4-0-2-10"
+  class="jsx-3283879972 button button__medium"
 >
   <span
-    class="elm-0-2-7 elm-d1-0-2-12"
+    class="elm-0-2-1 elm-d1-0-2-3"
     data-testid="text-elm"
   >
     Hello Test

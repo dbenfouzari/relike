@@ -21,15 +21,56 @@ $padding-inline: 16px;
   overflow: visible;
   vertical-align: middle;
   border-radius: 4px;
+
+  //#region Emphasis-specific styles
+  &__low, &__medium {
+    &:hover, &:focus {
+      background-color: var(--button-color--low-opacity);
+    }
+
+    &:active {
+      background-color: var(--button-color--medium-opacity);
+    }
+  }
+
+  &__medium, &__high {
+    border: 1px solid var(--button-color);
+  }
+
+  &__high {
+    background-color: var(--button-color);
+
+    &:hover, &:focus {
+      background-color: var(--button-color--high--hover);
+    }
+
+    &:active {
+      background-color: var(--button-color--high--active);
+    }
+  }
+  //#endregion
+}
+
+// Disabled styles
+.button__disabled {
+  opacity: .5;
+
+  &.button__low, &.button__medium {
+    &:hover, &:focus, &:active {
+      background-color: transparent;
+    }
+  }
+
+  &.button__high {
+    &:hover, &:focus, &:active {
+      background-color: var(--button-color);
+    }
+  }
 }
 
 .button__block {
   display: flex;
   width: 100%;
-}
-
-.button__disabled {
-  opacity: .5;
 }
 
 .icon {
