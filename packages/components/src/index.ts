@@ -17,7 +17,6 @@ export { default as DataTable } from "./data-table";
 export { default as Dialog } from "./dialog";
 export { default as Divider } from "./divider";
 export { default as DropdownButton } from "./dropdown-button";
-export { default as EdgeInsets } from "./edge-insets";
 export { default as ExpansionPanel } from "./expansion-panel";
 export { default as Flex } from "./flex";
 export { default as FloatingActionButton } from "./floating-action-button";
