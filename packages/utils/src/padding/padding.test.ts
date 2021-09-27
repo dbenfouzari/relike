@@ -77,6 +77,11 @@ padding-bottom: 32px;`);
       expect(right).toEqual(32);
       expect(bottom).toEqual(32);
       expect(left).toEqual(32);
+
+      expect(Padding.all(0).copyWith({ top: 2 }).top).toEqual(2);
+      expect(Padding.all(0).copyWith({ right: 2 }).right).toEqual(2);
+      expect(Padding.all(0).copyWith({ bottom: 2 }).bottom).toEqual(2);
+      expect(Padding.all(0).copyWith({ left: 2 }).left).toEqual(2);
     });
   });
 
