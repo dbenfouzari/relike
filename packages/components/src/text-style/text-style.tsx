@@ -221,7 +221,17 @@ class TextStyle {
   }
 
   public toString() {
-    return JSON.stringify(this);
+    return `TextStyle({
+  backgroundColor: ${this.backgroundColor},
+  color: ${this.color},
+  fontFamily: ${this.fontFamily},
+  fontFamilyFallback: ${this.fontFamilyFallback},
+  fontWeight: ${this.fontWeight},
+  height: ${this.height},
+  letterSpacing: ${this.letterSpacing},
+  overflow: ${this.overflow},
+  wordSpacing: ${this.wordSpacing}
+})`;
   }
 
   public copyWith({
