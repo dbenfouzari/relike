@@ -62,6 +62,7 @@ WithAvatarImage.args = {
 export const WithDelete = Template.bind({});
 WithDelete.args = {
   ...defaultProps,
+  onPress: action("press"),
   onDeletePress: action("delete"),
   avatar: <img alt="avatar" src="https://wl-sympa.cf.tsp.li/resize/728x/jpg/f6e/ef6/b5b68253409b796f61f6ecd1f1.jpg" />,
 };
@@ -69,7 +70,7 @@ WithDelete.args = {
 export const WithDifferentColor = Template.bind({});
 WithDifferentColor.args = {
   ...defaultProps,
-  color: Colors.blue[500],
+  color: Colors.blue[700],
   onPress: action("press"),
   onDeletePress: action("delete"),
   avatar: <img alt="avatar" src="https://wl-sympa.cf.tsp.li/resize/728x/jpg/f6e/ef6/b5b68253409b796f61f6ecd1f1.jpg" />,

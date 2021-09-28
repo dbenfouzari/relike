@@ -10,9 +10,10 @@ exports[`Calendar should handle previous month 1`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
       data-testid="prev-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_left
       </span>
@@ -32,9 +33,10 @@ exports[`Calendar should handle previous month 1`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
       data-testid="next-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_right
       </span>
@@ -42,6 +44,8 @@ exports[`Calendar should handle previous month 1`] = `
   </div>
   <div
     class="inner"
+    role="tabpanel"
+    tabindex="0"
   >
     <span
       class="day_name"
@@ -639,9 +643,10 @@ exports[`Calendar should handle previous month 2`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
       data-testid="prev-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_left
       </span>
@@ -661,9 +666,10 @@ exports[`Calendar should handle previous month 2`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
       data-testid="next-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_right
       </span>
@@ -671,6 +677,8 @@ exports[`Calendar should handle previous month 2`] = `
   </div>
   <div
     class="inner"
+    role="tabpanel"
+    tabindex="0"
   >
     <span
       class="day_name"
@@ -1169,9 +1177,10 @@ exports[`Calendar should handle previous month 3`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
       data-testid="prev-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_left
       </span>
@@ -1191,9 +1200,10 @@ exports[`Calendar should handle previous month 3`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
       data-testid="next-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_right
       </span>
@@ -1201,6 +1211,8 @@ exports[`Calendar should handle previous month 3`] = `
   </div>
   <div
     class="inner"
+    role="tabpanel"
+    tabindex="0"
   >
     <span
       class="day_name"
@@ -1699,9 +1711,10 @@ exports[`Calendar should render successfully 1`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2 wrapper__clickable"
       data-testid="prev-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_left
       </span>
@@ -1721,9 +1734,10 @@ exports[`Calendar should render successfully 1`] = `
     <button
       class="wrapper wrapper-0-2-1 wrapper-d1-0-2-3 wrapper__clickable"
       data-testid="next-month"
+      tabindex="0"
     >
       <span
-        class="jsx-1922660221 icon material-icons"
+        class="jsx-579726175 icon material-icons"
       >
         arrow_right
       </span>
@@ -1731,6 +1745,8 @@ exports[`Calendar should render successfully 1`] = `
   </div>
   <div
     class="inner"
+    role="tabpanel"
+    tabindex="0"
   >
     <span
       class="day_name"

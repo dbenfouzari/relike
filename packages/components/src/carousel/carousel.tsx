@@ -33,6 +33,7 @@ export const Carousel: FC<CarouselProps> = ({ children, gap = 12 }) => {
     <div className={classes.wrapper}>
       {leftIndicator && (
         <IconButton
+          tabIndex={0}
           data-testid="left"
           className={classes.button}
           onPress={onScrollLeft}
@@ -40,9 +41,15 @@ export const Carousel: FC<CarouselProps> = ({ children, gap = 12 }) => {
         />
       )}
 
-      <ul className={classes.inner} ref={listRef} style={{ gap }}>
+      <ul className={classes.inner} ref={listRef} style={{ gap }} role="tablist" tabIndex={0}>
         {Children.map(children, (child, index) => (
-          <li key={index} className={classes.element} ref={itemRef(index)}>
+          <li
+            role="tab"
+            aria-label={`Slide ${index + 1} of ${Children.count(children)}`}
+            key={index}
+            className={classes.element}
+            ref={itemRef(index)}
+          >
             {child}
           </li>
         ))}
@@ -50,6 +57,7 @@ export const Carousel: FC<CarouselProps> = ({ children, gap = 12 }) => {
 
       {rightIndicator && (
         <IconButton
+          tabIndex={0}
           data-testid="right"
           className={classes.button}
           onPress={onScrollRight}

@@ -2,6 +2,17 @@ import { Children, useEffect, useMemo, useRef, useState } from "react";
 
 import { scrollLeftToStep, scrollRightToStep, scrollToStep, showHideIndicator, THRESHOLD } from "./utils";
 
+const handleTargetVisible = (target: Element) => {
+  target.setAttribute("visible", "true");
+  target.setAttribute("tabIndex", "0");
+  target.removeAttribute("aria-hidden");
+};
+const handleTargetHidden = (target: Element) => {
+  target.removeAttribute("visible");
+  target.removeAttribute("tabIndex");
+  target.setAttribute("aria-hidden", "true");
+};
+
 const useCarousel = (children: JSX.Element | JSX.Element[]) => {
   const listRef = useRef<HTMLUListElement>(null);
   const itemRefs = useMemo<HTMLElement[]>(() => Array.from({ length: Children.toArray(children).length }), [children]);
@@ -12,9 +23,7 @@ const useCarousel = (children: JSX.Element | JSX.Element[]) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          entry.intersectionRatio >= THRESHOLD
-            ? entry.target.setAttribute("visible", "true")
-            : entry.target.removeAttribute("visible");
+          entry.intersectionRatio >= THRESHOLD ? handleTargetVisible(entry.target) : handleTargetHidden(entry.target);
 
           showHideIndicator(itemRefs, setLeftIndicator, setRightIndicator);
         });

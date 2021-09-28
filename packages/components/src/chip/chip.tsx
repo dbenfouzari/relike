@@ -80,10 +80,10 @@ const COMPONENT_NAME = "Chip";
 
 const getIconColor = (color: Color) => {
   if (color.estimateBrightness() === "dark") return Colors.white70;
-  return Colors.black26;
+  return Colors.black54;
 };
 const getLabelColor = (color: Color) => {
-  if (color.estimateBrightness() === "dark") return Colors.white.withOpacity(0.9);
+  if (color.estimateBrightness() === "dark") return Colors.white;
   return Colors.black87;
 };
 
@@ -134,6 +134,8 @@ export const Chip = forwardRef<HTMLButtonElement, ChipProps>(
       <button
         ref={ref}
         onClick={handlePress}
+        tabIndex={handlePress ? 0 : -1}
+        disabled={disabled}
         className={classNames(
           classes.chip,
           styles.chip,

@@ -38,6 +38,7 @@ WithIcon.args = {
   srcSet: undefined,
   alt: undefined,
   children: <Icon icon={Icons.folder} color={Colors.white} />,
+  color: Colors.black87,
 };
 
 export const WithText = Template.bind({});

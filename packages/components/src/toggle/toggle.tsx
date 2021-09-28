@@ -117,6 +117,7 @@ export const Toggle: FC<ToggleProps> = ({
       data-testid="toggle"
       type="button"
       role="switch"
+      aria-label={`Toggle ${value ? "on" : "off"}`}
       aria-checked={value}
       className={classnames(classes.button, styles.button, {
         [classes.button__checked]: value,

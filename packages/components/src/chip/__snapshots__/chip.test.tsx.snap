@@ -3,6 +3,7 @@
 exports[`Chip should render successfully 1`] = `
 <button
   class="chip chip-0-2-1 chip-d0-0-2-4"
+  tabindex="-1"
 >
   <span
     class="elm-0-2-7 elm-d0-0-2-8 label"

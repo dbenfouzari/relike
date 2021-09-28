@@ -69,7 +69,7 @@ export const Calendar: FC<CalendarProps> = ({
         locale={locale}
       />
 
-      <div className={classes.inner}>
+      <div className={classes.inner} tabIndex={0} role="tabpanel">
         <Days locale={locale} formatDay={formatDay} />
         <MonthDays currentDate={currentDate} events={filteredEvents} />
       </div>

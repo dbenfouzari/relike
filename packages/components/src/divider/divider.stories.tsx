@@ -11,14 +11,18 @@ const Template: ComponentStory<typeof Divider> = (args) => <Divider {...args} />
 
 const CompleteTemplate: ComponentStory<typeof Divider> = (args) => (
   <ul>
-    <li>List item 1</li>
-    <Divider {...args} />
-    <li>List item 2</li>
-    <Divider {...args} />
-    <li>List item 3</li>
-    <Divider {...args} />
-    <li>List item 4</li>
-    <Divider {...args} />
+    <li>
+      List item 1 <Divider {...args} />
+    </li>
+    <li>
+      List item 2 <Divider {...args} />
+    </li>
+    <li>
+      List item 3 <Divider {...args} />
+    </li>
+    <li>
+      List item 4 <Divider {...args} />
+    </li>
     <li>List item 5</li>
   </ul>
 );

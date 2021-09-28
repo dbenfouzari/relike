@@ -37,7 +37,7 @@ export type TimelineComponent = FC<TimelineProps> & {
  * @see TimelineItem
  */
 export const Timeline: TimelineComponent = ({ children, mode = "left" }) => (
-  <div
+  <ul
     className={classnames(classes.timeline, {
       timeline__left: mode === "left",
       timeline__right: mode === "right",
@@ -45,7 +45,7 @@ export const Timeline: TimelineComponent = ({ children, mode = "left" }) => (
     })}
   >
     {children}
-  </div>
+  </ul>
 );
 
 Timeline.Item = TimelineItem;

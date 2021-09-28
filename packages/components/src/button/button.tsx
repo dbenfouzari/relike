@@ -36,7 +36,7 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
    *
    * It will also affect hover and active state.
    *
-   * @default Colors.blue[500]
+   * @default Colors.blue[700]
    */
   color?: Color;
 
@@ -111,7 +111,7 @@ export const getLightness = (color: Color) => {
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { block, emphasis = Emphasis.medium, className, color = Colors.blue[500], icon, children, disabled, ...props },
+    { block, emphasis = Emphasis.medium, className, color = Colors.blue[700], icon, children, disabled, ...props },
     ref,
   ) => {
     const foregroundColor = useMemo(() => {

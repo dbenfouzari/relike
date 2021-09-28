@@ -19,9 +19,10 @@ const CalendarTop: FC<CalendarTopProps> = ({ currentDate, locale, onNextClick, o
   <div className={classes.top}>
     <Tooltip label={STRINGS[locale]["prev-month"]}>
       <IconButton
+        tabIndex={0}
         data-testid="prev-month"
         onPress={onPrevClick}
-        icon={<Icon icon={Icons.arrow_left} color={new Color(0xff99a1a7)} />}
+        icon={<Icon icon={Icons.arrow_left} color={new Color(0xff6a7074)} />}
       />
     </Tooltip>
 
@@ -32,9 +33,10 @@ const CalendarTop: FC<CalendarTopProps> = ({ currentDate, locale, onNextClick, o
 
     <Tooltip label={STRINGS[locale]["next-month"]}>
       <IconButton
+        tabIndex={0}
         data-testid="next-month"
         onPress={onNextClick}
-        icon={<Icon icon={Icons.arrow_right} color={new Color(0xff99a1a7)} />}
+        icon={<Icon icon={Icons.arrow_right} color={new Color(0xff6a7074)} />}
       />
     </Tooltip>
   </div>

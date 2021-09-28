@@ -1,4 +1,4 @@
-import { Colors } from "@hastics/utils";
+import { Color, Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, ReactNode } from "react";
 
@@ -9,6 +9,11 @@ import classes from "./avatar.module.scss";
 export type BaseAvatarProps = {
   /** This prop is used to override the style */
   className?: string;
+
+  /**
+   * @default Colors.black26
+   */
+  color?: Color;
 };
 
 const SIZES = {
@@ -59,11 +64,11 @@ export type AvatarProps = AvatarWithChildren | AvatarWithSrc;
 const COMPONENT_NAME = "Avatar";
 
 export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
-  ({ className, children, size = "m", alt = "Avatar", src, srcSet, sizes, ...props }, ref) => (
+  ({ className, color = Colors.black26, children, size = "m", alt = "Avatar", src, srcSet, sizes, ...props }, ref) => (
     <Container
       width={SIZES[size]}
       height={SIZES[size]}
-      color={Colors.black26}
+      color={color}
       alignment={Alignment.center}
       ref={ref}
       className={classNames(classes.avatar, className)}
