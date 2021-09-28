@@ -1,3 +1,11 @@
+@mixin cover($position: absolute, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
 .wrapper {
   user-select: none;
   position: relative;
@@ -36,9 +44,8 @@
 }
 
 .item_list_item {
-  padding: 12px;
   margin: 0;
-  text-align: left;
+  position: relative;
 
   &__placeholder {
     color: rgba(0, 0, 0, .52)
@@ -50,5 +57,13 @@
 
   &__selected {
     background-color: rgba(100, 100, 100, .3);
+  }
+
+  button {
+    border: 0;
+    background-color: transparent;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
   }
 }

@@ -101,7 +101,7 @@ const useStyles = createUseStyles({
   }),
 });
 
-export const Chip = forwardRef<HTMLAnchorElement, ChipProps>(
+export const Chip = forwardRef<HTMLButtonElement, ChipProps>(
   ({ className, onPress, onDeletePress, disabled, color = Colors.grey[200], avatar, children, ...props }, ref) => {
     const styles = useStyles({ color });
 
@@ -131,7 +131,7 @@ export const Chip = forwardRef<HTMLAnchorElement, ChipProps>(
     const iconColor = useMemo(() => getIconColor(color), [color]);
 
     return (
-      <a
+      <button
         ref={ref}
         onClick={handlePress}
         className={classNames(
@@ -162,7 +162,7 @@ export const Chip = forwardRef<HTMLAnchorElement, ChipProps>(
             data-testid="delete-icon"
           />
         )}
-      </a>
+      </button>
     );
   },
 );

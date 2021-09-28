@@ -59,6 +59,7 @@ $overlay-z-index: 999;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: $overlay-z-index;
   animation: overlay-appear .3s ease-in-out;
+  width: 100vw;
 
   &__unmounting {
     animation: overlay-exit .3s ease-in-out;

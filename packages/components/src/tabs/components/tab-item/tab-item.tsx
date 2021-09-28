@@ -51,11 +51,11 @@ const useStyles = createUseStyles({
     },
 });
 
-export const InnerTabItem = forwardRef<HTMLDivElement, InnerTabItemProps>(
+export const InnerTabItem = forwardRef<HTMLButtonElement, InnerTabItemProps>(
   ({ name, onChange, active, icon, inactiveColor, index }, ref) => {
     const styles = useStyles({ inactiveColor });
     return (
-      <div
+      <button
         className={classnames(classes.item, styles.item, { [classes.item__active]: active })}
         ref={ref}
         onClick={onChange}
@@ -64,7 +64,7 @@ export const InnerTabItem = forwardRef<HTMLDivElement, InnerTabItemProps>(
       >
         {icon && <Icon icon={icon} className={classes.icon} size={20} />}
         {name}
-      </div>
+      </button>
     );
   },
 );

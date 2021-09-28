@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chip should render successfully 1`] = `
-<a
+<button
   class="chip chip-0-2-1 chip-d0-0-2-4"
 >
   <span
@@ -10,5 +10,5 @@ exports[`Chip should render successfully 1`] = `
   >
     Hello
   </span>
-</a>
+</button>
 `;

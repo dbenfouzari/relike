@@ -77,7 +77,7 @@ interface ResultWithCustomIconProps extends BaseResultProps {
   iconSize?: undefined;
 }
 
-interface ResultWithoutCustomIconProps extends BaseResultProps {
+export interface ResultWithoutCustomIconProps extends BaseResultProps {
   /**
    * REQUIRED if **icon** is not set.
    *
@@ -99,7 +99,7 @@ interface ResultWithoutCustomIconProps extends BaseResultProps {
   iconSize?: number;
 }
 
-type ResultProps = ResultWithoutCustomIconProps | ResultWithCustomIconProps;
+export type ResultProps = ResultWithoutCustomIconProps | ResultWithCustomIconProps;
 
 const getIcon = (status?: ResultStatus, icon?: ReactElement<IconProps>, iconSize = 72) => {
   if (icon) return icon;

@@ -52,7 +52,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
       ? createPortal(
           <>
             {withoutOverlay ? null : (
-              <div
+              <button
                 className={classNames(classes.overlay, {
                   [classes.overlay__unmounting]: !isOpen,
                 })}

@@ -12,7 +12,9 @@ $height: 32px;
   border-radius: #{$height / 2};
   align-items: center;
   padding-right: 12px;
+  padding-left: 0;
   user-select: none;
+  border: 0;
   transition: box-shadow .3s ease, background-color .3s ease;
 
   &:hover, &:active {

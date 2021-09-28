@@ -111,7 +111,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
   const valueLabel = useMemo(() => value && items.find((item) => item.value === value)?.text, [items, value]);
 
   const handleSelect = useCallback(
-    (nextValue: string) => (event: MouseEvent<HTMLLIElement>) => {
+    (nextValue: string) => (event: MouseEvent<HTMLButtonElement>) => {
       event.stopPropagation();
 
       if (onChange) onChange(nextValue);
@@ -165,18 +165,14 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
 
       <ul ref={ulRef} className={classnames(classes.item_list, classNames?.item_list)}>
         {allowEmpty && (
-          <li
-            className={classnames(classes.item_list_item, classes.item_list_item__placeholder)}
-            onClick={handleSelect("")}
-          >
-            {placeholder}
+          <li className={classnames(classes.item_list_item, classes.item_list_item__placeholder)}>
+            <button onClick={handleSelect("")}>{placeholder}</button>
           </li>
         )}
         {items.map((item) => (
           <li
             key={item.value}
             data-testid={item.value}
-            onClick={handleSelect(item.value)}
             id={`dropdown-value-${item.value}`}
             className={classnames(
               classes.item_list_item,
@@ -186,7 +182,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
               classNames?.item_list_item,
             )}
           >
-            {item.text}
+            <button onClick={handleSelect(item.value)}>{item.text}</button>
           </li>
         ))}
       </ul>
