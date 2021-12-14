@@ -1,9 +1,8 @@
-import { Color } from "@hastics/utils";
-
+import Color from "../color";
 import FontWeight from "../font-weight";
 import TextOverflow from "../text-overflow";
 
-interface TextStyleConstructor {
+export interface TextStyleConstructor {
   /**
    * The color to use as the background for the text.
    */

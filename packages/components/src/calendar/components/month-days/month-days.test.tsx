@@ -1,7 +1,7 @@
-import { DateTime } from "@hastics/utils";
 // @ts-ignore Don't know how to do it properly
 import * as chr from "chromatic/isChromatic";
 
+import DateTime from "../../../date-time";
 import { getIsToday } from "./month-days";
 
 describe("Calendar/MonthDays", () => {

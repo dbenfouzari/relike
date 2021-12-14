@@ -1,8 +1,10 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { ButtonHTMLAttributes, forwardRef, useMemo } from "react";
 
+import Brightness from "../brightness";
+import Color from "../color";
+import Colors from "../colors";
+import { useTheme } from "../hooks";
 import Icon from "../icon";
 import { IconData } from "../icons";
 import Text from "../text";
@@ -110,17 +112,19 @@ export const getLightness = (color: Color) => {
  * @see https://material.io/archive/guidelines/components/buttons.html Material.io for guidelines.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { block, emphasis = Emphasis.medium, className, color = Colors.blue[700], icon, children, disabled, ...props },
-    ref,
-  ) => {
+  ({ block, emphasis = Emphasis.medium, className, color, icon, children, disabled, ...props }, ref) => {
+    const { primaryColor } = useTheme();
+    const mainColor = color ?? primaryColor;
+
     const foregroundColor = useMemo(() => {
       if (emphasis === Emphasis.high) {
-        return color.estimateBrightness() === "dark" ? Colors.white : Colors.black;
+        return mainColor.estimateBrightness() === Brightness.dark ? Colors.white : Colors.black;
       }
 
-      return color;
-    }, [color, emphasis]);
+      return mainColor;
+    }, [emphasis, mainColor]);
+
+    console.log({ foregroundColor: foregroundColor.toRGBA() });
 
     return (
       <button
@@ -143,11 +147,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         <Text style={Typography.blackMountainView.button?.copyWith({ color: foregroundColor })}>{children}</Text>
 
         <style jsx>{`
-          --button-color: ${color.toRGBA()};
-          --button-color--low-opacity: ${color?.withOpacity(0.05).toRGBA()};
-          --button-color--medium-opacity: ${color?.withOpacity(0.1).toRGBA()};
-          --button-color--high--hover: ${color?.withLightness(getLightness(color).hover).toRGBA()};
-          --button-color--high--active: ${color?.withLightness(getLightness(color).active).toRGBA()};
+          --button-color: ${mainColor.toRGBA()};
+          --button-color--low-opacity: ${mainColor?.withOpacity(0.05).toRGBA()};
+          --button-color--medium-opacity: ${mainColor?.withOpacity(0.1).toRGBA()};
+          --button-color--high--hover: ${mainColor?.withLightness(getLightness(mainColor).hover).toRGBA()};
+          --button-color--high--active: ${mainColor?.withLightness(getLightness(mainColor).active).toRGBA()};
         `}</style>
       </button>
     );

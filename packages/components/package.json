@@ -12,7 +12,7 @@
     "/dist"
   ],
   "scripts": {
-    "generate-index": "yarn hastics generate:index src --exclude hooks,index.ts,introduction.stories.mdx,react-app-env.d.ts,setupTests.ts,types.ts",
+    "generate-index": "yarn hastics generate:index src --exclude __snapshots__,hooks,index.ts,introduction.stories.mdx,react-app-env.d.ts,setupTests.ts,types.ts",
     "build:cjs": "babel --source-maps --quiet --root-mode upward src -d dist/cjs --env-name cjs --extensions \".ts,.tsx,.js,.jsx\"",
     "build:esm": "babel --source-maps --quiet --root-mode upward src -d dist/esm --extensions \".ts,.tsx,.js,.jsx\"",
     "build:js": "yarn build:cjs && yarn build:esm",
@@ -26,7 +26,6 @@
     "chromatic": "CI=true npx chromatic --exit-once-uploaded --ci --project-token 97eda06526d3"
   },
   "dependencies": {
-    "@hastics/utils": "^0.0.1",
     "@popperjs/core": "^2.9.3",
     "classnames": "^2.3.1",
     "core-js": "^3.16.1",

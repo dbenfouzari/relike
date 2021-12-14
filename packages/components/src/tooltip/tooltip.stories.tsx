@@ -1,10 +1,11 @@
 import "./tooltip.stories.module.scss";
 
-import { Colors, Padding } from "@hastics/utils";
-import { Duration } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Colors from "../colors";
 import Container from "../container";
+import Duration from "../duration";
+import Padding from "../padding";
 import Tooltip, { TooltipPlacement } from "./tooltip";
 
 export default {

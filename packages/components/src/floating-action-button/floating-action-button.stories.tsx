@@ -1,6 +1,6 @@
-import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Colors from "../colors";
 import Icons from "../icons";
 import FloatingActionButton, { Emphasis, FloatingActionButtonProps } from "./floating-action-button";
 

@@ -1,7 +1,7 @@
-import { Colors } from "@hastics/utils";
 import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Colors from "../colors";
 import Chip, { ChipProps } from "./chip";
 import classes from "./chip.stories.module.scss";
 

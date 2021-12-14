@@ -1,6 +1,6 @@
-import { Colors } from "@hastics/utils";
 import { render } from "@testing-library/react";
 
+import Colors from "../colors";
 import Icons from "../icons";
 import Button, { ButtonProps, Emphasis } from "./button";
 

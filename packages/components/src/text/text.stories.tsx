@@ -1,8 +1,8 @@
 import "./text.stories.module.scss";
 
-import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Colors from "../colors";
 import FontWeight from "../font-weight";
 import TextOverflow from "../text-overflow";
 import TextStyle from "../text-style";

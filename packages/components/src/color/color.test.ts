@@ -1,3 +1,4 @@
+import Brightness from "../brightness";
 import Color from "./color";
 
 describe("Color", () => {
@@ -154,8 +155,8 @@ describe("Color", () => {
     const colorLight = new Color(0xffffffff);
     const colorDark = new Color(0xff000000);
 
-    expect(colorLight.estimateBrightness()).toBe("light");
-    expect(colorDark.estimateBrightness()).toBe("dark");
+    expect(colorLight.estimateBrightness()).toBe(Brightness.light);
+    expect(colorDark.estimateBrightness()).toBe(Brightness.dark);
   });
 
   it("should change hue", () => {

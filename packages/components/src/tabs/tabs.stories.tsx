@@ -1,7 +1,7 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Color from "../color";
+import Colors from "../colors";
 import Icons from "../icons";
 import Tabs from "./tabs";
 

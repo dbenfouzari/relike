@@ -1,8 +1,8 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { createUseStyles } from "react-jss";
 
+import Color from "../../../color";
+import Colors from "../../../colors";
 import { Tuple } from "../../../types";
 import useSkeletonContext from "../../hooks/useSkeletonContext";
 import classes from "./paragraph.module.scss";

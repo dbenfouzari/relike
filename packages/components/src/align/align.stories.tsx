@@ -1,7 +1,7 @@
-import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Alignment from "../alignment";
+import Colors from "../colors";
 import Container from "../container";
 import Align from "./align";
 

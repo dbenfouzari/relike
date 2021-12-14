@@ -1,6 +1,6 @@
-import { Colors } from "@hastics/utils";
 import { render } from "@testing-library/react";
 
+import Colors from "../colors";
 import CrossAxisAlignment from "../cross-axis-alignment";
 import Flex from "../flex";
 import MainAxisAlignment from "../main-axis-alignment";

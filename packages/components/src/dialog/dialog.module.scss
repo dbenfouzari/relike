@@ -56,7 +56,7 @@ $overlay-z-index: 999;
 
 .overlay {
   @include cover($position: fixed);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color);
   z-index: $overlay-z-index;
   animation: overlay-appear .3s ease-in-out;
   width: 100vw;

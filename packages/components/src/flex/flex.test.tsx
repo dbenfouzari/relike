@@ -1,7 +1,7 @@
-import { Colors } from "@hastics/utils";
 import { render } from "@testing-library/react";
 
 import Axis from "../axis";
+import Colors from "../colors";
 import Container from "../container";
 import CrossAxisAlignment from "../cross-axis-alignment";
 import MainAxisAlignment from "../main-axis-alignment";

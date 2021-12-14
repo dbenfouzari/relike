@@ -1,6 +1,6 @@
-import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Colors from "../colors";
 import Loader, { LoaderProps } from "./loader";
 
 export default {

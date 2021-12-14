@@ -1,7 +1,9 @@
-import { Color } from "@hastics/utils";
-import { Colors, Duration } from "@hastics/utils";
 import { FC, useMemo } from "react";
 import { createUseStyles } from "react-jss";
+
+import Color from "../../../color";
+import Colors from "../../../colors";
+import Duration from "../../../duration";
 
 export interface LoaderScreenProps {
   /**

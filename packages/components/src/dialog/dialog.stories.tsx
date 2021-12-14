@@ -1,11 +1,12 @@
-import { Colors, Padding } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { useCallback, useState } from "react";
 
 import Button from "../button";
 import { Emphasis } from "../button/button";
+import Colors from "../colors";
 import Container from "../container";
 import Flex from "../flex";
+import Padding from "../padding";
 import Toolbar from "../toolbar";
 import Dialog, { DialogProps } from "./dialog";
 

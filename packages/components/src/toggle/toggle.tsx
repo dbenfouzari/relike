@@ -1,8 +1,9 @@
-import { Color, Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, ReactNode, useCallback } from "react";
 import { createUseStyles } from "react-jss";
 
+import Color from "../color";
+import Colors from "../colors";
 import useMergedState from "../hooks/useMergedState";
 import Loader from "../loader";
 import classes from "./toggle.module.scss";

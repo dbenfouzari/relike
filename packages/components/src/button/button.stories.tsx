@@ -1,8 +1,11 @@
-import { Colors } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
+import Colors from "../colors";
 import Flex from "../flex";
 import Icons from "../icons";
+import ThemeData from "../theme-data";
+import ThemeProvider from "../theme-provider";
+import Typography from "../typography";
 import Button, { ButtonProps, Emphasis } from "./button";
 
 export default {
@@ -38,6 +41,19 @@ Default.args = {
 Default.argTypes = {
   emphasis: { control: { disable: true } },
 };
+
+export const WithThemeProvider = Template.bind({});
+WithThemeProvider.args = {
+  ...defaultProps,
+  children: "Button",
+};
+WithThemeProvider.decorators = [
+  (story) => (
+    <ThemeProvider value={new ThemeData({ primarySwatch: Colors.green, textTheme: Typography.blackMountainView })}>
+      {story()}
+    </ThemeProvider>
+  ),
+];
 
 export const LowEmphasis = Template.bind({});
 LowEmphasis.args = {

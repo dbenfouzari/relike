@@ -1,5 +1,6 @@
-import { Duration } from "@hastics/utils";
 import { useEffect, useState } from "react";
+
+import Duration from "../duration";
 
 type Timeout = ReturnType<typeof setTimeout>;
 

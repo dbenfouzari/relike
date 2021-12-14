@@ -1,9 +1,9 @@
-import { Padding } from "@hastics/utils";
 import classNames from "classnames";
 import { ButtonHTMLAttributes, FC, forwardRef, MouseEvent } from "react";
 import { createUseStyles } from "react-jss";
 
 import Icon from "../icon";
+import Padding from "../padding";
 import classes from "./icon-button.module.scss";
 
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

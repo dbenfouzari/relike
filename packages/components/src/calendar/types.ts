@@ -1,5 +1,4 @@
-import { DateTime } from "@hastics/utils";
-
+import DateTime from "../date-time";
 import { DAYS, MONTHS, SupportedLocales } from "./constants";
 
 export type DaysType = typeof DAYS;

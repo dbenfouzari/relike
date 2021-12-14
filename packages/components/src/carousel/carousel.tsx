@@ -1,6 +1,6 @@
-import { Colors } from "@hastics/utils";
 import { Children, FC } from "react";
 
+import Colors from "../colors";
 import Icon from "../icon";
 import IconButton from "../icon-button";
 import Icons from "../icons";

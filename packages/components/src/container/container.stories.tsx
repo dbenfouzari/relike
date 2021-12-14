@@ -1,7 +1,9 @@
-import { Colors, Margin, Padding } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Alignment from "../alignment";
+import Colors from "../colors";
+import Margin from "../margin";
+import Padding from "../padding";
 import Container, { ContainerProps } from "./container";
 
 export default {

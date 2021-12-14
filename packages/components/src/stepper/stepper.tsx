@@ -1,7 +1,7 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import { Children, FC, ReactElement } from "react";
 
+import Color from "../color";
+import Colors from "../colors";
 import StepperItem, { InternalStepperItem, StepperItemProps } from "./components/stepper-item/stepper-item";
 import classes from "./stepper.module.scss";
 

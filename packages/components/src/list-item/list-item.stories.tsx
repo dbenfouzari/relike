@@ -1,8 +1,8 @@
-import { Colors } from "@hastics/utils";
 import { action } from "@storybook/addon-actions";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Avatar from "../avatar";
+import Colors from "../colors";
 import CrossAxisAlignment from "../cross-axis-alignment";
 import Flex from "../flex";
 import Icon from "../icon";

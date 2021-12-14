@@ -1,5 +1,6 @@
 import assert from "assert";
 
+import Brightness from "../brightness";
 import { toHsl } from "./utils";
 
 /**
@@ -7,15 +8,21 @@ import { toHsl } from "./utils";
  * You can manipulate a [Color] to add or subtract alpha, red, green or blue. And many other manipulations.
  */
 class Color {
-  private value;
-  public readonly alpha;
-  public readonly red;
-  public readonly green;
-  public readonly blue;
-  public readonly hue;
-  public readonly saturation;
-  public readonly lightness;
+  private value: number;
+  public readonly alpha: number;
+  public readonly red: number;
+  public readonly green: number;
+  public readonly blue: number;
+  public readonly hue: number;
+  public readonly saturation: number;
+  public readonly lightness: number;
 
+  /**
+   * Create a Color.
+   * It takes a number, but it's pretty hard to know the exact color so it's better so write something like this
+   *
+   * @example new Color(0xff123456) // where "ff" is alpha channel, 12 is red, 34 is green, and 56 is blue.
+   */
   constructor(color: number) {
     const a = color >>> 24;
     const r = (color >>> 16) & 0xff;
@@ -36,10 +43,16 @@ class Color {
     this.lightness = l;
   }
 
+  /**
+   * Converts a Color to its string representation.
+   */
   public toString() {
     return `Color(0x${(this.value >>> 0).toString(16)})`;
   }
 
+  /**
+   * Check that all is working as expected.
+   */
   static assert = (a: number, r: number, g: number, b: number) => {
     assert(a >= 0, "Alpha channel should be between 0 and 255");
     assert(a <= 255, "Alpha channel should be between 0 and 255");
@@ -76,30 +89,30 @@ class Color {
     const s1 = saturation / 100;
     const l1 = lightness / 100;
 
-    let c = (1 - Math.abs(2 * l1 - 1)) * s1;
-    let x = c * (1 - Math.abs(((hue / 60) % 2) - 1));
-    let m = l1 - c / 2;
+    const c = (1 - Math.abs(2 * l1 - 1)) * s1;
+    const x = c * (1 - Math.abs(((hue / 60) % 2) - 1));
+    const m = l1 - c / 2;
     let r = 0;
     let g = 0;
     let b = 0;
 
-    if (0 <= hue && hue < 60) {
+    if (hue >= 0 && hue < 60) {
       r = c;
       g = x;
       b = 0;
-    } else if (60 <= hue && hue < 120) {
+    } else if (hue >= 60 && hue < 120) {
       r = x;
       g = c;
       b = 0;
-    } else if (120 <= hue && hue < 180) {
+    } else if (hue >= 120 && hue < 180) {
       r = 0;
       g = c;
       b = x;
-    } else if (180 <= hue && hue < 240) {
+    } else if (hue >= 180 && hue < 240) {
       r = 0;
       g = x;
       b = c;
-    } else if (240 <= hue && hue < 300) {
+    } else if (hue >= 240 && hue < 300) {
       r = x;
       g = 0;
       b = c;
@@ -189,6 +202,9 @@ class Color {
     return Color.fromARGB(this.alpha, this.red, this.green, b);
   };
 
+  /**
+   * Returns a new color that matches this color with the hue replaced with h (which ranged from 0 to 360)
+   */
   withHue = (h: number) => {
     assert(h >= 0, "Hue should be between 0 and 360");
     assert(h <= 360, "Hue should be between 0 and 360");
@@ -196,6 +212,9 @@ class Color {
     return Color.fromHSLA(h, this.saturation, this.lightness, this.alpha);
   };
 
+  /**
+   * Returns a new color that matches this color with the saturation replaced with s (which ranged from 0 to 100)
+   */
   withSaturation = (s: number) => {
     assert(s >= 0, "Saturation should be between 0 and 100");
     assert(s <= 100, "Saturation should be between 0 and 100");
@@ -203,6 +222,9 @@ class Color {
     return Color.fromHSLA(this.hue, s, this.lightness, this.alpha);
   };
 
+  /**
+   * Returns a new color that matches this color with the lightness replaced with l (which ranged from 0 to 100)
+   */
   withLightness = (l: number) => {
     assert(l >= 0, "Lightness should be between 0 and 100");
     assert(l <= 100, "Lightness should be between 0 and 100");
@@ -210,6 +232,9 @@ class Color {
     return Color.fromHSLA(this.hue, this.saturation, l, this.alpha);
   };
 
+  /**
+   *
+   */
   static _linearizeColorComponent(component: number) {
     if (component <= 0.03928) return component / 12.92;
     return Math.pow((component + 0.055) / 1.055, 2.4);
@@ -228,11 +253,8 @@ class Color {
   }
 
   /**
-   * Determines whether the given Color is Brightness.light or Brightness.dark.
+   * Determines whether the given Color is Brightness.LIGHT or Brightness.DARK.
    * This compares the luminosity of the given color to a threshold value that matches the material design specification.
-   *
-   * TODO: Return Brightness, not a string ! So it's deprecated for now
-   * @deprecated
    */
   estimateBrightness() {
     const relativeLuminance = this.computeLuminance();
@@ -244,8 +266,8 @@ class Color {
     // Design spec shows for its color palette on
     // <https://material.io/go/design-theming#color-color-palette>.
     const kThreshold = 0.15;
-    if ((relativeLuminance + 0.05) * (relativeLuminance + 0.05) > kThreshold) return "light";
-    return "dark";
+    if ((relativeLuminance + 0.05) * (relativeLuminance + 0.05) > kThreshold) return Brightness.light;
+    return Brightness.dark;
   }
 }
 

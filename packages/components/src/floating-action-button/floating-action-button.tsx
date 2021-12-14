@@ -1,9 +1,10 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { ButtonHTMLAttributes, forwardRef, useMemo } from "react";
 import { createUseStyles } from "react-jss";
 
+import Brightness from "../brightness";
+import Color from "../color";
+import Colors from "../colors";
 import Icon from "../icon";
 import { IconData } from "../icons";
 import Text from "../text";
@@ -184,7 +185,7 @@ export const FloatingActionButton = forwardRef<HTMLButtonElement, FloatingAction
 
     const foregroundColor = useMemo(() => {
       if (emphasis === Emphasis.high) {
-        return color.estimateBrightness() === "dark" ? Colors.white : Colors.black;
+        return color.estimateBrightness() === Brightness.dark ? Colors.white : Colors.black;
       }
 
       return color;

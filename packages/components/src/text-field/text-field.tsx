@@ -1,7 +1,7 @@
-import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { CSSProperties, FC, InputHTMLAttributes } from "react";
 
+import Colors from "../colors";
 import Input from "../input";
 import classes from "./text-field.module.scss";
 

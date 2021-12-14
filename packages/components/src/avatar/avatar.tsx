@@ -1,8 +1,9 @@
-import { Color, Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, ReactNode } from "react";
 
 import Alignment from "../alignment";
+import Color from "../color";
+import Colors from "../colors";
 import Container from "../container";
 import classes from "./avatar.module.scss";
 

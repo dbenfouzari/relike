@@ -1,8 +1,8 @@
-import { Duration } from "@hastics/utils";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ComponentProps } from "react";
 import { animated, config, useSpring } from "react-spring";
 
+import Duration from "../duration";
 import LinearProgressIndicator from "./linear-progress-indicator";
 
 export default {

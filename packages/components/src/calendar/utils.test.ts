@@ -1,6 +1,5 @@
-import { DateTime } from "@hastics/utils";
-import { Duration } from "@hastics/utils";
-
+import DateTime from "../date-time";
+import Duration from "../duration";
 import { filterCalendarEvents, getEventsThatDay } from "./utils";
 
 describe("Calendar Utils", function () {

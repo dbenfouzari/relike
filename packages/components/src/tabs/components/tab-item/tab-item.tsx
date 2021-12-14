@@ -1,8 +1,8 @@
-import { Color } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, forwardRef, ReactNode, RefObject } from "react";
 import { createUseStyles } from "react-jss";
 
+import Color from "../../../color";
 import Icon from "../../../icon";
 import { IconData } from "../../../icons";
 import classes from "./tab-item.module.scss";

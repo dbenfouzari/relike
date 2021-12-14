@@ -1,9 +1,10 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { forwardRef, MouseEvent, ReactNode, ReactText, useMemo } from "react";
 import { createUseStyles } from "react-jss";
 
+import Brightness from "../brightness";
+import Color from "../color";
+import Colors from "../colors";
 import Icon from "../icon";
 import IconButton from "../icon-button";
 import Icons from "../icons";
@@ -79,11 +80,11 @@ type ChipStyleProps = {
 const COMPONENT_NAME = "Chip";
 
 const getIconColor = (color: Color) => {
-  if (color.estimateBrightness() === "dark") return Colors.white70;
+  if (color.estimateBrightness() === Brightness.dark) return Colors.white70;
   return Colors.black54;
 };
 const getLabelColor = (color: Color) => {
-  if (color.estimateBrightness() === "dark") return Colors.white;
+  if (color.estimateBrightness() === Brightness.dark) return Colors.white;
   return Colors.black87;
 };
 

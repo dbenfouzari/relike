@@ -1,8 +1,9 @@
-import { Duration } from "@hastics/utils";
 import classNames from "classnames";
-import { forwardRef, ReactNode } from "react";
+import { CSSProperties, forwardRef, ReactNode } from "react";
 import { createPortal } from "react-dom";
 
+import Colors from "../colors";
+import Duration from "../duration";
 import useDelayedUnmount from "../hooks/useDelayedUnmount";
 import classes from "./dialog.module.scss";
 
@@ -53,6 +54,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
           <>
             {withoutOverlay ? null : (
               <button
+                style={{ "--color": Colors.black54.toRGBA() } as CSSProperties}
                 className={classNames(classes.overlay, {
                   [classes.overlay__unmounting]: !isOpen,
                 })}

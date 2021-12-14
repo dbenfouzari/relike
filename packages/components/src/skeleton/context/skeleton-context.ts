@@ -1,6 +1,7 @@
-import { Color } from "@hastics/utils";
-import { Colors } from "@hastics/utils";
 import { createContext } from "react";
+
+import Color from "../../color";
+import Colors from "../../colors";
 
 type SkeletonContextValue = {
   active?: boolean;

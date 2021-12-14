@@ -1,5 +1,4 @@
-import { Color } from "@hastics/utils";
-
+import Color from "../color";
 import Icons, { IconData } from "../icons";
 
 export enum AlertSeverities {

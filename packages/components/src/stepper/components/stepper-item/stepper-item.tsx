@@ -1,8 +1,8 @@
-import { Color } from "@hastics/utils";
 import classnames from "classnames";
 import { FC } from "react";
 import { createUseStyles } from "react-jss";
 
+import Color from "../../../color";
 import Icon from "../../../icon";
 import Icons, { IconData } from "../../../icons";
 import classes from "./stepper-item.module.scss";

@@ -1,7 +1,8 @@
-import { Color, Colors } from "@hastics/utils";
 import classNames from "classnames";
 import { FC } from "react";
 
+import Color from "../color";
+import Colors from "../colors";
 import { IconData } from "../icons";
 import classes from "./icon.module.scss";
 

@@ -1,7 +1,8 @@
-import { Duration } from "@hastics/utils";
 import debounce from "lodash.debounce";
 import pull from "lodash.pull";
 import { useEffect, useRef, useState } from "react";
+
+import Duration from "../duration";
 
 type Tooltip = { open: VoidFunction; close: VoidFunction; anchorElement: HTMLElement };
 type Timeout = ReturnType<typeof setTimeout>;

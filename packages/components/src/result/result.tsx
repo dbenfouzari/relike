@@ -1,7 +1,8 @@
-import { Color, Colors } from "@hastics/utils";
 import classnames from "classnames";
 import { FC, ReactElement, ReactNode } from "react";
 
+import Color from "../color";
+import Colors from "../colors";
 import Icon, { IconProps } from "../icon";
 import Icons from "../icons";
 import classes from "./result.module.scss";
