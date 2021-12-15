@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Icon from "../icon";
 import Icons from "../icons";
-import Timeline from "./timeline";
+import Timeline, { TimelineProps } from "./timeline";
 
 export default {
   title: "Timeline",
@@ -12,9 +12,19 @@ export default {
   argTypes: {
     children: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Timeline>;
+} as Meta<TimelineProps>;
 
-const Template: ComponentStory<typeof Timeline> = (args) => <Timeline {...args} />;
+/**
+ * Default template for Timeline component.
+ *
+ * @param {TimelineProps} args The timeline props.
+ * @example
+ * <Template mode="left">
+ *   <Template.Item>Toto</Template.Item>
+ * </Template>
+ * @returns {JSX.Element} The Timeline component.
+ */
+const Template: Story<TimelineProps> = (args) => <Timeline {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

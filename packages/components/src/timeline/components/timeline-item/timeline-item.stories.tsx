@@ -1,13 +1,21 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
-import TimelineItem from "./timeline-item";
+import TimelineItem, { TimelineItemProps } from "./timeline-item";
 
 export default {
   title: "Timeline.Item",
   component: TimelineItem,
-} as ComponentMeta<typeof TimelineItem>;
+} as Meta<TimelineItemProps>;
 
-const Template: ComponentStory<typeof TimelineItem> = (args) => <TimelineItem {...args} />;
+/**
+ * Default TimelineItem template.
+ *
+ * @param {TimelineItemProps} args The TimelineItem props.
+ * @example
+ * <Template>Hello</Template>
+ * @returns {JSX.Element} the TimelineItem
+ */
+const Template: Story<TimelineItemProps> = (args) => <TimelineItem {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
