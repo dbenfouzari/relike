@@ -2,8 +2,6 @@
 
 # dependencies
 node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -26,8 +24,8 @@ yarn-error.log*
 
 # Yarn
 ## https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-.pnp.*
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
