@@ -3,6 +3,7 @@
 exports[`Avatar should render successfully 1`] = `
 <div
   class="container-0-2-1 container-d0-0-2-2 avatar"
+  data-testid="avatar"
 >
   <div
     class="wrapper-0-2-3 wrapper-d0-0-2-4"
@@ -18,6 +19,7 @@ exports[`Avatar should render successfully 1`] = `
 exports[`Avatar should render successfully with an image 1`] = `
 <div
   class="container-0-2-1 container-d1-0-2-5 avatar"
+  data-testid="avatar"
 >
   <div
     class="wrapper-0-2-3 wrapper-d1-0-2-6"

@@ -3,5 +3,6 @@
 exports[`Divider should render successfully 1`] = `
 <div
   class="divider divider__dark"
+  data-testid="divider"
 />
 `;

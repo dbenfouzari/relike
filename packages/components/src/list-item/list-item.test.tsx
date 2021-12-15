@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Colors from "../colors";
 import CrossAxisAlignment from "../cross-axis-alignment";
@@ -11,7 +11,7 @@ import classes from "./list-item.stories.module.scss";
 
 describe("ListItem", () => {
   it("should render successfully", () => {
-    const { container } = render(
+    render(
       <ListItem>
         <Flex.Column
           mainAxisAlignment={MainAxisAlignment.spaceEvenly}
@@ -26,6 +26,6 @@ describe("ListItem", () => {
       </ListItem>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole("listitem")).toMatchSnapshot();
   });
 });

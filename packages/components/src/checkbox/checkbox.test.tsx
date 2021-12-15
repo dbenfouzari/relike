@@ -1,27 +1,25 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import Checkbox from "./checkbox";
 
 describe("Checkbox", () => {
   it("should render successfully", () => {
-    const { container } = render(<Checkbox />);
+    render(<Checkbox />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("checkbox-wrapper")).toMatchSnapshot();
   });
 
   it("should render successfully when default checked", () => {
-    const { container } = render(<Checkbox defaultChecked />);
+    render(<Checkbox defaultChecked />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("checkbox-wrapper")).toMatchSnapshot();
   });
 
   it("should handle click", () => {
-    const { getByTestId } = render(<Checkbox defaultChecked />);
+    render(<Checkbox defaultChecked />);
 
-    const input = getByTestId("input");
+    const input = screen.getByTestId("input");
 
-    act(() => {
-      fireEvent.click(input);
-    });
+    fireEvent.click(input);
   });
 });

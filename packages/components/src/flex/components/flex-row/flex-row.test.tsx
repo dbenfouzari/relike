@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Colors from "../../../colors";
 import Container from "../../../container";
@@ -17,7 +17,7 @@ const defaultProps: Partial<FlexRowProps> = {
 
 describe("FlexRow", () => {
   it("should render successfully", () => {
-    const { container } = render(
+    render(
       <FlexRow {...defaultProps}>
         <Container width={100} height={100} color={Colors.red[300]} />
         <Container width={80} height={80} color={Colors.green[300]} />
@@ -25,6 +25,6 @@ describe("FlexRow", () => {
       </FlexRow>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("flex-item")).toMatchSnapshot();
   });
 });

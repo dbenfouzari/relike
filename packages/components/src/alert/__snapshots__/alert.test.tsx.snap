@@ -19,6 +19,7 @@ exports[`Alert should render successfully 1`] = `
     </div>
     <div
       class="flex flex-0-2-3 flex-d0-0-2-4 message"
+      data-testid="flex-item"
     >
       <div
         class="jsx-4265373365 content"

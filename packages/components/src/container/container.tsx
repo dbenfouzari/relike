@@ -103,6 +103,7 @@ export const Container = forwardRef<unknown, ContainerProps>(
       ref,
       className: classnames(styles.container, className),
       children: children ? alignment ? <Align alignment={alignment}>{children}</Align> : children : null,
+      "data-testid": (rest as any)["data-testid"],
     });
   },
 );

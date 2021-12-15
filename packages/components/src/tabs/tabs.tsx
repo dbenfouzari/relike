@@ -93,21 +93,15 @@ export const Tabs: TabsComponent = ({
 
   return (
     <div className={classnames(classes.wrapper, styles.wrapper)} role="tablist">
-      {Children.map(
-        children,
-        (
-          child: any,
-          index, // FIXME: Remove any
-        ) => (
-          <InnerTabItem
-            index={index}
-            ref={itemRef(index)}
-            onChange={handleTabChange(index)}
-            active={activeIndex === index}
-            {...child.props}
-          />
-        ),
-      )}
+      {Children.map(children as ReactElement<TabItemProps>[], (child, index) => (
+        <InnerTabItem
+          index={index}
+          ref={itemRef(index)}
+          onChange={handleTabChange(index)}
+          active={activeIndex === index}
+          {...child.props}
+        />
+      ))}
 
       <div ref={barRef} className={classes.bar} />
     </div>

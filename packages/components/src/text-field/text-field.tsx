@@ -28,6 +28,7 @@ export const TextField: FC<TextFieldProps> = ({ className, obscureText, ...props
   <Input
     type={obscureText ? "password" : "text"}
     className={classNames(classes.text_field, className)}
+    role="textbox"
     style={
       {
         "--primary-color": Colors.blueGrey[200].toRGBA(),

@@ -37,6 +37,7 @@ export const Toolbar = forwardRef<HTMLDivElement, ToolbarProps>(({ before, after
       [classes.toolbar__hasAfter]: Boolean(after),
       [classes.toolbar__hasLabel]: Boolean(children),
     })}
+    role="toolbar"
   >
     {before && <div className={classes.toolbar_before}>{before}</div>}
     {children && <div className={classes.toolbar_label}>{children}</div>}

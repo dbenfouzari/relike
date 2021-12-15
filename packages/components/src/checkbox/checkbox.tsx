@@ -86,7 +86,10 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     }, []);
 
     return (
-      <label className={classnames(classes.wrapper, { [classes.wrapper__disabled]: disabled }, classNames?.wrapper)}>
+      <label
+        data-testid="checkbox-wrapper"
+        className={classnames(classes.wrapper, { [classes.wrapper__disabled]: disabled }, classNames?.wrapper)}
+      >
         <div className={classnames(classes.outer, classNames?.outer)}>
           <input
             ref={ref}

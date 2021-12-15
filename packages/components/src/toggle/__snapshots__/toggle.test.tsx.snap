@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toggle should render successfully 1`] = `
+<button
+  aria-checked="false"
+  aria-label="Toggle off"
+  class="button button-0-2-1 button-d0-0-2-2"
+  data-testid="toggle"
+  role="switch"
+  type="button"
+>
+  <span
+    class="handle"
+  />
+  <span
+    class="inner"
+  />
+</button>
+`;

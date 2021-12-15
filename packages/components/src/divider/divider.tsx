@@ -22,6 +22,7 @@ const COMPONENT_NAME = "Divider";
 export const Divider = forwardRef<HTMLDivElement, DividerProps>(({ className, variant = "dark", ...props }, ref) => (
   <div
     ref={ref}
+    data-testid="divider"
     className={classNames(
       classes.divider,
       {

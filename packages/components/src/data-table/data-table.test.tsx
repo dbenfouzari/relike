@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Icon from "../icon";
 import Icons from "../icons";
@@ -27,10 +27,6 @@ it("should render successfully", () => {
       <DataColumn value="gender" label="Gender" />
     </DataTable>,
   );
-});
 
-it("DataColumn should return null", () => {
-  const DataColumn = buildDataColumn<Data>();
-
-  expect(render(<DataColumn label="Name" value="name" />).container.firstChild).toBe(null);
+  expect(screen.getByRole("table")).toMatchSnapshot();
 });

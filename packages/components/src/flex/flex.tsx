@@ -196,7 +196,7 @@ export const Flex: FlexComponent = forwardRef<HTMLDivElement, FlexProps & HTMLPr
     });
 
     return (
-      <div ref={ref} className={classNames(classes.flex, styles.flex, className)} {...props}>
+      <div data-testid="flex-item" ref={ref} className={classNames(classes.flex, styles.flex, className)} {...props}>
         {children}
       </div>
     );

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should render successfully 1`] = `
+<div
+  class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2"
+  role="tablist"
+>
+  <button
+    class="item item-0-2-3 item-d0-0-2-4 item__active"
+    data-testid="0"
+    role="tab"
+  >
+    Tab 1
+  </button>
+  <button
+    class="item item-0-2-3 item-d1-0-2-5"
+    data-testid="1"
+    role="tab"
+  >
+    Tab 2
+  </button>
+  <button
+    class="item item-0-2-3 item-d2-0-2-6"
+    data-testid="2"
+    role="tab"
+  >
+    Tab il était un petit navire
+  </button>
+  <button
+    class="item item-0-2-3 item-d3-0-2-7"
+    data-testid="3"
+    role="tab"
+  >
+    Tab 4
+  </button>
+  <div
+    class="bar"
+    style="width: 0px; left: 0px;"
+  />
+</div>
+`;
+
+exports[`Tabs should work with defaultActiveKey 1`] = `
+<div
+  class="wrapper wrapper-0-2-1 wrapper-d1-0-2-8"
+  role="tablist"
+>
+  <button
+    class="item item-0-2-3 item-d4-0-2-9"
+    data-testid="0"
+    role="tab"
+  >
+    Tab 1
+  </button>
+  <button
+    class="item item-0-2-3 item-d5-0-2-10"
+    data-testid="1"
+    role="tab"
+  >
+    Tab 2
+  </button>
+  <button
+    class="item item-0-2-3 item-d6-0-2-11 item__active"
+    data-testid="2"
+    role="tab"
+  >
+    Tab il était un petit navire
+  </button>
+  <button
+    class="item item-0-2-3 item-d7-0-2-12"
+    data-testid="3"
+    role="tab"
+  >
+    Tab 4
+  </button>
+  <div
+    class="bar"
+    style="width: 0px; left: 64px;"
+  />
+</div>
+`;

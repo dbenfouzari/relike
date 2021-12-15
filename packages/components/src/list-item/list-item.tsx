@@ -31,6 +31,7 @@ const ListItem = forwardRef<unknown, ListItemProps>(
 
     return createElement(defaultAs, {
       ref,
+      role: "listitem",
       className: classNames(
         classes.list_item,
         {

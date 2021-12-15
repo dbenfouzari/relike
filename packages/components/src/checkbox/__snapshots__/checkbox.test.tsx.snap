@@ -3,6 +3,7 @@
 exports[`Checkbox should render successfully 1`] = `
 <label
   class="wrapper"
+  data-testid="checkbox-wrapper"
 >
   <div
     class="outer"
@@ -28,6 +29,7 @@ exports[`Checkbox should render successfully 1`] = `
 exports[`Checkbox should render successfully when default checked 1`] = `
 <label
   class="wrapper"
+  data-testid="checkbox-wrapper"
 >
   <div
     class="outer"

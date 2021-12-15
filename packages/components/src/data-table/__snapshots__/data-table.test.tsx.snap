@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render successfully 1`] = `
+<div
+  role="table"
+>
+  <div
+    class="header row"
+    role="columnheader"
+  >
+    <div
+      class="cell"
+      role="cell"
+      style="flex: 1;"
+    >
+      Name
+    </div>
+    <div
+      class="cell"
+      role="cell"
+      style="flex: 1;"
+    >
+      Age
+    </div>
+    <div
+      class="cell"
+      role="cell"
+      style="flex: 1;"
+    >
+      Gender
+    </div>
+  </div>
+  <div
+    class="content"
+  >
+    <div
+      class="row"
+      role="row"
+    >
+      <div
+        class="cell"
+        role="cell"
+      >
+        <span
+          class="jsx-786785084 icon material-icons"
+        >
+          person
+        </span>
+        <span>
+          John Doe
+        </span>
+      </div>
+      <div
+        class="cell"
+        role="cell"
+      >
+        23
+      </div>
+      <div
+        class="cell"
+        role="cell"
+      >
+        male
+      </div>
+    </div>
+  </div>
+</div>
+`;

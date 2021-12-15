@@ -1,13 +1,11 @@
 {
   "plugins": [
     "prettier",
-    "simple-import-sort",
-    "jsx-a11y"
+    "simple-import-sort"
   ],
   "extends": [
     "react-app",
-    "react-app/jest",
-    "plugin:jsx-a11y/recommended"
+    "react-app/jest"
   ],
   "overrides": [
     {

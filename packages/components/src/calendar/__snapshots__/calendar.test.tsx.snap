@@ -3,6 +3,7 @@
 exports[`Calendar should handle previous month 1`] = `
 <div
   class="calendar"
+  data-testid="calendar"
 >
   <div
     class="top"
@@ -636,6 +637,7 @@ exports[`Calendar should handle previous month 1`] = `
 exports[`Calendar should handle previous month 2`] = `
 <div
   class="calendar"
+  data-testid="calendar"
 >
   <div
     class="top"
@@ -1170,6 +1172,7 @@ exports[`Calendar should handle previous month 2`] = `
 exports[`Calendar should handle previous month 3`] = `
 <div
   class="calendar"
+  data-testid="calendar"
 >
   <div
     class="top"
@@ -1704,6 +1707,7 @@ exports[`Calendar should handle previous month 3`] = `
 exports[`Calendar should render successfully 1`] = `
 <div
   class="calendar"
+  data-testid="calendar"
 >
   <div
     class="top"

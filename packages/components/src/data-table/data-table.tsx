@@ -8,7 +8,7 @@ export const buildDataColumn =
     null;
 
 export const DataTable = <D extends DataTableData>({ data, children, renderRow, classNames }: DataTableProps<D>) => (
-  <div>
+  <div role="table">
     <DataTableHeader children={children} classNames={classNames} />
     <DataTableBody data={data} renderRow={renderRow} classNames={classNames}>
       {children}

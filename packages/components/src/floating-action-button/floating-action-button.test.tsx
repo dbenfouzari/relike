@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Icons from "../icons";
 import FloatingActionButton, { Emphasis, FloatingActionButtonProps } from "./floating-action-button";
@@ -15,14 +15,14 @@ const setup = (outerProps?: Partial<FloatingActionButtonProps>) => {
 
 describe("Button", () => {
   it("should render successfully with high emphasis", () => {
-    const { container } = setup({ emphasis: Emphasis.high });
+    setup({ emphasis: Emphasis.high });
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole("button")).toMatchSnapshot();
   });
 
   it("should render successfully when extended", () => {
-    const { container } = setup({ icon: Icons.check, label: "See all results" });
+    setup({ icon: Icons.check, label: "See all results" });
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole("button")).toMatchSnapshot();
   });
 });

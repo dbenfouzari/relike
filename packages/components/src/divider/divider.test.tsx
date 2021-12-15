@@ -1,11 +1,11 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Divider from "./divider";
 
 describe("Divider", () => {
   it("should render successfully", () => {
-    const { container } = render(<Divider />);
+    render(<Divider />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("divider")).toMatchSnapshot();
   });
 });

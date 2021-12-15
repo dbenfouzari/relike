@@ -147,7 +147,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
 
   return (
     <button
-      data-testid="button"
+      data-testid="dropdown-button"
       ref={ref}
       className={classnames(
         classes.wrapper,

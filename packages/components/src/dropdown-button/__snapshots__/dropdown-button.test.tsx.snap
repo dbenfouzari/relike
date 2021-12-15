@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownButton should render successfully 1`] = `
+<button
+  class="wrapper"
+  data-testid="dropdown-button"
+>
+  <span
+    style="min-width: 0;"
+  >
+    <span
+      class="value_placeholder"
+    />
+    <span
+      class="jsx-786785084 icon material-icons"
+    >
+      arrow_drop_down
+    </span>
+  </span>
+  <ul
+    class="item_list"
+  >
+    <li
+      class="item_list_item"
+      data-testid="0"
+      id="dropdown-value-0"
+    >
+      <button>
+        Item 0
+      </button>
+    </li>
+    <li
+      class="item_list_item"
+      data-testid="1"
+      id="dropdown-value-1"
+    >
+      <button>
+        Item 1
+      </button>
+    </li>
+    <li
+      class="item_list_item"
+      data-testid="2"
+      id="dropdown-value-2"
+    >
+      <button>
+        Item 2
+      </button>
+    </li>
+    <li
+      class="item_list_item"
+      data-testid="3"
+      id="dropdown-value-3"
+    >
+      <button>
+        Item 3
+      </button>
+    </li>
+    <li
+      class="item_list_item"
+      data-testid="4"
+      id="dropdown-value-4"
+    >
+      <button>
+        Item 4
+      </button>
+    </li>
+  </ul>
+</button>
+`;

@@ -137,6 +137,7 @@ export const Chip = forwardRef<HTMLButtonElement, ChipProps>(
         onClick={handlePress}
         tabIndex={handlePress ? 0 : -1}
         disabled={disabled}
+        data-testid="chip"
         className={classNames(
           classes.chip,
           styles.chip,

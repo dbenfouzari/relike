@@ -61,7 +61,7 @@ export const Calendar: FC<CalendarProps> = ({
   }, [currentDate, events]);
 
   return (
-    <div className={classnames(classes.calendar, { [classes.calendar__dark]: dark })}>
+    <div data-testid="calendar" className={classnames(classes.calendar, { [classes.calendar__dark]: dark })}>
       <CalendarTop
         currentDate={currentDate}
         onPrevClick={handlePrevClick}

@@ -1,22 +1,20 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import Chip from "./chip";
 
 describe("Chip", () => {
   it("should render successfully", () => {
-    const { container } = render(<Chip>Hello</Chip>);
+    render(<Chip>Hello</Chip>);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("chip")).toMatchSnapshot();
   });
 
   it("should handle click", () => {
     const onClick = jest.fn();
 
-    const { container } = render(<Chip onPress={onClick}>Hello</Chip>);
+    render(<Chip onPress={onClick}>Hello</Chip>);
 
-    act(() => {
-      fireEvent.click(container.firstChild as ChildNode);
-    });
+    fireEvent.click(screen.getByTestId("chip"));
 
     expect(onClick).toHaveBeenCalled();
   });
@@ -24,13 +22,11 @@ describe("Chip", () => {
   it("should handle deletion", () => {
     const onDelete = jest.fn();
 
-    const { getByTestId } = render(<Chip onDeletePress={onDelete}>Hello</Chip>);
+    render(<Chip onDeletePress={onDelete}>Hello</Chip>);
 
-    const deleteIcon = getByTestId("delete-icon");
+    const deleteIcon = screen.getByTestId("delete-icon");
 
-    act(() => {
-      fireEvent.click(deleteIcon);
-    });
+    fireEvent.click(deleteIcon);
 
     expect(onDelete).toHaveBeenCalled();
   });

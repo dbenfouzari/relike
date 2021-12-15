@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import Tabs from "./tabs";
 
@@ -20,17 +20,19 @@ const children = [
 describe("Tabs", () => {
   it("should render successfully", () => {
     render(<Tabs>{children}</Tabs>);
+
+    expect(screen.getByRole("tablist")).toMatchSnapshot();
   });
 
   it("should work with defaultActiveKey", () => {
     render(<Tabs defaultActiveKey="3">{children}</Tabs>);
+
+    expect(screen.getByRole("tablist")).toMatchSnapshot();
   });
 
   it("should handle click", () => {
-    const { getByTestId } = render(<Tabs defaultActiveKey="3">{children}</Tabs>);
+    render(<Tabs defaultActiveKey="3">{children}</Tabs>);
 
-    act(() => {
-      fireEvent.click(getByTestId(2));
-    });
+    fireEvent.click(screen.getByTestId(2));
   });
 });

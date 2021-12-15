@@ -73,6 +73,7 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       alignment={Alignment.center}
       ref={ref}
       className={classNames(classes.avatar, className)}
+      data-testid="avatar"
       {...props}
     >
       {src ? (

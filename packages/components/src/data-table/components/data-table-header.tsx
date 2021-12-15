@@ -14,12 +14,12 @@ const DataTableHeader = <C extends DataTableColumnProps>({ children, classNames 
   const mandatoryColumns = filterChildren(children);
 
   return (
-    <div className={classnames(classes.header, classes.row, classNames?.header, classNames?.row)}>
+    <div role="columnheader" className={classnames(classes.header, classes.row, classNames?.header, classNames?.row)}>
       {Children.map(mandatoryColumns, (child) => {
         const { flex = 1, label, value } = child.props;
 
         return (
-          <div key={value} className={classes.cell} style={{ flex }}>
+          <div role="cell" key={value} className={classes.cell} style={{ flex }}>
             {label}
           </div>
         );

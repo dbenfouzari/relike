@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render successfully 1`] = `
+<button
+  class="wrapper wrapper__disabled"
+  data-testid="text-button"
+>
+  <span>
+    Press Me
+  </span>
+</button>
+`;

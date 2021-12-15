@@ -3,12 +3,14 @@
 exports[`ListItem should render successfully 1`] = `
 <li
   class="list_item"
+  role="listitem"
 >
   <div
     class="content"
   >
     <div
       class="flex flex-0-2-1 flex-d0-0-2-2 content"
+      data-testid="flex-item"
     >
       <span
         class="elm-0-2-3 elm-d0-0-2-4"

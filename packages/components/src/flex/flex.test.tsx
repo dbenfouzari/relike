@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Axis from "../axis";
 import Colors from "../colors";
@@ -21,7 +21,7 @@ const defaultProps: Partial<FlexProps> = {
 
 describe("Flex", () => {
   it("should render successfully", () => {
-    const { container } = render(
+    render(
       <Flex {...defaultProps}>
         <Container width={100} height={100} color={Colors.red[300]} />
         <Container width={80} height={80} color={Colors.green[300]} />
@@ -29,11 +29,11 @@ describe("Flex", () => {
       </Flex>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("flex-item")).toMatchSnapshot();
   });
 
   it("should render successfully with array gap", () => {
-    const { container } = render(
+    render(
       <Flex {...defaultProps} gap={[30, "20%"]}>
         <Container width={100} height={100} color={Colors.red[300]} />
         <Container width={80} height={80} color={Colors.green[300]} />
@@ -41,6 +41,6 @@ describe("Flex", () => {
       </Flex>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("flex-item")).toMatchSnapshot();
   });
 });

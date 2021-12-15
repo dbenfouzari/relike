@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { FC, useRef } from "react";
 
 import useOnClickOutside from "./useOnClickOutside";
@@ -18,11 +18,9 @@ describe("useOnClickOutside", () => {
   it("should work", () => {
     const handler = jest.fn();
 
-    const { getByTestId } = render(<Wrapper handler={handler} />);
+    render(<Wrapper handler={handler} />);
 
-    act(() => {
-      fireEvent.click(getByTestId("wrapper"));
-    });
+    fireEvent.click(screen.getByTestId("wrapper"));
 
     expect(handler).toHaveBeenCalled();
   });

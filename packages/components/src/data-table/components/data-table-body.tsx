@@ -16,7 +16,12 @@ const DataTableBody = <D extends DataTableData>({ data, children, renderRow, cla
   const mandatoryColumns = filterChildren(children);
 
   const Wrapper =
-    renderRow ?? (({ children }) => <div className={classnames(classes.row, classNames?.row)}>{children}</div>);
+    renderRow ??
+    (({ children }) => (
+      <div role="row" className={classnames(classes.row, classNames?.row)}>
+        {children}
+      </div>
+    ));
 
   return (
     <div className={classes.content}>
@@ -31,7 +36,12 @@ const DataTableBody = <D extends DataTableData>({ data, children, renderRow, cla
             return RenderCell ? (
               <RenderCell key={value} value={format(item[value], item)} />
             ) : (
-              <div key={value} className={classnames(classes.cell, classNames?.cell, className)} style={{ flex }}>
+              <div
+                role="cell"
+                key={value}
+                className={classnames(classes.cell, classNames?.cell, className)}
+                style={{ flex }}
+              >
                 {format(item[value], item)}
               </div>
             );

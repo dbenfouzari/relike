@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import ExpansionPanel from "./expansion-panel";
 
@@ -18,7 +18,7 @@ describe("ExpansionPanel", () => {
   });
 
   it("should open", () => {
-    const { getByTestId } = render(
+    render(
       <ExpansionPanel
         headerBuilder={() => (
           <div>
@@ -30,10 +30,8 @@ describe("ExpansionPanel", () => {
       </ExpansionPanel>,
     );
 
-    const toggle = getByTestId("toggle");
+    const toggle = screen.getByTestId("toggle");
 
-    act(() => {
-      fireEvent.click(toggle);
-    });
+    fireEvent.click(toggle);
   });
 });

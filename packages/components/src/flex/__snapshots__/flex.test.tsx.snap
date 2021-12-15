@@ -3,6 +3,7 @@
 exports[`Flex should render successfully 1`] = `
 <div
   class="flex flex-0-2-1 flex-d0-0-2-2"
+  data-testid="flex-item"
 >
   <div
     class="container-0-2-3 container-d0-0-2-4"
@@ -19,6 +20,7 @@ exports[`Flex should render successfully 1`] = `
 exports[`Flex should render successfully with array gap 1`] = `
 <div
   class="flex flex-0-2-1 flex-d1-0-2-7"
+  data-testid="flex-item"
 >
   <div
     class="container-0-2-3 container-d3-0-2-8"

@@ -2,6 +2,20 @@
 
 exports[`Tooltip should render successfully 1`] = `
 <div
-  class="container-0-2-1 container-d0-0-2-2"
-/>
+  aria-label="Hello Testing World"
+  class="tooltip"
+  id="tooltip-123456"
+  role="tooltip"
+  style="position: absolute; left: 0px; top: 0px;"
+>
+  <div
+    class="tooltip__arrow"
+  />
+  <span
+    class="elm-0-2-3 elm-d0-0-2-4"
+    data-testid="text-elm"
+  >
+    Hello Testing World
+  </span>
+</div>
 `;

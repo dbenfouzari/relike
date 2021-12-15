@@ -1,4 +1,4 @@
-import { act, fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import DateTime from "../date-time";
 import Duration from "../duration";
@@ -11,12 +11,12 @@ describe("Calendar", () => {
   jest.spyOn(Date, "now").mockImplementation(() => new Date("2021-08-26T21:14:00.000Z").valueOf());
 
   it("should render successfully", () => {
-    const { container } = render(<Calendar initialValue={currDateTime} />);
-    expect(container.firstChild).toMatchSnapshot();
+    render(<Calendar initialValue={currDateTime} />);
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
   it("should handle previous month", async () => {
-    const { container, getByTestId } = render(
+    render(
       <Calendar
         initialValue={currDateTime}
         events={[
@@ -29,30 +29,26 @@ describe("Calendar", () => {
     const currentMonth = currDateTime.month;
     const currentMonthIndex = currentMonth - 1;
 
-    const month = getByTestId("month");
+    const month = screen.getByTestId("month");
     const currMonth = MONTHS.en[currentMonthIndex];
     const prevCurrMonth = MONTHS.en[currentMonthIndex - 1];
     const nextCurrMonth = MONTHS.en[currentMonthIndex + 1];
 
     expect(month.textContent).toEqual(currMonth);
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
 
-    const prevMonth = getByTestId("prev-month");
-    const nextMonth = getByTestId("next-month");
+    const prevMonth = screen.getByTestId("prev-month");
+    const nextMonth = screen.getByTestId("next-month");
 
-    act(() => {
-      fireEvent.click(prevMonth);
-    });
+    fireEvent.click(prevMonth);
 
     expect(month.textContent).toEqual(prevCurrMonth);
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
 
-    act(() => {
-      fireEvent.click(nextMonth);
-      fireEvent.click(nextMonth);
-    });
+    fireEvent.click(nextMonth);
+    fireEvent.click(nextMonth);
 
     expect(month.textContent).toEqual(nextCurrMonth);
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 });
