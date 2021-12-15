@@ -4,7 +4,27 @@ import { useEffect, useRef, useState } from "react";
 
 import Duration from "../duration";
 
-type Tooltip = { open: VoidFunction; close: VoidFunction; anchorElement: HTMLElement };
+/**
+ *
+ */
+type Tooltip = {
+  /**
+   * Method that will be called to open the tooltip.
+   */
+  open: VoidFunction;
+  /**
+   * Method that will be called to close the tooltip.
+   */
+  close: VoidFunction;
+  /**
+   * The element where the tooltip will be bound.
+   */
+  anchorElement: HTMLElement;
+};
+
+/**
+ * `setTimeout` type
+ */
 type Timeout = ReturnType<typeof setTimeout>;
 
 /**
@@ -18,6 +38,12 @@ const tooltipMouseToggle = (() => {
   /** Global listener added on the document. */
   let globalListener: undefined | ((evt: MouseEvent) => void);
 
+  /**
+   * A handler that creates global listener.
+   *
+   * @example
+   * addGlobalListener(); // it adds listener on mouseover
+   */
   function addGlobalListener() {
     if (globalListener) return;
     globalListener = debounce((evt) => {
@@ -33,6 +59,12 @@ const tooltipMouseToggle = (() => {
     document.addEventListener("mouseover", globalListener);
   }
 
+  /**
+   * A handler that removes global listener.
+   *
+   * @example
+   * removeGlobalListener(); // it removes listener on mouseover
+   */
   function removeGlobalListener() {
     if (!globalListener) return;
     document.removeEventListener("mouseover", globalListener);
@@ -40,6 +72,13 @@ const tooltipMouseToggle = (() => {
   }
 
   return {
+    /**
+     * Use this method to create a tooltip.
+     *
+     * @param {Tooltip} tooltip The tooltip you want to add
+     * @example
+     * addTooltip(open)
+     */
     addTooltip(tooltip: Tooltip) {
       if (!tooltips) {
         tooltips = [];
@@ -47,9 +86,16 @@ const tooltipMouseToggle = (() => {
       }
       tooltips.push(tooltip);
     },
-    removeTooltip(actions: Tooltip) {
+    /**
+     * Use this method to remove a tooltip
+     *
+     * @param {Tooltip} tooltip The tooltip you want to remove.
+     * @example
+     * removeTooltip(tooltip);
+     */
+    removeTooltip(tooltip: Tooltip) {
       if (!tooltips) return;
-      pull(tooltips, actions);
+      pull(tooltips, tooltip);
       if (tooltips.length === 0) {
         removeGlobalListener();
         tooltips = undefined;
@@ -58,6 +104,16 @@ const tooltipMouseToggle = (() => {
   };
 })();
 
+/**
+ * Use this hook to control the tooltip.
+ *
+ * @param {Duration} delay The delay after which the tooltip opens.
+ * @param {HTMLElement | null} anchorElement The element on which the tooltip will be bound.
+ * @param {Duration} closeAfter Automatically closes the tooltip after this delay.
+ * @example
+ * useTooltipOpen(Duration.seconds(1), null)
+ * @returns {boolean} isOpen
+ */
 export function useTooltipOpen(delay: Duration, anchorElement: HTMLElement | null, closeAfter?: Duration): boolean {
   const timer = useRef<Timeout>();
   const shouldOpen = useRef<boolean>(false);
@@ -70,6 +126,12 @@ export function useTooltipOpen(delay: Duration, anchorElement: HTMLElement | nul
 
     const tooltip: Tooltip = {
       anchorElement,
+      /**
+       * Opens the tooltip.
+       *
+       * @example
+       * tooltip.open();
+       */
       open() {
         if (!shouldOpen.current) {
           shouldOpen.current = true;
@@ -84,6 +146,12 @@ export function useTooltipOpen(delay: Duration, anchorElement: HTMLElement | nul
           }
         }
       },
+      /**
+       * Closes the tooltip.
+       *
+       * @example
+       * tooltip.close();
+       */
       close() {
         if (timer.current) {
           clearTimeout(timer.current);
@@ -96,6 +164,13 @@ export function useTooltipOpen(delay: Duration, anchorElement: HTMLElement | nul
       },
     };
 
+    /**
+     * Handler that will be called on keydown pressed in anchorElement.
+     *
+     * @param {KeyboardEvent} event The keyboard event.
+     * @example
+     * anchorElement.addEventListener("keydown", keydown);
+     */
     const keydown = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
       tooltip.close();

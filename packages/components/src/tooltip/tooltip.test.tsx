@@ -8,6 +8,13 @@ import Tooltip from "./tooltip";
 const ref = createRef<HTMLDivElement>();
 
 jest.mock("uid", () => ({
+  /**
+   * Returns a mocked unique ID
+   *
+   * @example
+   * uid(); // 123456
+   * @returns {string} a string
+   */
   uid: () => "123456",
 }));
 
