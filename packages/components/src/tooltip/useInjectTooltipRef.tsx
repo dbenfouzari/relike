@@ -1,23 +1,21 @@
-import { cloneElement, MutableRefObject, ReactNode, useMemo } from "react";
+import { cloneElement, ReactNode, useMemo } from "react";
 
-type FnRef<T> = (value: T) => void;
-
-function mergeRefs<T>(...refs: Array<MutableRefObject<T | null> | FnRef<T>>): FnRef<T> {
-  return (value) =>
-    refs.forEach((ref) => {
-      if (typeof ref === "function") {
-        ref(value);
-      } else if (ref) {
-        // eslint-disable-next-line no-param-reassign
-        (ref as MutableRefObject<T>).current = value;
-      }
-    });
-}
+import { mergeRefs } from "./utils";
 
 /**
+ * Use this hook to handle tooltip ref injection.
+ *
  * Add ref and ARIA attribute(s) in tooltip children or wrapped children.
  * Button, IconButton, Icon and React HTML elements don't need to be wrapped but any other kind of children (array, fragment, custom components)
  * will be wrapped in a <span>.
+ *
+ * @param {ReactNode} children The tooltip children
+ * @param {(e: HTMLDivElement) => void} setAnchorElement A method to set anchor element.
+ * @param {boolean} isOpen Is the tooltip open ?
+ * @param {string} id The tooltip unique identifier.
+ * @example
+ * useInjectTooltipRef(<div />, () => {}, true, "test");
+ * @returns {ReactNode} A wrapping div that contains the tooltip.
  */
 export const useInjectTooltipRef = (
   children: ReactNode,

@@ -1,8 +1,9 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 
 import Color from "../color";
 import Colors from "../colors";
 import Icons from "../icons";
+import type { TabsProps } from "./tabs";
 import Tabs from "./tabs";
 
 export default {
@@ -18,9 +19,19 @@ export default {
     // Sets a delay for the component's stories
     chromatic: { delay: 1000 },
   },
-} as ComponentMeta<typeof Tabs>;
+} as Meta<TabsProps>;
 
-const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
+/**
+ * Default Tabs template.
+ *
+ * @param {TabsProps} args The Tabs props.
+ * @example
+ * <Template>
+ *   <Tabs.Item name"Tab 1">Hello</Tabs.Item>
+ * </Template>
+ * @returns {JSX.Element} The Tabs component
+ */
+const Template: Story<TabsProps> = (args) => <Tabs {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,12 +1,12 @@
 import "./tooltip.stories.module.scss";
 
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Container from "../container";
 import Duration from "../duration";
 import Padding from "../padding";
-import Tooltip, { TooltipPlacement } from "./tooltip";
+import Tooltip, { TooltipPlacement, TooltipProps } from "./tooltip";
 
 export default {
   title: "Tooltip",
@@ -17,9 +17,17 @@ export default {
     delay: { control: { disable: true } },
   },
   decorators: [(story) => <Container padding={Padding.all(96)}>{story()}</Container>],
-} as ComponentMeta<typeof Tooltip>;
+} as Meta<TooltipProps>;
 
-const Template: ComponentStory<typeof Tooltip> = (args) => <Tooltip {...args} />;
+/**
+ * Default template
+ *
+ * @param {TooltipProps} args The tooltip props
+ * @example
+ * <Template label="Hello, Storybook" />
+ * @returns {JSX.Element} The element
+ */
+const Template: Story<TooltipProps> = (args) => <Tooltip {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

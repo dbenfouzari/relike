@@ -3,11 +3,29 @@ import { Children, ReactElement, useCallback, useEffect, useMemo, useRef } from 
 import type { TabItemProps } from "../components/tab-item";
 import useDefaultState from "./useDefaultState";
 
+/**
+ * Use this hook to handle tabs interactions.
+ *
+ * @param {ReactElement} children The multiple `Tabs.Item`
+ * @param {string} defaultActiveKey The default active tab key
+ * @param {number} space The space between each tab
+ * @example
+ * const { activeIndex, barRef, handleTabChange, itemRef } = useTabs(children, defaultActiveKey, space);
+ * @returns {any} handler and something // TODO: Better returns
+ */
 const useTabs = <T extends ReactElement<TabItemProps>[]>(children: T, defaultActiveKey?: string, space = 0) => {
   const [activeIndex, setActiveIndex] = useDefaultState(children, defaultActiveKey);
   const itemRefs = useMemo<HTMLElement[]>(() => Array.from({ length: Children.toArray(children).length }), [children]);
   const barRef = useRef<HTMLDivElement>(null);
 
+  /**
+   * This method aims to generate a ref.
+   *
+   * @param {number} index The tab index
+   * @example
+   * <InnerTabItem ref={itemRef(index)} />
+   * @returns {void} nothing
+   */
   const itemRef = (index: number) => (elm: HTMLElement | null) => {
     if (elm) itemRefs[index] = elm;
   };

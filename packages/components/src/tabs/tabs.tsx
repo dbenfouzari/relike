@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { Children, FC, ReactElement } from "react";
+import { Children, CSSProperties, FC, ReactElement } from "react";
 import { createUseStyles } from "react-jss";
 
 import Color from "../color";
@@ -8,6 +8,7 @@ import TabItem, { InnerTabItem, TabItemProps } from "./components/tab-item";
 import useTabs from "./hooks/useTabs";
 import classes from "./tabs.module.scss";
 
+/** Defines Tabs props */
 export interface TabsProps {
   /**
    * Select what tab should be selected first.
@@ -34,7 +35,6 @@ export interface TabsProps {
    * Override the active tab color.
    *
    * @default Colors.blue[500]
-   *
    * @see Color
    */
   activeColor?: Color;
@@ -43,34 +43,61 @@ export interface TabsProps {
    * Override the inactive tab color.
    *
    * @default Colors.black87
-   *
    * @see Color
    */
   inactiveColor?: Color;
 }
 
+/** Defines Tabs component that includes TabItem */
 type TabsComponent = FC<TabsProps> & {
+  /**
+   * Call TabItem directly without importing it.
+   *
+   * @example
+   * <Tabs.Item />
+   */
   Item: typeof TabItem;
 };
 
+/** Defines props for Tabs styles */
 interface TabsStylesProps {
+  /** Space between two tabs. */
   space: number;
+  /** Main color when tab is active */
   activeColor: Color;
+  /** Main color when tab is inactive */
   inactiveColor: Color;
 }
 
 const DEFAULT_TABS_SPACE = 32;
 
 const useStyles = createUseStyles({
-  wrapper: ({ space, activeColor, inactiveColor }: TabsStylesProps) => ({
-    "--tabs-space": space + "px",
-    "--active-color": activeColor.toRGBA(),
-    "--inactive-color": inactiveColor.toRGBA(),
-  }),
+  /**
+   * Generate styles from args
+   *
+   * @param {TabsStylesProps} args Tab styles props
+   * @example
+   * wrapper({ space: 32, activeColor: Colors.blue, inactiveColor: Colors.grey })
+   * @returns {CSSProperties} styles
+   */
+  wrapper: ({ space, activeColor, inactiveColor }: TabsStylesProps) =>
+    ({
+      "--tabs-space": space + "px",
+      "--active-color": activeColor.toRGBA(),
+      "--inactive-color": inactiveColor.toRGBA(),
+    } as CSSProperties),
 });
 
 /**
  * A component that displays a horizontal row of tabs.
+ *
+ * @param {TabsProps} props Tabs props.
+ * @example
+ * <Tabs>
+ *   <Tabs.Item>Hello</Tabs.Item>
+ *   <Tabs.Item>World</Tabs.Item>
+ * </Tabs>
+ * @returns {JSX.Element} JSX element.
  */
 export const Tabs: TabsComponent = ({
   defaultActiveKey,

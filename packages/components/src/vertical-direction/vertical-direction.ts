@@ -1,3 +1,10 @@
+/**
+ * A direction in which boxes flow vertically.
+ *
+ * This is used by the flex algorithm (e.g. Column) to decide in which direction to draw boxes.
+ *
+ * This is also used to disambiguate start and end values (e.g. MainAxisAlignment.start or CrossAxisAlignment.end).
+ */
 enum VerticalDirection {
   /**
    * Boxes should start at the top and be stacked vertically towards the bottom.

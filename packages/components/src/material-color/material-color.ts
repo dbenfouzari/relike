@@ -9,6 +9,9 @@ class ColorSwatch extends Color {
   protected _swatch: Record<number, Color>;
 
   /**
+   * @param primary
+   * @param swatch
+   * @example
    * Creates a color that has a small table of related colors called a "swatch".
    *
    * The `primary` argument should be the 32 bit ARGB value of one of the
@@ -125,11 +128,6 @@ class MaterialColor extends ColorSwatch {
 }
 
 export class MaterialAccentColor extends ColorSwatch {
-  /// The lightest shade.
-  public get shade50() {
-    return this[50];
-  }
-
   /// The second lightest shade.
   public get shade100() {
     return this[100];

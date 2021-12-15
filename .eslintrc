@@ -3,13 +3,15 @@
   "plugins": [
     "@typescript-eslint",
     "prettier",
+    "jsdoc",
     "simple-import-sort",
     "jsx-a11y",
     "testing-library"
   ],
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:jsdoc/recommended"
   ],
   "overrides": [
     {
@@ -29,7 +31,34 @@
     "prettier/prettier": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "@typescript-eslint/no-unused-vars": "error"
+    "@typescript-eslint/no-unused-vars": "error",
+    "jsdoc/require-example": "warn",
+    "jsdoc/no-undefined-types": ["warn", {
+      "definedTypes": [
+        "HTMLDivElement",
+        "HTMLElement",
+        "JSX",
+        "KeyboardEvent"
+      ]
+    }],
+    "jsdoc/require-jsdoc": ["warn", {
+      "contexts": [
+        "ArrowFunctionExpression",
+        "FunctionDeclaration",
+        "FunctionExpression",
+        "MethodDefinition",
+        // "Property",
+        "TSDeclareFunction",
+        "TSEnumDeclaration",
+        "TSInterfaceDeclaration",
+        "TSMethodSignature",
+        "TSPropertySignature",
+        "TSTypeAliasDeclaration"
+        // "VariableDeclaration"
+      ],
+      "checkGetters": true,
+      "enableFixer": false
+    }]
   },
   "ignorePatterns": [
     "node_modules",

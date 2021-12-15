@@ -5,6 +5,9 @@ import TimelineItem from "./components/timeline-item";
 import classes from "./timeline.module.scss";
 import { TimelineMode } from "./types";
 
+/**
+ * Defines Timeline props.
+ */
 export interface TimelineProps {
   /**
    * Choose at which side of the text the line should be.
@@ -12,6 +15,7 @@ export interface TimelineProps {
    * - **left**: As default, text is on the right
    * - **right**: Text is on the left
    * - **alternate**: Text starts on the right, then next element on the left, etc.
+   *
    * @default left
    */
   mode?: TimelineMode;
@@ -22,7 +26,11 @@ export interface TimelineProps {
   children: ReactElement<typeof TimelineItem> | ReactElement<typeof TimelineItem>[];
 }
 
+/**
+ * Defines the Timeline component.
+ */
 export type TimelineComponent = FC<TimelineProps> & {
+  /** TimelineItem component */
   Item: typeof TimelineItem;
 };
 
@@ -31,10 +39,16 @@ export type TimelineComponent = FC<TimelineProps> & {
  * You can limit the **[TimeLine]** space by wrapping it with a div.
  *
  * ### When To Use
- * - When a series of information needs to be ordered by time (ascending or descending).
+ * - When a series of information need to be ordered by time (ascending or descending).
  * - When you need a timeline to make a visual connection.
  *
+ * @param {TimelineProps} props The Timeline props.
  * @see TimelineItem
+ * @example
+ * <Timeline>
+ *   <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
+ * </Timeline>
+ * @returns {JSX.Element} The JSX element.
  */
 export const Timeline: TimelineComponent = ({ children, mode = "left" }) => (
   <ul

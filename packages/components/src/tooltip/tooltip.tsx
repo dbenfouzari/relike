@@ -1,4 +1,4 @@
-import { forwardRef, MutableRefObject, ReactNode, useMemo, useState } from "react";
+import { forwardRef, ReactNode, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
 import { uid } from "uid";
@@ -11,7 +11,11 @@ import { Maybe } from "../types";
 import classes from "./tooltip.module.scss";
 import { useInjectTooltipRef } from "./useInjectTooltipRef";
 import { useTooltipOpen } from "./useTooltipOpen";
+import { mergeRefs } from "./utils";
 
+/**
+ * Handles tooltip placement.
+ */
 export enum TooltipPlacement {
   top = "top",
   right = "right",
@@ -19,6 +23,9 @@ export enum TooltipPlacement {
   left = "left",
 }
 
+/**
+ * Defines Tooltip props.
+ */
 export interface TooltipProps {
   /** Anchor (element on which we activate the tooltip). */
   children: ReactNode;
@@ -53,21 +60,6 @@ const COMPONENT_NAME = "Tooltip";
  * Arrow size (in pixel).
  */
 const ARROW_SIZE = 8;
-
-// TODO: Remove duplicate `mergeRefs`
-type FnRef<T> = (value: T) => void;
-
-function mergeRefs<T>(...refs: Array<null | MutableRefObject<T | null> | FnRef<T>>): FnRef<T> {
-  return (value) =>
-    refs.forEach((ref) => {
-      if (typeof ref === "function") {
-        ref(value);
-      } else if (ref) {
-        // eslint-disable-next-line no-param-reassign
-        (ref as MutableRefObject<T>).current = value;
-      }
-    });
-}
 
 export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
   (

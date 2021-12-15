@@ -3,6 +3,7 @@ import { forwardRef, ReactNode } from "react";
 
 import classes from "./toolbar.module.scss";
 
+/** Defines Toolbar props. */
 export interface ToolbarProps {
   /**
    * Override default styles.

@@ -1,6 +1,6 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
-import TextButton from "./text-button";
+import TextButton, { TextButtonProps } from "./text-button";
 import styles from "./text-button.stories.module.scss";
 
 export default {
@@ -10,10 +10,26 @@ export default {
     onPress: { control: { disable: true } },
     className: { control: { disable: true } },
   },
-} as ComponentMeta<typeof TextButton>;
+} as Meta<TextButtonProps>;
 
-const Template: ComponentStory<typeof TextButton> = (args) => <TextButton {...args} />;
-const WithContentTemplate: ComponentStory<typeof TextButton> = (args) => (
+/**
+ * Default TextButton template.
+ *
+ * @param {TextButtonProps} args The TextButton props.
+ * @example
+ * <Template>Hello</Template>
+ * @returns {JSX.Element} The TextButton component.
+ */
+const Template: Story<TextButtonProps> = (args) => <TextButton {...args} />;
+/**
+ * Template with text content on both sides.
+ *
+ * @param {TextButtonProps} args The TextButton props.
+ * @example
+ * <Template>Hello</Template>
+ * @returns {JSX.Element} The TextButton component.
+ */
+const WithContentTemplate: Story<TextButtonProps> = (args) => (
   <div>
     <span>Toto</span>
     <TextButton {...args} />

@@ -4,6 +4,7 @@ import { FC, MouseEvent, MouseEventHandler, ReactChild, useCallback } from "reac
 import { Maybe } from "../types";
 import styles from "./text-button.module.scss";
 
+/** Defines props for TextButton component */
 export interface TextButtonProps {
   /**
    * Called when the button is tapped or otherwise activated.
@@ -13,6 +14,7 @@ export interface TextButtonProps {
    * Typically the button's label.
    */
   children: ReactChild;
+  /** Override className */
   className?: string;
 }
 
@@ -24,6 +26,10 @@ export interface TextButtonProps {
  *
  * @see [OutlinedButton], a [TextButton] with a border outline.
  * @see [ElevatedButton], a filled button whose material elevates when pressed.
+ * @param {TextButtonProps} props The TextButton props
+ * @example
+ * <TextButton>Hello</TextButton>
+ * @returns {JSX.Element} The JSX Element.
  */
 export const TextButton: FC<TextButtonProps> = ({ onPress, children, className }) => {
   // Handle click event

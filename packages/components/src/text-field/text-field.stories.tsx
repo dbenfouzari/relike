@@ -1,6 +1,6 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
-import TextField from "./text-field";
+import TextField, { TextFieldProps } from "./text-field";
 
 export default {
   title: "TextField",
@@ -11,9 +11,17 @@ export default {
   argTypes: {
     className: { control: { disable: true } },
   },
-} as ComponentMeta<typeof TextField>;
+} as Meta<TextFieldProps>;
 
-const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args} />;
+/**
+ * Default TextField template.
+ *
+ * @param {TextFieldProps} args The TextField props
+ * @example
+ * <Template obscureText />
+ * @returns {JSX.Element} The TextField component.
+ */
+const Template: Story<TextFieldProps> = (args) => <TextField {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Icon from "../icon";
@@ -26,9 +26,17 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Toggle>;
+} as Meta<ToggleProps>;
 
-const Template: ComponentStory<typeof Toggle> = (args) => <Toggle {...args} />;
+/**
+ * Default Toggle template.
+ *
+ * @param {ToggleProps} args The toggle props.
+ * @example
+ * <Template checked={false} />
+ * @returns {JSX.Element} the toggle.
+ */
+const Template: Story<ToggleProps> = (args) => <Toggle {...args} />;
 
 const defaultProps: Partial<ToggleProps> = {
   checked: undefined,
