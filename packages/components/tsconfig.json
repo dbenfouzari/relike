@@ -17,9 +17,8 @@
     "jsx": "react-jsx",
     "composite": true
   },
-  "include": ["src"],
+  "include": ["src", ".storybook/constants.ts"],
   "references": [
-    { "path": "../cli" },
-    { "path": "../utils" }
+    { "path": "../cli" }
   ]
 }

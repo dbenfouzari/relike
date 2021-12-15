@@ -16892,7 +16892,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }],
         ["npm:8.4.1", {
-          "packageLocation": "./.yarn/cache/eslint-npm-8.4.1-f532f40df7-d962cd7cd0.zip/node_modules/eslint/",
+          "packageLocation": "./.yarn/unplugged/eslint-npm-8.4.1-f532f40df7/node_modules/eslint/",
           "packageDependencies": [
             ["eslint", "npm:8.4.1"],
             ["@eslint/eslintrc", "npm:1.0.5"],
