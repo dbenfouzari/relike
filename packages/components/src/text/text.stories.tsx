@@ -1,13 +1,13 @@
 import "./text.stories.module.scss";
 
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import FontWeight from "../font-weight";
 import TextOverflow from "../text-overflow";
 import TextStyle from "../text-style";
 import Typography from "../typography";
-import Text from "./text";
+import Text, { TextProps } from "./text";
 
 export default {
   title: "Text",
@@ -16,9 +16,17 @@ export default {
     className: { control: { disable: true } },
     style: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Text>;
+} as Meta<TextProps>;
 
-const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
+/**
+ * Default Text template.
+ *
+ * @param {TextProps} args The Text props.
+ * @example
+ * <Template>Hello</Template>
+ * @returns {JSX.Element} The Text component.
+ */
+const Template: Story<TextProps> = (args) => <Text {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

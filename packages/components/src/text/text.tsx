@@ -6,6 +6,7 @@ import TextOverflow from "../text-overflow";
 import TextStyle from "../text-style";
 import Typography from "../typography";
 
+/** Defines Text props. */
 export interface TextProps {
   /**
    * By default, [Text] renders a `span` element. You can override this using this prop.
@@ -28,7 +29,11 @@ export interface TextProps {
   className?: string;
 }
 
+/** Defines props for Text styles */
 export interface TextStylesProps {
+  /**
+   * The TextStyle used for text.
+   */
   style: TextStyle;
 }
 
@@ -42,6 +47,14 @@ const COMPONENT_NAME = "Text";
  */
 const DEFAULT_PROPS: Partial<TextProps> = {};
 
+/**
+ * Helper to get CSS overflow property.
+ *
+ * @param {TextOverflow} overflow The TextOverflow.
+ * @returns {CSSProperties.textOverflow} The CSS textOverflow property value.
+ * @example
+ * getCSSOverflow(TextOverflow.clip) // "hidden"
+ */
 export const getCSSOverflow = (overflow?: TextOverflow): CSSProperties["textOverflow"] => {
   if (typeof overflow === "undefined") return undefined;
 
@@ -59,6 +72,14 @@ export const getCSSOverflow = (overflow?: TextOverflow): CSSProperties["textOver
 };
 
 const useStyles = createUseStyles({
+  /**
+   * Creates styles for main element.
+   *
+   * @param {TextStylesProps} args Used to build the styles.
+   * @example
+   * elm({ style: Typography.blackMountainView.headline1 })
+   * @returns {CSSProperties} The final styles.
+   */
   elm: ({ style }: TextStylesProps) => ({
     backgroundColor: style.backgroundColor?.toRGBA(),
     color: style.color?.toRGBA(),
