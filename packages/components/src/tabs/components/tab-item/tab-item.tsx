@@ -1,5 +1,6 @@
 import classnames from "classnames";
-import { FC, forwardRef, ReactNode, RefObject } from "react";
+import type { CSSProperties, FC, ReactNode, RefObject } from "react";
+import { forwardRef } from "react";
 import { createUseStyles } from "react-jss";
 
 import Color from "../../../color";
@@ -7,15 +8,13 @@ import Icon from "../../../icon";
 import { IconData } from "../../../icons";
 import classes from "./tab-item.module.scss";
 
+/** Defines TabItem props */
 export interface TabItemProps {
-  /**
-   * The tab name that will be shown.
-   */
+  /** The tab name that will be shown. */
   name: string;
+  /** Content that will be shown when tab is active */
   children: ReactNode;
-  /**
-   * This key will be used by system to know default tab.
-   */
+  /** This key will be used by system to know default tab. */
   key: string;
   /**
    * An optional [IconData] to show aside of tab item name.
@@ -37,18 +36,42 @@ export interface TabItemProps {
   inactiveColor?: Color;
 }
 
+/**
+ * Defines inner TabItem props.
+ *
+ * This is used directly by `Tabs`
+ */
 export interface InnerTabItemProps extends Omit<TabItemProps, "key"> {
+  /** The tab item ref */
   ref: RefObject<HTMLDivElement>;
+  /** Handler that is called when tab is changed */
   onChange: () => void;
+  /** Is tab item active */
   active: boolean;
+  /** The TabItem index in array */
   index: number;
 }
 
+/** Defines InnerTabItem styles props. */
+type InnerTabItemStylesProps = {
+  /** Color when tab is inactive */
+  inactiveColor?: Color;
+};
+
 const useStyles = createUseStyles({
-  item: ({ inactiveColor }: { inactiveColor?: Color }) =>
-    inactiveColor && {
+  /**
+   * Generates styles based on args
+   *
+   * @param {InnerTabItemStylesProps} args The props.
+   * @example
+   * item({ inactiveColor: Colors.grey })
+   * @returns {CSSProperties} InnerTabItem styles
+   */
+  item: ({ inactiveColor }: InnerTabItemStylesProps) =>
+    inactiveColor &&
+    ({
       "--inactive-color": inactiveColor.toRGBA(),
-    },
+    } as CSSProperties),
 });
 
 export const InnerTabItem = forwardRef<HTMLButtonElement, InnerTabItemProps>(
@@ -69,6 +92,13 @@ export const InnerTabItem = forwardRef<HTMLButtonElement, InnerTabItemProps>(
   },
 );
 
+/**
+ * The TabItem
+ *
+ * @example
+ * <TabItem name="Tab 1">Tab 1 content</TabItem>
+ * @returns {JSX.Element} JSX element.
+ */
 export const TabItem: FC<TabItemProps> = () => null;
 
 export default TabItem;
