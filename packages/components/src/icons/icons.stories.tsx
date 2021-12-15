@@ -1,4 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { CSSProperties } from "react";
 import { FixedSizeList } from "react-window";
 
 import Icon from "../icon";
@@ -16,7 +17,7 @@ export default {
   component: IconComponent,
 } as ComponentMeta<typeof Icon>;
 
-const Row = ({ index, style }: { index: number; style: any }) => {
+const Row = ({ index, style }: { index: number; style: CSSProperties }) => {
   const icon = Object.entries(Icons)[index];
   return (
     <div style={style}>
@@ -25,13 +26,11 @@ const Row = ({ index, style }: { index: number; style: any }) => {
   );
 };
 
-const Template: ComponentStory<typeof Icon> = () => {
-  return (
-    <FixedSizeList height={800} itemCount={Object.keys(Icons).length} itemSize={55} width={800}>
-      {Row}
-    </FixedSizeList>
-  );
-};
+const Template: ComponentStory<typeof Icon> = () => (
+  <FixedSizeList height={800} itemCount={Object.keys(Icons).length} itemSize={55} width={800}>
+    {Row}
+  </FixedSizeList>
+);
 
 export const Default = Template.bind({});
 Default.args = {};

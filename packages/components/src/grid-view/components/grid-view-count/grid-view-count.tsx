@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Children, cloneElement, FC, useEffect } from "react";
+import { Children, cloneElement, FC, ReactElement, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 
 import Axis from "../../../axis";
@@ -102,7 +102,7 @@ export const GridViewCount: FC<GridViewCountProps> = ({ children, className, ...
 
   return (
     <div className={classNames(styles.wrapper, className)}>
-      {Children.map<JSX.Element, any>(children, (child) =>
+      {Children.map(children as ReactElement[], (child) =>
         cloneElement(child, {
           className: classNames(child.props.className, styles.child),
         }),

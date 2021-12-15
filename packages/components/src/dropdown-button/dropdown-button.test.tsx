@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import DropdownButton from "./dropdown-button";
 
 const generateItems = (n = 5) => {
-  let result = [];
+  const result = [];
   for (let i = 0; i < n; i++) {
     result.push({ value: i.toString(), text: `Item ${i}` });
   }

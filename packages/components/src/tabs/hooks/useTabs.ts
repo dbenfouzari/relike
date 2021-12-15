@@ -3,7 +3,7 @@ import { Children, ReactElement, useCallback, useEffect, useMemo, useRef } from 
 import type { TabItemProps } from "../components/tab-item";
 import useDefaultState from "./useDefaultState";
 
-const useTabs = <T extends ReactElement<TabItemProps>[]>(children: T, defaultActiveKey?: string, space: number = 0) => {
+const useTabs = <T extends ReactElement<TabItemProps>[]>(children: T, defaultActiveKey?: string, space = 0) => {
   const [activeIndex, setActiveIndex] = useDefaultState(children, defaultActiveKey);
   const itemRefs = useMemo<HTMLElement[]>(() => Array.from({ length: Children.toArray(children).length }), [children]);
   const barRef = useRef<HTMLDivElement>(null);
@@ -25,9 +25,11 @@ const useTabs = <T extends ReactElement<TabItemProps>[]>(children: T, defaultAct
   );
 
   useEffect(() => {
+    if (!barRef.current) return;
+
     const width = itemRefs[activeIndex].offsetWidth;
-    barRef.current!.style.width = `${width}px`;
-    barRef.current!.style.left = `${getLeft(activeIndex)}px`;
+    barRef.current.style.width = `${width}px`;
+    barRef.current.style.left = `${getLeft(activeIndex)}px`;
   }, [activeIndex, getLeft, itemRefs, space]);
 
   const handleTabChange = useCallback(

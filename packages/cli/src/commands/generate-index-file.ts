@@ -5,6 +5,7 @@ import * as path from "path";
 
 import { generateWarning } from "../generators/index-file";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"));
 
 interface Flags {

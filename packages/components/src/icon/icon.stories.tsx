@@ -21,12 +21,14 @@ export default {
   },
 } as ComponentMeta<typeof Icon>;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Template: ComponentStory<any> = ({ icon, ...args }: { icon: string }) => {
   const originalIcon = Icons[icon as keyof Icons];
 
   return <Icon icon={originalIcon} {...args} />;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const WithCustomColorTemplate: ComponentStory<any> = ({ icon, ...args }: { icon: string }) => {
   const originalIcon = Icons[icon as keyof Icons];
 

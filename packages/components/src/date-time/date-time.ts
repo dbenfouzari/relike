@@ -223,7 +223,7 @@ class DateTime {
     const data = (match as RegExpMatchArray)[0];
 
     const [, hoursString, minutesString] = data.split(/([+-])(\d{2})(\d{2})/).filter(Boolean);
-    let hours = parseInt(hoursString);
+    const hours = parseInt(hoursString);
     const minutes = parseInt(minutesString);
     // hours = sign === '+' ? hours : -hours;
 

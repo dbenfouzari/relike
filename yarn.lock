@@ -6009,7 +6009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.5.0":
+"@typescript-eslint/eslint-plugin@npm:^5.5.0, @typescript-eslint/eslint-plugin@npm:^5.7.0":
   version: 5.7.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.7.0"
   dependencies:
@@ -6095,7 +6095,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.5.0":
+"@typescript-eslint/parser@npm:^5.5.0, @typescript-eslint/parser@npm:^5.7.0":
   version: 5.7.0
   resolution: "@typescript-eslint/parser@npm:5.7.0"
   dependencies:
@@ -13120,13 +13120,17 @@ __metadata:
     "@testing-library/jest-dom": ^5.14.1
     "@types/jest": ^27.0.1
     "@types/node": ^16.6.1
+    "@typescript-eslint/eslint-plugin": ^5.7.0
+    "@typescript-eslint/parser": ^5.7.0
     babel-jest: ^27.0.6
     caniuse-lite: ^1.0.30001251
     chromatic: ^5.9.2
     eslint: ^8.4.1
     eslint-config-react-app: ^7.0.0
     eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-react-hooks: ^4.3.0
     eslint-plugin-simple-import-sort: ^7.0.0
+    eslint-plugin-testing-library: ^5.0.1
     identity-obj-proxy: ^3.0.0
     jest: ^27.0.6
     lerna: ^4.0.0

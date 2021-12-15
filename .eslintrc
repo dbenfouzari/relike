@@ -1,11 +1,15 @@
 {
+  "parser": "@typescript-eslint/parser",
   "plugins": [
+    "@typescript-eslint",
     "prettier",
-    "simple-import-sort"
+    "simple-import-sort",
+    "jsx-a11y",
+    "testing-library"
   ],
   "extends": [
-    "react-app",
-    "react-app/jest"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "overrides": [
     {
@@ -15,6 +19,10 @@
       "rules": {
         "import/no-anonymous-default-export": "off"
       }
+    },
+    {
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
     }
   ],
   "rules": {
@@ -26,6 +34,7 @@
   "ignorePatterns": [
     "node_modules",
     "dist",
-    "storybook-static"
+    "storybook-static",
+    "coverage"
   ]
 }
