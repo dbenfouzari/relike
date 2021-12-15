@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { FC, ReactNode, useCallback } from "react";
+import { CSSProperties, FC, ReactNode, useCallback } from "react";
 import { createUseStyles } from "react-jss";
 
 import Color from "../color";
@@ -8,14 +8,19 @@ import useMergedState from "../hooks/useMergedState";
 import Loader from "../loader";
 import classes from "./toggle.module.scss";
 
+/**
+ * Defines the base Toggle props. Used to be extended.
+ */
 interface BaseToggleProps {
   /**
    * Basically the `checked` state color.
+   *
    * @default Colors.teal[500]
    */
   checkedColor?: Color;
   /**
    * Basically the `unchecked` state color.
+   *
    * @default Colors.grey[300]
    */
   unCheckedColor?: Color;
@@ -43,33 +48,70 @@ interface BaseToggleProps {
   loading?: boolean;
 }
 
+/**
+ * Defines the props for uncontrolled Toggle component.
+ */
 interface UncontrolledToggleProps {
+  /**
+   * Is the Toggle checked ? Should not be set if you want an uncontrolled Toggle.
+   */
   checked?: undefined;
+  /**
+   * Handle Toggle value change. Should not be set if you want an uncontrolled Toggle.
+   */
   onChange?: undefined;
 }
 
+/**
+ * Defines the props for controlled Toggle component.
+ */
 interface ControlledToggleProps {
   /**
-   * Is the Toggle checked ? Should ne be set if you want an uncontrolled Toggle.
+   * Is the Toggle checked ? Should not be set if you want an uncontrolled Toggle.
    */
   checked: boolean;
   /**
-   * Handle Toggle value change. Should ne be set if you want an uncontrolled Toggle.
+   * Handle Toggle value change. Should not be set if you want an uncontrolled Toggle.
    */
   onChange: (nextValue: boolean) => void;
 }
 
+/**
+ * Defines the Toggle props.
+ */
 export type ToggleProps = BaseToggleProps & (UncontrolledToggleProps | ControlledToggleProps);
 
+/** Defines the props given to the `useStyles` */
 interface ToggleStylesProps {
+  /** Toggle value */
   value: boolean;
+  /** Toggle color when it's checked */
   checkedColor: Color;
+  /** Toggle color when it's unchecked */
   unCheckedColor: Color;
+  /** Is the Toggle disabled ? */
   disabled: boolean;
 }
 
+/**
+ * @typedef {Object} Args
+ * @property {Color} checkedColor The checked Toggle color.
+ * @property {Color} unCheckedColor The unchecked Toggle color.
+ * @property {boolean} value Toggle value.
+ * @property {boolean} disabled Is the Toggle disabled ?
+ */
+
 const useStyles = createUseStyles({
-  button: ({ checkedColor, unCheckedColor, value, disabled }: ToggleStylesProps) => {
+  /**
+   * Returns styles for toggle button
+   *
+   * @param {Args} args The arguments.
+   * @example
+   * button({ checkedColor: Color(0xffffffff), uncheckedColor: Color(0xff000000), value: true, disabled: false });
+   * @returns {CSSProperties} The button styles.
+   */
+  button: (args: ToggleStylesProps): CSSProperties => {
+    const { checkedColor, unCheckedColor, value, disabled } = args;
     const color = value ? checkedColor : unCheckedColor;
 
     return {
@@ -85,6 +127,11 @@ const useStyles = createUseStyles({
  *
  * By default, if you don't pass `checked` and `onChange`, it's considered `uncontrolled`.
  * That means you can't control its value nor catch its change.
+ *
+ * @param {ToggleProps} props The toggle props.
+ * @example
+ * <Toggle checked={false} />
+ * @returns {JSX.Element} a JSX element.
  */
 export const Toggle: FC<ToggleProps> = ({
   checked,
