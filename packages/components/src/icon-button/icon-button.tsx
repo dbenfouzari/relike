@@ -4,6 +4,7 @@ import { createUseStyles } from "react-jss";
 
 import Icon from "../icon";
 import Padding from "../padding";
+import Tooltip from "../tooltip";
 import classes from "./icon-button.module.scss";
 
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -16,18 +17,10 @@ export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
    * @default 8
    */
   padding?: Padding;
-}
-
-export interface IconButtonBaseProps {
-  icon: ReturnType<typeof Icon>;
-  onPress?: (event: MouseEvent<HTMLButtonElement>) => void;
-  className?: string;
   /**
-   * The padding around the button's icon. The entire padded icon will react to input gestures.
-   * This property must not be null. It defaults to 8.0 padding on all sides.
-   * @default 8
+   * Get a tooltip and a11y label.
    */
-  padding?: Padding;
+  label?: string;
 }
 
 interface StyledIconProps {
@@ -48,10 +41,10 @@ const useStyles = createUseStyles({
  * @see Icon
  */
 export const IconButton: FC<IconButtonProps> = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ padding = Padding.all(8), className, onPress, icon, ...props }, ref) => {
+  ({ label, padding = Padding.all(8), className, onPress, icon, ...props }, ref) => {
     const styles = useStyles({ padding });
 
-    return (
+    const rendered = (
       <button
         ref={ref}
         onClick={onPress}
@@ -68,6 +61,8 @@ export const IconButton: FC<IconButtonProps> = forwardRef<HTMLButtonElement, Ico
         {icon}
       </button>
     );
+
+    return label ? <Tooltip label={label}>{rendered}</Tooltip> : rendered;
   },
 );
 

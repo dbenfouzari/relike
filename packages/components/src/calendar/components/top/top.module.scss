@@ -1,11 +1,7 @@
 .top {
   max-width: 400px;
-  align-items: center;
   margin: 12px auto;
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  place-items: center;
   color: var(--secondary-color);
 
   .center {
