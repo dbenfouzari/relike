@@ -2,7 +2,7 @@
 
 exports[`Button should render successfully when disabled 1`] = `
 <button
-  class="jsx-3565249460 button button__disabled button__medium"
+  class="jsx-1787608142 button button__disabled button__medium"
   disabled=""
 >
   <span
@@ -16,7 +16,7 @@ exports[`Button should render successfully when disabled 1`] = `
 
 exports[`Button should render successfully when lightness is high 1`] = `
 <button
-  class="jsx-422034462 button button__high"
+  class="jsx-1658600500 button button__high"
 >
   <span
     class="elm-0-2-1 elm-d5-0-2-7"
@@ -29,7 +29,7 @@ exports[`Button should render successfully when lightness is high 1`] = `
 
 exports[`Button should render successfully when lightness is low 1`] = `
 <button
-  class="jsx-4112808095 button button__medium"
+  class="jsx-1850165365 button button__medium"
 >
   <span
     class="elm-0-2-1 elm-d4-0-2-6"
@@ -42,7 +42,7 @@ exports[`Button should render successfully when lightness is low 1`] = `
 
 exports[`Button should render successfully with high emphasis 1`] = `
 <button
-  class="jsx-3565249460 button button__high"
+  class="jsx-1787608142 button button__high"
 >
   <span
     class="elm-0-2-1 elm-d2-0-2-4"
@@ -55,10 +55,10 @@ exports[`Button should render successfully with high emphasis 1`] = `
 
 exports[`Button should render successfully with icon 1`] = `
 <button
-  class="jsx-3565249460 button button__medium"
+  class="jsx-1787608142 button button__medium"
 >
   <span
-    class="jsx-2935016879 icon material-icons icon"
+    class="jsx-2439414882 icon material-icons icon"
   >
     access_time
   </span>
@@ -73,7 +73,7 @@ exports[`Button should render successfully with icon 1`] = `
 
 exports[`Button should render successfully with low emphasis 1`] = `
 <button
-  class="jsx-3565249460 button button__low"
+  class="jsx-1787608142 button button__low"
 >
   <span
     class="elm-0-2-1 elm-d0-0-2-2"
@@ -86,7 +86,7 @@ exports[`Button should render successfully with low emphasis 1`] = `
 
 exports[`Button should render successfully with medium emphasis 1`] = `
 <button
-  class="jsx-3565249460 button button__medium"
+  class="jsx-1787608142 button button__medium"
 >
   <span
     class="elm-0-2-1 elm-d1-0-2-3"

@@ -124,8 +124,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       return mainColor;
     }, [emphasis, mainColor]);
 
-    console.log({ foregroundColor: foregroundColor.toRGBA() });
-
     return (
       <button
         disabled={disabled}
