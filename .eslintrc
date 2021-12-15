@@ -41,7 +41,7 @@
         "KeyboardEvent"
       ]
     }],
-    "jsdoc/require-jsdoc": ["error", {
+    "jsdoc/require-jsdoc": ["warn", {
       "contexts": [
         "ArrowFunctionExpression",
         "FunctionDeclaration",
