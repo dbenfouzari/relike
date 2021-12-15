@@ -20,10 +20,16 @@ describe("GridView.Count", () => {
   });
 
   it("should render successfully with horizontal scroll", () => {
+    const consoleWarnMock = jest.spyOn(console, "warn").mockImplementation();
+
     render(
       <GridViewCount scrollDirection={Axis.horizontal} crossAxisCount={4}>
         {items}
       </GridViewCount>,
+    );
+
+    expect(consoleWarnMock).toHaveBeenCalledWith(
+      "[GridView.Count] You used Axis.horizontal as scrollDirection. Be warned that strange behaviour may occur with this.",
     );
   });
 });

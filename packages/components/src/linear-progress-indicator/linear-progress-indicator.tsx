@@ -13,16 +13,19 @@ export interface LinearProgressIndicatorProps {
   value: number;
   /**
    * Color of the outer line.
+   *
    * @default Colors.blue[300]
    */
   backgroundColor?: Color;
   /**
    * Color of the inner line, that one that moves.
+   *
    * @default Colors.blue[600]
    */
   color?: Color;
   /**
    * Lines height. It defines how big is the linear progress indicator.
+   *
    * @default 4
    */
   height?: number;
@@ -53,6 +56,8 @@ const useValueStyles = createUseStyles({
 /**
  * A widget that shows progress along a line.
  *
+ * @param root0
+ * @param root0.value
  * @example
  * <LinearProgressIndicator value={40} />
  */
@@ -63,7 +68,7 @@ export const LinearProgressIndicator: FC<LinearProgressIndicatorProps> = ({ valu
   const valueStyles = useValueStyles({ value });
 
   return (
-    <div className={basicStyles.wrapper}>
+    <div data-testid="linear-progress" className={basicStyles.wrapper}>
       <div className={classNames(basicStyles.inner, valueStyles.inner)} />
     </div>
   );

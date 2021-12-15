@@ -140,6 +140,8 @@ describe("DateTime", () => {
     });
 
     it("`add` should add 1 year", () => {
+      const consoleWarnMock = jest.spyOn(console, "warn").mockImplementation();
+
       const date = new DateTime({ year: 2021, month: DateTime.august, day: 6 });
       const duration = Duration.years(1);
 
@@ -148,6 +150,10 @@ describe("DateTime", () => {
       expect(finalDate.year).toEqual(2022);
       expect(finalDate.month).toEqual(8);
       expect(finalDate.day).toEqual(6);
+
+      expect(consoleWarnMock).toHaveBeenCalledWith(
+        "Be careful when you work with years. This library does not provide a really good way to handle these values since it's not the same every month, every year.",
+      );
     });
 
     it("`subtract` should subtract a date", () => {

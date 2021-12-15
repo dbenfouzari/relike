@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinearProgressIndicator should render successfully 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d0-0-2-3"
+  data-testid="linear-progress"
+>
+  <div
+    class="inner-0-2-2 inner-d1-0-2-4 inner-0-2-5 inner-d0-0-2-6"
+  />
+</div>
+`;

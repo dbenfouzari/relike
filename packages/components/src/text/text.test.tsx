@@ -7,10 +7,14 @@ import Text, { getCSSOverflow } from "./text";
 
 describe("Text", () => {
   it("getCSSOverflow should return correct value", () => {
+    const consoleWarnMock = jest.spyOn(console, "warn").mockImplementation();
+
     expect(getCSSOverflow(TextOverflow.fade)).toEqual(undefined);
     expect(getCSSOverflow(TextOverflow.clip)).toEqual("hidden");
     expect(getCSSOverflow(TextOverflow.ellipsis)).toEqual("ellipsis");
     expect(getCSSOverflow(TextOverflow.visible)).toEqual("visible");
+
+    expect(consoleWarnMock).toHaveBeenCalledWith("[TextOverflow] - TextOverflow.fade is not yet implemented.");
   });
 
   it("should render successfully", () => {
