@@ -6,42 +6,55 @@ exports[`Calendar should handle previous month 1`] = `
   data-testid="calendar"
 >
   <div
-    class="top"
+    class="toolbar toolbar__hasBefore toolbar__hasAfter toolbar__hasLabel top"
+    role="toolbar"
   >
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
-      data-testid="prev-month"
-      tabindex="0"
-    >
-      <span
-        class="jsx-579726175 icon material-icons"
-      >
-        arrow_left
-      </span>
-    </button>
     <div
-      class="center"
+      class="toolbar_before"
     >
-      <span
-        data-testid="month"
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
+        data-testid="prev-month"
+        tabindex="0"
       >
-        august
-      </span>
-      <span>
-        2021
-      </span>
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_left
+        </span>
+      </button>
     </div>
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
-      data-testid="next-month"
-      tabindex="0"
+    <div
+      class="toolbar_label"
     >
-      <span
-        class="jsx-579726175 icon material-icons"
+      <div
+        class="center"
       >
-        arrow_right
-      </span>
-    </button>
+        <span
+          data-testid="month"
+        >
+          august
+        </span>
+        <span>
+          2021
+        </span>
+      </div>
+    </div>
+    <div
+      class="toolbar_after"
+    >
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
+        data-testid="next-month"
+        tabindex="0"
+      >
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_right
+        </span>
+      </button>
+    </div>
   </div>
   <div
     class="inner"
@@ -640,42 +653,55 @@ exports[`Calendar should handle previous month 2`] = `
   data-testid="calendar"
 >
   <div
-    class="top"
+    class="toolbar toolbar__hasBefore toolbar__hasAfter toolbar__hasLabel top"
+    role="toolbar"
   >
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
-      data-testid="prev-month"
-      tabindex="0"
-    >
-      <span
-        class="jsx-579726175 icon material-icons"
-      >
-        arrow_left
-      </span>
-    </button>
     <div
-      class="center"
+      class="toolbar_before"
     >
-      <span
-        data-testid="month"
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
+        data-testid="prev-month"
+        tabindex="0"
       >
-        july
-      </span>
-      <span>
-        2021
-      </span>
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_left
+        </span>
+      </button>
     </div>
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
-      data-testid="next-month"
-      tabindex="0"
+    <div
+      class="toolbar_label"
     >
-      <span
-        class="jsx-579726175 icon material-icons"
+      <div
+        class="center"
       >
-        arrow_right
-      </span>
-    </button>
+        <span
+          data-testid="month"
+        >
+          july
+        </span>
+        <span>
+          2021
+        </span>
+      </div>
+    </div>
+    <div
+      class="toolbar_after"
+    >
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
+        data-testid="next-month"
+        tabindex="0"
+      >
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_right
+        </span>
+      </button>
+    </div>
   </div>
   <div
     class="inner"
@@ -1175,42 +1201,55 @@ exports[`Calendar should handle previous month 3`] = `
   data-testid="calendar"
 >
   <div
-    class="top"
+    class="toolbar toolbar__hasBefore toolbar__hasAfter toolbar__hasLabel top"
+    role="toolbar"
   >
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
-      data-testid="prev-month"
-      tabindex="0"
-    >
-      <span
-        class="jsx-579726175 icon material-icons"
-      >
-        arrow_left
-      </span>
-    </button>
     <div
-      class="center"
+      class="toolbar_before"
     >
-      <span
-        data-testid="month"
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d2-0-2-4 wrapper__clickable"
+        data-testid="prev-month"
+        tabindex="0"
       >
-        september
-      </span>
-      <span>
-        2021
-      </span>
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_left
+        </span>
+      </button>
     </div>
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
-      data-testid="next-month"
-      tabindex="0"
+    <div
+      class="toolbar_label"
     >
-      <span
-        class="jsx-579726175 icon material-icons"
+      <div
+        class="center"
       >
-        arrow_right
-      </span>
-    </button>
+        <span
+          data-testid="month"
+        >
+          september
+        </span>
+        <span>
+          2021
+        </span>
+      </div>
+    </div>
+    <div
+      class="toolbar_after"
+    >
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d3-0-2-5 wrapper__clickable"
+        data-testid="next-month"
+        tabindex="0"
+      >
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_right
+        </span>
+      </button>
+    </div>
   </div>
   <div
     class="inner"
@@ -1710,42 +1749,55 @@ exports[`Calendar should render successfully 1`] = `
   data-testid="calendar"
 >
   <div
-    class="top"
+    class="toolbar toolbar__hasBefore toolbar__hasAfter toolbar__hasLabel top"
+    role="toolbar"
   >
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2 wrapper__clickable"
-      data-testid="prev-month"
-      tabindex="0"
-    >
-      <span
-        class="jsx-579726175 icon material-icons"
-      >
-        arrow_left
-      </span>
-    </button>
     <div
-      class="center"
+      class="toolbar_before"
     >
-      <span
-        data-testid="month"
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2 wrapper__clickable"
+        data-testid="prev-month"
+        tabindex="0"
       >
-        august
-      </span>
-      <span>
-        2021
-      </span>
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_left
+        </span>
+      </button>
     </div>
-    <button
-      class="wrapper wrapper-0-2-1 wrapper-d1-0-2-3 wrapper__clickable"
-      data-testid="next-month"
-      tabindex="0"
+    <div
+      class="toolbar_label"
     >
-      <span
-        class="jsx-579726175 icon material-icons"
+      <div
+        class="center"
       >
-        arrow_right
-      </span>
-    </button>
+        <span
+          data-testid="month"
+        >
+          august
+        </span>
+        <span>
+          2021
+        </span>
+      </div>
+    </div>
+    <div
+      class="toolbar_after"
+    >
+      <button
+        class="wrapper wrapper-0-2-1 wrapper-d1-0-2-3 wrapper__clickable"
+        data-testid="next-month"
+        tabindex="0"
+      >
+        <span
+          class="jsx-579726175 icon material-icons"
+        >
+          arrow_right
+        </span>
+      </button>
+    </div>
   </div>
   <div
     class="inner"
