@@ -1,8 +1,8 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Icon from "../icon";
 import Icons from "../icons";
-import Toolbar from "./toolbar";
+import Toolbar, { ToolbarProps } from "./toolbar";
 
 export default {
   title: "Toolbar",
@@ -12,9 +12,17 @@ export default {
     after: { control: { disable: true } },
     children: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Toolbar>;
+} as Meta<ToolbarProps>;
 
-const Template: ComponentStory<typeof Toolbar> = (args) => <Toolbar {...args} />;
+/**
+ * Default template
+ *
+ * @param {ToolbarProps} args The toolbar props
+ * @example
+ * <Template children={<span>Hello</span>} />
+ * @returns {JSX.Element} The Toolbar component.
+ */
+const Template: Story<ToolbarProps> = (args) => <Toolbar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
