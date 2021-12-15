@@ -10,6 +10,7 @@ import classes from "./text-field.module.scss";
  */
 type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type">;
 
+/** Defines props for TextField. */
 export interface TextFieldProps extends InputProps {
   /**
    * Override style
@@ -23,6 +24,11 @@ export interface TextFieldProps extends InputProps {
 
 /**
  * A **TextField** lets the user enter text, either with hardware keyboard or with an onscreen keyboard.
+ *
+ * @param {TextFieldProps} props The TextField props.
+ * @example
+ * <TextField obscureText value="toto" />
+ * @returns {JSX.Element} The JSX element.
  */
 export const TextField: FC<TextFieldProps> = ({ className, obscureText, ...props }) => (
   <Input
