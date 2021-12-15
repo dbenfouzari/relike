@@ -1,3 +1,11 @@
+/**
+ * The available text overflows.
+ *
+ * - `clip` - Clip the overflowing text to fix its container.
+ * - `fade` - Fade the overflowing text to transparent.
+ * - `ellipsis` - Use an ellipsis to indicate that the text has overflowed.
+ * - `visible` - Render overflowing text outside its container.
+ */
 enum TextOverflow {
   /**
    * Clip the overflowing text to fix its container.
@@ -12,7 +20,7 @@ enum TextOverflow {
    */
   ellipsis,
   /**
-   * Render overflowing text outside of its container.
+   * Render overflowing text outside its container.
    */
   visible,
 }

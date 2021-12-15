@@ -2,6 +2,9 @@ import Color from "../color";
 import FontWeight from "../font-weight";
 import TextOverflow from "../text-overflow";
 
+/**
+ * Defines props used to build a TextStyle
+ */
 export interface TextStyleConstructor {
   /**
    * The color to use as the background for the text.
@@ -49,9 +52,10 @@ export interface TextStyleConstructor {
    * The typeface thickness to use when painting the text (e.g., bold).
    */
   fontWeight?: FontWeight;
-  /** ### Line height
+  /**
+   * ### Line height
    *
-   * By default, text will layout with line height as defined by the font.
+   * By default, text will lay out with line height as defined by the font.
    * Font-metrics defined line height may be taller or shorter than the font size.
    * The [height] property allows manual adjustment of the height of the line as
    * a multiple of [fontSize]. For most fonts, setting [height] to 1.0 is not
@@ -66,7 +70,7 @@ export interface TextStyleConstructor {
    *
    * @example
    * <Text style={ TextStyle(height: 5, fontSize: 10) }>
-   *   Ladies and gentlemen, you coulda been anywhere in the world tonight, but you’re here with us in New York City.
+   *   Ladies and gentlemen, you could have been anywhere in the world tonight, but you’re here with us in New York City.
    * </Text>
    */
   height?: number;
@@ -134,9 +138,10 @@ class TextStyle {
    * The typeface thickness to use when painting the text (e.g., bold).
    */
   public readonly fontWeight?: FontWeight;
-  /** ### Line height
+  /**
+   * ### Line height
    *
-   * By default, text will layout with line height as defined by the font.
+   * By default, text will lay out with line height as defined by the font.
    * Font-metrics defined line height may be taller or shorter than the font size.
    * The [height] property allows manual adjustment of the height of the line as
    * a multiple of [fontSize]. For most fonts, setting [height] to 1.0 is not
@@ -151,7 +156,7 @@ class TextStyle {
    *
    * @example
    * <Text style={ TextStyle(height: 5, fontSize: 10) }>
-   *   Ladies and gentlemen, you coulda been anywhere in the world tonight, but you’re here with us in New York City.
+   *   Ladies and gentlemen, you could have been anywhere in the world tonight, but you’re here with us in New York City.
    * </Text>
    */
   public readonly height?: number;
@@ -181,6 +186,13 @@ class TextStyle {
    */
   public readonly wordSpacing?: number;
 
+  /**
+   * Builds a TextStyle
+   *
+   * @param {TextStyleConstructor} args The arguments.
+   * @example
+   * new TextStyle({ color: textColor, fontSize: 13 })
+   */
   constructor({
     backgroundColor,
     color,
@@ -214,11 +226,20 @@ class TextStyle {
    * first value in [fontFamilyFallback] acts as the preferred/first font
    * family. When neither is provided, then the default platform font will
    * be used.
+   *
+   * @returns {[string]} The fonts
    */
   public get fontFamily() {
     return [this._fontFamily, ...(this.fontFamilyFallback || [])].join(", ");
   }
 
+  /**
+   * Returns a string representation of TextStyle.
+   *
+   * @example
+   * new TextStyle({ color: Colors.red, fontSize: 13 }).toString();
+   * @returns {string} the string representation of TextStyle
+   */
   public toString() {
     return `TextStyle({
   backgroundColor: ${this.backgroundColor},
@@ -233,6 +254,16 @@ class TextStyle {
 })`;
   }
 
+  /**
+   * Creates a new TextStyle with args override.
+   *
+   * @param {TextStyleConstructor} args The new args.
+   * @example
+   * const textStyle = new TextStyle({ color: Colors.red, fontSize: 13 });
+   * const blackBgTextStyle = textStyle.copyWith({ backgroundColor: Colors.black });
+   * const whiteFgTextStyle = blackBgTextStyle.copyWith({ color: Colors.white }) // { color: Colors.white, fontSize: 13, backgroundColor: Colors.black }
+   * @returns {TextStyle} A new TextStyle
+   */
   public copyWith({
     backgroundColor,
     color,
