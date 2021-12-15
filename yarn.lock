@@ -2054,14 +2054,14 @@ __metadata:
     "@hastics/cli": ^0.0.1
     "@mdx-js/react": ^1.6.22
     "@popperjs/core": ^2.9.3
-    "@storybook/addon-a11y": ^6.3.8
-    "@storybook/addon-actions": ^6.3.7
-    "@storybook/addon-docs": ^6.3.7
-    "@storybook/addon-essentials": ^6.3.7
-    "@storybook/addon-links": ^6.3.7
-    "@storybook/node-logger": ^6.3.7
+    "@storybook/addon-a11y": ^6.4.9
+    "@storybook/addon-actions": ^6.4.9
+    "@storybook/addon-docs": ^6.4.9
+    "@storybook/addon-essentials": ^6.4.9
+    "@storybook/addon-links": ^6.4.9
+    "@storybook/node-logger": ^6.4.9
     "@storybook/preset-create-react-app": ^3.2.0
-    "@storybook/react": ^6.3.7
+    "@storybook/react": ^6.4.9
     "@storybook/storybook-deployer": ^2.8.10
     "@testing-library/react": ^12.1.2
     "@testing-library/react-hooks": ^7.0.1
@@ -3992,7 +3992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-a11y@npm:^6.3.8":
+"@storybook/addon-a11y@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/addon-a11y@npm:6.4.9"
   dependencies:
@@ -4024,7 +4024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-actions@npm:6.4.9, @storybook/addon-actions@npm:^6.3.7":
+"@storybook/addon-actions@npm:6.4.9, @storybook/addon-actions@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/addon-actions@npm:6.4.9"
   dependencies:
@@ -4115,7 +4115,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:6.4.9, @storybook/addon-docs@npm:^6.3.7":
+"@storybook/addon-docs@npm:6.4.9, @storybook/addon-docs@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/addon-docs@npm:6.4.9"
   dependencies:
@@ -4213,7 +4213,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-essentials@npm:^6.3.7":
+"@storybook/addon-essentials@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/addon-essentials@npm:6.4.9"
   dependencies:
@@ -4257,7 +4257,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^6.3.7":
+"@storybook/addon-links@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/addon-links@npm:6.4.9"
   dependencies:
@@ -4906,7 +4906,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/node-logger@npm:6.4.9, @storybook/node-logger@npm:^6.3.7":
+"@storybook/node-logger@npm:6.4.9, @storybook/node-logger@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/node-logger@npm:6.4.9"
   dependencies:
@@ -4993,7 +4993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:^6.3.7":
+"@storybook/react@npm:^6.4.9":
   version: 6.4.9
   resolution: "@storybook/react@npm:6.4.9"
   dependencies:
@@ -5934,21 +5934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webpack@npm:^4.41.13":
-  version: 4.41.31
-  resolution: "@types/webpack@npm:4.41.31"
-  dependencies:
-    "@types/node": "*"
-    "@types/tapable": ^1
-    "@types/uglify-js": "*"
-    "@types/webpack-sources": "*"
-    anymatch: ^3.0.0
-    source-map: ^0.6.0
-  checksum: 8aa4b4ad68bb7a6ee5bd027005014e6242434162ed4c14cd251713ad6041e42bf7629fc56a5edc5a2124b49cc0dce273d6ee3386fae9a9cfe02e1f7e82087ea2
-  languageName: node
-  linkType: hard
-
-"@types/webpack@npm:^4.41.26, @types/webpack@npm:^4.41.8":
+"@types/webpack@npm:^4.41.13, @types/webpack@npm:^4.41.26, @types/webpack@npm:^4.41.8":
   version: 4.41.32
   resolution: "@types/webpack@npm:4.41.32"
   dependencies:
