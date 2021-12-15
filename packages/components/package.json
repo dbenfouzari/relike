@@ -23,7 +23,7 @@
     "storybook:dev": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "storybook:deploy": "storybook-to-ghpages",
-    "chromatic": "CI=true npx chromatic --exit-once-uploaded --ci --project-token 97eda06526d3"
+    "chromatic": "CI=true chromatic --exit-once-uploaded --ci --project-token 97eda06526d3"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
