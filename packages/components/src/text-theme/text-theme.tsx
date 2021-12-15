@@ -1,6 +1,9 @@
 import TextStyle from "../text-style";
 import { TextStyleConstructor } from "../text-style/text-style";
 
+/**
+ * Defines props to build a TextTheme.
+ */
 interface TextThemeConstructor {
   /**
    * The largest text on the screen, reserved for short, important text or numerals.
@@ -35,7 +38,7 @@ interface TextThemeConstructor {
    */
   bodyText2?: TextStyle;
   /**
-   * Smaller than headline, reserved for medium-emphasis text that is shorter in length.
+   * Smaller than headline, reserved for medium-emphasis text that is shorter.
    */
   subtitle1?: TextStyle;
   /**
@@ -90,7 +93,7 @@ class TextTheme {
    */
   bodyText2?: TextStyle;
   /**
-   * Smaller than headline, reserved for medium-emphasis text that is shorter in length.
+   * Smaller than headline, reserved for medium-emphasis text that is shorter.
    */
   subtitle1?: TextStyle;
   /**
@@ -110,6 +113,21 @@ class TextTheme {
    */
   overline?: TextStyle;
 
+  /**
+   * Build a TextTheme based on data
+   *
+   * @param {TextThemeConstructor} args The arguments.
+   * @example
+   * new TextTheme({
+   *   headline1: new TextStyle({
+   *     fontFamily: "Roboto",
+   *     fontSize: 96,
+   *     fontWeight: FontWeight.light,
+   *     letterSpacing: -1.5,
+   *     color: Colors.black54,
+   *   }),
+   * }) // returns a new TextTheme.
+   */
   constructor({
     headline1,
     headline2,
@@ -140,6 +158,14 @@ class TextTheme {
     this.overline = overline;
   }
 
+  /**
+   * Returns a new TextTheme based on overrides.
+   *
+   * @param {TextThemeConstructor} args The arguments
+   * @example
+   * Typography.blackMountainView.copyWith({ headline1: ... })
+   * @returns {TextTheme} A new TextTheme with new values.
+   */
   copyWith({
     headline1,
     headline2,
@@ -172,6 +198,14 @@ class TextTheme {
     });
   }
 
+  /**
+   * Overrides all TextTheme data with new styles
+   *
+   * @param {TextStyleConstructor} args The new styles.
+   * @example
+   * Typography.blackMountainView.apply({ fontFamily: "Roboto" })
+   * @returns {TextTheme} A new TextTheme with all values updated.
+   */
   apply({
     backgroundColor,
     color,
