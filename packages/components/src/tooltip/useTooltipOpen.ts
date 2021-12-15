@@ -23,7 +23,7 @@ const tooltipMouseToggle = (() => {
     globalListener = debounce((evt) => {
       if (!tooltips || !evt.target) return;
       for (const { open, close, anchorElement } of tooltips) {
-        if (anchorElement.contains(evt.target as any)) {
+        if (anchorElement.contains(evt.target)) {
           open();
         } else {
           close();

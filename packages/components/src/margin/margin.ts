@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 import EdgeInsets from "../edge-insets";
 import { Maybe } from "../types";
 
-const isNull = <T extends any>(value: Maybe<T>) => value === null;
+const isNull = <T>(value: Maybe<T>) => value === null;
 
 class Margin extends EdgeInsets {
   /**

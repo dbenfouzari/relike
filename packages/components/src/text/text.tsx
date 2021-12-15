@@ -83,12 +83,12 @@ export const Text = forwardRef(
       children,
       className,
     }: TextProps,
-    ref: ForwardedRef<HTMLElement>,
+    ref: ForwardedRef<HTMLHeadingElement>,
   ) => {
     const styles = useStyles({ style });
 
     return (
-      <AsElement data-testid="text-elm" ref={ref as any} className={classNames(styles.elm, className)}>
+      <AsElement data-testid="text-elm" ref={ref} className={classNames(styles.elm, className)}>
         {children}
       </AsElement>
     );

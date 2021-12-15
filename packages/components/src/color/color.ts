@@ -76,7 +76,7 @@ class Color {
   /**
    * Create a [Color] from hue, saturation and lightness.
    */
-  static fromHSLA(hue: number, saturation: number, lightness: number, alpha: number = 255) {
+  static fromHSLA(hue: number, saturation: number, lightness: number, alpha = 255) {
     assert(hue >= 0, "Hue should be between 0 and 360");
     assert(hue <= 360, "Hue should be between 0 and 360");
     assert(saturation >= 0, "Saturation should be between 0 and 100");

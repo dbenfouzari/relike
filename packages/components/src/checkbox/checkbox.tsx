@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
 });
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ className, color = Colors.blue[400], classNames, defaultChecked = false, label, disabled, ...props }, ref) => {
+  ({ className, color = Colors.blue[400], classNames, defaultChecked = false, label, disabled }, ref) => {
     const [isChecked, setIsChecked] = useState(defaultChecked);
     const styles = useStyles({ color });
 

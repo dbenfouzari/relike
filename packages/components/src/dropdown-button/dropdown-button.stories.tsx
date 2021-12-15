@@ -6,7 +6,7 @@ import DropdownButton, { DropdownButtonProps } from "./dropdown-button";
 import classes from "./dropdown-button.stories.module.scss";
 
 const generateItems = (n = 100) => {
-  let result = [];
+  const result = [];
   for (let i = 0; i < n; i++) {
     result.push({ value: i.toString(), text: `Item ${i}` });
   }

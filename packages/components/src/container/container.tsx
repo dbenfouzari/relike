@@ -99,11 +99,13 @@ export const Container = forwardRef<unknown, ContainerProps>(
   ({ children, as = "div", alignment, className, ...rest }, ref) => {
     const styles = useStyles(rest);
 
+    const restWithDataId = rest as typeof rest & { "data-testid": string };
+
     return createElement(as, {
       ref,
       className: classnames(styles.container, className),
       children: children ? alignment ? <Align alignment={alignment}>{children}</Align> : children : null,
-      "data-testid": (rest as any)["data-testid"],
+      "data-testid": restWithDataId["data-testid"],
     });
   },
 );

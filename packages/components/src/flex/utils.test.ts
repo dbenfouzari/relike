@@ -30,7 +30,7 @@ describe("Flex/utils", () => {
     expect(getFlexDirection(TextDirection.ltr, VerticalDirection.down, Axis.vertical)).toEqual("column");
     expect(getFlexDirection(TextDirection.ltr, VerticalDirection.up, Axis.vertical)).toEqual("column-reverse");
 
-    // @ts-expect-error
+    // @ts-expect-error Function takes arguments.
     expect(getFlexDirection()).toEqual("row");
   });
 });

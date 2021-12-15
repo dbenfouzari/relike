@@ -6,7 +6,7 @@ abstract class AlignmentGeometry {
   /// values less than -1 represent positions to the left of the left edge,
   /// and values greater than 1 represent positions to the right of the right
   /// edge.
-  public x: number = 0;
+  public x = 0;
 
   /// The distance fraction in the vertical direction.
   ///
@@ -14,7 +14,7 @@ abstract class AlignmentGeometry {
   /// corresponds to the bottommost edge. Values are not limited to that range;
   /// values less than -1 represent positions above the top, and values
   /// greater than 1 represent positions below the bottom.
-  public y: number = 0;
+  public y = 0;
 
   protected constructor(x: number, y: number) {
     this.x = x;

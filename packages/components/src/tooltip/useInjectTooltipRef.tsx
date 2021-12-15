@@ -27,6 +27,7 @@ export const useInjectTooltipRef = (
 ): ReactNode => {
   return useMemo(() => {
     const ariaProps = { "aria-describedby": isOpen ? id : undefined };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const untypedChildren = children as any;
 
     if (

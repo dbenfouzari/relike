@@ -74,7 +74,7 @@ export const Stepper: StepperComponent = ({
   titleColor = Colors.black,
 }) => (
   <div className={classes.wrapper}>
-    {Children.map<JSX.Element, any>(children, (child, index) => (
+    {Children.map(children as ReactElement<StepperItemProps>[], (child, index) => (
       <InternalStepperItem
         key={index}
         isCurrent={index === current}

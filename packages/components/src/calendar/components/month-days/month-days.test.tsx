@@ -1,4 +1,4 @@
-// @ts-ignore Don't know how to do it properly
+// @ts-expect-error Don't know how to do it properly
 import * as chr from "chromatic/isChromatic";
 
 import DateTime from "../../../date-time";
@@ -20,7 +20,7 @@ describe("Calendar/MonthDays", () => {
   });
 
   it("in Chromatic, getIsToday should return correct value", () => {
-    // @ts-ignore Don't know how to do it properly
+    // @ts-expect-error Don't know how to do it properly
     jest.spyOn(chr, "default").mockImplementation(() => true);
 
     expect(getIsToday(DateTime.now())).toBe(false);

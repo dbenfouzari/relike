@@ -1,4 +1,5 @@
 import { act, renderHook } from "@testing-library/react-hooks";
+import { ChangeEvent } from "react";
 
 import useTextEditingController from "./useTextEditingController";
 
@@ -21,7 +22,7 @@ describe("TextField/useTextEditingController", () => {
     act(() => {
       result.current.handleSelectionChange({
         target: { selectionStart: 0, selectionEnd: 5, value: "Hello Tests" },
-      } as any);
+      } as ChangeEvent<HTMLInputElement>);
     });
 
     expect(result.current.selectedText).toBe("Hello");
@@ -33,7 +34,7 @@ describe("TextField/useTextEditingController", () => {
     act(() => {
       result.current.handleChange({
         target: { value: "Toto" },
-      } as any);
+      } as ChangeEvent<HTMLInputElement>);
     });
 
     expect(result.current.value).toBe("Toto");

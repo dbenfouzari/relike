@@ -201,7 +201,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(0, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 255, 0, 0);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
 
@@ -209,7 +209,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(0, 100, 40, 255);
       const colorRGBA = Color.fromARGB(255, 204, 0, 0);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
 
@@ -217,7 +217,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(0, 80, 40, 255);
       const colorRGBA = Color.fromARGB(255, 184, 20, 20);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
   });
@@ -227,7 +227,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(120, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 0, 255, 0);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
 
@@ -235,7 +235,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(100, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 85, 255, 0);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
   });
@@ -245,7 +245,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(240, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 0, 0, 255);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
 
@@ -253,7 +253,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(170, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 0, 255, 213);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
 
@@ -261,7 +261,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(190, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 0, 213, 255);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
   });
@@ -271,7 +271,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(260, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 85, 0, 255);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
 
@@ -279,7 +279,7 @@ describe("Color", () => {
       const colorHSL = Color.fromHSLA(310, 100, 50, 255);
       const colorRGBA = Color.fromARGB(255, 255, 0, 212);
 
-      // @ts-expect-error
+      // @ts-expect-error `value` is private
       expect(colorHSL.value).toEqual(colorRGBA.value);
     });
   });

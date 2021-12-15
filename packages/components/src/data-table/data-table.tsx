@@ -4,7 +4,8 @@ import { DataTableColumnProps, DataTableData, DataTableProps } from "./types";
 
 export const buildDataColumn =
   <T extends DataTableData>() =>
-  <K extends keyof T[number]>(_props: DataTableColumnProps<T, K>) =>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  <K extends keyof T[number]>(props: DataTableColumnProps<T, K>) =>
     null;
 
 export const DataTable = <D extends DataTableData>({ data, children, renderRow, classNames }: DataTableProps<D>) => (

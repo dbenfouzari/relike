@@ -7,8 +7,6 @@ import Colors from "../../../colors";
 import useSkeletonContext from "../../hooks/useSkeletonContext";
 import classes from "./title.module.scss";
 
-export interface SkeletonTitleProps {}
-
 interface SkeletonTitleStylesProps {
   color: Color;
 }
@@ -22,7 +20,7 @@ const useStyles = createUseStyles({
 /**
  * You can display a **[Skeleton.Title]** to mimic a title while content is loading.
  */
-export const SkeletonTitle: FC<SkeletonTitleProps> = () => {
+export const SkeletonTitle: FC = () => {
   const { active = false, color = Colors.grey[200] } = useSkeletonContext();
   const styles = useStyles({ color });
 

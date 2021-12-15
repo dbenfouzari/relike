@@ -70,7 +70,7 @@ interface ToggleStylesProps {
 
 const useStyles = createUseStyles({
   button: ({ checkedColor, unCheckedColor, value, disabled }: ToggleStylesProps) => {
-    let color = value ? checkedColor : unCheckedColor;
+    const color = value ? checkedColor : unCheckedColor;
 
     return {
       backgroundColor: color.toRGBA(),

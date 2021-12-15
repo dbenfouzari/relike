@@ -30,7 +30,7 @@ describe("Result", () => {
       <Result
         title="Submission Failed"
         subtitle="Please check and modify the following information before resubmitting."
-        // @ts-expect-error
+        // @ts-expect-error Because this status does not exist
         status="unknown"
       />,
     );

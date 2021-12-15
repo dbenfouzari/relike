@@ -3,7 +3,7 @@ import { FC, useRef } from "react";
 
 import useOnClickOutside from "./useOnClickOutside";
 
-const Wrapper: FC<{ handler: Function }> = ({ handler }) => {
+const Wrapper: FC<{ handler: (event: MouseEvent | TouchEvent) => unknown }> = ({ handler }) => {
   const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, handler);
 

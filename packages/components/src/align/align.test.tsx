@@ -136,7 +136,7 @@ describe("Align", () => {
 
   it("should render successfully with bad alignment", () => {
     render(
-      // @ts-expect-error
+      // @ts-expect-error `alignment` must be an Alignment, not `undefined`.
       <Align alignment={undefined}>
         <span>Hello Test</span>
       </Align>,

@@ -34,7 +34,7 @@ export interface SkeletonProps {
    * You can also pass custom paragraph props to customize it.
    * @default true
    */
-  paragraph?: boolean | SkeletonParagraphProps<any>;
+  paragraph?: boolean | SkeletonParagraphProps<number>;
   /**
    * You can completely render what you want.
    *

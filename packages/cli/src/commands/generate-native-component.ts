@@ -9,6 +9,7 @@ import {
   generateTestFile,
 } from "../generators/react-native";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"));
 
 interface Options {
