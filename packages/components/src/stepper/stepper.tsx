@@ -57,13 +57,25 @@ export interface StepperProps {
   titleColor?: Color;
 }
 
-type StepperComponent = FC<StepperProps> & { Item: typeof StepperItem };
+/** Defines Stepper component */
+type StepperComponent = FC<StepperProps> & {
+  /** Bind it StepperItem to be able to call `Stepper.Item` directly. */
+  Item: typeof StepperItem;
+};
 
 /**
  * A **Stepper** that displays progress through a sequence of steps.
  *
  * Steppers are particularly useful in the case of forms where one step requires the completion of another one,
  * or where multiple steps need to be completed in order to submit the whole form.
+ *
+ * @param {StepperProps} props The Stepper props
+ * @example
+ * <Stepper current={0}>
+ *   <Stepper.Item title="Test1" />
+ *   <Stepper.Item title="Test2" />
+ * </Stepper>
+ * @returns {JSX.Element} JSX Element
  */
 export const Stepper: StepperComponent = ({
   children,

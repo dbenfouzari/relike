@@ -1,7 +1,7 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
-import Stepper from "./stepper";
+import Stepper, { StepperProps } from "./stepper";
 import classes from "./stepper.stories.module.scss";
 
 export default {
@@ -16,9 +16,17 @@ export default {
     children: { control: { disable: true } },
   },
   subcomponents: { "Stepper.Item": Stepper.Item },
-} as ComponentMeta<typeof Stepper>;
+} as Meta<StepperProps>;
 
-const Template: ComponentStory<typeof Stepper> = (args) => <Stepper {...args} />;
+/**
+ * Default template for Stepper.
+ *
+ * @param {StepperProps} args The Stepper props
+ * @example
+ * <Template {...stepperProps} />
+ * @returns {JSX.Element} The Stepper component
+ */
+const Template: Story<StepperProps> = (args) => <Stepper {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
