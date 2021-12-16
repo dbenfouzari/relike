@@ -1,10 +1,10 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import classnames from "classnames";
 
 import Colors from "../colors";
 import Icon from "../icon";
 import Icons from "../icons";
-import Result, { ResultStatus } from "./result";
+import Result, { ResultProps, ResultStatus } from "./result";
 import classes from "./result.stories.module.scss";
 
 export default {
@@ -32,9 +32,17 @@ export default {
   },
   decorators: [(story) => <div className={classes.wrapper}>{story()}</div>],
   subcomponents: { Icon },
-} as ComponentMeta<typeof Result>;
+} as Meta<ResultProps>;
 
-const Template: ComponentStory<typeof Result> = (args) => <Result {...args} />;
+/**
+ * Default Result template
+ *
+ * @param {ResultProps} args The props
+ * @example
+ * <Template {...props} />
+ * @returns {JSX.Element} The JSX element.
+ */
+const Template: Story<ResultProps> = (args) => <Result {...args} />;
 
 export const Success = Template.bind({});
 Success.args = {
