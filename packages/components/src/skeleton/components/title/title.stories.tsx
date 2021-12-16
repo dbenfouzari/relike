@@ -1,13 +1,20 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import SkeletonTitle from "./title";
 
 export default {
   title: "Skeleton.Title",
   component: SkeletonTitle,
-} as ComponentMeta<typeof SkeletonTitle>;
+} as Meta;
 
-const Template: ComponentStory<typeof SkeletonTitle> = (args) => <SkeletonTitle {...args} />;
+/**
+ * Default SkeletonTitle template.
+ *
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The JSX element.
+ */
+const Template: Story = () => <SkeletonTitle />;
 
 export const Default = Template.bind({});
 Default.args = {};

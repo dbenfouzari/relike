@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Skeleton, { SkeletonProps } from "./skeleton";
@@ -10,9 +10,17 @@ export default {
     children: { control: { disable: true } },
     color: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Skeleton>;
+} as Meta<SkeletonProps>;
 
-const Template: ComponentStory<typeof Skeleton> = (args) => <Skeleton {...args} />;
+/**
+ * Default Skeleton template.
+ *
+ * @param {SkeletonProps} args The Skeleton props.
+ * @example
+ * <Template {...skeletonProps} />
+ * @returns {JSX.Element} The JSX element.
+ */
+const Template: Story<SkeletonProps> = (args) => <Skeleton {...args} />;
 
 const defaultProps: Partial<SkeletonProps> = {
   active: false,

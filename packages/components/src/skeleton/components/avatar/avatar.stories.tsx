@@ -1,7 +1,7 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import SkeletonContext from "../../context/skeleton-context";
-import SkeletonAvatar from "./avatar";
+import SkeletonAvatar, { SkeletonAvatarProps } from "./avatar";
 
 export default {
   title: "Skeleton.Avatar",
@@ -13,10 +13,27 @@ export default {
     },
     color: { control: { disable: true } },
   },
-} as ComponentMeta<typeof SkeletonAvatar>;
+} as Meta<SkeletonAvatarProps>;
 
-const Template: ComponentStory<typeof SkeletonAvatar> = (args) => <SkeletonAvatar {...args} />;
-const ActiveTemplate: ComponentStory<typeof SkeletonAvatar> = (args) => (
+/**
+ * Default SkeletonAvatar template
+ *
+ * @param {SkeletonAvatarProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The JSX element.
+ */
+const Template: Story<SkeletonAvatarProps> = (args) => <SkeletonAvatar {...args} />;
+
+/**
+ * Active SkeletonAvatar template
+ *
+ * @param {SkeletonAvatarProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The JSX element.
+ */
+const ActiveTemplate: Story<SkeletonAvatarProps> = (args) => (
   <SkeletonContext.Provider value={{ active: true }}>
     <SkeletonAvatar {...args} />
   </SkeletonContext.Provider>

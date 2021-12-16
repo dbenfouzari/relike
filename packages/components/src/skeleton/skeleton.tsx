@@ -9,11 +9,13 @@ import SkeletonTitle from "./components/title";
 import SkeletonContext from "./context/skeleton-context";
 import classes from "./skeleton.module.scss";
 
+/** Defines Skeleton props */
 export interface SkeletonProps {
   /**
    * If `true`, an infinite animation runs on every child.
    *
    * You should use it if you are loading something.
+   *
    * @default false
    */
   active?: boolean;
@@ -25,6 +27,7 @@ export interface SkeletonProps {
   color?: Color;
   /**
    * Show avatar placeholder ?
+   *
    * @default false
    */
   avatar?: boolean;
@@ -32,6 +35,7 @@ export interface SkeletonProps {
    * Show paragraph placeholder ?
    *
    * You can also pass custom paragraph props to customize it.
+   *
    * @default true
    */
   paragraph?: boolean | SkeletonParagraphProps<number>;
@@ -43,18 +47,46 @@ export interface SkeletonProps {
   children?: ReactChild | ReactChildren;
 }
 
+/** Defines Skeleton component */
 type SkeletonComponent = FC<SkeletonProps> & {
+  /**
+   * Includes SkeletonAvatar.
+   *
+   * @example
+   * <Skeleton.Avatar />
+   */
   Avatar: typeof SkeletonAvatar;
+  /**
+   * Includes SkeletonParagraph.
+   *
+   * @example
+   * <Skeleton.Paragraph />
+   */
   Paragraph: typeof SkeletonParagraph;
+  /**
+   * Includes SkeletonTitle.
+   *
+   * @example
+   * <Skeleton.Title />
+   */
   Title: typeof SkeletonTitle;
 };
 
 /**
  * You can display a **[Skeleton]** to mimic a content while it's loading.
+ *
+ * @param {SkeletonProps} props The Skeleton props.
+ * @example
+ * <Skeleton>
+ *   <Skeleton.Avatar />
+ *   <Skeleton.Title />
+ *   <Skeleton.Paragraph rows={1} />
+ * </Skeleton>
+ * @returns {JSX.Element} The JSX element.
  */
 export const Skeleton: SkeletonComponent = ({ active, avatar, children, color, paragraph = true }) => (
   <SkeletonContext.Provider value={{ active, color }}>
-    <div className={classnames({ [classes.skeleton__active]: active })}>
+    <div aria-busy data-testid="skeleton" className={classnames({ [classes.skeleton__active]: active })}>
       {children || (
         <div className={classes.skeleton}>
           {avatar && (
