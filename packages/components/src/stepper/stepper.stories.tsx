@@ -32,6 +32,16 @@ export const Default = Template.bind({});
 Default.args = {
   children: [
     <Stepper.Item key="finished" title="Finished" description="This is a description" />,
+    <Stepper.Item key="in-progress" title="In Progress" />,
+    <Stepper.Item key="waiting" title="Waiting" />,
+  ],
+  current: 1,
+};
+
+export const Complete = Template.bind({});
+Complete.args = {
+  children: [
+    <Stepper.Item key="finished" title="Finished" description="This is a description" />,
     <Stepper.Item key="in-progress" title="In Progress" description="This is a description" subTitle="Left 00:00:08" />,
     <Stepper.Item key="waiting" title="Waiting" description="This is a description" />,
   ],

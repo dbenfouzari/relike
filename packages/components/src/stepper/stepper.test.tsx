@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Stepper from "./stepper";
 
@@ -9,4 +9,6 @@ it("should render successfully", () => {
       <Stepper.Item title="Test2" />
     </Stepper>,
   );
+
+  expect(screen.getByRole("list")).toMatchSnapshot();
 });

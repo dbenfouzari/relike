@@ -151,6 +151,7 @@ export const InternalStepperItem: FC<InternalStepperItemProps> = ({
         [classes.item__current]: isCurrent,
         [classes.item__past]: isPast,
       })}
+      role="listitem"
     >
       <div className={classes.container}>
         <span className={classes.icon}>{iconComponent}</span>

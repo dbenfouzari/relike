@@ -85,7 +85,7 @@ export const Stepper: StepperComponent = ({
   disabledColor = Colors.black38,
   titleColor = Colors.black,
 }) => (
-  <div className={classes.wrapper}>
+  <div role="list" className={classes.wrapper}>
     {Children.map(children as ReactElement<StepperItemProps>[], (child, index) => (
       <InternalStepperItem
         key={index}

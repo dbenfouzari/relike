@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render successfully 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d0-0-2-2 item item__current"
+  role="listitem"
+>
+  <div
+    class="container"
+  >
+    <span
+      class="icon"
+    >
+      2
+    </span>
+    <div
+      class="content"
+    >
+      <span
+        class="title"
+      >
+        Test
+         
+        <span
+          class="subtitle"
+        />
+      </span>
+      <span
+        class="description"
+      />
+    </div>
+  </div>
+</div>
+`;
