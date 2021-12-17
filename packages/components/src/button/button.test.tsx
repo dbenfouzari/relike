@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
 
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import Icons from "../icons";
-import Button, { ButtonProps, Emphasis } from "./button";
+import Button, { ButtonProps } from "./button";
 
 const setup = (outerProps?: Partial<ButtonProps>) => {
   const props: ButtonProps = {

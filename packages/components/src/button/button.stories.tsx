@@ -1,12 +1,13 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import Flex from "../flex";
 import Icons from "../icons";
 import ThemeData from "../theme-data";
 import ThemeProvider from "../theme-provider";
 import Typography from "../typography";
-import Button, { ButtonProps, Emphasis } from "./button";
+import Button, { ButtonProps } from "./button";
 
 export default {
   title: "Button",

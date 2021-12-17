@@ -4,27 +4,13 @@ import { ButtonHTMLAttributes, forwardRef, useMemo } from "react";
 import Brightness from "../brightness";
 import Color from "../color";
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import { useTheme } from "../hooks";
 import Icon from "../icon";
 import { IconData } from "../icons";
 import Text from "../text";
 import Typography from "../typography";
 import classes from "./button.module.scss";
-
-export enum Emphasis {
-  /**
-   * Basically a text button.
-   */
-  low = "low",
-  /**
-   * Transparent, with borders.
-   */
-  medium = "medium",
-  /**
-   * Filled with color.
-   */
-  high = "high",
-}
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {
   /**
@@ -108,7 +94,6 @@ export const getLightness = (color: Color) => {
  * <Button emphasis={Emphasis.high}>
  *   Hello World!
  * </Button>
- *
  * @see https://material.io/archive/guidelines/components/buttons.html Material.io for guidelines.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
