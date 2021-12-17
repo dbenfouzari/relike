@@ -1,10 +1,10 @@
 import { action } from "@storybook/addon-actions";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Icon from "../icon";
 import Icons from "../icons";
 import Padding from "../padding";
-import IconButton from "./icon-button";
+import IconButton, { IconButtonProps } from "./icon-button";
 
 export default {
   title: "IconButton",
@@ -20,9 +20,17 @@ export default {
     // Below is a hack to override default call to `action` on the `onChange` handler
     actions: { argTypesRegex: "^toto.*" },
   },
-} as ComponentMeta<typeof IconButton>;
+} as Meta<IconButtonProps>;
 
-const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...args} />;
+/**
+ * Default IconButton template
+ *
+ * @param {IconButtonProps} args The props
+ * @example
+ * <Template {...iconButtonProps} />
+ * @returns {JSX.Element} The IconButton
+ */
+const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
