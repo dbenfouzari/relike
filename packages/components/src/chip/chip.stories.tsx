@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Chip, { ChipProps } from "./chip";
@@ -15,9 +15,17 @@ export default {
     onDeletePress: { control: { disable: true } },
     avatar: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Chip>;
+} as Meta<ChipProps>;
 
-const Template: ComponentStory<typeof Chip> = (args) => <Chip {...args} />;
+/**
+ * Default Chip template
+ *
+ * @param {ChipProps} args The props
+ * @example
+ * <Template {...} />
+ * @returns {JSX.Element} The Chip component
+ */
+const Template: Story<ChipProps> = (args) => <Chip {...args} />;
 
 const defaultProps: Partial<ChipProps> = {
   onPress: null,
