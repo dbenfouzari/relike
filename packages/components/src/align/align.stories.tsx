@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Alignment from "../alignment";
 import Colors from "../colors";
 import Container from "../container";
-import Align from "./align";
+import Align, { AlignProps } from "./align";
 
 export default {
   title: "Align",
@@ -11,9 +11,17 @@ export default {
   argTypes: {
     children: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Align>;
+} as Meta<AlignProps>;
 
-const Template: ComponentStory<typeof Align> = (args) => (
+/**
+ * Default Align template
+ *
+ * @param {AlignProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The Align component
+ */
+const Template: Story<AlignProps> = (args) => (
   <Container color={Colors.blueGrey[100]} width={100} height={100}>
     <Align {...args} />
   </Container>

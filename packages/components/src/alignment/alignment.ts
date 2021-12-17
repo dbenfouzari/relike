@@ -16,6 +16,15 @@ abstract class AlignmentGeometry {
   /// greater than 1 represent positions below the bottom.
   public y = 0;
 
+  /**
+   * Build an `Alignment`
+   *
+   * @param {number} x -1, 0, or 1
+   * @param {number} y -1, 0, or 1
+   * @protected
+   * @example
+   * new Alignment(0, 0)
+   */
   protected constructor(x: number, y: number) {
     this.x = x;
     this.y = y;
@@ -50,6 +59,13 @@ class Alignment extends AlignmentGeometry {
   /// The bottom right corner.
   static bottomRight = new Alignment(1.0, 1.0);
 
+  /**
+   * Returns the string representation of Alignment
+   *
+   * @example
+   * Alignment.bottomRight.toString() // Alignment(x: 1, y: 1);
+   * @returns {string} The string representation
+   */
   public toString() {
     return `Alignment(x: ${this.x}, y: ${this.y})`;
   }

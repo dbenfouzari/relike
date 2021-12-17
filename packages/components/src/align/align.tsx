@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 
 import Alignment from "../alignment";
 
+/** Defines Align props */
 export interface AlignProps {
   /**
    * The `alignment` prop is mandatory. It sets the children alignment.
@@ -18,10 +19,20 @@ export interface AlignProps {
   children: ReactNode;
 }
 
+/** Defines Align styles props */
 interface AlignStylesProps {
+  /** The alignment */
   alignment: Alignment;
 }
 
+/**
+ * Helper to get CSS property `justify-content`
+ *
+ * @param {Alignment} alignment The alignment.
+ * @example
+ * getJustifyContent(Alignment.topLeft)
+ * @returns {CSSProperties.justifyContent} The CSS property value.
+ */
 const getJustifyContent = (alignment: Alignment): CSSProperties["justifyContent"] | null => {
   switch (alignment) {
     case Alignment.topLeft:
@@ -44,6 +55,14 @@ const getJustifyContent = (alignment: Alignment): CSSProperties["justifyContent"
   }
 };
 
+/**
+ * Helper to get CSS property `align-items`
+ *
+ * @param {Alignment} alignment The alignment
+ * @example
+ * getAlignItems(CrossAxisAlignment.center)
+ * @returns {CSSProperties.alignItems} The CSS property value.
+ */
 const getAlignItems = (alignment: Alignment): CSSProperties["alignItems"] | null => {
   switch (alignment) {
     case Alignment.topLeft:
@@ -67,6 +86,14 @@ const getAlignItems = (alignment: Alignment): CSSProperties["alignItems"] | null
 };
 
 const useStyles = createUseStyles({
+  /**
+   * Builds styles for Alignment wrapper
+   *
+   * @param {AlignStylesProps} props The props
+   * @example
+   * wrapper({ alignment: Alignment.topLeft })
+   * @returns {CSSProperties} The styles
+   */
   wrapper: ({ alignment }: AlignStylesProps) => ({
     display: "flex",
     flex: 1,
@@ -77,6 +104,13 @@ const useStyles = createUseStyles({
 
 /**
  * Use this component to align items in a container.
+ *
+ * @param {AlignProps} props The props
+ * @example
+ * <Align alignment={Alignment.topLeft}>
+ *   <div>
+ * </Align>
+ * @returns {JSX.Element} The Align component
  */
 export const Align: FC<AlignProps> = ({ alignment, children }) => {
   const styles = useStyles({ alignment });

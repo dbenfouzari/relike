@@ -3,8 +3,18 @@ import { render, screen } from "@testing-library/react";
 import Alignment from "../alignment";
 import Align from "./align";
 
+/** Defines direction */
 type Direction = "flex-start" | "flex-end" | "center";
 
+/**
+ * Generates tests
+ *
+ * @param {HTMLElement} elm The element to test
+ * @param {Direction | ""} justifyContent The justifyContent expected.
+ * @param {Direction | ""} alignItems The alignItems expected.
+ * @example
+ * expectDirections(divElement, "flex-start", "flex-start");
+ */
 const expectDirections = (elm: HTMLElement, justifyContent: Direction | "", alignItems: Direction | "") => {
   const headerClass = elm.className;
   // Because I have to get inner styles, I have to use direct node access.
