@@ -1,6 +1,11 @@
 import AbstractEdgeInsets from "./edge-insets";
 
 class EdgeInsets extends AbstractEdgeInsets {
+  /**
+   * @example
+   * toto()
+   * @returns {string} lambda
+   */
   toto() {
     return "toto";
   }
