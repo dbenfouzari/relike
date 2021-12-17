@@ -1,6 +1,7 @@
 import Color from "../color";
 import Icons, { IconData } from "../icons";
 
+/** Defines Alert severities */
 export enum AlertSeverities {
   error = "error",
   warning = "warning",
@@ -38,5 +39,5 @@ export const DEFAULT_COLORS: Record<AlertSeverities, Record<"font" | "icon" | "b
   },
 };
 
-export type AvatarIcon = keyof typeof DEFAULT_ICONS;
-export type AvatarColors = typeof DEFAULT_COLORS[keyof typeof DEFAULT_COLORS];
+/** Defines different Alert colors */
+export type AlertColors = typeof DEFAULT_COLORS[keyof typeof DEFAULT_COLORS];

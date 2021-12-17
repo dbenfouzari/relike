@@ -11,16 +11,29 @@ import Padding from "../padding";
 import Text from "../text";
 import Typography from "../typography";
 import classes from "./alert.module.scss";
-import { AlertSeverities, AvatarColors, DEFAULT_COLORS, DEFAULT_ICONS } from "./constants";
+import { AlertColors, AlertSeverities, DEFAULT_COLORS, DEFAULT_ICONS } from "./constants";
 
-type AlertChildren = ({ color }: { color: AvatarColors["font"] }) => ReactNode;
+/** Defines Alert children type */
+type AlertChildren = ({
+  color,
+}: {
+  /** Color */
+  color: AlertColors["font"];
+}) => ReactNode;
 
+/** Defines Alert props */
 export interface AlertProps {
   /** This prop is used to override the style */
   className?: string;
-
+  /**
+   * Alert severity.
+   *
+   * @default AlertSeverities.info
+   */
   severity?: AlertSeverities;
+  /** Alert title */
   title?: string;
+  /** Alert children */
   children?: ReactNode | AlertChildren;
 }
 
@@ -33,13 +46,21 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
   ({ severity = AlertSeverities.info, title, className, children, ...props }, ref) => {
     const content = useMemo(() => {
       if (typeof children === "function") return children({ color: DEFAULT_COLORS[severity].font });
-      return <Text>{children}</Text>;
+      return (
+        <Text style={Typography.blackMountainView.bodyText2?.copyWith({ color: DEFAULT_COLORS[severity].font })}>
+          {children}
+        </Text>
+      );
     }, [children, severity]);
 
     return (
       <div role="alert" ref={ref} className={classNames(classes.wrapper, className)} {...props}>
         <Container padding={Padding.symmetric({ horizontal: 16, vertical: 6 })}>
-          <div className={classes.icon_wrapper}>
+          <div
+            className={classNames(classes.icon_wrapper, {
+              [classes.icon_wrapper__without_title]: !title,
+            })}
+          >
             <Icon icon={DEFAULT_ICONS[severity]} color={DEFAULT_COLORS[severity].icon} size={22} />
           </div>
 
