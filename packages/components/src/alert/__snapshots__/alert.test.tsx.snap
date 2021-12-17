@@ -9,7 +9,7 @@ exports[`Alert should render successfully 1`] = `
     class="container-0-2-1 container-d0-0-2-2"
   >
     <div
-      class="jsx-4265373365 icon_wrapper"
+      class="jsx-4265373365 icon_wrapper icon_wrapper__without_title"
     >
       <span
         class="jsx-3319743189 icon material-icons"
