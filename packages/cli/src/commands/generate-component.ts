@@ -13,16 +13,30 @@ import {
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"));
 
+/** Defines available CLI options */
 interface Options {
+  /** The component name */
   component: string;
+  /** Target path */
   path: string;
-  style: boolean;
+  /** Should generate story file */
   story: boolean;
+  /** Should generate style file */
+  style: boolean;
+  /** Should generate test file */
   test: boolean;
 }
 
+/** Defines CLI arguments */
 type Arguments = [component: string, path: string, options: Options];
 
+/**
+ * Generates a component file.
+ *
+ * @param {Arguments} args The arguments
+ * @example
+ * generateComponent(...args)
+ */
 const generateComponent = async (...args: Arguments) => {
   const [componentArg, pathArg, flags] = args;
 
@@ -36,7 +50,7 @@ const generateComponent = async (...args: Arguments) => {
   else if (flags.path) path = flags.path;
 
   if (!name) {
-    const responses = await inquirer.prompt<{ name: string }>([
+    const responses = await inquirer.prompt<{ /** component name */ name: string }>([
       { type: "input", name: "name", message: "What' your component name?" },
     ]);
 
@@ -47,6 +61,14 @@ const generateComponent = async (...args: Arguments) => {
     const pathResponses = await inquirer.prompt([
       {
         type: "fuzzypath",
+        /**
+         * Generates exclude path from results.
+         *
+         * @param {string} nodePath The current path
+         * @example
+         * excludePath("index.ts")
+         * @returns {boolean} should it be excluded
+         */
         excludePath: (nodePath: string) => nodePath.startsWith("node_modules"),
         itemType: "directory",
         name: "destination",

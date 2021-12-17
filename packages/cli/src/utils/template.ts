@@ -10,6 +10,7 @@ import {
 } from "change-case";
 
 // String `Lives down BY the River` conversions.
+/** Defines available cases. */
 export enum CaseConverter {
   camelCase = "(camelCase)", // livesDownByTheRiver
   constantCase = "(constantCase)", // LIVES_DOWN_BY_THE_RIVER
@@ -22,6 +23,16 @@ export enum CaseConverter {
   snakeCase = "(snakeCase)", // lives_down_by_the_river
 }
 
+/**
+ * Replace fileName with correct variables and cases.
+ *
+ * @param {string} fileName The file name
+ * @param {string} key The key to replace
+ * @param {string} value The value that replaces the key
+ * @example
+ * replaceFileName(templateIndexPath, key, componentName)
+ * @returns {string} The final file name
+ */
 export const replaceFileName = (fileName: string, key: string, value: string) => {
   // Define my two RegExps that will allow me to replace with correct content.
   const regexWithoutCondition = new RegExp(`__${key}__`, "gm");
@@ -44,6 +55,17 @@ export const replaceFileName = (fileName: string, key: string, value: string) =>
   return result;
 };
 
+/**
+ * Replace content with correct variables and cases.
+ *
+ * @param {string} content The content
+ * @param {string} key The key to replace
+ * @param {string} value The value that replaces the key
+ * @param {any} defaultCase The case
+ * @example
+ * replace(templateIndex, key, componentName, paramCase)
+ * @returns {string} The final file name
+ */
 export const replace = (content: string, key: string, value: string, defaultCase = pascalCase) => {
   // Define my two RegExps that will allow me to replace with correct content.
   const regexWithoutCase = new RegExp(`__${key}__`, "gm");
