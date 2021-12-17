@@ -61,10 +61,10 @@ const generateComponent = async (...args: Arguments) => {
         /**
          * Generates exclude path from results.
          *
-         * @param {string} nodePath The current path
+         * @param   {string}  nodePath The current path
          * @example
          * excludePath("index.ts")
-         * @returns {boolean} should it be excluded
+         * @returns {boolean}          should it be excluded
          */
         excludePath: (nodePath: string) => nodePath.startsWith("node_modules"),
         itemType: "directory",

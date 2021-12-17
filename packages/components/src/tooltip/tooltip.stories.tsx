@@ -22,10 +22,10 @@ export default {
 /**
  * Default template
  *
- * @param {TooltipProps} args The tooltip props
+ * @param   {TooltipProps} args The tooltip props
  * @example
  * <Template label="Hello, Storybook" />
- * @returns {JSX.Element} The element
+ * @returns {JSX.Element}       The element
  */
 const Template: Story<TooltipProps> = (args) => <Tooltip {...args} />;
 

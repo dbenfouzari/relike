@@ -15,10 +15,10 @@ export interface UseTextEditingControllerProps<B extends boolean> {
  * If you want to control the input, you can use this `useTextEditingController`.
  * Use it like this :
  *
- * @param {UseTextEditingControllerProps<boolean>} props The props
+ * @param   {UseTextEditingControllerProps<boolean>} props The props
  * @example
  * const _controller = useTextEditingController({ listenValue: true });
- * @returns {any} The handlers
+ * @returns {any}                                          The handlers
  */
 const useTextEditingController = <B extends boolean>({
   initialValue = "",
@@ -40,7 +40,7 @@ const useTextEditingController = <B extends boolean>({
   }, []);
 
   /**
-   *  Clears the input value
+   * Clears the input value
    *
    *  @example
    *  clear();

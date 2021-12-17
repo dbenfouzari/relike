@@ -17,10 +17,10 @@ const useStyles = createUseStyles({
   /**
    * Generates styles based on props
    *
-   * @param {SkeletonTitleStylesProps} props The styles props.
+   * @param   {SkeletonTitleStylesProps} props The styles props.
    * @example
    * title({ color: Colors.blue })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                  The styles
    */
   title: ({ color }: SkeletonTitleStylesProps): CSSProperties => ({
     backgroundColor: color.toRGBA(),

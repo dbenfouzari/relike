@@ -42,13 +42,13 @@ export type TimelineComponent = FC<TimelineProps> & {
  * - When a series of information need to be ordered by time (ascending or descending).
  * - When you need a timeline to make a visual connection.
  *
- * @param {TimelineProps} props The Timeline props.
+ * @param   {TimelineProps} props The Timeline props.
  * @see TimelineItem
  * @example
  * <Timeline>
  *   <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
  * </Timeline>
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}         The JSX element.
  */
 export const Timeline: TimelineComponent = ({ children, mode = "left" }) => (
   <ul

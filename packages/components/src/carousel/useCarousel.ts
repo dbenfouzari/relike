@@ -31,10 +31,10 @@ const handleTargetHidden = (target: Element) => {
 /**
  * Use this hook to get carousel logic.
  *
- * @param {JSX.Element[]} children The carousel children
+ * @param   {JSX.Element[]} children The carousel children
  * @example
  * const { leftIndicator, rightIndicator, listRef, scrollLeft, scrollRight, itemRef } = useCarousel(children);
- * @returns {any} Handlers
+ * @returns {any}                    Handlers
  */
 const useCarousel = (children: JSX.Element | JSX.Element[]) => {
   const listRef = useRef<HTMLUListElement>(null);
@@ -102,10 +102,10 @@ const useCarousel = (children: JSX.Element | JSX.Element[]) => {
   /**
    * Ref generator. It stores a single item ref into refs storage.
    *
-   * @param {number} index The item index
+   * @param   {number} index The item index
    * @example
    * <div ref={itemRef(0)} />
-   * @returns {void} Nothing
+   * @returns {void}         Nothing
    */
   const itemRef = (index: number) => (elm: HTMLElement | null) => {
     if (elm) itemRefs[index] = elm;

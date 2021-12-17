@@ -5,8 +5,8 @@ import { RefObject, useEffect } from "react";
  *
  * We use it to close a modal when user clicks outside it, for example.
  *
- * @param {RefObject} ref The element
- * @param {Function} handler What happens where user clicks outside
+ * @param {RefObject} ref     The element
+ * @param {Function}  handler What happens where user clicks outside
  * @example
  * const modalRef = useRef();
  * useOnClickOutside(modalRef, closeModal);

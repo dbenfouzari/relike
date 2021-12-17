@@ -20,10 +20,10 @@ export default {
 /**
  * Default FlexRow template
  *
- * @param {FlexRowProps} args The props
+ * @param   {FlexRowProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The FlexRow component
+ * @returns {JSX.Element}       The FlexRow component
  */
 const Template: Story<FlexRowProps> = (args) => (
   <Container width={500} height={500} color={Colors.grey[100]}>

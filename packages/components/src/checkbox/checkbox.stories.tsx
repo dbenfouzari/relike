@@ -15,10 +15,10 @@ export default {
 /**
  * Default Checkbox Template
  *
- * @param {CheckboxProps} args The props
+ * @param   {CheckboxProps} args The props
  * @example
  * <Template {...} />
- * @returns {JSX.Element} The Checkbox component
+ * @returns {JSX.Element}        The Checkbox component
  */
 const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 

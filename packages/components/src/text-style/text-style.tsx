@@ -63,7 +63,7 @@ export interface TextStyleConstructor {
    * illustrates the difference between the font-metrics-defined line height and
    * the line height produced with `height: 1.0` (also known as the EM-square):
    *
-   // The [height] property can be used to change the line height. Here, the line
+     // The [height] property can be used to change the line height. Here, the line
    * height is set to 5 times the font size, so that the text is very spaced out.
    * Since the `fontSize` is set to 10, the final height of the line is
    * 50 pixels.
@@ -149,7 +149,7 @@ class TextStyle {
    * illustrates the difference between the font-metrics-defined line height and
    * the line height produced with `height: 1.0` (also known as the EM-square):
    *
-   // The [height] property can be used to change the line height. Here, the line
+     // The [height] property can be used to change the line height. Here, the line
    * height is set to 5 times the font size, so that the text is very spaced out.
    * Since the `fontSize` is set to 10, the final height of the line is
    * 50 pixels.
@@ -257,12 +257,12 @@ class TextStyle {
   /**
    * Creates a new TextStyle with args override.
    *
-   * @param {TextStyleConstructor} args The new args.
+   * @param   {TextStyleConstructor} args The new args.
    * @example
    * const textStyle = new TextStyle({ color: Colors.red, fontSize: 13 });
    * const blackBgTextStyle = textStyle.copyWith({ backgroundColor: Colors.black });
    * const whiteFgTextStyle = blackBgTextStyle.copyWith({ color: Colors.white }) // { color: Colors.white, fontSize: 13, backgroundColor: Colors.black }
-   * @returns {TextStyle} A new TextStyle
+   * @returns {TextStyle}                 A new TextStyle
    */
   public copyWith({
     backgroundColor,

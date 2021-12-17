@@ -98,10 +98,10 @@ const useStyles = createUseStyles({
   /**
    * Generates low emphasis styles.
    *
-   * @param {FloatingActionButtonStylesProps} props The props
+   * @param   {FloatingActionButtonStylesProps} props The props
    * @example
    * buttonLow({ color: Colors.blue, disabled: false })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                         The styles
    */
   buttonLow: ({ color, disabled }: FloatingActionButtonStylesProps) => ({
     "&:hover, &:focus": {
@@ -114,10 +114,10 @@ const useStyles = createUseStyles({
   /**
    * Generates medium emphasis styles.
    *
-   * @param {FloatingActionButtonStylesProps} props The props
+   * @param   {FloatingActionButtonStylesProps} props The props
    * @example
    * buttonLow({ color: Colors.blue, disabled: false })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                         The styles
    */
   buttonMedium: ({ color, disabled }: FloatingActionButtonStylesProps) => ({
     border: `1px solid ${color.toRGBA()}`,
@@ -131,10 +131,10 @@ const useStyles = createUseStyles({
   /**
    * Generates high emphasis styles.
    *
-   * @param {FloatingActionButtonStylesProps} props The props
+   * @param   {FloatingActionButtonStylesProps} props The props
    * @example
    * buttonLow({ color: Colors.blue, disabled: false })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                         The styles
    */
   buttonHigh: ({ color, disabled }: FloatingActionButtonStylesProps) => {
     const currentLightness = color.lightness;

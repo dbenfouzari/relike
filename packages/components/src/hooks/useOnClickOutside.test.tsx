@@ -12,10 +12,10 @@ type WrapperProps = {
 /**
  * A simple wrapper to test the hook.
  *
- * @param {WrapperProps} props The props
+ * @param   {WrapperProps} props The props
  * @example
  * <Wrapper handler={() => {}} />
- * @returns {JSX.Element} The wrapper element
+ * @returns {JSX.Element}        The wrapper element
  */
 const Wrapper: FC<WrapperProps> = ({ handler }) => {
   const ref = useRef<HTMLDivElement>(null);

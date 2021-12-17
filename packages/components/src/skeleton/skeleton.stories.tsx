@@ -15,10 +15,10 @@ export default {
 /**
  * Default Skeleton template.
  *
- * @param {SkeletonProps} args The Skeleton props.
+ * @param   {SkeletonProps} args The Skeleton props.
  * @example
  * <Template {...skeletonProps} />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}        The JSX element.
  */
 const Template: Story<SkeletonProps> = (args) => <Skeleton {...args} />;
 

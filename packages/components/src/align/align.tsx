@@ -28,10 +28,10 @@ interface AlignStylesProps {
 /**
  * Helper to get CSS property `justify-content`
  *
- * @param {Alignment} alignment The alignment.
+ * @param   {Alignment}                    alignment The alignment.
  * @example
  * getJustifyContent(Alignment.topLeft)
- * @returns {CSSProperties.justifyContent} The CSS property value.
+ * @returns {CSSProperties.justifyContent}           The CSS property value.
  */
 const getJustifyContent = (alignment: Alignment): CSSProperties["justifyContent"] | null => {
   switch (alignment) {
@@ -58,10 +58,10 @@ const getJustifyContent = (alignment: Alignment): CSSProperties["justifyContent"
 /**
  * Helper to get CSS property `align-items`
  *
- * @param {Alignment} alignment The alignment
+ * @param   {Alignment}                alignment The alignment
  * @example
  * getAlignItems(CrossAxisAlignment.center)
- * @returns {CSSProperties.alignItems} The CSS property value.
+ * @returns {CSSProperties.alignItems}           The CSS property value.
  */
 const getAlignItems = (alignment: Alignment): CSSProperties["alignItems"] | null => {
   switch (alignment) {
@@ -89,10 +89,10 @@ const useStyles = createUseStyles({
   /**
    * Builds styles for Alignment wrapper
    *
-   * @param {AlignStylesProps} props The props
+   * @param   {AlignStylesProps} props The props
    * @example
    * wrapper({ alignment: Alignment.topLeft })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}          The styles
    */
   wrapper: ({ alignment }: AlignStylesProps) => ({
     display: "flex",
@@ -105,12 +105,12 @@ const useStyles = createUseStyles({
 /**
  * Use this component to align items in a container.
  *
- * @param {AlignProps} props The props
+ * @param   {AlignProps}  props The props
  * @example
  * <Align alignment={Alignment.topLeft}>
  *   <div>
  * </Align>
- * @returns {JSX.Element} The Align component
+ * @returns {JSX.Element}       The Align component
  */
 export const Align: FC<AlignProps> = ({ alignment, children }) => {
   const styles = useStyles({ alignment });

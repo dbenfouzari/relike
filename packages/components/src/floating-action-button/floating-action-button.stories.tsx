@@ -17,10 +17,10 @@ export default {
 /**
  * Default FAB template
  *
- * @param {FloatingActionButtonProps} args The props
+ * @param   {FloatingActionButtonProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The FAB
+ * @returns {JSX.Element}                    The FAB
  */
 const Template: Story<FloatingActionButtonProps> = (args) => <FloatingActionButton {...args} />;
 

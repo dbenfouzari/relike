@@ -18,20 +18,20 @@ export default {
 /**
  * Default SkeletonAvatar template
  *
- * @param {SkeletonAvatarProps} args The props
+ * @param   {SkeletonAvatarProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}              The JSX element.
  */
 const Template: Story<SkeletonAvatarProps> = (args) => <SkeletonAvatar {...args} />;
 
 /**
  * Active SkeletonAvatar template
  *
- * @param {SkeletonAvatarProps} args The props
+ * @param   {SkeletonAvatarProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}              The JSX element.
  */
 const ActiveTemplate: Story<SkeletonAvatarProps> = (args) => (
   <SkeletonContext.Provider value={{ active: true }}>

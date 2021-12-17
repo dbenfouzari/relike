@@ -8,7 +8,7 @@ export class IconData {
   /**
    * Creates an IconData.
    *
-   * @param {string} name The icon name
+   * @param {string}      name      The icon name
    * @param {IconVariant} [variant] The variant
    * @example
    * new IconData("access_time_filled", "outlined")

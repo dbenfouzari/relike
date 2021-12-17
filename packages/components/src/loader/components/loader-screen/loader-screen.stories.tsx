@@ -17,10 +17,10 @@ export default {
 /**
  * Default LoaderScreen template.
  *
- * @param {LoaderScreenProps} args The props
+ * @param   {LoaderScreenProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The LoaderScreen component
+ * @returns {JSX.Element}            The LoaderScreen component
  */
 const Template: Story<LoaderScreenProps> = (args) => <LoaderScreen {...args} />;
 

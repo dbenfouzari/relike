@@ -32,10 +32,10 @@ export default {
 /**
  * Default ListItem template
  *
- * @param {ListItemProps} args The props
+ * @param   {ListItemProps} args The props
  * @example
  * <Template {...listItemProps} />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}        The JSX element
  */
 const Template: Story<ListItemProps> = (args) => <ListItem {...args} />;
 

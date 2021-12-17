@@ -95,20 +95,20 @@ interface ToggleStylesProps {
 
 /**
  * @typedef {Object} Args
- * @property {Color} checkedColor The checked Toggle color.
- * @property {Color} unCheckedColor The unchecked Toggle color.
- * @property {boolean} value Toggle value.
- * @property {boolean} disabled Is the Toggle disabled ?
+ * @property {Color}   checkedColor   The checked Toggle color.
+ * @property {Color}   unCheckedColor The unchecked Toggle color.
+ * @property {boolean} value          Toggle value.
+ * @property {boolean} disabled       Is the Toggle disabled ?
  */
 
 const useStyles = createUseStyles({
   /**
    * Returns styles for toggle button
    *
-   * @param {Args} args The arguments.
+   * @param   {Args}          args The arguments.
+   * @returns {CSSProperties}      The button styles.
    * @example
    * button({ checkedColor: Color(0xffffffff), uncheckedColor: Color(0xff000000), value: true, disabled: false });
-   * @returns {CSSProperties} The button styles.
    */
   button: (args: ToggleStylesProps): CSSProperties => {
     const { checkedColor, unCheckedColor, value, disabled } = args;
@@ -128,10 +128,10 @@ const useStyles = createUseStyles({
  * By default, if you don't pass `checked` and `onChange`, it's considered `uncontrolled`.
  * That means you can't control its value nor catch its change.
  *
- * @param {ToggleProps} props The toggle props.
+ * @param   {ToggleProps} props The toggle props.
  * @example
  * <Toggle checked={false} />
- * @returns {JSX.Element} a JSX element.
+ * @returns {JSX.Element}       a JSX element.
  */
 export const Toggle: FC<ToggleProps> = ({
   checked,

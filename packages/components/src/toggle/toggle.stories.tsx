@@ -31,10 +31,10 @@ export default {
 /**
  * Default Toggle template.
  *
- * @param {ToggleProps} args The toggle props.
+ * @param   {ToggleProps} args The toggle props.
  * @example
  * <Template checked={false} />
- * @returns {JSX.Element} the toggle.
+ * @returns {JSX.Element}      the toggle.
  */
 const Template: Story<ToggleProps> = (args) => <Toggle {...args} />;
 

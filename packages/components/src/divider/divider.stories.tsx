@@ -10,20 +10,20 @@ export default {
 /**
  * Default Divider template.
  *
- * @param {DividerProps} args The props
+ * @param   {DividerProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Divider component.
+ * @returns {JSX.Element}       The Divider component.
  */
 const Template: Story<DividerProps> = (args) => <Divider {...args} />;
 
 /**
  * Complete Divider template.
  *
- * @param {DividerProps} args The props
+ * @param   {DividerProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Divider component.
+ * @returns {JSX.Element}       The Divider component.
  */
 const CompleteTemplate: Story<DividerProps> = (args) => (
   <ul>

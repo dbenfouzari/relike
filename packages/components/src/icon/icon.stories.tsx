@@ -32,10 +32,10 @@ type TemplateArgs = Omit<IconProps, "icon"> & {
  *
  * We pass icon name instead of icon to be able to work with Storybook controls.
  *
- * @param {TemplateArgs} props The props
+ * @param   {TemplateArgs} props The props
  * @example
  * <Template icon={Icons.access_time.name} />
- * @returns {JSX.Element} The Icon component
+ * @returns {JSX.Element}        The Icon component
  */
 const Template: Story<TemplateArgs> = ({ icon, ...args }) => {
   const originalIcon = Icons[icon as keyof Icons];
@@ -48,10 +48,10 @@ const Template: Story<TemplateArgs> = ({ icon, ...args }) => {
  *
  * We pass icon name instead of icon to be able to work with Storybook controls.
  *
- * @param {TemplateArgs} props The props
+ * @param   {TemplateArgs} props The props
  * @example
  * <WithCustomColorTemplate icon={Icons.access_time.name} />
- * @returns {JSX.Element} The Icon component
+ * @returns {JSX.Element}        The Icon component
  */
 const WithCustomColorTemplate: Story<TemplateArgs> = ({ icon, ...args }) => {
   const originalIcon = Icons[icon as keyof Icons];

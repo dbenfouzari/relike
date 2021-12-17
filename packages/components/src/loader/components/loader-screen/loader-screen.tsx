@@ -56,11 +56,11 @@ interface LoaderScreenStylesProps {
 /**
  * This method builds a `useStyles` from props.
  *
- * @param {LoaderScreenStylesProps} props The props
+ * @param   {LoaderScreenStylesProps} props The props
  * @example
  * const useStyles = makeUseStyles({ animationDuration, color1, color2, color3, color4 });
  * const styles = useStyles();
- * @returns {CSSProperties} The styles
+ * @returns {CSSProperties}                 The styles
  */
 const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: LoaderScreenStylesProps) => {
   const durationInMs = animationDuration.inMilliseconds;
@@ -131,10 +131,10 @@ const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: Lo
 /**
  * This component aims to be used when an entire screen is loading.
  *
- * @param {LoaderScreenProps} props The props
+ * @param   {LoaderScreenProps} props The props
  * @example
  * <LoaderScreen />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}             The JSX element.
  */
 export const LoaderScreen: FC<LoaderScreenProps> = ({
   animationDuration = Duration.seconds(1),

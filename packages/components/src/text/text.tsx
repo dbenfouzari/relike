@@ -50,8 +50,8 @@ const DEFAULT_PROPS: Partial<TextProps> = {};
 /**
  * Helper to get CSS overflow property.
  *
- * @param {TextOverflow} overflow The TextOverflow.
- * @returns {CSSProperties.textOverflow} The CSS textOverflow property value.
+ * @param   {TextOverflow}               overflow The TextOverflow.
+ * @returns {CSSProperties.textOverflow}          The CSS textOverflow property value.
  * @example
  * getCSSOverflow(TextOverflow.clip) // "hidden"
  */
@@ -75,10 +75,10 @@ const useStyles = createUseStyles({
   /**
    * Creates styles for main element.
    *
-   * @param {TextStylesProps} args Used to build the styles.
+   * @param   {TextStylesProps} args Used to build the styles.
    * @example
    * elm({ style: Typography.blackMountainView.headline1 })
-   * @returns {CSSProperties} The final styles.
+   * @returns {CSSProperties}        The final styles.
    */
   elm: ({ style }: TextStylesProps) => ({
     backgroundColor: style.backgroundColor?.toRGBA(),

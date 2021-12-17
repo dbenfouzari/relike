@@ -42,9 +42,9 @@ export interface SkeletonAvatarProps {
    * The shape is :
    * ```
    * type Sizes = {
-   *   small: number;
-   *   default: number;
-   *   large: number;
+   * small: number;
+   * default: number;
+   * large: number;
    * }
    * ```
    */
@@ -75,11 +75,11 @@ const useStyles = createUseStyles({
   /**
    * Generates styles based on props
    *
-   * @param {AvatarStylesProps} props
-   *        The props
+   * @param   {AvatarStylesProps} props
+   *                                    The props
    * @example
    * wrapper({ color: Colors.blue, sizes: { small: 24, default: 32, large: 40 }, size: 'small' })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}           The styles
    */
   wrapper: ({ color, sizes, size }: AvatarStylesProps): CSSProperties => {
     const finalSize = typeof size === "number" ? size : sizes[size];
@@ -96,10 +96,10 @@ const useStyles = createUseStyles({
 /**
  * You can display a **[Skeleton.Avatar]** to mimic an avatar while content is loading.
  *
- * @param {SkeletonAvatarProps} props The props
+ * @param   {SkeletonAvatarProps} props The props
  * @example
  * <SkeletonAvatar />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}               The JSX element
  */
 export const SkeletonAvatar: FC<SkeletonAvatarProps> = ({
   size = "default",

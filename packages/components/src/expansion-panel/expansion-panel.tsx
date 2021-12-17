@@ -48,12 +48,12 @@ export interface ExpansionPanelProps {
  * It has a header and a body and can be either expanded or collapsed.
  * The body of the panel is only visible when it is expanded.
  *
- * @param {ExpansionPanelProps} props The props
+ * @param   {ExpansionPanelProps} props The props
  * @example
  * <ExpansionPanel {...args} headerBuilder={<span>Title</span>}>
  *   <span>Hello World</span>
  * </ExpansionPanel>
- * @returns {JSX.Element} The JSX Element
+ * @returns {JSX.Element}               The JSX Element
  */
 export const ExpansionPanel: FC<ExpansionPanelProps> = ({ headerBuilder, children, classNames }) => {
   const { ref: contentRef, contentHeight, isExpanded, toggleExpand } = useExpansion(children);

@@ -10,10 +10,10 @@ import classes from "./dropdown-button.module.scss";
  * This method is used to calculate max width of children elements.
  * It aims to get wrapper min width.
  *
- * @param {HTMLElement | null} parent The parent.
+ * @param   {HTMLElement | null} parent The parent.
  * @example
  * getMaxChildrenWidth(...)
- * @returns {number} The children width
+ * @returns {number}                    The children width
  */
 const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
   if (!parent) return;
@@ -145,10 +145,10 @@ export type DropdownButtonProps = DropdownButtonPropsWithAllowEmpty | DropdownBu
  * The button shows the currently selected item as well as an arrow that opens a menu for selecting
  * another item.
  *
- * @param {DropdownButtonProps} props The props
+ * @param   {DropdownButtonProps} props The props
  * @example
  * <DropdownButton items={[ { value: 1, text: 'One' }, { value: 2, text: 'Two' } ]} />
- * @returns {JSX.Element} The JSX Element.
+ * @returns {JSX.Element}               The JSX Element.
  */
 export const DropdownButton: FC<DropdownButtonProps> = ({
   allowEmpty = false,

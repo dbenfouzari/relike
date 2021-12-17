@@ -26,10 +26,10 @@ export interface TextButtonProps {
  *
  * @see [OutlinedButton], a [TextButton] with a border outline.
  * @see [ElevatedButton], a filled button whose material elevates when pressed.
- * @param {TextButtonProps} props The TextButton props
+ * @param   {TextButtonProps} props The TextButton props
  * @example
  * <TextButton>Hello</TextButton>
- * @returns {JSX.Element} The JSX Element.
+ * @returns {JSX.Element}           The JSX Element.
  */
 export const TextButton: FC<TextButtonProps> = ({ onPress, children, className }) => {
   // Handle click event

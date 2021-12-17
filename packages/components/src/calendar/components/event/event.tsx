@@ -12,10 +12,10 @@ export interface EventProps {
 /**
  * Renders Event component
  *
- * @param {EventProps} props The props
+ * @param   {EventProps}  props The props
  * @example
  * <Event event={{...}} />
- * @returns {JSX.Element} The Event component
+ * @returns {JSX.Element}       The Event component
  */
 const Event: FC<EventProps> = ({ event }) => (
   <div className={classes.wrapper}>

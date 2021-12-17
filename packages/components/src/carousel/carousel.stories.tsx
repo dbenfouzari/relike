@@ -16,10 +16,10 @@ export default {
 /**
  * Default Carousel template.
  *
- * @param {CarouselProps} args The props
+ * @param   {CarouselProps} args The props
  * @example
  * <Template {...} />
- * @returns {JSX.Element} The Carousel component
+ * @returns {JSX.Element}        The Carousel component
  */
 const Template: Story<CarouselProps> = (args) => <Carousel {...args} />;
 

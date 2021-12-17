@@ -16,10 +16,10 @@ type IconComponentProps = {
 /**
  * Displays an Icon component with its name.
  *
- * @param {IconComponentProps} props The props
+ * @param   {IconComponentProps} props The props
  * @example
  * <IconComponent value="access_time" icon={Icons.access_time} />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}              The JSX element.
  */
 const IconComponent = ({ value, icon }: IconComponentProps) => (
   <div style={{ marginBottom: 12, display: "flex", alignItems: "center" }}>
@@ -46,10 +46,10 @@ type RowProps = {
  *
  * It's used by react-window `FixedSizeList` to automatically generate icon rows.
  *
- * @param {RowProps} props The props
+ * @param   {RowProps}    props The props
  * @example
  * <Row index={3} style={...} />
- * @returns {JSX.Element} The row
+ * @returns {JSX.Element}       The row
  */
 const Row = ({ index, style }: RowProps) => {
   const icon = Object.entries(Icons)[index];

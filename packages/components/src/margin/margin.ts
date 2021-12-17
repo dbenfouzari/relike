@@ -6,12 +6,12 @@ import { Maybe } from "../types";
 /**
  * Check if a value is null
  *
- * @param {any} value
- *        The value to check
+ * @param   {any}     value
+ *                          The value to check
  * @example
  * isNull(3) // false
  * isNull(null) // true
- * @returns {boolean} Is the value null
+ * @returns {boolean}       Is the value null
  */
 const isNull = <T>(value: Maybe<T>) => value === null;
 
@@ -59,10 +59,10 @@ class Margin extends EdgeInsets {
   /**
    * Returns a new Padding with values overridden.
    *
-   * @param {{ top, right }} props The props
+   * @param   {{ top, right }} props The props
    * @example
    * Margin.all(32).copyWith({ top: 12 }) // { top: 12, right: 32, bottom: 32, left: 32 }
-   * @returns {Margin} The new margin
+   * @returns {Margin}               The new margin
    */
   copyWith({
     top = null,

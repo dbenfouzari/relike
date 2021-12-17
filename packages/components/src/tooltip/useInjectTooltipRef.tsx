@@ -9,13 +9,13 @@ import { mergeRefs } from "./utils";
  * Button, IconButton, Icon and React HTML elements don't need to be wrapped but any other kind of children (array, fragment, custom components)
  * will be wrapped in a <span>.
  *
- * @param {ReactNode} children The tooltip children
- * @param {(e: HTMLDivElement) => void} setAnchorElement A method to set anchor element.
- * @param {boolean} isOpen Is the tooltip open ?
- * @param {string} id The tooltip unique identifier.
+ * @param   {ReactNode}                   children         The tooltip children
+ * @param   {(e: HTMLDivElement) => void} setAnchorElement A method to set anchor element.
+ * @param   {boolean}                     isOpen           Is the tooltip open ?
+ * @param   {string}                      id               The tooltip unique identifier.
  * @example
  * useInjectTooltipRef(<div />, () => {}, true, "test");
- * @returns {ReactNode} A wrapping div that contains the tooltip.
+ * @returns {ReactNode}                                    A wrapping div that contains the tooltip.
  */
 export const useInjectTooltipRef = (
   children: ReactNode,

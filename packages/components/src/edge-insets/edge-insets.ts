@@ -37,10 +37,10 @@ abstract class EdgeInsets {
   /**
    * Builds a new `EdgeInsets`.
    *
-   * @param {number | null} top Top value.
-   * @param {number | null} right Right value.
+   * @param {number | null} top    Top value.
+   * @param {number | null} right  Right value.
    * @param {number | null} bottom Bottom value.
-   * @param {number | null} left Left value.
+   * @param {number | null} left   Left value.
    * @example
    * new EdgeInsets(8, 8, 8, 8);
    */
@@ -54,11 +54,11 @@ abstract class EdgeInsets {
   /**
    * Creates insets where all the offsets are value.
    *
-   * @param {NewEdgeInsets} this Itself
-   * @param {number} value The value applied to all edges.
+   * @param   {NewEdgeInsets} this  Itself
+   * @param   {number}        value The value applied to all edges.
    * @example
    * EdgeInsets.all(32)
-   * @returns {EdgeInsets} A new EdgeInsets.
+   * @returns {EdgeInsets}          A new EdgeInsets.
    */
   public static all<T extends EdgeInsets>(this: NewEdgeInsets<T>, value: number): T {
     return new this(value, value, value, value);
@@ -67,11 +67,11 @@ abstract class EdgeInsets {
   /**
    * Creates insets with symmetrical vertical and horizontal offsets.
    *
-   * @param {NewEdgeInsets} this Itself
-   * @param {EdgeInsetsSymmetricParams} params The params
+   * @param   {NewEdgeInsets}             this   Itself
+   * @param   {EdgeInsetsSymmetricParams} params The params
    * @example
    * EdgeInsets.symmetric({ horizontal: 12, vertical: 6 })
-   * @returns {EdgeInsets} A new EdgeInsets.
+   * @returns {EdgeInsets}                       A new EdgeInsets.
    */
   static symmetric<T extends EdgeInsets>(this: NewEdgeInsets<T>, params: EdgeInsetsSymmetricParams) {
     const { horizontal = null, vertical = null } = params;
@@ -81,11 +81,11 @@ abstract class EdgeInsets {
   /**
    * Creates insets with only the given values non-zero.
    *
-   * @param {NewEdgeInsets} this Itself
-   * @param {EdgeInsetsOnlyParams} params The params
+   * @param   {NewEdgeInsets}        this   Itself
+   * @param   {EdgeInsetsOnlyParams} params The params
    * @example
    * EdgeInsets.only({ top: 4, left: 2 })
-   * @returns {EdgeInsets} A new EdgeInsets.
+   * @returns {EdgeInsets}                  A new EdgeInsets.
    */
   static only<T extends EdgeInsets>(this: NewEdgeInsets<T>, params: EdgeInsetsOnlyParams = {}) {
     const { top = null, right = null, bottom = null, left = null } = params;
@@ -95,14 +95,14 @@ abstract class EdgeInsets {
   /**
    * Creates insets from offsets from the left, top, right, and bottom.
    *
-   * @param {NewEdgeInsets} this Itself
-   * @param {number} left Left value
-   * @param {number} top Top value
-   * @param {number} right Right value
-   * @param {number} bottom Bottom value
+   * @param   {NewEdgeInsets} this   Itself
+   * @param   {number}        left   Left value
+   * @param   {number}        top    Top value
+   * @param   {number}        right  Right value
+   * @param   {number}        bottom Bottom value
    * @example
    * EdgeInsets.fromLTRB(32, 16, 32, 16) // Same as EdgeInsets.symmetric({ horizontal: 32, vertical: 16 })
-   * @returns {EdgeInsets} A new EdgeInsets.
+   * @returns {EdgeInsets}           A new EdgeInsets.
    */
   static fromLTRB<T extends EdgeInsets>(
     this: NewEdgeInsets<T>,
@@ -117,10 +117,10 @@ abstract class EdgeInsets {
   /**
    * An EdgeInsets with zero offsets in each direction.
    *
-   * @param {NewEdgeInsets} this Itself
+   * @param   {NewEdgeInsets} this Itself
    * @example
    * EdgeInsets.zero()
-   * @returns {EdgeInsets} A new EdgeInsets.
+   * @returns {EdgeInsets}         A new EdgeInsets.
    */
   static zero<T extends EdgeInsets>(this: NewEdgeInsets<T>) {
     return new this(0, 0, 0, 0);

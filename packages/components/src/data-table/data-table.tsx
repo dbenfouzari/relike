@@ -20,7 +20,7 @@ export const buildDataColumn =
 /**
  * Display a data table
  *
- * @param {DataTableProps} props The props
+ * @param   {DataTableProps} props The props
  * @example
  * const data = [{ name: "John Doe", age: 23, gender: "male" }] as const;
  * type Data = typeof data;
@@ -29,7 +29,7 @@ export const buildDataColumn =
  * <DataTable data={data}>
  *   <DataColumn value="age" label="Age" />
  * </DataTable>
- * @returns {JSX.Element} The JSX Element
+ * @returns {JSX.Element}          The JSX Element
  */
 export const DataTable = <D extends DataTableData>({ data, children, renderRow, classNames }: DataTableProps<D>) => (
   <div role="table">

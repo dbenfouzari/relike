@@ -24,10 +24,10 @@ export interface CalendarTopProps {
 /**
  * Renders calendar header
  *
- * @param {CalendarTopProps} props The props
+ * @param   {CalendarTopProps} props The props
  * @example
  * <CalendarTop currentDate={DateTime.now()} locale={SupportedCalendarLocales.FR} />
- * @returns {JSX.Element} The CalendarTop component
+ * @returns {JSX.Element}            The CalendarTop component
  */
 const CalendarTop: FC<CalendarTopProps> = ({ currentDate, locale, onNextClick, onPrevClick }) => (
   <Toolbar

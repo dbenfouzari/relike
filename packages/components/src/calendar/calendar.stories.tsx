@@ -22,10 +22,10 @@ export default {
 /**
  * Default Calendar template
  *
- * @param {CalendarProps} args The props
+ * @param   {CalendarProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Calendar component
+ * @returns {JSX.Element}        The Calendar component
  */
 const Template: Story<CalendarProps> = (args) => <Calendar {...args} />;
 

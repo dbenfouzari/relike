@@ -76,10 +76,10 @@ const useStyles = createUseStyles({
   /**
    * Generates Checkbox styles
    *
-   * @param {CheckboxStyleProps} color Main color
+   * @param   {CheckboxStyleProps} color Main color
    * @example
    * checkbox({ color: Colors.blue })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}            The styles
    */
   checkbox: ({ color }: CheckboxStyleProps) => ({
     "&:checked:before": {

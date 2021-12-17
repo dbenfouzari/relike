@@ -20,10 +20,10 @@ export default {
 /**
  * Default Chip template
  *
- * @param {ChipProps} args The props
+ * @param   {ChipProps}   args The props
  * @example
  * <Template {...} />
- * @returns {JSX.Element} The Chip component
+ * @returns {JSX.Element}      The Chip component
  */
 const Template: Story<ChipProps> = (args) => <Chip {...args} />;
 

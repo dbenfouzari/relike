@@ -8,10 +8,10 @@ export type FnRef<T> = (value: T) => void;
 /**
  * Used to merge tooltip refs together.
  *
- * @param {MutableRefObject[]} refs The refs you want to merge.
+ * @param   {MutableRefObject[]} refs The refs you want to merge.
  * @example
  * mergeRefs(divRef, arrRef);
- * @returns {FnRef} a new ref object.
+ * @returns {FnRef}                   a new ref object.
  */
 export function mergeRefs<T>(...refs: Array<null | MutableRefObject<T | null> | FnRef<T>>): FnRef<T> {
   return (value) =>

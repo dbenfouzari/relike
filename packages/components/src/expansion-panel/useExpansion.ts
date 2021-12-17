@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
  *
  * To do this, we clone all and compute the height.
  *
- * @param {HTMLElement | null} [parent] The parent.
+ * @param   {HTMLElement | null} [parent] The parent.
  * @example
  * getChildrenHeight(<div>...</div>);
- * @returns {number | undefined} The height
+ * @returns {number | undefined}          The height
  */
 const getChildrenHeight = (parent?: HTMLElement | null) => {
   if (!parent) return;
@@ -33,10 +33,10 @@ const getChildrenHeight = (parent?: HTMLElement | null) => {
 /**
  * Use this hook to get expansion panel logic.
  *
- * @param {React.ReactElement[]} children The content
+ * @param   {React.ReactElement[]} children The content
  * @example
  * useExpansion(...);
- * @returns {any} The maxHeight and handlers
+ * @returns {any}                           The maxHeight and handlers
  */
 const useExpansion = <T>(children: T) => {
   const contentRef = useRef<HTMLDivElement>(null);

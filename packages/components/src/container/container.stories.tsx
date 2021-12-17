@@ -22,10 +22,10 @@ export default {
 /**
  * Default Container template
  *
- * @param {ContainerProps} args The props
+ * @param   {ContainerProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The Container component
+ * @returns {JSX.Element}         The Container component
  */
 const Template: Story<ContainerProps> = (args) => <Container {...args} />;
 

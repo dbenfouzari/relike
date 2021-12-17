@@ -16,10 +16,10 @@ export interface DataTableHeaderProps<C> {
 /**
  * Display the DataTable header
  *
- * @param {DataTableHeaderProps} props The props
+ * @param   {DataTableHeaderProps} props The props
  * @example
  * <DataTableHeader {...} />
- * @returns {JSX.Element} The JSX Element.
+ * @returns {JSX.Element}                The JSX Element.
  */
 const DataTableHeader = <C extends DataTableColumnProps>({ children, classNames }: DataTableHeaderProps<C>) => {
   const mandatoryColumns = filterChildren(children);

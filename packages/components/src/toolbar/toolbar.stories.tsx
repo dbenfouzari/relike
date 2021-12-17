@@ -17,10 +17,10 @@ export default {
 /**
  * Default template
  *
- * @param {ToolbarProps} args The toolbar props
+ * @param   {ToolbarProps} args The toolbar props
  * @example
  * <Template children={<span>Hello</span>} />
- * @returns {JSX.Element} The Toolbar component.
+ * @returns {JSX.Element}       The Toolbar component.
  */
 const Template: Story<ToolbarProps> = (args) => <Toolbar {...args} />;
 

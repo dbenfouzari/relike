@@ -16,10 +16,10 @@ export default {
 /**
  * Default TextField template.
  *
- * @param {TextFieldProps} args The TextField props
+ * @param   {TextFieldProps} args The TextField props
  * @example
  * <Template obscureText />
- * @returns {JSX.Element} The TextField component.
+ * @returns {JSX.Element}         The TextField component.
  */
 const Template: Story<TextFieldProps> = (args) => <TextField {...args} />;
 

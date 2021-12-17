@@ -16,20 +16,20 @@ export default {
 /**
  * Default Alert template
  *
- * @param {AlertProps} args The props
+ * @param   {AlertProps}  args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Alert component
+ * @returns {JSX.Element}      The Alert component
  */
 const Template: Story<AlertProps> = (args) => <Alert {...args} />;
 
 /**
  * Template that displays all alerts.
  *
- * @param {AlertProps} args The props
+ * @param   {AlertProps}  args The props
  * @example
  * <MultipleTemplate />
- * @returns {JSX.Element} Multiple Alerts
+ * @returns {JSX.Element}      Multiple Alerts
  */
 const MultipleTemplate: Story<AlertProps> = (args) => (
   <Flex.Column gap={8} crossAxisAlignment={CrossAxisAlignment.stretch}>

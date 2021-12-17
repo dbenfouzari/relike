@@ -9,10 +9,10 @@ import classes from "./icon.module.scss";
 /**
  * Get the correct className for variant
  *
- * @param {IconVariant} [variant] The icon variant.
+ * @param   {IconVariant} [variant] The icon variant.
  * @example
  * getIconClassName("rounded") // "material-icons-round"
- * @returns {string} The className
+ * @returns {string}                The className
  */
 const getIconClassName = (variant?: IconVariant) => {
   if (variant === "rounded") return "material-icons-round";
@@ -52,10 +52,10 @@ export interface IconProps {
  *
  * It uses Material-Icons font. Don't forget to include Material CSS in your app !
  *
- * @param {IconProps} props The props
+ * @param   {IconProps}   props The props
  * @example
  * <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}       The JSX element.
  * @see IconButton
  * @see Icons
  */

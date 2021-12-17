@@ -20,10 +20,10 @@ export interface DataTableBodyProps<D extends DataTableData> {
 /**
  * Display DataTableBody
  *
- * @param {DataTableBodyProps} props The props
+ * @param   {DataTableBodyProps} props The props
  * @example
  * <DataTableBody {...} />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}              The JSX element
  */
 const DataTableBody = <D extends DataTableData>({ data, children, renderRow, classNames }: DataTableBodyProps<D>) => {
   const mandatoryColumns = filterChildren(children);
@@ -46,10 +46,10 @@ const DataTableBody = <D extends DataTableData>({ data, children, renderRow, cla
             /**
              * Callback format method if none is provided
              *
-             * @param {string | number} v Data value
+             * @param   {string | number} v Data value
              * @example
              * formatCallback(4) // 4
-             * @returns {string | number} Original value
+             * @returns {string | number}   Original value
              * @todo It's useless and does computation for nothing. Find a way to remove it.
              */
             const formatCallback = (v: string | number) => v;

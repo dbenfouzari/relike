@@ -17,12 +17,12 @@ export default {
 /**
  * Default template for Timeline component.
  *
- * @param {TimelineProps} args The timeline props.
+ * @param   {TimelineProps} args The timeline props.
  * @example
  * <Template mode="left">
  *   <Template.Item>Toto</Template.Item>
  * </Template>
- * @returns {JSX.Element} The Timeline component.
+ * @returns {JSX.Element}        The Timeline component.
  */
 const Template: Story<TimelineProps> = (args) => <Timeline {...args} />;
 

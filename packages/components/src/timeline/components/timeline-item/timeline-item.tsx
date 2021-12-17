@@ -53,10 +53,10 @@ const useStyles = createUseStyles({
   /**
    * Generate styles for TimelineItem
    *
-   * @param {TimelineItemStylesProps} props The props.
+   * @param   {TimelineItemStylesProps} props The props.
    * @example
    * item({ color: Colors.blue };
-   * @returns {CSSProperties} The styles.
+   * @returns {CSSProperties}                 The styles.
    */
   item: (props: TimelineItemStylesProps) =>
     ({
@@ -67,10 +67,10 @@ const useStyles = createUseStyles({
 /**
  * The TimelineItem component.
  *
- * @param {TimelineItemProps} props The TimelineItem props.
+ * @param   {TimelineItemProps} props The TimelineItem props.
  * @example
  * <TimelineItem>Hello</TimelineItem>
- * @returns {JSX.Element} the JSX element.
+ * @returns {JSX.Element}             the JSX element.
  */
 export const TimelineItem: FC<TimelineItemProps> = ({ children, color = Colors.blue[500], dot }) => {
   const styles = useStyles({ color });

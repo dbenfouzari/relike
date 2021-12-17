@@ -55,10 +55,10 @@ const useStyles = createUseStyles({
   /**
    * Builds container styles
    *
-   * @param {ContainerStylesProps} props The props
+   * @param   {ContainerStylesProps} props The props
    * @example
    * container({ color = Colors.blue })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}              The styles
    */
   container: ({ color, height, margin, padding, width }: ContainerStylesProps) => ({
     boxSizing: "border-box",

@@ -59,10 +59,10 @@ const COMPONENT_NAME = "Button";
 /**
  * Helper to get hover and active lightness
  *
- * @param {Color} color The button color
+ * @param   {Color} color The button color
  * @example
  * getLightness(Colors.blue)
- * @returns {any} An object with hover and active lightness.
+ * @returns {any}         An object with hover and active lightness.
  */
 export const getLightness = (color: Color) => {
   const currentLightness = color.lightness;

@@ -41,10 +41,10 @@ const useStyles = createUseStyles({
   /**
    * Generates wrapper styles based on props
    *
-   * @param {IconStylesProps} padding IconButton padding
+   * @param   {IconStylesProps} padding IconButton padding
    * @example
    * wrapper({ padding: Padding.all(8) })
-   * @returns {CSSProperties} The styles.
+   * @returns {CSSProperties}           The styles.
    */
   wrapper: ({ padding }: IconStylesProps) => ({
     ...padding.toStyle(),

@@ -22,10 +22,10 @@ export default {
 /**
  * Default Flex template
  *
- * @param {FlexProps} args The props
+ * @param   {FlexProps}   args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The Flex component
+ * @returns {JSX.Element}      The Flex component
  */
 const Template: Story<FlexProps> = (args) => (
   <Container width={500} height={500} color={Colors.grey[100]}>

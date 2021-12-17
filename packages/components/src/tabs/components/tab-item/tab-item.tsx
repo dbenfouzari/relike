@@ -62,10 +62,10 @@ const useStyles = createUseStyles({
   /**
    * Generates styles based on args
    *
-   * @param {InnerTabItemStylesProps} args The props.
+   * @param   {InnerTabItemStylesProps} args The props.
    * @example
    * item({ inactiveColor: Colors.grey })
-   * @returns {CSSProperties} InnerTabItem styles
+   * @returns {CSSProperties}                InnerTabItem styles
    */
   item: ({ inactiveColor }: InnerTabItemStylesProps) =>
     inactiveColor &&

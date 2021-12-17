@@ -8,10 +8,10 @@ import Button, { ButtonProps } from "./button";
 /**
  * Set up button tests
  *
- * @param {Partial<ButtonProps>} props The props
+ * @param   {Partial<ButtonProps>} props The props
  * @example
  * setup()
- * @returns {any} The result
+ * @returns {any}                        The result
  */
 const setup = (props: Partial<ButtonProps> = {}) => {
   const baseProps: ButtonProps = {

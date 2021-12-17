@@ -58,13 +58,13 @@ class Color {
   /**
    * Check that all is working as expected.
    *
-   * @param {number} a Alpha channel
-   * @param {number} r Red channel
-   * @param {number} g Green channel
-   * @param {number} b Blue channel
+   * @param   {number} a Alpha channel
+   * @param   {number} r Red channel
+   * @param   {number} g Green channel
+   * @param   {number} b Blue channel
    * @example
    * Color.assert(0, 0, 0, 0)
-   * @returns {void} Nothing
+   * @returns {void}     Nothing
    * @throws If an error occurs
    */
   static assert = (a: number, r: number, g: number, b: number) => {
@@ -81,13 +81,13 @@ class Color {
   /**
    * Create a [Color] from alpha, red, green and blue channels.
    *
-   * @param {number} a Alpha channel
-   * @param {number} r Red channel
-   * @param {number} g Green channel
-   * @param {number} b Blue channel
+   * @param   {number} a Alpha channel
+   * @param   {number} r Red channel
+   * @param   {number} g Green channel
+   * @param   {number} b Blue channel
    * @example
    * Color.fromARGB(100, 255, 255, 255) // full white
-   * @returns {Color} A new Color
+   * @returns {Color}    A new Color
    */
   static fromARGB(a: number, r: number, g: number, b: number) {
     this.assert(a, r, g, b);
@@ -98,13 +98,13 @@ class Color {
   /**
    * Create a [Color] from hue, saturation and lightness.
    *
-   * @param {number} hue Hue between 0 and 360
-   * @param {number} saturation Saturation between 0 and 100
-   * @param {number} lightness Lightness between 0 and 100
-   * @param {number} alpha Alpha between 0 and 255
+   * @param   {number} hue        Hue between 0 and 360
+   * @param   {number} saturation Saturation between 0 and 100
+   * @param   {number} lightness  Lightness between 0 and 100
+   * @param   {number} alpha      Alpha between 0 and 255
    * @example
    * Color.fromHSLA(0, 100, 50, 255);
-   * @returns {Color} A new Color.
+   * @returns {Color}             A new Color.
    */
   static fromHSLA(hue: number, saturation: number, lightness: number, alpha = 255) {
     assert(hue >= 0, "Hue should be between 0 and 360");
@@ -193,10 +193,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the alpha channel replaced with a (which ranges from 0 to 255).
    *
-   * @param {number} a Alpha channel
+   * @param   {number} a Alpha channel
    * @example
    * Colors.blue.withAlpha(0)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withAlpha = (a: number) => {
     assert(a >= 0, "Alpha channel should be between 0 and 255");
@@ -208,10 +208,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the alpha channel replaced with the given opacity (which ranges from 0.0 to 1.0).
    *
-   * @param {number} o Opacity
+   * @param   {number} o Opacity
    * @example
    * Colors.blue.withOpacity(0)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withOpacity = (o: number) => {
     assert(o >= 0, "Opacity should be between 0 and 1");
@@ -223,10 +223,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the red channel replaced with r (which ranges from 0 to 255).
    *
-   * @param {number} r Red channel
+   * @param   {number} r Red channel
    * @example
    * Colors.blue.withRed(10)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withRed = (r: number) => {
     assert(r >= 0, "Red channel should be between 0 and 255");
@@ -238,10 +238,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the green channel replaced with g (which ranges from 0 to 255).
    *
-   * @param {number} g Green channel
+   * @param   {number} g Green channel
    * @example
    * Colors.blue.withGreen(10)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withGreen = (g: number) => {
     assert(g >= 0, "Green channel should be between 0 and 255");
@@ -253,10 +253,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the blue channel replaced with b (which ranges from 0 to 255).
    *
-   * @param {number} b Blue channel
+   * @param   {number} b Blue channel
    * @example
    * Colors.blue.withBlue(10)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withBlue = (b: number) => {
     assert(b >= 0, "Blue channel should be between 0 and 255");
@@ -268,10 +268,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the hue replaced with h (which ranged from 0 to 360)
    *
-   * @param {number} h Hue
+   * @param   {number} h Hue
    * @example
    * Colors.blue.withHue(0)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withHue = (h: number) => {
     assert(h >= 0, "Hue should be between 0 and 360");
@@ -283,10 +283,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the saturation replaced with s (which ranged from 0 to 100)
    *
-   * @param {number} s Saturation
+   * @param   {number} s Saturation
    * @example
    * Colors.blue.withSaturation(0)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withSaturation = (s: number) => {
     assert(s >= 0, "Saturation should be between 0 and 100");
@@ -298,10 +298,10 @@ class Color {
   /**
    * Returns a new color that matches this color with the lightness replaced with l (which ranged from 0 to 100)
    *
-   * @param {number} l Lightness channel
+   * @param   {number} l Lightness channel
    * @example
    * Colors.blue.withLightness(0)
-   * @returns {Color} A new Color.
+   * @returns {Color}    A new Color.
    */
   withLightness = (l: number) => {
     assert(l >= 0, "Lightness should be between 0 and 100");
@@ -313,10 +313,10 @@ class Color {
   /**
    * Don't really know how it works, it's internal use ONLY
    *
-   * @param {number} component a value
+   * @param   {number} component a value
    * @example
    * Color._linearizeColorComponent(this.red / 0xff);
-   * @returns {number} A number
+   * @returns {number}           A number
    * @deprecated DON'T USE IT
    */
   static _linearizeColorComponent(component: number) {

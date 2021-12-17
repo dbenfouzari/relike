@@ -19,10 +19,10 @@ const AnimatedLinearProgressIndicator = animated(LinearProgressIndicator);
  * This is a simple animated component.
  * It uses `react-spring` to handle animation.
  *
- * @param {LinearProgressIndicatorProps} props The props.
+ * @param   {LinearProgressIndicatorProps} props The props.
  * @example
  * <AnimatedComponent {...props} />
- * @returns {JSX.Element} An animated LinearProgressIndicator
+ * @returns {JSX.Element}                        An animated LinearProgressIndicator
  */
 const AnimatedComponent = (props: LinearProgressIndicatorProps) => {
   const { value } = useSpring({
@@ -38,20 +38,20 @@ const AnimatedComponent = (props: LinearProgressIndicatorProps) => {
 /**
  * Default LinearProgressIndicator template
  *
- * @param {LinearProgressIndicatorProps} args The props.
+ * @param   {LinearProgressIndicatorProps} args The props.
  * @example
  * <Template {...props} />
- * @returns {JSX.Element} The LinearProgressIndicator component
+ * @returns {JSX.Element}                       The LinearProgressIndicator component
  */
 const Template: Story<LinearProgressIndicatorProps> = (args) => <LinearProgressIndicator {...args} />;
 
 /**
  * AnimatedLinearProgressIndicator template
  *
- * @param {LinearProgressIndicatorProps} args The props.
+ * @param   {LinearProgressIndicatorProps} args The props.
  * @example
  * <AnimatedTemplate {...props} />
- * @returns {JSX.Element} The AnimatedLinearProgressIndicator component
+ * @returns {JSX.Element}                       The AnimatedLinearProgressIndicator component
  */
 const AnimatedTemplate: Story<LinearProgressIndicatorProps> = (args) => <AnimatedComponent {...args} />;
 

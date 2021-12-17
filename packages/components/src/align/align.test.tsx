@@ -9,9 +9,9 @@ type Direction = "flex-start" | "flex-end" | "center";
 /**
  * Generates tests
  *
- * @param {HTMLElement} elm The element to test
+ * @param {HTMLElement}    elm            The element to test
  * @param {Direction | ""} justifyContent The justifyContent expected.
- * @param {Direction | ""} alignItems The alignItems expected.
+ * @param {Direction | ""} alignItems     The alignItems expected.
  * @example
  * expectDirections(divElement, "flex-start", "flex-start");
  */

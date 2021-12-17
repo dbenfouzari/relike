@@ -25,10 +25,10 @@ export default {
 /**
  * Default IconButton template
  *
- * @param {IconButtonProps} args The props
+ * @param   {IconButtonProps} args The props
  * @example
  * <Template {...iconButtonProps} />
- * @returns {JSX.Element} The IconButton
+ * @returns {JSX.Element}          The IconButton
  */
 const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />;
 

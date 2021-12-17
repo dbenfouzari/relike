@@ -16,8 +16,8 @@ class ColorSwatch extends Color {
    * for that same color, and as is exposed by [value]. (This is distinct from
    * the specific index of the color in the swatch.)
    *
-   * @param {number} primary The primary color number (0xffffffff)
-   * @param {Record<number, Color>} swatch The swatch
+   * @param {number}                primary The primary color number (0xffffffff)
+   * @param {Record<number, Color>} swatch  The swatch
    * @example
    * new ColorSwatch(0xffffc107, { 50: new Color(0xffffc107) })
    */

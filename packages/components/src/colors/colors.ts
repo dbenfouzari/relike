@@ -142,10 +142,10 @@ class Colors {
    * ![](https://flutter.github.io/assets-for-api-docs/assets/material/Colors.blacks.png)
    *
    * See also:
-   *  - [black87], [black54], [black45], [black38], [black26], [black12], which
-   *    are variants on this color but with different opacities.
-   *  - [white], a solid white color.
-   *  - [transparent], a fully-transparent color.
+   * - [black87], [black54], [black45], [black38], [black26], [black12], which
+   * are variants on this color but with different opacities.
+   * - [white], a solid white color.
+   * - [transparent], a fully-transparent color.
    */
   static black = new Color(0xff000000);
 
@@ -717,11 +717,11 @@ class Colors {
    *
    * See also:
    *
-   *  - [white70], [white60], [white54], [white38], [white30], [white12],
-   *    [white10], which are variants on this color but with different
-   *    opacities.
-   *  - [black], a solid black color.
-   *  - [transparent], a fully-transparent color.
+   * - [white70], [white60], [white54], [white38], [white30], [white12],
+   * [white10], which are variants on this color but with different
+   * opacities.
+   * - [black], a solid black color.
+   * - [transparent], a fully-transparent color.
    */
   static white = new Color(0xffffffff);
 

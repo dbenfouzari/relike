@@ -37,10 +37,10 @@ export default {
 /**
  * Default Result template
  *
- * @param {ResultProps} args The props
+ * @param   {ResultProps} args The props
  * @example
  * <Template {...props} />
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}      The JSX element.
  */
 const Template: Story<ResultProps> = (args) => <Result {...args} />;
 

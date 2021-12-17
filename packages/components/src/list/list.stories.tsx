@@ -21,10 +21,10 @@ export default {
 /**
  * Default List template.
  *
- * @param {ListProps} args The props
+ * @param   {ListProps}   args The props
  * @example
  * <Template {...listProps} />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}      The JSX element
  */
 const Template: Story<ListProps> = (args) => <List {...args} />;
 

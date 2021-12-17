@@ -129,10 +129,10 @@ const COMPONENT_NAME = "Flex";
 /**
  * Takes a `gap` and returns correct CSS property value.
  *
- * @param {FlexStyleProps.gap} gap The gap.
+ * @param   {FlexStyleProps.gap} gap The gap.
  * @example
  * computeGap([32, "12px"])
- * @returns {any} The final gap
+ * @returns {any}                    The final gap
  */
 const computeGap = (gap?: FlexStyleProps["gap"]) => {
   if (!gap) return null;
@@ -158,10 +158,10 @@ const useStyles = createUseStyles({
   /**
    * Generates flex styles
    *
-   * @param {FlexStyleProps} props The props
+   * @param   {FlexStyleProps} props The props
    * @example
    * flex({ crossAxisAlignment: CrossAxisAlignment.center, ... })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}        The styles
    */
   flex: ({
     crossAxisAlignment,

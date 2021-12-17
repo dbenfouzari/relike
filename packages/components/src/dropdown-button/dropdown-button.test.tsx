@@ -5,11 +5,11 @@ import DropdownButton from "./dropdown-button";
 /**
  * Helper to generate dropdown items.
  *
- * @param {number} [n = 100] Number of items to generate
+ * @param   {number}                            [n = 100] Number of items to generate
  * @example
  * generateItems() // generates 100 items
  * generateItems(5) // generates 5 items
- * @returns {{ value: number, text: string }[]} The items.
+ * @returns {{ value: number, text: string }[]}           The items.
  */
 const generateItems = (n = 5) => {
   const result = [];

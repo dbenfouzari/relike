@@ -10,10 +10,10 @@ export default {
 /**
  * Default TimelineItem template.
  *
- * @param {TimelineItemProps} args The TimelineItem props.
+ * @param   {TimelineItemProps} args The TimelineItem props.
  * @example
  * <Template>Hello</Template>
- * @returns {JSX.Element} the TimelineItem
+ * @returns {JSX.Element}            the TimelineItem
  */
 const Template: Story<TimelineItemProps> = (args) => <TimelineItem {...args} />;
 

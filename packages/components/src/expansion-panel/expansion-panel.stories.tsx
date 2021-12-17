@@ -25,10 +25,10 @@ export default {
 /**
  * Default ExpansionPanel template.
  *
- * @param {ExpansionPanelProps} args The props.
+ * @param   {ExpansionPanelProps} args The props.
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The ExpansionPanel component
+ * @returns {JSX.Element}              The ExpansionPanel component
  */
 const Template: Story<ExpansionPanelProps> = (args) => (
   <ExpansionPanel {...args} headerBuilder={Header}>
@@ -39,10 +39,10 @@ const Template: Story<ExpansionPanelProps> = (args) => (
 /**
  * Template with multiple ExpansionPanels.
  *
- * @param {ExpansionPanelProps} args The props.
+ * @param   {ExpansionPanelProps} args The props.
  * @example
  * <TemplateMultiple {...args} />
- * @returns {JSX.Element} Wrapped ExpansionPanels components
+ * @returns {JSX.Element}              Wrapped ExpansionPanels components
  */
 const TemplateMultiple: Story<ExpansionPanelProps> = (args) => (
   <div>

@@ -20,10 +20,10 @@ export default {
 /**
  * Default FlexColumn template
  *
- * @param {FlexColumnProps} args The props
+ * @param   {FlexColumnProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The FlexColumn component
+ * @returns {JSX.Element}          The FlexColumn component
  */
 const Template: Story<FlexColumnProps> = (args) => (
   <Container width={500} height={500} color={Colors.grey[100]}>

@@ -7,10 +7,10 @@ import FloatingActionButton, { FloatingActionButtonProps } from "./floating-acti
 /**
  * Set up the tests
  *
- * @param {Partial<FloatingActionButtonProps>} props The override props
+ * @param   {Partial<FloatingActionButtonProps>} props The override props
  * @example
  * setup({ emphasis: Emphasis.high })
- * @returns {any} The result
+ * @returns {any}                                      The result
  */
 const setup = (props?: Partial<FloatingActionButtonProps>) => {
   const baseProps: FloatingActionButtonProps = {

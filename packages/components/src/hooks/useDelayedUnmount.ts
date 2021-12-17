@@ -8,11 +8,11 @@ import { Timeout } from "../types";
  *
  * Useful in a dialog for example, where you want to animate it before destroying it.
  *
- * @param {boolean} isMounted Should it be destroyed ?
- * @param {Duration} delay The delay before destroy.
+ * @param   {boolean}  isMounted Should it be destroyed ?
+ * @param   {Duration} delay     The delay before destroy.
  * @example
  * useDelayedUnmount(false, Duration.seconds(2)) // after 2 seconds, you can destroy.
- * @returns {boolean} Should you render the children
+ * @returns {boolean}            Should you render the children
  */
 const useDelayedUnmount = (isMounted: boolean, delay: Duration) => {
   const [shouldRender, setShouldRender] = useState(false);

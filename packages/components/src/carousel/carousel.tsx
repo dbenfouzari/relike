@@ -25,7 +25,7 @@ export interface CarouselProps {
  * This is a simple carousel.
  * You can use it to show a really simple carousel that you can control with chevrons.
  *
- * @param {CarouselProps} props The props
+ * @param   {CarouselProps} props The props
  * @example
  * <Carousel>
  *   <div key={1} style={styles.element}>
@@ -38,7 +38,7 @@ export interface CarouselProps {
  *     Example 3
  *   </div>
  * </Carousel>
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}         The JSX element
  */
 export const Carousel: FC<CarouselProps> = ({ children, gap = 12 }) => {
   const { leftIndicator, rightIndicator, listRef, scrollLeft, scrollRight, itemRef } = useCarousel(children);

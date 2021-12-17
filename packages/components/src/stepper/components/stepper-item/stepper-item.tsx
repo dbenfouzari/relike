@@ -75,7 +75,7 @@ const useStyles = createUseStyles({
   /**
    * Generates styles based on props
    *
-   * @param {StepperItemStylesProps} props The styles props.
+   * @param   {StepperItemStylesProps} props The styles props.
    * @example
    * wrapper({
    *   disabledColor: Colors.grey,
@@ -83,7 +83,7 @@ const useStyles = createUseStyles({
    *   primaryColor: Colors.blue,
    *   titleColor: Colors.blue
    * })
-   * @returns {CSSProperties} CSS rules
+   * @returns {CSSProperties}                CSS rules
    */
   wrapper: ({ disabledColor, secondaryColor, primaryColor, titleColor }: StepperItemStylesProps) =>
     ({
@@ -107,7 +107,7 @@ export const StepperItem: FC<StepperItemProps> = () => null;
  * The internal StepperItem. It is only used by Stepper component to render something,
  * but should not be used directly.
  *
- * @param {InternalStepperItemProps} props The props.
+ * @param   {InternalStepperItemProps} props The props.
  * @example
  * <InternalStepperItem
  *   key={index}
@@ -120,7 +120,7 @@ export const StepperItem: FC<StepperItemProps> = () => null;
  *   titleColor={titleColor}
  *   {...child.props}
  * />
- * @returns {JSX.Element} JSX Element.
+ * @returns {JSX.Element}                    JSX Element.
  */
 export const InternalStepperItem: FC<InternalStepperItemProps> = ({
   title,

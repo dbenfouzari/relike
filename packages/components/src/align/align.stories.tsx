@@ -16,10 +16,10 @@ export default {
 /**
  * Default Align template
  *
- * @param {AlignProps} args The props
+ * @param   {AlignProps}  args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Align component
+ * @returns {JSX.Element}      The Align component
  */
 const Template: Story<AlignProps> = (args) => (
   <Container color={Colors.blueGrey[100]} width={100} height={100}>

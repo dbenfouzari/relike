@@ -50,10 +50,10 @@ const useStyles = createUseStyles({
   /**
    * Creates wrapper styles based on props.
    *
-   * @param {LoaderStylesProps} props The props.
+   * @param   {LoaderStylesProps} props The props.
    * @example
    * wrapper({ size: 16 })
-   * @returns {CSSProperties} CSS rules
+   * @returns {CSSProperties}           CSS rules
    */
   wrapper: ({ size }: LoaderStylesProps) => ({
     display: "inline-block",
@@ -64,10 +64,10 @@ const useStyles = createUseStyles({
   /**
    * Creates single item styles based on props.
    *
-   * @param {LoaderStylesProps} props The props.
+   * @param   {LoaderStylesProps} props The props.
    * @example
    * item({ color: Colors.blue, thickness: 2 })
-   * @returns {CSSProperties} CSS rules
+   * @returns {CSSProperties}           CSS rules
    */
   item: ({ color, thickness }: LoaderStylesProps) => ({
     display: "block",
@@ -106,10 +106,10 @@ type LoaderComponent = FC<LoaderProps> & {
 /**
  * A spinner for displaying loading state of a page or a section.
  *
- * @param {LoaderProps} props The props
+ * @param   {LoaderProps} props The props
  * @example
  * <Loader />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}       The JSX element
  */
 export const Loader: LoaderComponent = ({ color = Colors.blue[500], size = 16, thickness = 2, className }) => {
   const styles = useStyles({ color, size, thickness });

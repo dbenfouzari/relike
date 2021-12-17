@@ -16,10 +16,10 @@ export default {
 /**
  * Default Loader template
  *
- * @param {LoaderProps} args The props
+ * @param   {LoaderProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Loader component
+ * @returns {JSX.Element}      The Loader component
  */
 const Template: Story<LoaderProps> = (args) => <Loader {...args} />;
 

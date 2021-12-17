@@ -39,10 +39,10 @@ export interface CalendarProps {
 /**
  * A **[Calendar]** that uses no external dependency.
  *
- * @param {CalendarProps} props The props
+ * @param   {CalendarProps} props The props
  * @example
  * <Calendar />
- * @returns {JSX.Element} The Calendar component
+ * @returns {JSX.Element}         The Calendar component
  */
 export const Calendar: FC<CalendarProps> = ({
   initialValue = DateTime.now(),

@@ -65,7 +65,8 @@
       ],
       "checkGetters": true,
       "enableFixer": false
-    }]
+    }],
+    "jsdoc/check-line-alignment": ["error", "always"]
   },
   "ignorePatterns": [
     "node_modules",

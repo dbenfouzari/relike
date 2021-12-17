@@ -19,20 +19,20 @@ export interface DaysProps {
  *
  * Used to format days
  *
- * @param {string} str The string to format
+ * @param   {string} str The string to format
  * @example
  * threeFirstLetters("monday") // "mon"
- * @returns {string} The 3 first letters.
+ * @returns {string}     The 3 first letters.
  */
 export const threeFirstLetters = (str: string) => str.substr(0, 3);
 
 /**
  * Render Days component
  *
- * @param {DaysProps} props The props
+ * @param   {DaysProps}   props The props
  * @example
  * <Days locale={SupportedCalendarLocales.FR} />
- * @returns {JSX.Element} The Days component
+ * @returns {JSX.Element}       The Days component
  */
 const Days: FC<DaysProps> = ({ locale, formatDay = threeFirstLetters }) => {
   const localizedDays = useMemo(() => DAYS[locale], [locale]);

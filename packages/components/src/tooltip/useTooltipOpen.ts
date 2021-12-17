@@ -5,9 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Duration from "../duration";
 import { Timeout } from "../types";
 
-/**
- *
- */
+/** Defines a tooltip */
 type Tooltip = {
   /**
    * Method that will be called to open the tooltip.
@@ -103,12 +101,12 @@ const tooltipMouseToggle = (() => {
 /**
  * Use this hook to control the tooltip.
  *
- * @param {Duration} delay The delay after which the tooltip opens.
- * @param {HTMLElement | null} anchorElement The element on which the tooltip will be bound.
- * @param {Duration} closeAfter Automatically closes the tooltip after this delay.
+ * @param   {Duration}           delay         The delay after which the tooltip opens.
+ * @param   {HTMLElement | null} anchorElement The element on which the tooltip will be bound.
+ * @param   {Duration}           closeAfter    Automatically closes the tooltip after this delay.
  * @example
  * useTooltipOpen(Duration.seconds(1), null)
- * @returns {boolean} isOpen
+ * @returns {boolean}                          isOpen
  */
 export function useTooltipOpen(delay: Duration, anchorElement: HTMLElement | null, closeAfter?: Duration): boolean {
   const timer = useRef<Timeout>();

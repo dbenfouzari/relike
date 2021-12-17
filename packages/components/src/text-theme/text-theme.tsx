@@ -161,10 +161,10 @@ class TextTheme {
   /**
    * Returns a new TextTheme based on overrides.
    *
-   * @param {TextThemeConstructor} args The arguments
+   * @param   {TextThemeConstructor} args The arguments
    * @example
    * Typography.blackMountainView.copyWith({ headline1: ... })
-   * @returns {TextTheme} A new TextTheme with new values.
+   * @returns {TextTheme}                 A new TextTheme with new values.
    */
   copyWith({
     headline1,
@@ -201,10 +201,10 @@ class TextTheme {
   /**
    * Overrides all TextTheme data with new styles
    *
-   * @param {TextStyleConstructor} args The new styles.
+   * @param   {TextStyleConstructor} args The new styles.
    * @example
    * Typography.blackMountainView.apply({ fontFamily: "Roboto" })
-   * @returns {TextTheme} A new TextTheme with all values updated.
+   * @returns {TextTheme}                 A new TextTheme with all values updated.
    */
   apply({
     backgroundColor,

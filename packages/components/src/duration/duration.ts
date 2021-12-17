@@ -21,10 +21,10 @@ export interface DurationConstructionParams {
 /**
  * Converts a number to 6-digits number string.
  *
- * @param {number} n The number to convert
+ * @param   {number} n The number to convert
  * @example
  * sixDigits(24) // "000024"
- * @returns {string} 6-digits number string.
+ * @returns {string}   6-digits number string.
  */
 function sixDigits(n: number) {
   return n.toString().padStart(6, "0");
@@ -33,11 +33,11 @@ function sixDigits(n: number) {
 /**
  * Converts a number to 2-digits number string.
  *
- * @param {number} n The number to convert
+ * @param   {number} n The number to convert
  * @example
  * sixDigits(24) // "24"
  * sixDigits(2) // "02"
- * @returns {string} 2-digits number string.
+ * @returns {string}   2-digits number string.
  */
 function twoDigits(n: number) {
   return n.toString().padStart(2, "0");
@@ -77,10 +77,10 @@ class Duration {
   /**
    * Builds a new Duration
    *
-   * @param {DurationConstructionParams} params The params
+   * @param   {DurationConstructionParams} params The params
    * @example
    * new Duration({ seconds: 2 })
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}                          A new Duration.
    */
   constructor({
     microseconds = 0,
@@ -107,10 +107,10 @@ class Duration {
   /**
    * Creates a Duration from milliseconds.
    *
-   * @param {number} milliseconds The value.
+   * @param   {number}   milliseconds The value.
    * @example
    * Duration.milliseconds(1000) // same as Duration.seconds(1)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}              A new Duration.
    */
   static milliseconds(milliseconds: number) {
     return new Duration({ milliseconds });
@@ -118,10 +118,10 @@ class Duration {
   /**
    * Creates a Duration from microseconds.
    *
-   * @param {number} microseconds The value.
+   * @param   {number}   microseconds The value.
    * @example
    * Duration.microseconds(1000)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}              A new Duration.
    */
   static microseconds(microseconds: number) {
     return new Duration({ microseconds });
@@ -129,10 +129,10 @@ class Duration {
   /**
    * Creates a Duration from seconds.
    *
-   * @param {number} seconds The value.
+   * @param   {number}   seconds The value.
    * @example
    * Duration.seconds(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}         A new Duration.
    */
   static seconds(seconds: number) {
     return new Duration({ seconds });
@@ -140,10 +140,10 @@ class Duration {
   /**
    * Creates a Duration from minutes.
    *
-   * @param {number} minutes The value.
+   * @param   {number}   minutes The value.
    * @example
    * Duration.minutes(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}         A new Duration.
    */
   static minutes(minutes: number) {
     return new Duration({ minutes });
@@ -151,10 +151,10 @@ class Duration {
   /**
    * Creates a Duration from hours.
    *
-   * @param {number} hours The value.
+   * @param   {number}   hours The value.
    * @example
    * Duration.hours(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}       A new Duration.
    */
   static hours(hours: number) {
     return new Duration({ hours });
@@ -162,10 +162,10 @@ class Duration {
   /**
    * Creates a Duration from days.
    *
-   * @param {number} days The value.
+   * @param   {number}   days The value.
    * @example
    * Duration.days(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}      A new Duration.
    */
   static days(days: number) {
     return new Duration({ days });
@@ -173,10 +173,10 @@ class Duration {
   /**
    * Creates a Duration from months.
    *
-   * @param {number} months The value.
+   * @param   {number}   months The value.
    * @example
    * Duration.months(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}        A new Duration.
    */
   static months(months: number) {
     console.warn(
@@ -191,10 +191,10 @@ class Duration {
    * This library does not provide a perfect way to handle these values since it's not
    * the same every month, every year.
    *
-   * @param {number} years The value.
+   * @param   {number}   years The value.
    * @example
    * Duration.years(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}       A new Duration.
    */
   static years(years: number) {
     console.warn(
@@ -303,10 +303,10 @@ class Duration {
   /**
    * Adds this Duration and other and returns the sum as a new Duration object.
    *
-   * @param {Duration} otherDuration The Duration to add with.
+   * @param   {Duration} otherDuration The Duration to add with.
    * @example
    * Duration.seconds(2).add(Duration.seconds(5)) // Duration.seconds(7)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}               A new Duration.
    */
   public add(otherDuration: Duration) {
     return new Duration({ microseconds: this.inMicroseconds + otherDuration.inMicroseconds });
@@ -315,10 +315,10 @@ class Duration {
   /**
    * Subtracts other from this Duration and returns the difference as a new Duration object.
    *
-   * @param {Duration} otherDuration The Duration to subtract.
+   * @param   {Duration} otherDuration The Duration to subtract.
    * @example
    * Duration.seconds(7).subtract(Duration.seconds(5)) // Duration.seconds(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}               A new Duration.
    */
   public subtract(otherDuration: Duration) {
     return new Duration({ microseconds: this.inMicroseconds - otherDuration.inMicroseconds });
@@ -327,10 +327,10 @@ class Duration {
   /**
    * Multiplies this Duration by the given factor and returns the result as a new Duration object.
    *
-   * @param {number} factor The factor to multiply with
+   * @param   {number}   factor The factor to multiply with
    * @example
    * Duration.seconds(2).multiply(5) // Duration.seconds(10)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}        A new Duration.
    */
   public multiply(factor: number) {
     return new Duration({ microseconds: this.inMicroseconds * factor });
@@ -339,10 +339,10 @@ class Duration {
   /**
    * Divides this Duration by the given quotient and returns the truncated result as a new Duration object.
    *
-   * @param {number} factor The factor to divide with.
+   * @param   {number}   factor The factor to divide with.
    * @example
    * Duration.seconds(10).divide(5) // Duration.seconds(2)
-   * @returns {Duration} A new Duration.
+   * @returns {Duration}        A new Duration.
    */
   public divide(factor: number) {
     return new Duration({ microseconds: Math.floor(this.inMicroseconds / factor) });
@@ -351,11 +351,11 @@ class Duration {
   /**
    * Whether this Duration is shorter than the other.
    *
-   * @param {Duration} otherDuration The duration to compare with.
+   * @param   {Duration} otherDuration The duration to compare with.
    * @example
    * Duration.seconds(2).isLesserThan(Duration.seconds(5)) // true
    * Duration.seconds(5).isLesserThan(Duration.seconds(2)) // false
-   * @returns {boolean} Whether it's shorter or not.
+   * @returns {boolean}                Whether it's shorter or not.
    */
   public isLesserThan(otherDuration: Duration) {
     return this._duration < otherDuration._duration;
@@ -364,12 +364,12 @@ class Duration {
   /**
    * Whether this Duration is shorter than or equal to the other.
    *
-   * @param {Duration} otherDuration The duration to compare with.
+   * @param   {Duration} otherDuration The duration to compare with.
    * @example
    * Duration.seconds(2).isLesserThanOrEqual(Duration.seconds(5)) // true
    * Duration.seconds(5).isLesserThanOrEqual(Duration.seconds(5)) // true
    * Duration.seconds(6).isLesserThanOrEqual(Duration.seconds(5)) // false
-   * @returns {boolean} Whether it's shorter or not.
+   * @returns {boolean}                Whether it's shorter or not.
    */
   public isLesserThanOrEqual(otherDuration: Duration) {
     return this._duration <= otherDuration._duration;
@@ -378,12 +378,12 @@ class Duration {
   /**
    * Whether this Duration has the same length as the other.
    *
-   * @param {Duration} otherDuration The duration to compare with.
+   * @param   {Duration} otherDuration The duration to compare with.
    * @example
    * Duration.seconds(2).isEqual(Duration.seconds(5)) // false
    * Duration.seconds(5).isEqual(Duration.seconds(5)) // true
    * Duration.seconds(6).isEqual(Duration.seconds(5)) // false
-   * @returns {boolean} Whether it's shorter or not.
+   * @returns {boolean}                Whether it's shorter or not.
    */
   public isEqual(otherDuration: Duration) {
     return this._duration === otherDuration._duration;
@@ -392,12 +392,12 @@ class Duration {
   /**
    * Whether this Duration is longer than the other.
    *
-   * @param {Duration} otherDuration The duration to compare with.
+   * @param   {Duration} otherDuration The duration to compare with.
    * @example
    * Duration.seconds(2).isGreaterThan(Duration.seconds(5)) // false
    * Duration.seconds(5).isGreaterThan(Duration.seconds(5)) // false
    * Duration.seconds(6).isGreaterThan(Duration.seconds(5)) // true
-   * @returns {boolean} Whether it's shorter or not.
+   * @returns {boolean}                Whether it's shorter or not.
    */
   public isGreaterThan(otherDuration: Duration) {
     return this._duration > otherDuration._duration;
@@ -406,12 +406,12 @@ class Duration {
   /**
    * Whether this Duration is longer than or equal to the other.
    *
-   * @param {Duration} otherDuration The duration to compare with.
+   * @param   {Duration} otherDuration The duration to compare with.
    * @example
    * Duration.seconds(2).isGreaterThanOrEqual(Duration.seconds(5)) // false
    * Duration.seconds(5).isGreaterThanOrEqual(Duration.seconds(5)) // true
    * Duration.seconds(6).isGreaterThanOrEqual(Duration.seconds(5)) // true
-   * @returns {boolean} Whether it's shorter or not.
+   * @returns {boolean}                Whether it's shorter or not.
    */
   public isGreaterThanOrEqual(otherDuration: Duration) {
     return this._duration >= otherDuration._duration;

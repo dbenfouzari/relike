@@ -21,10 +21,10 @@ export default {
 /**
  * Template that exposes 3 emphasis button
  *
- * @param {ButtonProps} args The props
+ * @param   {ButtonProps} args The props
  * @example
  * <ExpoTemplate {...args} />
- * @returns {JSX.Element} The row of Buttons
+ * @returns {JSX.Element}      The row of Buttons
  */
 const ExpoTemplate: Story<ButtonProps> = (args) => (
   <Flex.Row gap={8}>
@@ -37,10 +37,10 @@ const ExpoTemplate: Story<ButtonProps> = (args) => (
 /**
  * Default Button template
  *
- * @param {ButtonProps} args The props
+ * @param   {ButtonProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The Button component
+ * @returns {JSX.Element}      The Button component
  */
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 

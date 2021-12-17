@@ -15,19 +15,19 @@ export default {
 /**
  * Default TextButton template.
  *
- * @param {TextButtonProps} args The TextButton props.
+ * @param   {TextButtonProps} args The TextButton props.
  * @example
  * <Template>Hello</Template>
- * @returns {JSX.Element} The TextButton component.
+ * @returns {JSX.Element}          The TextButton component.
  */
 const Template: Story<TextButtonProps> = (args) => <TextButton {...args} />;
 /**
  * Template with text content on both sides.
  *
- * @param {TextButtonProps} args The TextButton props.
+ * @param   {TextButtonProps} args The TextButton props.
  * @example
  * <Template>Hello</Template>
- * @returns {JSX.Element} The TextButton component.
+ * @returns {JSX.Element}          The TextButton component.
  */
 const WithContentTemplate: Story<TextButtonProps> = (args) => (
   <div>

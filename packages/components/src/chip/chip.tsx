@@ -83,10 +83,10 @@ const COMPONENT_NAME = "Chip";
 /**
  * Get icon color based on `color` brightness.
  *
- * @param {Color} color The chip color
+ * @param   {Color} color The chip color
  * @example
  * getIconColor(Colors.red)
- * @returns {Color} The icon Color.
+ * @returns {Color}       The icon Color.
  */
 const getIconColor = (color: Color) => {
   if (color.estimateBrightness() === Brightness.dark) return Colors.white70;
@@ -96,10 +96,10 @@ const getIconColor = (color: Color) => {
 /**
  * Get label color based on `color` brightness.
  *
- * @param {Color} color The chip color
+ * @param   {Color} color The chip color
  * @example
  * getLabelColor(Colors.red)
- * @returns {Color} The label Color.
+ * @returns {Color}       The label Color.
  */
 const getLabelColor = (color: Color) => {
   if (color.estimateBrightness() === Brightness.dark) return Colors.white;
@@ -110,10 +110,10 @@ const useStyles = createUseStyles({
   /**
    * Generates chip styles
    *
-   * @param {ChipStyleProps} props The props
+   * @param   {ChipStyleProps} props The props
    * @example
    * chip({ color: Colors.red })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}        The styles
    */
   chip: ({ color }: ChipStyleProps) => ({
     backgroundColor: color.toRGBA(),
@@ -121,10 +121,10 @@ const useStyles = createUseStyles({
   /**
    * Generates clickable chip styles
    *
-   * @param {ChipStyleProps} props The props
+   * @param   {ChipStyleProps} props The props
    * @example
    * chip__clickable({ color: Colors.red })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}        The styles
    */
   chip__clickable: ({ color }: ChipStyleProps) => ({
     "&:active": {
@@ -134,10 +134,10 @@ const useStyles = createUseStyles({
   /**
    * Generates chip label styles
    *
-   * @param {ChipStyleProps} props The props
+   * @param   {ChipStyleProps} props The props
    * @example
    * label({ color: Colors.red })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}        The styles
    */
   label: ({ color }: ChipStyleProps) => ({
     color: getLabelColor(color).toRGBA(),

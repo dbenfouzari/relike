@@ -21,10 +21,10 @@ export default {
 /**
  * Default Text template.
  *
- * @param {TextProps} args The Text props.
+ * @param   {TextProps}   args The Text props.
  * @example
  * <Template>Hello</Template>
- * @returns {JSX.Element} The Text component.
+ * @returns {JSX.Element}      The Text component.
  */
 const Template: Story<TextProps> = (args) => <Text {...args} />;
 

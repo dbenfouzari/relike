@@ -126,12 +126,12 @@ export type ResultProps = ResultWithoutCustomIconProps | ResultWithCustomIconPro
 /**
  * This helper is used to get correct icon from given args
  *
- * @param {ResultStatus} status The status
- * @param {ReactElement<IconProps>} [icon] The custom icon, if exists
- * @param {number} [iconSize=72] The icon size
+ * @param   {ResultStatus}            status        The status
+ * @param   {ReactElement<IconProps>} [icon]        The custom icon, if exists
+ * @param   {number}                  [iconSize=72] The icon size
  * @example
  * getIcon(ResultStatus.ERROR, undefined, 36)
- * @returns {JSX.Element} The custom icon
+ * @returns {JSX.Element}                           The custom icon
  */
 const getIcon = (status?: ResultStatus, icon?: ReactElement<IconProps>, iconSize = 72) => {
   if (icon) return icon;
@@ -168,10 +168,10 @@ const getIcon = (status?: ResultStatus, icon?: ReactElement<IconProps>, iconSize
 /**
  * Used to feed back the results of a series of operational tasks.
  *
- * @param {ResultProps} props The props.
+ * @param   {ResultProps} props The props.
  * @example
  * <Result status={ResultStatus.ERROR} title="An error occured" />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}       The JSX element
  */
 export const Result: FC<ResultProps> = ({ status, title, subtitle, icon, children, iconSize, actions, classNames }) => (
   <div data-testid="result" className={classnames(classes.wrapper, classNames?.wrapper)}>

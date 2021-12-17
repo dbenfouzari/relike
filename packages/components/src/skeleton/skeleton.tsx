@@ -75,14 +75,14 @@ type SkeletonComponent = FC<SkeletonProps> & {
 /**
  * You can display a **[Skeleton]** to mimic a content while it's loading.
  *
- * @param {SkeletonProps} props The Skeleton props.
+ * @param   {SkeletonProps} props The Skeleton props.
  * @example
  * <Skeleton>
  *   <Skeleton.Avatar />
  *   <Skeleton.Title />
  *   <Skeleton.Paragraph rows={1} />
  * </Skeleton>
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}         The JSX element.
  */
 export const Skeleton: SkeletonComponent = ({ active, avatar, children, color, paragraph = true }) => (
   <SkeletonContext.Provider value={{ active, color }}>

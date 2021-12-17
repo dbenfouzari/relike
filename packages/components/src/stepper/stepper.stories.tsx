@@ -21,10 +21,10 @@ export default {
 /**
  * Default template for Stepper.
  *
- * @param {StepperProps} args The Stepper props
+ * @param   {StepperProps} args The Stepper props
  * @example
  * <Template {...stepperProps} />
- * @returns {JSX.Element} The Stepper component
+ * @returns {JSX.Element}       The Stepper component
  */
 const Template: Story<StepperProps> = (args) => <Stepper {...args} />;
 

@@ -1,12 +1,12 @@
 /**
  * Convert r, g, and b values to HSL
  *
- * @param {number} r Red amount
- * @param {number} g Green amount
- * @param {number} b Blue amount
+ * @param   {number} r Red amount
+ * @param   {number} g Green amount
+ * @param   {number} b Blue amount
  * @example
  * toHsl(255, 255, 255)
- * @returns {any} HSL array
+ * @returns {any}      HSL array
  */
 export const toHsl = (r: number, g: number, b: number) => {
   // Make r, g, and b fractions of 1

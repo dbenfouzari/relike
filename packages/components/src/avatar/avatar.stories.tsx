@@ -13,10 +13,10 @@ export default {
 /**
  * Default Avatar template.
  *
- * @param {AvatarProps} args The props
+ * @param   {AvatarProps} args The props
  * @example
  * <Template />
- * @returns {JSX.Element} The Avatar component
+ * @returns {JSX.Element}      The Avatar component
  */
 const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 

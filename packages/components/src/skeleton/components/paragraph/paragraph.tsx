@@ -32,10 +32,10 @@ const useStyles = createUseStyles({
   /**
    * Generates styles based on props
    *
-   * @param {SkeletonParagraphStylesProps} props The props
+   * @param   {SkeletonParagraphStylesProps} props The props
    * @example
    * line({ color: Colors.blue })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                      The styles
    */
   line: ({ color }: SkeletonParagraphStylesProps): CSSProperties => ({
     backgroundColor: color.toRGBA(),
@@ -45,16 +45,16 @@ const useStyles = createUseStyles({
 /**
  * A helper to get paragraph width.
  *
- * @param {number} rows
- *        Rows amount
- * @param {number} rowIndex
- *        Current row index
- * @param {number | number[]} width
- *        The row width
+ * @param   {number}            rows
+ *                                       Rows amount
+ * @param   {number}            rowIndex
+ *                                       Current row index
+ * @param   {number | number[]} width
+ *                                       The row width
  * @returns {any}
- *          - `undefined` if no width given
- *          - `width` if is a number and this is the last row
- *          - `width[rowIndex]` else
+ *                                       - `undefined` if no width given
+ *                                       - `width` if is a number and this is the last row
+ *                                       - `width[rowIndex]` else
  * @example
  * getWidth(5, 3, 200)
  */
@@ -72,10 +72,10 @@ const getWidth = <R extends number>(
 /**
  * You can display a **[Skeleton.Paragraph]** to mimic a paragraph while content is loading.
  *
- * @param {SkeletonParagraphProps} props The SkeletonParagraph props
+ * @param   {SkeletonParagraphProps} props The SkeletonParagraph props
  * @example
  * <SkeletonParagraph rows={5} width={100} />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}                  The JSX element
  */
 export const SkeletonParagraph = <R extends number>({ rows, width }: SkeletonParagraphProps<R>) => {
   const { active = false, color = Colors.grey[200] } = useSkeletonContext();

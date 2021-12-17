@@ -75,10 +75,10 @@ const useStyles = createUseStyles({
   /**
    * Generate styles from args
    *
-   * @param {TabsStylesProps} args Tab styles props
+   * @param   {TabsStylesProps} args Tab styles props
    * @example
    * wrapper({ space: 32, activeColor: Colors.blue, inactiveColor: Colors.grey })
-   * @returns {CSSProperties} styles
+   * @returns {CSSProperties}        styles
    */
   wrapper: ({ space, activeColor, inactiveColor }: TabsStylesProps) =>
     ({
@@ -91,13 +91,13 @@ const useStyles = createUseStyles({
 /**
  * A component that displays a horizontal row of tabs.
  *
- * @param {TabsProps} props Tabs props.
+ * @param   {TabsProps}   props Tabs props.
  * @example
  * <Tabs>
  *   <Tabs.Item>Hello</Tabs.Item>
  *   <Tabs.Item>World</Tabs.Item>
  * </Tabs>
- * @returns {JSX.Element} JSX element.
+ * @returns {JSX.Element}       JSX element.
  */
 export const Tabs: TabsComponent = ({
   defaultActiveKey,

@@ -33,10 +33,10 @@ const useStyles = createUseStyles({
   /**
    * Generates wrapper styles
    *
-   * @param {StylesProps} props The props
+   * @param   {StylesProps}   props The props
    * @example
    * wrapper({ scrollDirection: Axis.vertical })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}       The styles
    */
   wrapper: ({ scrollDirection, crossAxisSpacing, mainAxisSpacing, crossAxisCount, padding }: StylesProps) => ({
     // Since we want a grid
@@ -91,7 +91,7 @@ const useStyles = createUseStyles({
 /**
  * Creates a scrollable, 2D array of widgets with a fixed number of tiles in the cross axis.
  *
- * @param {GridViewCountProps} props The props
+ * @param   {GridViewCountProps} props The props
  * @example
  * <GridViewCount crossAxisCount={2}>
  *   <div>1</div>
@@ -99,7 +99,7 @@ const useStyles = createUseStyles({
  *   <div>3</div>
  *   <div>4</div>
  * </GridViewCount>
- * @returns {JSX.Element} The JSX element.
+ * @returns {JSX.Element}              The JSX element.
  */
 export const GridViewCount: FC<GridViewCountProps> = ({ children, className, ...props }) => {
   const styles = useStyles(props);

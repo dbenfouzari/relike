@@ -43,10 +43,10 @@ const useBasicStyles = createUseStyles({
   /**
    * Creates wrapper styles based on props
    *
-   * @param {LinearProgressIndicatorStylesProps} props The props
+   * @param   {LinearProgressIndicatorStylesProps} props The props
    * @example
    * wrapper({ height: 8, backgroundColor: Colors.blue })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                            The styles
    */
   wrapper: ({ backgroundColor, height }: LinearProgressIndicatorStylesProps) => ({
     width: "100%",
@@ -56,10 +56,10 @@ const useBasicStyles = createUseStyles({
   /**
    * Creates inner styles based on props
    *
-   * @param {LinearProgressIndicatorStylesProps} props The props
+   * @param   {LinearProgressIndicatorStylesProps} props The props
    * @example
    * inner({ height: 8, backgroundColor: Colors.blue })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}                            The styles
    */
   inner: ({ backgroundColor, height }: LinearProgressIndicatorStylesProps) => ({
     backgroundColor: backgroundColor?.toRGBA() ?? defaultColor.toRGBA(),
@@ -74,10 +74,10 @@ const useValueStyles = createUseStyles({
   /**
    * Creates inner styles based on props
    *
-   * @param {ValueStylesProps} props The props
+   * @param   {ValueStylesProps} props The props
    * @example
    * inner({ value: 90 })
-   * @returns {CSSProperties} The styles
+   * @returns {CSSProperties}          The styles
    */
   inner: (props: ValueStylesProps) => ({
     width: `${props.value}%`,
@@ -87,10 +87,10 @@ const useValueStyles = createUseStyles({
 /**
  * A widget that shows progress along a line.
  *
- * @param {LinearProgressIndicatorProps} props The props
+ * @param   {LinearProgressIndicatorProps} props The props
  * @example
  * <LinearProgressIndicator value={40} />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}                        The JSX element
  */
 export const LinearProgressIndicator: FC<LinearProgressIndicatorProps> = ({ value, ...rest }) => {
   if (value > 100) throw new RangeError("[LinearProgressIndicator] - The value should not exceed 100");

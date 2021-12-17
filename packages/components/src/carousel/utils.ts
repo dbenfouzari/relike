@@ -3,10 +3,10 @@ export const THRESHOLD = 0.75;
 /**
  * Find the first visible carousel item index.
  *
- * @param {HTMLElement[]} childRefs The child refs
+ * @param   {HTMLElement[]} childRefs The child refs
  * @example
  * findFirstVisibleIndex(...)
- * @returns {number} First index
+ * @returns {number}                  First index
  */
 export const findFirstVisibleIndex = (childRefs: HTMLElement[]) =>
   childRefs.findIndex((child) => child.getAttribute("visible"));
@@ -14,10 +14,10 @@ export const findFirstVisibleIndex = (childRefs: HTMLElement[]) =>
 /**
  * Find the last visible carousel item index.
  *
- * @param {HTMLElement[]} childRefs The child refs
+ * @param   {HTMLElement[]} childRefs The child refs
  * @example
  * findLastVisibleIndex(...)
- * @returns {number} Last index
+ * @returns {number}                  Last index
  */
 export const findLastVisibleIndex = (childRefs: HTMLElement[]) => {
   const reversedIndex = childRefs
@@ -32,8 +32,8 @@ export const findLastVisibleIndex = (childRefs: HTMLElement[]) => {
 /**
  * Scrolls the carousel to left until it gets to defined step.
  *
- * @param {number} scrollStep The step to go
- * @param {HTMLElement[]} itemRefs The item refs.
+ * @param {number}        scrollStep The step to go
+ * @param {HTMLElement[]} itemRefs   The item refs.
  * @example
  * scrollLeftToStep(0, elms);
  */
@@ -47,8 +47,8 @@ export const scrollLeftToStep = (scrollStep: number, itemRefs: HTMLElement[]) =>
 /**
  * Scrolls the carousel to right until it gets to defined step.
  *
- * @param {number} scrollStep The step to go
- * @param {HTMLElement[]} itemRefs The item refs.
+ * @param {number}        scrollStep The step to go
+ * @param {HTMLElement[]} itemRefs   The item refs.
  * @example
  * scrollRightToStep(0, elms);
  */
@@ -62,8 +62,8 @@ export const scrollRightToStep = (scrollStep: number, itemRefs: HTMLElement[]) =
 /**
  * Scrolls the carousel until it gets to defined step.
  *
- * @param {number} scrollStep The step to go
- * @param {HTMLElement[]} itemRefs The item refs.
+ * @param {number}        scrollStep The step to go
+ * @param {HTMLElement[]} itemRefs   The item refs.
  * @example
  * scrollToStep(0, elms);
  */
@@ -74,9 +74,9 @@ export const scrollToStep = (scrollStep: number, itemRefs: HTMLElement[]) => {
 /**
  * Automatically shows or hide indicator.
  *
- * @param {HTMLElement[]} itemRefs The item refs
- * @param {Function} setLeftIndicator Handler to set left indicator visibility
- * @param {Function} setRightIndicator Handler to set right indicator visibility
+ * @param {HTMLElement[]} itemRefs          The item refs
+ * @param {Function}      setLeftIndicator  Handler to set left indicator visibility
+ * @param {Function}      setRightIndicator Handler to set right indicator visibility
  * @example
  * showHideIndicator(itemRefs, setLeftIndicator, setRightIndicator);
  */

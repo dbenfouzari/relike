@@ -11,10 +11,10 @@ import GridViewCount, { GridViewCountProps } from "./grid-view-count";
 /**
  * Helper to generate grid view items.
  *
- * @param {number} n Number of items to generate.
+ * @param   {number}        n Number of items to generate.
  * @example
  * generateItems(32)
- * @returns {JSX.Element[]} The items.
+ * @returns {JSX.Element[]}   The items.
  */
 const generateItems = (n: number) =>
   Array.from({ length: n }, (_, index) => {
@@ -54,10 +54,10 @@ export default {
 /**
  * Default GridViewCount template
  *
- * @param {GridViewCountProps} args The props
+ * @param   {GridViewCountProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The GridViewCount
+ * @returns {JSX.Element}             The GridViewCount
  */
 const Template: Story<GridViewCountProps> = (args) => <GridViewCount {...args} />;
 

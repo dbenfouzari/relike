@@ -18,10 +18,10 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * Basic **Input**.
  * Can be `controlled` by passing `controller` prop.
  *
- * @param {InputProps} props The props.
+ * @param   {InputProps}  props The props.
  * @example
  * <Input />
- * @returns {JSX.Element} The JSX element
+ * @returns {JSX.Element}       The JSX element
  * @see UseTextEditingController
  */
 export const Input: FC<InputProps> = ({ controller, ...props }) => {

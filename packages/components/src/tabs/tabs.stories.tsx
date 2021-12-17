@@ -24,12 +24,12 @@ export default {
 /**
  * Default Tabs template.
  *
- * @param {TabsProps} args The Tabs props.
+ * @param   {TabsProps}   args The Tabs props.
  * @example
  * <Template>
  *   <Tabs.Item name"Tab 1">Hello</Tabs.Item>
  * </Template>
- * @returns {JSX.Element} The Tabs component
+ * @returns {JSX.Element}      The Tabs component
  */
 const Template: Story<TabsProps> = (args) => <Tabs {...args} />;
 

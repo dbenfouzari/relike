@@ -8,11 +8,11 @@ import classes from "./dropdown-button.stories.module.scss";
 /**
  * Helper to generate dropdown items.
  *
- * @param {number} [n = 100] Number of items to generate
+ * @param   {number}                            [n = 100] Number of items to generate
  * @example
  * generateItems() // generates 100 items
  * generateItems(5) // generates 5 items
- * @returns {{ value: number, text: string }[]} The items.
+ * @returns {{ value: number, text: string }[]}           The items.
  */
 const generateItems = (n = 100) => {
   const result = [];
@@ -41,10 +41,10 @@ export default {
 /**
  * Default DropdownButton template
  *
- * @param {DropdownButtonProps} args The props
+ * @param   {DropdownButtonProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The DropdownButton component
+ * @returns {JSX.Element}              The DropdownButton component
  */
 const Template: Story<DropdownButtonProps> = (args) => <DropdownButton {...args} />;
 

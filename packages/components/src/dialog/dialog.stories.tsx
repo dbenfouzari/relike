@@ -60,10 +60,10 @@ export default {
 /**
  * Component that handles Dialog.
  *
- * @param {DialogProps} props The props
+ * @param   {DialogProps} props The props
  * @example
  * <Component {...props} />
- * @returns {JSX.Element} Component that handles Dialog.
+ * @returns {JSX.Element}       Component that handles Dialog.
  */
 const Component = (props: DialogProps) => {
   const [isOpen, setIsOpen] = useState(props.isOpen);
@@ -85,10 +85,10 @@ const Component = (props: DialogProps) => {
 /**
  * Default Dialog template.
  *
- * @param {DialogProps} args The props
+ * @param   {DialogProps} args The props
  * @example
  * <Template {...args} />
- * @returns {JSX.Element} The Dialog component
+ * @returns {JSX.Element}      The Dialog component
  */
 const Template: Story<DialogProps> = (args) => <Component {...args} />;
 
