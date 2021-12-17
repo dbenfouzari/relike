@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpansionPanel should open 1`] = `
+<div
+  class="wrapper wrapper__open"
+  data-testid="expansion-panel"
+>
+  <div
+    class="header"
+  >
+    <div>
+      <span>
+        Hello Panel
+      </span>
+    </div>
+    <button
+      class="wrapper wrapper-0-2-1 wrapper-d1-0-2-3 wrapper__clickable"
+      data-testid="toggle"
+    >
+      <span
+        class="jsx-786785084 icon material-icons arrow"
+      >
+        keyboard_arrow_down
+      </span>
+    </button>
+  </div>
+  <div
+    class="content"
+    style="max-height: 0;"
+  >
+    <div
+      class="content_inner"
+    >
+      Ah que coucou
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExpansionPanel should render successfully 1`] = `
+<div
+  class="wrapper"
+  data-testid="expansion-panel"
+>
+  <div
+    class="header"
+  >
+    <div>
+      <span>
+        Hello Panel
+      </span>
+    </div>
+    <button
+      class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2 wrapper__clickable"
+      data-testid="toggle"
+    >
+      <span
+        class="jsx-786785084 icon material-icons arrow"
+      >
+        keyboard_arrow_down
+      </span>
+    </button>
+  </div>
+  <div
+    class="content"
+    style="max-height: 0;"
+  >
+    <div
+      class="content_inner"
+    >
+      Ah que coucou
+    </div>
+  </div>
+</div>
+`;

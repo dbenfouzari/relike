@@ -8,24 +8,37 @@ import Padding from "../padding";
 import classes from "./expansion-panel.module.scss";
 import useExpansion from "./useExpansion";
 
+/** Defines possible className overrides for ExpansionPanel component */
 export interface ExpansionPanelClassNames {
+  /***/
   wrapper?: string;
+  /***/
   header?: string;
+  /***/
   headerIconButton?: string;
+  /***/
   contentOuter?: string;
+  /***/
   contentInner?: string;
 }
 
+/** Defines ExpansionPanel props */
 export interface ExpansionPanelProps {
-  /**
-   * The component builder that builds the expansion panels' header.
-   */
-  headerBuilder: ({ isExpanded }: { isExpanded: boolean }) => JSX.Element;
+  /** The component builder that builds the expansion panels' header. */
+  headerBuilder: ({
+    isExpanded,
+  }: {
+    /** Provides a way to know if the panel is expanded. */
+    isExpanded: boolean;
+  }) => JSX.Element;
   /**
    * The body of the expansion panel that's displayed below the header.
    * It's only displayed when panel is expanded.
    */
   children: ReactChildren | ReactChild;
+  /**
+   * You can override multiples classNames, so it really looks like you want.
+   */
   classNames?: ExpansionPanelClassNames;
 }
 
@@ -34,12 +47,22 @@ export interface ExpansionPanelProps {
  *
  * It has a header and a body and can be either expanded or collapsed.
  * The body of the panel is only visible when it is expanded.
+ *
+ * @param {ExpansionPanelProps} props The props
+ * @example
+ * <ExpansionPanel {...args} headerBuilder={<span>Title</span>}>
+ *   <span>Hello World</span>
+ * </ExpansionPanel>
+ * @returns {JSX.Element} The JSX Element
  */
 export const ExpansionPanel: FC<ExpansionPanelProps> = ({ headerBuilder, children, classNames }) => {
   const { ref: contentRef, contentHeight, isExpanded, toggleExpand } = useExpansion(children);
 
   return (
-    <div className={classnames(classes.wrapper, { [classes.wrapper__open]: isExpanded }, classNames?.wrapper)}>
+    <div
+      data-testid="expansion-panel"
+      className={classnames(classes.wrapper, { [classes.wrapper__open]: isExpanded }, classNames?.wrapper)}
+    >
       <div className={classnames(classes.header, classNames?.header)}>
         {headerBuilder({ isExpanded })}
 

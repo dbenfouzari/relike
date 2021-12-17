@@ -1,5 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
+/**
+ * Helper to get ExpansionPanel content height when it's not collapsed.
+ *
+ * To do this, we clone all and compute the height.
+ *
+ * @param {HTMLElement | null} [parent] The parent.
+ * @example
+ * getChildrenHeight(<div>...</div>);
+ * @returns {number | undefined} The height
+ */
 const getChildrenHeight = (parent?: HTMLElement | null) => {
   if (!parent) return;
 
@@ -20,17 +30,31 @@ const getChildrenHeight = (parent?: HTMLElement | null) => {
   return maxHeight;
 };
 
+/**
+ * Use this hook to get expansion panel logic.
+ *
+ * @param {React.ReactElement[]} children The content
+ * @example
+ * useExpansion(...);
+ * @returns {any} The maxHeight and handlers
+ */
 const useExpansion = <T>(children: T) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [maxContentHeight, setMaxContentHeight] = useState<number | undefined>(0);
   const [contentHeight, setContentHeight] = useState<number | undefined>(0);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const toggleExpand = () => setIsExpanded((v) => !v);
-
   /**
-   * This hooks is used to get children height, so we can store it.
+   * Toggles panel expansion
+   *
+   * @example
+   * toggleExpand();
    */
+  const toggleExpand = () => {
+    setIsExpanded((v) => !v);
+  };
+
+  /** This hook is used to get children height, so we can store it. */
   useEffect(() => {
     if (contentRef.current) {
       const maxHeight = getChildrenHeight(contentRef.current);
@@ -38,9 +62,7 @@ const useExpansion = <T>(children: T) => {
     }
   }, [children]);
 
-  /**
-   * This hook is used to set content height based on `isExpanded` variable.
-   */
+  /** This hook is used to set content height based on `isExpanded` variable. */
   useEffect(() => {
     if (isExpanded) {
       setContentHeight(maxContentHeight);

@@ -41,6 +41,7 @@
         "JSX",
         "KeyboardEvent",
         "MouseEvent",
+        "React",
         "ThemeData",
         "TouchEvent"
       ]

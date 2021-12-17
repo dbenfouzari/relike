@@ -15,6 +15,8 @@ describe("ExpansionPanel", () => {
         Ah que coucou
       </ExpansionPanel>,
     );
+
+    expect(screen.getByTestId("expansion-panel")).toMatchSnapshot();
   });
 
   it("should open", () => {
@@ -33,5 +35,7 @@ describe("ExpansionPanel", () => {
     const toggle = screen.getByTestId("toggle");
 
     fireEvent.click(toggle);
+
+    expect(screen.getByTestId("expansion-panel")).toMatchSnapshot();
   });
 });
