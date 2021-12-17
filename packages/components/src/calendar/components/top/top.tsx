@@ -6,16 +6,29 @@ import Icon from "../../../icon";
 import IconButton from "../../../icon-button";
 import Icons from "../../../icons";
 import Toolbar from "../../../toolbar";
-import { MONTHS, STRINGS, SupportedLocales } from "../../constants";
+import { MONTHS, STRINGS, SupportedCalendarLocales } from "../../constants";
 import classes from "./top.module.scss";
 
+/** Defines calendar header props */
 export interface CalendarTopProps {
+  /** Current date */
   currentDate: DateTime;
+  /** Handle previous button click */
   onPrevClick: VoidFunction;
+  /** Handle next button click */
   onNextClick: VoidFunction;
-  locale: SupportedLocales;
+  /** Current calendar locale */
+  locale: SupportedCalendarLocales;
 }
 
+/**
+ * Renders calendar header
+ *
+ * @param {CalendarTopProps} props The props
+ * @example
+ * <CalendarTop currentDate={DateTime.now()} locale={SupportedCalendarLocales.FR} />
+ * @returns {JSX.Element} The CalendarTop component
+ */
 const CalendarTop: FC<CalendarTopProps> = ({ currentDate, locale, onNextClick, onPrevClick }) => (
   <Toolbar
     className={classes.top}
