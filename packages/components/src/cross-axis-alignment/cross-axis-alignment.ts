@@ -1,3 +1,6 @@
+/**
+ * How the children should be placed along the cross axis in a flex layout.
+ */
 enum CrossAxisAlignment {
   /**
    * Place the children along the cross axis such that their baselines match.
