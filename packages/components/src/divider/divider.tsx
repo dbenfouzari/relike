@@ -3,6 +3,7 @@ import { forwardRef } from "react";
 
 import classes from "./divider.module.scss";
 
+/** Defines Divider props */
 export interface DividerProps {
   /** This prop is used to override the style */
   className?: string;
@@ -14,9 +15,7 @@ export interface DividerProps {
   variant?: "dark" | "light";
 }
 
-/**
- * Component display name.
- */
+/** Component display name. */
 const COMPONENT_NAME = "Divider";
 
 export const Divider = forwardRef<HTMLDivElement, DividerProps>(({ className, variant = "dark", ...props }, ref) => (
