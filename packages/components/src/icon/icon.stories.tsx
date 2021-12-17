@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import { EXCLUDED_CONTROLS } from "../../.storybook/constants";
 import Colors from "../colors";
-import Icons from "../icons";
-import Icon from "./icon";
+import Icons, { IconData } from "../icons";
+import Icon, { IconProps } from "./icon";
 
 export default {
   title: "Icon",
@@ -19,17 +19,41 @@ export default {
       exclude: [...EXCLUDED_CONTROLS, "color"],
     },
   },
-} as ComponentMeta<typeof Icon>;
+} as Meta<IconProps>;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Template: ComponentStory<any> = ({ icon, ...args }: { icon: string }) => {
+/** Defines default template args */
+type TemplateArgs = Omit<IconProps, "icon"> & {
+  /** The icon name */
+  icon: IconData["name"];
+};
+
+/**
+ * Default Icon template.
+ *
+ * We pass icon name instead of icon to be able to work with Storybook controls.
+ *
+ * @param {TemplateArgs} props The props
+ * @example
+ * <Template icon={Icons.access_time.name} />
+ * @returns {JSX.Element} The Icon component
+ */
+const Template: Story<TemplateArgs> = ({ icon, ...args }) => {
   const originalIcon = Icons[icon as keyof Icons];
 
   return <Icon icon={originalIcon} {...args} />;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const WithCustomColorTemplate: ComponentStory<any> = ({ icon, ...args }: { icon: string }) => {
+/**
+ * Icon template with custom red color.
+ *
+ * We pass icon name instead of icon to be able to work with Storybook controls.
+ *
+ * @param {TemplateArgs} props The props
+ * @example
+ * <WithCustomColorTemplate icon={Icons.access_time.name} />
+ * @returns {JSX.Element} The Icon component
+ */
+const WithCustomColorTemplate: Story<TemplateArgs> = ({ icon, ...args }) => {
   const originalIcon = Icons[icon as keyof Icons];
 
   return <Icon color={Colors.red[500]} icon={originalIcon} {...args} />;

@@ -8,6 +8,7 @@ import Icon from "../icon";
 import Icons from "../icons";
 import classes from "./checkbox.module.scss";
 
+/** Defines Checkbox props */
 export interface CheckboxProps {
   /** This prop is used to override the style */
   className?: string;
@@ -17,15 +18,21 @@ export interface CheckboxProps {
    * @default Colors.blue[400]
    */
   color?: Color;
+  /** Checkbox display label */
   label?: string;
+  /** Is checkbox disabled */
   disabled?: boolean;
+  /** Checkbox override classNames */
   classNames?: ClassNames;
 }
 
+/** Defines checkbox styles */
 interface CheckboxStyleProps {
+  /** Main color */
   color: Color;
 }
 
+/** Defines Checkbox overridable classNames */
 interface ClassNames {
   /**
    * This is the component that wraps all content.
@@ -62,12 +69,18 @@ interface ClassNames {
   label?: string;
 }
 
-/**
- * Component display name.
- */
+/** Component display name. */
 const COMPONENT_NAME = "Checkbox";
 
 const useStyles = createUseStyles({
+  /**
+   * Generates Checkbox styles
+   *
+   * @param {CheckboxStyleProps} color Main color
+   * @example
+   * checkbox({ color: Colors.blue })
+   * @returns {CSSProperties} The styles
+   */
   checkbox: ({ color }: CheckboxStyleProps) => ({
     "&:checked:before": {
       backgroundColor: color.toRGBA(),

@@ -1,3 +1,6 @@
+/**
+ * How the children should be placed along the main axis in a flex layout.
+ */
 enum MainAxisAlignment {
   /**
    * Place the children as close to the middle of the main axis as possible.

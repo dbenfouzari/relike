@@ -13,6 +13,7 @@ import TextStyle from "../text-style";
 import { Maybe } from "../types";
 import classes from "./chip.module.scss";
 
+/** Defines Chip props */
 export interface ChipProps {
   /** This prop is used to override the style */
   className?: string;
@@ -70,33 +71,74 @@ export interface ChipProps {
   children: ReactText;
 }
 
+/** Defines Chip styles props */
 type ChipStyleProps = {
+  /** Chip color */
   color: Color;
 };
 
-/**
- * Component display name.
- */
+/** Component display name. */
 const COMPONENT_NAME = "Chip";
 
+/**
+ * Get icon color based on `color` brightness.
+ *
+ * @param {Color} color The chip color
+ * @example
+ * getIconColor(Colors.red)
+ * @returns {Color} The icon Color.
+ */
 const getIconColor = (color: Color) => {
   if (color.estimateBrightness() === Brightness.dark) return Colors.white70;
   return Colors.black54;
 };
+
+/**
+ * Get label color based on `color` brightness.
+ *
+ * @param {Color} color The chip color
+ * @example
+ * getLabelColor(Colors.red)
+ * @returns {Color} The label Color.
+ */
 const getLabelColor = (color: Color) => {
   if (color.estimateBrightness() === Brightness.dark) return Colors.white;
   return Colors.black87;
 };
 
 const useStyles = createUseStyles({
+  /**
+   * Generates chip styles
+   *
+   * @param {ChipStyleProps} props The props
+   * @example
+   * chip({ color: Colors.red })
+   * @returns {CSSProperties} The styles
+   */
   chip: ({ color }: ChipStyleProps) => ({
     backgroundColor: color.toRGBA(),
   }),
+  /**
+   * Generates clickable chip styles
+   *
+   * @param {ChipStyleProps} props The props
+   * @example
+   * chip__clickable({ color: Colors.red })
+   * @returns {CSSProperties} The styles
+   */
   chip__clickable: ({ color }: ChipStyleProps) => ({
     "&:active": {
       backgroundColor: color.withLightness(color.lightness - 5).toRGBA(),
     },
   }),
+  /**
+   * Generates chip label styles
+   *
+   * @param {ChipStyleProps} props The props
+   * @example
+   * label({ color: Colors.red })
+   * @returns {CSSProperties} The styles
+   */
   label: ({ color }: ChipStyleProps) => ({
     color: getLabelColor(color).toRGBA(),
   }),
@@ -116,6 +158,10 @@ export const Chip = forwardRef<HTMLButtonElement, ChipProps>(
     /**
      * If Chip is disabled, we should return undefined.
      * Else we stop firing `handlePress` on parent and we call `onDeletePress`.
+     *
+     * @param {MouseEvent} e The mouse event
+     * @example
+     * onDelete()
      */
     const onDelete =
       disabled || !onDeletePress

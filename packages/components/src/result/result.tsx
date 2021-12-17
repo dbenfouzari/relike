@@ -7,6 +7,7 @@ import Icon, { IconProps } from "../icon";
 import Icons from "../icons";
 import classes from "./result.module.scss";
 
+/** Defines possible statuses for Result component */
 export enum ResultStatus {
   SUCCESS = "@result-status_success",
   INFO = "@result-status_info",
@@ -14,6 +15,7 @@ export enum ResultStatus {
   ERROR = "@result-status_error",
 }
 
+/** Defines possible className overrides for Result component */
 export interface ResultClassnames {
   /**
    * The **Result** wrapper. Contains all React nodes.
@@ -46,6 +48,7 @@ export interface ResultClassnames {
   content?: string;
 }
 
+/** The base Result props. Meant to be overridden */
 interface BaseResultProps {
   /**
    * The **title** you want to show.
@@ -72,12 +75,29 @@ interface BaseResultProps {
   classNames?: ResultClassnames;
 }
 
-interface ResultWithCustomIconProps extends BaseResultProps {
+/** Defines the Result props when using custom icon */
+export interface ResultWithCustomIconProps extends BaseResultProps {
+  /**
+   * REQUIRED if **icon** is not set.
+   *
+   * You cannot set a **status** along with an **icon**.
+   */
   status?: undefined;
+  /**
+   * REQUIRED if **status** is not set.
+   *
+   * You cannot set an **icon** along with a **status**.
+   */
   icon: ReactElement<IconProps>;
+  /**
+   * Override default Icon size.
+   *
+   * @default 72
+   */
   iconSize?: undefined;
 }
 
+/** Defines the Result props when NOT using custom icon */
 export interface ResultWithoutCustomIconProps extends BaseResultProps {
   /**
    * REQUIRED if **icon** is not set.
@@ -100,8 +120,19 @@ export interface ResultWithoutCustomIconProps extends BaseResultProps {
   iconSize?: number;
 }
 
+/** Defines Result props */
 export type ResultProps = ResultWithoutCustomIconProps | ResultWithCustomIconProps;
 
+/**
+ * This helper is used to get correct icon from given args
+ *
+ * @param {ResultStatus} status The status
+ * @param {ReactElement<IconProps>} [icon] The custom icon, if exists
+ * @param {number} [iconSize=72] The icon size
+ * @example
+ * getIcon(ResultStatus.ERROR, undefined, 36)
+ * @returns {JSX.Element} The custom icon
+ */
 const getIcon = (status?: ResultStatus, icon?: ReactElement<IconProps>, iconSize = 72) => {
   if (icon) return icon;
   const wrappedIconSize = (iconSize * 54) / 72;
@@ -136,9 +167,14 @@ const getIcon = (status?: ResultStatus, icon?: ReactElement<IconProps>, iconSize
 
 /**
  * Used to feed back the results of a series of operational tasks.
+ *
+ * @param {ResultProps} props The props.
+ * @example
+ * <Result status={ResultStatus.ERROR} title="An error occured" />
+ * @returns {JSX.Element} The JSX element
  */
 export const Result: FC<ResultProps> = ({ status, title, subtitle, icon, children, iconSize, actions, classNames }) => (
-  <div className={classnames(classes.wrapper, classNames?.wrapper)}>
+  <div data-testid="result" className={classnames(classes.wrapper, classNames?.wrapper)}>
     <div className={classnames(classes.icon, classNames?.icon)}>{getIcon(status, icon, iconSize)}</div>
 
     <div className={classnames(classes.title, classNames?.title)}>{title}</div>

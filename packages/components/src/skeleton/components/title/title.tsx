@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { FC } from "react";
+import type { CSSProperties, FC } from "react";
 import { createUseStyles } from "react-jss";
 
 import Color from "../../../color";
@@ -7,18 +7,32 @@ import Colors from "../../../colors";
 import useSkeletonContext from "../../hooks/useSkeletonContext";
 import classes from "./title.module.scss";
 
+/** Defines SkeletonTitle props */
 interface SkeletonTitleStylesProps {
+  /** The main color. */
   color: Color;
 }
 
 const useStyles = createUseStyles({
-  title: ({ color }: SkeletonTitleStylesProps) => ({
+  /**
+   * Generates styles based on props
+   *
+   * @param {SkeletonTitleStylesProps} props The styles props.
+   * @example
+   * title({ color: Colors.blue })
+   * @returns {CSSProperties} The styles
+   */
+  title: ({ color }: SkeletonTitleStylesProps): CSSProperties => ({
     backgroundColor: color.toRGBA(),
   }),
 });
 
 /**
  * You can display a **[Skeleton.Title]** to mimic a title while content is loading.
+ *
+ * @example
+ * <SkeletonTitle />
+ * @returns {JSX.Element} The JSX element.
  */
 export const SkeletonTitle: FC = () => {
   const { active = false, color = Colors.grey[200] } = useSkeletonContext();

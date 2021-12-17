@@ -1,6 +1,8 @@
 import { ChangeEvent, useCallback, useMemo, useRef, useState } from "react";
 
+/** Defines useTextEditingController props */
 export interface UseTextEditingControllerProps<B extends boolean> {
+  /** Initial input value */
   initialValue?: string;
   /**
    * Update this to `true` if you want to listen the value.
@@ -12,10 +14,11 @@ export interface UseTextEditingControllerProps<B extends boolean> {
 /**
  * If you want to control the input, you can use this `useTextEditingController`.
  * Use it like this :
+ *
+ * @param {UseTextEditingControllerProps<boolean>} props The props
  * @example
  * const _controller = useTextEditingController({ listenValue: true });
- * @param {String} initialValue The initial value of the input
- * @param {Boolean} listenValue Do you want to listen the value ?
+ * @returns {any} The handlers
  */
 const useTextEditingController = <B extends boolean>({
   initialValue = "",
@@ -36,6 +39,12 @@ const useTextEditingController = <B extends boolean>({
     setValue(event.target.value);
   }, []);
 
+  /**
+   *  Clears the input value
+   *
+   *  @example
+   *  clear();
+   */
   const clear = () => {
     setValue("");
     inputRef.current && (inputRef.current.value = "");
@@ -106,6 +115,7 @@ const useTextEditingController = <B extends boolean>({
     : typeof resultWithoutValue;
 };
 
+/** Defines useTextEditingController type */
 export type UseTextEditingController = ReturnType<typeof useTextEditingController>;
 
 export default useTextEditingController;

@@ -5,38 +5,48 @@ import DateTime from "../date-time";
 import Duration from "../duration";
 import classes from "./calendar.module.scss";
 import { CalendarTop, Days, MonthDays } from "./components";
-import { SupportedLocales } from "./constants";
+import { SupportedCalendarLocales } from "./constants";
 import { CalendarEvent, Day } from "./types";
 import { filterCalendarEvents } from "./utils";
 
+/** Defines Calendar props */
 export interface CalendarProps {
   /**
    * Initial selected date. Can be a timestamp or a [DateTime].
+   *
    * @default DateTime.now()
    * @see DateTime
    */
   initialValue?: DateTime | number;
   /**
    * Set locale for months and days.
+   *
    * @default SupportedLocales.EN
    */
-  locale?: SupportedLocales;
+  locale?: SupportedCalendarLocales;
   /**
    * You can override the day label.
+   *
    * @default (value) => value.substr(0, 3)
    */
   formatDay?: (day: Day) => string;
+  /** List of events */
   events?: CalendarEvent[];
+  /** Is theme dark */
   dark?: boolean;
 }
 
 /**
  * A **[Calendar]** that uses no external dependency.
- * @see DateTime
+ *
+ * @param {CalendarProps} props The props
+ * @example
+ * <Calendar />
+ * @returns {JSX.Element} The Calendar component
  */
 export const Calendar: FC<CalendarProps> = ({
   initialValue = DateTime.now(),
-  locale = SupportedLocales.EN,
+  locale = SupportedCalendarLocales.EN,
   formatDay = (value) => value.substr(0, 3),
   events,
   dark,

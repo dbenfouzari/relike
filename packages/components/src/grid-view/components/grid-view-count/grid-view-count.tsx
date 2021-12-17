@@ -5,34 +5,39 @@ import { createUseStyles } from "react-jss";
 import Axis from "../../../axis";
 import Padding from "../../../padding";
 
+/** Defines GridViewCount props */
 export interface GridViewCountProps {
+  /** The children that should be displayed in the grid */
   children: JSX.Element[];
+  /** Override className */
   className?: string;
-  /**
-   * How much columns should be displayed
-   */
+  /** How many columns should be displayed */
   crossAxisCount: number;
-  /**
-   * How much spacing should be done on columns
-   */
+  /** How much spacing should be done on columns */
   crossAxisSpacing?: number;
-  /**
-   * How much spacing should be done on rows
-   */
+  /** How much spacing should be done on rows */
   mainAxisSpacing?: number;
-  /**
-   * If you want some padding around
-   */
+  /** If you want some padding around */
   padding?: Padding;
+  /** The scroll direction. Defines if the grid should be displayed horizontally or vertically */
   scrollDirection?: Axis;
 }
 
+/** Defines GridViewCount styles props */
 type StylesProps = Pick<
   GridViewCountProps,
   "crossAxisCount" | "crossAxisSpacing" | "mainAxisSpacing" | "padding" | "scrollDirection"
 >;
 
 const useStyles = createUseStyles({
+  /**
+   * Generates wrapper styles
+   *
+   * @param {StylesProps} props The props
+   * @example
+   * wrapper({ scrollDirection: Axis.vertical })
+   * @returns {CSSProperties} The styles
+   */
   wrapper: ({ scrollDirection, crossAxisSpacing, mainAxisSpacing, crossAxisCount, padding }: StylesProps) => ({
     // Since we want a grid
     display: "grid",
@@ -55,6 +60,7 @@ const useStyles = createUseStyles({
 
     /**
      * Below is a hack to handle end-side padding
+     *
      * @see https://webplatform.news/issues/2019-08-07
      */
     "&:after": {
@@ -84,6 +90,16 @@ const useStyles = createUseStyles({
 
 /**
  * Creates a scrollable, 2D array of widgets with a fixed number of tiles in the cross axis.
+ *
+ * @param {GridViewCountProps} props The props
+ * @example
+ * <GridViewCount crossAxisCount={2}>
+ *   <div>1</div>
+ *   <div>2</div>
+ *   <div>3</div>
+ *   <div>4</div>
+ * </GridViewCount>
+ * @returns {JSX.Element} The JSX element.
  */
 export const GridViewCount: FC<GridViewCountProps> = ({ children, className, ...props }) => {
   const styles = useStyles(props);
@@ -101,7 +117,7 @@ export const GridViewCount: FC<GridViewCountProps> = ({ children, className, ...
   }, [props.scrollDirection]);
 
   return (
-    <div className={classNames(styles.wrapper, className)}>
+    <div data-testid="grid-view-count" className={classNames(styles.wrapper, className)}>
       {Children.map(children as ReactElement[], (child) =>
         cloneElement(child, {
           className: classNames(child.props.className, styles.child),

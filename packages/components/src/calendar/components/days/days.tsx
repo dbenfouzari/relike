@@ -2,17 +2,38 @@ import classnames from "classnames";
 import { FC, useMemo } from "react";
 
 import Tooltip from "../../../tooltip";
-import { DAYS, SupportedLocales } from "../../constants";
+import { DAYS, SupportedCalendarLocales } from "../../constants";
 import { Day } from "../../types";
 import classes from "./days.module.scss";
 
+/** Defines Days props */
 export interface DaysProps {
-  locale: SupportedLocales;
+  /** Calendar locale */
+  locale: SupportedCalendarLocales;
+  /** Day formatter */
   formatDay?: (day: Day) => string;
 }
 
+/**
+ * Extract three first letters.
+ *
+ * Used to format days
+ *
+ * @param {string} str The string to format
+ * @example
+ * threeFirstLetters("monday") // "mon"
+ * @returns {string} The 3 first letters.
+ */
 export const threeFirstLetters = (str: string) => str.substr(0, 3);
 
+/**
+ * Render Days component
+ *
+ * @param {DaysProps} props The props
+ * @example
+ * <Days locale={SupportedCalendarLocales.FR} />
+ * @returns {JSX.Element} The Days component
+ */
 const Days: FC<DaysProps> = ({ locale, formatDay = threeFirstLetters }) => {
   const localizedDays = useMemo(() => DAYS[locale], [locale]);
 

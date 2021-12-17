@@ -5,27 +5,14 @@ import { createUseStyles } from "react-jss";
 import Brightness from "../brightness";
 import Color from "../color";
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import Icon from "../icon";
 import { IconData } from "../icons";
 import Text from "../text";
 import Typography from "../typography";
 import classes from "./floating-action-button.module.scss";
 
-export enum Emphasis {
-  /**
-   * Basically a text button.
-   */
-  low = "low",
-  /**
-   * Transparent, with borders.
-   */
-  medium = "medium",
-  /**
-   * Filled with color.
-   */
-  high = "high",
-}
-
+/** Defines FAB props*/
 export interface FloatingActionButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {
   /**
    * This is the button main color.
@@ -81,6 +68,8 @@ export interface FloatingActionButtonProps extends Omit<ButtonHTMLAttributes<HTM
    * Mini FABs can also be used to create visual continuity with other screen elements.
    */
   mini?: boolean;
+
+  /** Override className */
   className?: string;
 
   /**
@@ -94,17 +83,26 @@ export interface FloatingActionButtonProps extends Omit<ButtonHTMLAttributes<HTM
   block?: boolean;
 }
 
+/** Defines FAB styles props */
 interface FloatingActionButtonStylesProps {
+  /** Main color */
   color: Color;
+  /** Is the FAB disabled ? */
   disabled?: boolean;
 }
 
-/**
- * Component display name.
- */
+/** Component display name. */
 const COMPONENT_NAME = "FloatingActionButton";
 
 const useStyles = createUseStyles({
+  /**
+   * Generates low emphasis styles.
+   *
+   * @param {FloatingActionButtonStylesProps} props The props
+   * @example
+   * buttonLow({ color: Colors.blue, disabled: false })
+   * @returns {CSSProperties} The styles
+   */
   buttonLow: ({ color, disabled }: FloatingActionButtonStylesProps) => ({
     "&:hover, &:focus": {
       backgroundColor: disabled ? "transparent" : color.withOpacity(0.05).toRGBA(),
@@ -113,6 +111,14 @@ const useStyles = createUseStyles({
       backgroundColor: disabled ? "transparent" : color.withOpacity(0.1).toRGBA(),
     },
   }),
+  /**
+   * Generates medium emphasis styles.
+   *
+   * @param {FloatingActionButtonStylesProps} props The props
+   * @example
+   * buttonLow({ color: Colors.blue, disabled: false })
+   * @returns {CSSProperties} The styles
+   */
   buttonMedium: ({ color, disabled }: FloatingActionButtonStylesProps) => ({
     border: `1px solid ${color.toRGBA()}`,
     "&:hover, &:focus": {
@@ -122,6 +128,14 @@ const useStyles = createUseStyles({
       backgroundColor: disabled ? "transparent" : color.withOpacity(0.1).toRGBA(),
     },
   }),
+  /**
+   * Generates high emphasis styles.
+   *
+   * @param {FloatingActionButtonStylesProps} props The props
+   * @example
+   * buttonLow({ color: Colors.blue, disabled: false })
+   * @returns {CSSProperties} The styles
+   */
   buttonHigh: ({ color, disabled }: FloatingActionButtonStylesProps) => {
     const currentLightness = color.lightness;
     const hoverLightness = currentLightness - 5 < 0 ? currentLightness + 10 : currentLightness - 5;
@@ -173,7 +187,6 @@ const useStyles = createUseStyles({
  *
  * @example
  * <FloatingActionButton icon={Icons.check} label="See results" />
- *
  * @see https://material.io/components/buttons-floating-action-button
  */
 export const FloatingActionButton = forwardRef<HTMLButtonElement, FloatingActionButtonProps>(

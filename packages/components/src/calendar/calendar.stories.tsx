@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import isChromatic from "chromatic/isChromatic";
 
 import DateTime from "../date-time";
 import Duration from "../duration";
 import Calendar, { CalendarProps } from "./calendar";
 import classes from "./calendar.stories.module.scss";
-import { SupportedLocales } from "./constants";
+import { SupportedCalendarLocales } from "./constants";
 
 export default {
   title: "Calendar",
@@ -17,14 +17,22 @@ export default {
     layout: "fullscreen",
   },
   decorators: [(story) => <div className={classes.wrapper}>{story()}</div>],
-} as ComponentMeta<typeof Calendar>;
+} as Meta<CalendarProps>;
 
-const Template: ComponentStory<typeof Calendar> = (args) => <Calendar {...args} />;
+/**
+ * Default Calendar template
+ *
+ * @param {CalendarProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The Calendar component
+ */
+const Template: Story<CalendarProps> = (args) => <Calendar {...args} />;
 
 const now = isChromatic() ? new DateTime({ year: 2021, month: DateTime.august, day: 26 }) : DateTime.now();
 
 const defaultProps: CalendarProps = {
-  locale: SupportedLocales.EN,
+  locale: SupportedCalendarLocales.EN,
   initialValue: now,
   dark: false,
   events: [],

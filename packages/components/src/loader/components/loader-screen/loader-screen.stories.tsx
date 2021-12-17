@@ -1,7 +1,7 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Duration from "../../../duration";
-import LoaderScreen from "./loader-screen";
+import LoaderScreen, { LoaderScreenProps } from "./loader-screen";
 
 export default {
   title: "Loader.Screen",
@@ -12,9 +12,17 @@ export default {
     color3: { control: false },
     color4: { control: false },
   },
-} as ComponentMeta<typeof LoaderScreen>;
+} as Meta<LoaderScreenProps>;
 
-const Template: ComponentStory<typeof LoaderScreen> = (args) => <LoaderScreen {...args} />;
+/**
+ * Default LoaderScreen template.
+ *
+ * @param {LoaderScreenProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The LoaderScreen component
+ */
+const Template: Story<LoaderScreenProps> = (args) => <LoaderScreen {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

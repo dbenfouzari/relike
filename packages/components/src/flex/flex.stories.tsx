@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Axis from "../axis";
 import Colors from "../colors";
@@ -17,9 +17,17 @@ export default {
     crossAxisAlignment: { control: { type: "radio" } },
     mainAxisAlignment: { control: { type: "radio" } },
   },
-} as ComponentMeta<typeof Flex>;
+} as Meta<FlexProps>;
 
-const Template: ComponentStory<typeof Flex> = (args) => (
+/**
+ * Default Flex template
+ *
+ * @param {FlexProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The Flex component
+ */
+const Template: Story<FlexProps> = (args) => (
   <Container width={500} height={500} color={Colors.grey[100]}>
     <Flex {...args} />
   </Container>

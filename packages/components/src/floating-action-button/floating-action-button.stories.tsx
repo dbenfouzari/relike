@@ -1,8 +1,9 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import Icons from "../icons";
-import FloatingActionButton, { Emphasis, FloatingActionButtonProps } from "./floating-action-button";
+import FloatingActionButton, { FloatingActionButtonProps } from "./floating-action-button";
 
 export default {
   title: "FloatingActionButton",
@@ -11,9 +12,17 @@ export default {
     color: { control: { disable: true } },
     icon: { control: { disable: true } },
   },
-} as ComponentMeta<typeof FloatingActionButton>;
+} as Meta<FloatingActionButtonProps>;
 
-const Template: ComponentStory<typeof FloatingActionButton> = (args) => <FloatingActionButton {...args} />;
+/**
+ * Default FAB template
+ *
+ * @param {FloatingActionButtonProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The FAB
+ */
+const Template: Story<FloatingActionButtonProps> = (args) => <FloatingActionButton {...args} />;
 
 const defaultProps: Partial<FloatingActionButtonProps> = {
   emphasis: Emphasis.high,

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Loader, { LoaderProps } from "./loader";
@@ -11,9 +11,17 @@ export default {
       control: { disable: true },
     },
   },
-} as ComponentMeta<typeof Loader>;
+} as Meta<LoaderProps>;
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
+/**
+ * Default Loader template
+ *
+ * @param {LoaderProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The Loader component
+ */
+const Template: Story<LoaderProps> = (args) => <Loader {...args} />;
 
 const defaultProps: Partial<LoaderProps> = {
   color: Colors.blue[500],

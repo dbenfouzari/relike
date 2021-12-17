@@ -6,6 +6,14 @@ import MainAxisAlignment from "../main-axis-alignment";
 import TextDirection from "../text-direction";
 import VerticalDirection from "../vertical-direction";
 
+/**
+ * Helper to get CSS property `align-items`
+ *
+ * @param {CrossAxisAlignment} crossAxisAlignment The cross axis alignment (horizontal when parent is vertical, vice versa)
+ * @example
+ * getAlignItems(CrossAxisAlignment.center)
+ * @returns {CSSProperties.alignItems} The CSS property value.
+ */
 export const getAlignItems = (crossAxisAlignment: CrossAxisAlignment): NonNullable<CSSProperties["alignItems"]> => {
   switch (crossAxisAlignment) {
     case CrossAxisAlignment.center:
@@ -20,6 +28,14 @@ export const getAlignItems = (crossAxisAlignment: CrossAxisAlignment): NonNullab
   }
 };
 
+/**
+ * Helper to get CSS property `justify-content`
+ *
+ * @param {MainAxisAlignment} mainAxisAlignment The main axis alignment.
+ * @example
+ * getJustifyContent(MainAxisAlignment.start)
+ * @returns {CSSProperties.justifyContent} The CSS property value.
+ */
 export const getJustifyContent = (
   mainAxisAlignment: MainAxisAlignment,
 ): NonNullable<CSSProperties["justifyContent"]> => {
@@ -40,6 +56,16 @@ export const getJustifyContent = (
   }
 };
 
+/**
+ * Helper to get CSS property `flex-direction`
+ *
+ * @param {TextDirection} textDirection The text direction.
+ * @param {VerticalDirection} verticalDirection The vertical direction.
+ * @param {Axis} direction The axis.
+ * @example
+ * getFlexDirection(TextDirection.ltr, VerticalDirection.down, Axis.horizontal) // row
+ * @returns {CSSProperties.flexDirection} The CSS property value.
+ */
 export const getFlexDirection = (
   textDirection: TextDirection,
   verticalDirection: VerticalDirection,

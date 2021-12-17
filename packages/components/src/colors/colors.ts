@@ -106,6 +106,8 @@ const _yellowAccentPrimaryValue = 0xffffff00;
 class Colors {
   /**
    * The amber primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get amber() {
     return new MaterialColor(_amberPrimaryValue, {
@@ -123,7 +125,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get amberAccent() {
     return new MaterialAccentColor(_amberAccentPrimaryValue, {
@@ -140,10 +142,10 @@ class Colors {
    * ![](https://flutter.github.io/assets-for-api-docs/assets/material/Colors.blacks.png)
    *
    * See also:
-   *  * [black87], [black54], [black45], [black38], [black26], [black12], which
+   *  - [black87], [black54], [black45], [black38], [black26], [black12], which
    *    are variants on this color but with different opacities.
-   *  * [white], a solid white color.
-   *  * [transparent], a fully-transparent color.
+   *  - [white], a solid white color.
+   *  - [transparent], a fully-transparent color.
    */
   static black = new Color(0xff000000);
 
@@ -192,6 +194,8 @@ class Colors {
 
   /**
    * The blue primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get blue() {
     return new MaterialColor(_bluePrimaryValue, {
@@ -209,7 +213,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get blueAccent() {
     return new MaterialAccentColor(_blueAccentPrimaryValue, {
@@ -222,6 +226,8 @@ class Colors {
 
   /**
    * The blue-grey primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get blueGrey() {
     return new MaterialColor(_blueGreyPrimaryValue, {
@@ -240,6 +246,8 @@ class Colors {
 
   /**
    * The brown primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get brown() {
     return new MaterialColor(_brownPrimaryValue, {
@@ -258,6 +266,8 @@ class Colors {
 
   /**
    * The cyan primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get cyan() {
     return new MaterialColor(_cyanPrimaryValue, {
@@ -275,7 +285,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get cyanAccent() {
     return new MaterialAccentColor(_cyanAccentPrimaryValue, {
@@ -288,6 +298,8 @@ class Colors {
 
   /**
    * The deep orange primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get deepOrange() {
     return new MaterialColor(_deepOrangePrimaryValue, {
@@ -305,7 +317,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get deepOrangeAccent() {
     return new MaterialAccentColor(_deepOrangeAccentPrimaryValue, {
@@ -318,6 +330,8 @@ class Colors {
 
   /**
    * The deep purple primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get deepPurple() {
     return new MaterialColor(_deepPurplePrimaryValue, {
@@ -335,7 +349,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get deepPurpleAccent() {
     return new MaterialAccentColor(_deepPurpleAccentPrimaryValue, {
@@ -348,6 +362,8 @@ class Colors {
 
   /**
    * The green primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get green() {
     return new MaterialColor(_greenPrimaryValue, {
@@ -365,7 +381,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get greenAccent() {
     return new MaterialAccentColor(_greenAccentPrimaryValue, {
@@ -378,6 +394,8 @@ class Colors {
 
   /**
    * The grey primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get grey() {
     return new MaterialColor(_greyPrimaryValue, {
@@ -398,6 +416,8 @@ class Colors {
 
   /**
    * The indigo primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get indigo() {
     return new MaterialColor(_indigoPrimaryValue, {
@@ -415,7 +435,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get indigoAccent() {
     return new MaterialAccentColor(_indigoAccentPrimaryValue, {
@@ -428,6 +448,8 @@ class Colors {
 
   /**
    * The light blue primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get lightBlue() {
     return new MaterialColor(_lightBluePrimaryValue, {
@@ -445,7 +467,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get lightBlueAccent() {
     return new MaterialAccentColor(_lightBlueAccentPrimaryValue, {
@@ -458,6 +480,8 @@ class Colors {
 
   /**
    * The light green primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get lightGreen() {
     return new MaterialColor(_lightGreenPrimaryValue, {
@@ -475,7 +499,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get lightGreenAccent() {
     return new MaterialAccentColor(_lightGreenAccentPrimaryValue, {
@@ -488,6 +512,8 @@ class Colors {
 
   /**
    * The lime primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get lime() {
     return new MaterialColor(_limePrimaryValue, {
@@ -505,7 +531,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get limeAccent() {
     return new MaterialAccentColor(_limeAccentPrimaryValue, {
@@ -518,6 +544,8 @@ class Colors {
 
   /**
    * The orange primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get orange() {
     return new MaterialColor(_orangePrimaryValue, {
@@ -535,7 +563,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get orangeAccent() {
     return new MaterialAccentColor(_orangeAccentPrimaryValue, {
@@ -548,6 +576,8 @@ class Colors {
 
   /**
    * The pink primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get pink() {
     return new MaterialColor(_pinkPrimaryValue, {
@@ -565,7 +595,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get pinkAccent() {
     return new MaterialAccentColor(_pinkAccentPrimaryValue, {
@@ -578,6 +608,8 @@ class Colors {
 
   /**
    * The purple primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get purple() {
     return new MaterialColor(_purplePrimaryValue, {
@@ -595,7 +627,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get purpleAccent() {
     return new MaterialAccentColor(_purpleAccentPrimaryValue, {
@@ -608,6 +640,8 @@ class Colors {
 
   /**
    * The red primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get red() {
     return new MaterialColor(_redPrimaryValue, {
@@ -625,7 +659,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get redAccent() {
     return new MaterialAccentColor(_redAccentPrimaryValue, {
@@ -638,6 +672,8 @@ class Colors {
 
   /**
    * The teal primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get teal() {
     return new MaterialColor(_tealPrimaryValue, {
@@ -655,7 +691,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get tealAccent() {
     return new MaterialAccentColor(_tealAccentPrimaryValue, {
@@ -681,11 +717,11 @@ class Colors {
    *
    * See also:
    *
-   *  * [white70], [white60], [white54], [white38], [white30], [white12],
+   *  - [white70], [white60], [white54], [white38], [white30], [white12],
    *    [white10], which are variants on this color but with different
    *    opacities.
-   *  * [black], a solid black color.
-   *  * [transparent], a fully-transparent color.
+   *  - [black], a solid black color.
+   *  - [transparent], a fully-transparent color.
    */
   static white = new Color(0xffffffff);
 
@@ -742,6 +778,8 @@ class Colors {
 
   /**
    * The yellow primary color and swatch.
+   *
+   * @returns {MaterialColor} The Material color.
    */
   static get yellow() {
     return new MaterialColor(_yellowPrimaryValue, {
@@ -759,7 +797,7 @@ class Colors {
   }
 
   /**
-   *
+   * @returns {MaterialAccentColor} The MaterialAccent color.
    */
   static get yellowAccent() {
     return new MaterialAccentColor(_yellowAccentPrimaryValue, {
@@ -813,19 +851,5 @@ class Colors {
     Colors.blueGrey,
   ] as const;
 }
-
-// export const PaletteComponent = ({ colorKey }) => {
-//   const truc = Colors["deepPurpleAccent"];
-//
-//   if (truc instanceof MaterialColor) {
-//     return (
-//       <div>MaterialColor {colorKey}</div>
-//     )
-//   } else if (truc instanceof MaterialAccentColor) {
-//     return <div>MaterialAccentColor {colorKey}</div>
-//   } else {
-//     return <div>Unknown {colorKey}</div>
-//   }
-// }
 
 export default Colors;

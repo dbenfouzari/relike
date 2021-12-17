@@ -3,6 +3,7 @@ import pull from "lodash.pull";
 import { useEffect, useRef, useState } from "react";
 
 import Duration from "../duration";
+import { Timeout } from "../types";
 
 /**
  *
@@ -21,11 +22,6 @@ type Tooltip = {
    */
   anchorElement: HTMLElement;
 };
-
-/**
- * `setTimeout` type
- */
-type Timeout = ReturnType<typeof setTimeout>;
 
 /**
  * This singleton handle a global `mouseover` event listener on the `document` in order to toggle tooltips when

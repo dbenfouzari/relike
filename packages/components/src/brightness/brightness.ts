@@ -1,3 +1,4 @@
+/** Describes the contrast of a theme or color palette. */
 enum Brightness {
   /**
    * The color is dark and will require a light text color to achieve readable contrast.

@@ -1,15 +1,24 @@
 import { render, screen } from "@testing-library/react";
 
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import Icons from "../icons";
-import Button, { ButtonProps, Emphasis } from "./button";
+import Button, { ButtonProps } from "./button";
 
-const setup = (outerProps?: Partial<ButtonProps>) => {
-  const props: ButtonProps = {
+/**
+ * Set up button tests
+ *
+ * @param {Partial<ButtonProps>} props The props
+ * @example
+ * setup()
+ * @returns {any} The result
+ */
+const setup = (props: Partial<ButtonProps> = {}) => {
+  const baseProps: ButtonProps = {
     children: "Hello Test",
   };
 
-  const mergedProps = { ...props, ...outerProps };
+  const mergedProps = { ...baseProps, ...props };
 
   return render(<Button {...mergedProps} />);
 };

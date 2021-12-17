@@ -1,9 +1,8 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ComponentProps } from "react";
+import { Meta, Story } from "@storybook/react";
 import { animated, config, useSpring } from "react-spring";
 
 import Duration from "../duration";
-import LinearProgressIndicator from "./linear-progress-indicator";
+import LinearProgressIndicator, { LinearProgressIndicatorProps } from "./linear-progress-indicator";
 
 export default {
   title: "LinearProgressIndicator",
@@ -12,15 +11,20 @@ export default {
     backgroundColor: { control: { disable: true } },
     color: { control: { disable: true } },
   },
-} as ComponentMeta<typeof LinearProgressIndicator>;
+} as Meta<LinearProgressIndicatorProps>;
 
 const AnimatedLinearProgressIndicator = animated(LinearProgressIndicator);
 
 /**
  * This is a simple animated component.
- * It uses `react-spring` to handle animation
+ * It uses `react-spring` to handle animation.
+ *
+ * @param {LinearProgressIndicatorProps} props The props.
+ * @example
+ * <AnimatedComponent {...props} />
+ * @returns {JSX.Element} An animated LinearProgressIndicator
  */
-const AnimatedComponent = (props: ComponentProps<typeof LinearProgressIndicator>) => {
+const AnimatedComponent = (props: LinearProgressIndicatorProps) => {
   const { value } = useSpring({
     from: { value: 0 },
     to: { value: 100 },
@@ -31,9 +35,25 @@ const AnimatedComponent = (props: ComponentProps<typeof LinearProgressIndicator>
   return <AnimatedLinearProgressIndicator {...props} value={value.to((x) => x)} />;
 };
 
-const Template: ComponentStory<typeof LinearProgressIndicator> = (args) => <LinearProgressIndicator {...args} />;
+/**
+ * Default LinearProgressIndicator template
+ *
+ * @param {LinearProgressIndicatorProps} args The props.
+ * @example
+ * <Template {...props} />
+ * @returns {JSX.Element} The LinearProgressIndicator component
+ */
+const Template: Story<LinearProgressIndicatorProps> = (args) => <LinearProgressIndicator {...args} />;
 
-const AnimatedTemplate: ComponentStory<typeof LinearProgressIndicator> = (args) => <AnimatedComponent {...args} />;
+/**
+ * AnimatedLinearProgressIndicator template
+ *
+ * @param {LinearProgressIndicatorProps} args The props.
+ * @example
+ * <AnimatedTemplate {...props} />
+ * @returns {JSX.Element} The AnimatedLinearProgressIndicator component
+ */
+const AnimatedTemplate: Story<LinearProgressIndicatorProps> = (args) => <AnimatedComponent {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

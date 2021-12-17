@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render successfully 1`] = `
+<div
+  aria-busy="true"
+  class=""
+  data-testid="skeleton"
+>
+  <div
+    class="skeleton"
+  >
+    <div
+      class="content"
+    >
+      <h3
+        class="title title-0-2-1 title-d0-0-2-2"
+      />
+      <ul
+        class="paragraph"
+      >
+        <li
+          class="line line-0-2-3 line-d0-0-2-4"
+        />
+        <li
+          class="line line-0-2-3 line-d0-0-2-4"
+          style="width: 60%;"
+        />
+      </ul>
+    </div>
+  </div>
+</div>
+`;

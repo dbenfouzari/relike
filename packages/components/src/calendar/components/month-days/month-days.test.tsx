@@ -13,6 +13,13 @@ describe("Calendar/MonthDays", () => {
   it("getIsToday should return correct value", () => {
     jest.mock("chromatic/isChromatic", () => ({
       __esModule: true,
+      /**
+       * Is on Chromatic environment ?
+       *
+       * @example
+       * isChromatic()
+       * @returns {boolean} False here
+       */
       default: () => false,
     }));
 

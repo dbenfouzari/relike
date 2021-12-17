@@ -1,7 +1,8 @@
 // Disable Prettier so it doesn't format our arrays.
 /* eslint-disable prettier/prettier */
 
-export enum SupportedLocales {
+/** Defines supported Calendar locales */
+export enum SupportedCalendarLocales {
   FR = 'fr',
   EN = 'en',
   ES = 'es',

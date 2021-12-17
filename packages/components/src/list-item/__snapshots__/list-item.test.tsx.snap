@@ -3,27 +3,30 @@
 exports[`ListItem should render successfully 1`] = `
 <li
   class="list_item"
-  role="listitem"
 >
   <div
-    class="content"
+    class="wrapper"
   >
     <div
-      class="flex flex-0-2-1 flex-d0-0-2-2 content"
-      data-testid="flex-item"
+      class="content"
     >
-      <span
-        class="elm-0-2-3 elm-d0-0-2-4"
-        data-testid="text-elm"
+      <div
+        class="flex flex-0-2-1 flex-d0-0-2-2 content"
+        data-testid="flex-item"
       >
-        John Doe
-      </span>
-      <span
-        class="elm-0-2-3 elm-d1-0-2-5"
-        data-testid="text-elm"
-      >
-        Hey Storybook !
-      </span>
+        <span
+          class="elm-0-2-3 elm-d0-0-2-4"
+          data-testid="text-elm"
+        >
+          John Doe
+        </span>
+        <span
+          class="elm-0-2-3 elm-d1-0-2-5"
+          data-testid="text-elm"
+        >
+          Hey Storybook !
+        </span>
+      </div>
     </div>
   </div>
 </li>

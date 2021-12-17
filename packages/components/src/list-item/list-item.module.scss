@@ -1,12 +1,12 @@
 .list_item {
-  padding-inline: 16px;
-  padding-block: 8px;
   list-style: none;
   height: 48px;
   display: flex;
   align-items: center;
   font-size: 16px;
   transition: background-color 75ms ease;
+  padding-inline: 16px;
+  padding-block: 8px;
 
   &__clickable {
     &:hover {
@@ -19,6 +19,14 @@
   }
 }
 
+.wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+}
+
 .left {
   min-width: 56px;
 }
@@ -26,4 +34,6 @@
 .content {
   flex: 1;
   height: 100%;
+  display: flex;
+  align-items: center;
 }

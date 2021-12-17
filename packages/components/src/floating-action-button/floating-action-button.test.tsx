@@ -1,14 +1,23 @@
 import { render, screen } from "@testing-library/react";
 
+import { Emphasis } from "../emphasis";
 import Icons from "../icons";
-import FloatingActionButton, { Emphasis, FloatingActionButtonProps } from "./floating-action-button";
+import FloatingActionButton, { FloatingActionButtonProps } from "./floating-action-button";
 
-const setup = (outerProps?: Partial<FloatingActionButtonProps>) => {
-  const props: FloatingActionButtonProps = {
+/**
+ * Set up the tests
+ *
+ * @param {Partial<FloatingActionButtonProps>} props The override props
+ * @example
+ * setup({ emphasis: Emphasis.high })
+ * @returns {any} The result
+ */
+const setup = (props?: Partial<FloatingActionButtonProps>) => {
+  const baseProps: FloatingActionButtonProps = {
     icon: Icons.add,
   };
 
-  const mergedProps = { ...props, ...outerProps };
+  const mergedProps = { ...baseProps, ...props };
 
   return render(<FloatingActionButton {...mergedProps} />);
 };

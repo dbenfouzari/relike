@@ -6,6 +6,7 @@ import DataTable, { buildDataColumn } from "./data-table";
 
 const data = [{ name: "John Doe", age: 23, gender: "male" }] as const;
 
+/** Defines data type */
 type Data = typeof data;
 
 it("should render successfully", () => {

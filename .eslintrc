@@ -28,17 +28,24 @@
     }
   ],
   "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "prettier/prettier": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "jsdoc/require-example": "warn",
-    "jsdoc/no-undefined-types": ["warn", {
+    "jsdoc/no-undefined-types": ["error", {
       "definedTypes": [
+        "CSSProperties",
+        "Element",
         "HTMLDivElement",
         "HTMLElement",
         "JSX",
-        "KeyboardEvent"
+        "KeyboardEvent",
+        "MouseEvent",
+        "React",
+        "ThemeData",
+        "TouchEvent"
       ]
     }],
     "jsdoc/require-jsdoc": ["warn", {

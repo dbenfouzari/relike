@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import Colors from "../colors";
 import CrossAxisAlignment from "../cross-axis-alignment";
@@ -27,5 +27,28 @@ describe("ListItem", () => {
     );
 
     expect(screen.getByRole("listitem")).toMatchSnapshot();
+  });
+
+  it("should call onPress when pressed", () => {
+    const onPress = jest.fn();
+
+    render(
+      <ListItem onPress={onPress}>
+        <Flex.Column
+          mainAxisAlignment={MainAxisAlignment.spaceEvenly}
+          crossAxisAlignment={CrossAxisAlignment.start}
+          className={classes.content}
+        >
+          <Text>John Doe</Text>
+          <Text style={Typography.blackMountainView.bodyText2?.copyWith({ color: Colors.black54 })}>
+            Hey Storybook !
+          </Text>
+        </Flex.Column>
+      </ListItem>,
+    );
+
+    fireEvent.click(screen.getByText("John Doe"));
+
+    expect(onPress).toHaveBeenCalled();
   });
 });

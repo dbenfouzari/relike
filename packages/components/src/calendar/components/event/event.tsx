@@ -3,10 +3,20 @@ import { FC } from "react";
 import { CalendarEvent } from "../../types";
 import classes from "./event.module.scss";
 
+/** Defines Event props */
 export interface EventProps {
+  /** The event itself */
   event: CalendarEvent;
 }
 
+/**
+ * Renders Event component
+ *
+ * @param {EventProps} props The props
+ * @example
+ * <Event event={{...}} />
+ * @returns {JSX.Element} The Event component
+ */
 const Event: FC<EventProps> = ({ event }) => (
   <div className={classes.wrapper}>
     <span>{event.title}</span>

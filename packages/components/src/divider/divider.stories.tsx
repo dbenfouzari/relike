@@ -1,15 +1,31 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
-import Divider from "./divider";
+import Divider, { DividerProps } from "./divider";
 
 export default {
   title: "Divider",
   component: Divider,
-} as ComponentMeta<typeof Divider>;
+} as Meta<DividerProps>;
 
-const Template: ComponentStory<typeof Divider> = (args) => <Divider {...args} />;
+/**
+ * Default Divider template.
+ *
+ * @param {DividerProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The Divider component.
+ */
+const Template: Story<DividerProps> = (args) => <Divider {...args} />;
 
-const CompleteTemplate: ComponentStory<typeof Divider> = (args) => (
+/**
+ * Complete Divider template.
+ *
+ * @param {DividerProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The Divider component.
+ */
+const CompleteTemplate: Story<DividerProps> = (args) => (
   <ul>
     <li>
       List item 1 <Divider {...args} />

@@ -8,13 +8,24 @@ import { generateWarning } from "../generators/index-file";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"));
 
+/** Defines CLI flags */
 interface Flags {
+  /** Target path */
   path: string;
+  /** Excluded component files and folders, comma-separated */
   exclude: string;
 }
 
+/** Defines CLI arguments */
 type Arguments = [path: string, excluded: string, flags: Flags];
 
+/**
+ * Generates an index file.
+ *
+ * @param {Arguments} args The arguments
+ * @example
+ * generateIndexFile(...args)
+ */
 const generateIndexFile = async (...args: Arguments) => {
   const [pathArg, excludedArg, flags] = args;
 
@@ -31,6 +42,14 @@ const generateIndexFile = async (...args: Arguments) => {
     const { pathResponse } = await inquirer.prompt([
       {
         type: "fuzzypath",
+        /**
+         * Generates exclude path from results.
+         *
+         * @param {string} nodePath The current path
+         * @example
+         * excludePath("index.ts")
+         * @returns {boolean} should it be excluded
+         */
         excludePath: (nodePath: string) => nodePath.startsWith("node_modules"),
         itemType: "directory",
         name: "pathResponse",

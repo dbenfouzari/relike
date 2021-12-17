@@ -5,42 +5,63 @@ import Color from "../../../color";
 import Colors from "../../../colors";
 import Duration from "../../../duration";
 
+/** Defines LoaderScreen props */
 export interface LoaderScreenProps {
   /**
    * The first color.
+   *
    * @default Colors.red[200]
    */
   color1?: Color;
   /**
    * The second color.
+   *
    * @default Colors.black
    */
   color2?: Color;
   /**
    * The third color.
+   *
    * @default Colors.green[200]
    */
   color3?: Color;
   /**
    * The fourth color.
+   *
    * @default Colors.purple[200]
    */
   color4?: Color;
   /**
    * Animation duration. Is a `Duration` class instance.
-   * @default Duration({ seconds: 1 })
+   *
+   * @default Duration.seconds(1)
    */
   animationDuration?: Duration;
 }
 
+/** Defines LoaderScreen styles props */
 interface LoaderScreenStylesProps {
+  /** The first color. */
   color1: Color;
+  /** The second color. */
   color2: Color;
+  /** The third color. */
   color3: Color;
+  /** The fourth color. */
   color4: Color;
+  /** The animation duration */
   animationDuration: Duration;
 }
 
+/**
+ * This method builds a `useStyles` from props.
+ *
+ * @param {LoaderScreenStylesProps} props The props
+ * @example
+ * const useStyles = makeUseStyles({ animationDuration, color1, color2, color3, color4 });
+ * const styles = useStyles();
+ * @returns {CSSProperties} The styles
+ */
 const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: LoaderScreenStylesProps) => {
   const durationInMs = animationDuration.inMilliseconds;
 
@@ -109,9 +130,14 @@ const makeUseStyles = ({ animationDuration, color1, color2, color3, color4 }: Lo
 
 /**
  * This component aims to be used when an entire screen is loading.
+ *
+ * @param {LoaderScreenProps} props The props
+ * @example
+ * <LoaderScreen />
+ * @returns {JSX.Element} The JSX element.
  */
 export const LoaderScreen: FC<LoaderScreenProps> = ({
-  animationDuration = new Duration({ seconds: 1 }),
+  animationDuration = Duration.seconds(1),
   color1 = Colors.red[200],
   color2 = Colors.black,
   color3 = Colors.green[200],
@@ -123,7 +149,7 @@ export const LoaderScreen: FC<LoaderScreenProps> = ({
   );
   const styles = useStyles();
 
-  return <div className={styles.wrapper} />;
+  return <div data-testid="loader-screen" className={styles.wrapper} />;
 };
 
 export default LoaderScreen;

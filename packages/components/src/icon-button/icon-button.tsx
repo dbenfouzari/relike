@@ -7,28 +7,46 @@ import Padding from "../padding";
 import Tooltip from "../tooltip";
 import classes from "./icon-button.module.scss";
 
+/** Defines IconButton props */
 export interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  /** The icon component */
   icon: ReturnType<typeof Icon>;
+  /** Callback that will be called on click. */
   onPress?: (event: MouseEvent<HTMLButtonElement>) => void;
+  /** Override className */
   className?: string;
   /**
    * The padding around the button's icon. The entire padded icon will react to input gestures.
    * This property must not be null. It defaults to 8.0 padding on all sides.
-   * @default 8
+   *
+   * @default Padding.all(8)
    */
   padding?: Padding;
-  /**
-   * Get a tooltip and a11y label.
-   */
+  /** Get a tooltip and a11y label. */
   label?: string;
 }
 
-interface StyledIconProps {
+/** Defines Icon styles props */
+interface IconStylesProps {
+  /**
+   * The padding around the button's icon. The entire padded icon will react to input gestures.
+   * This property must not be null. It defaults to 8.0 padding on all sides.
+   *
+   * @default Padding.all(8)
+   */
   padding: Padding;
 }
 
 const useStyles = createUseStyles({
-  wrapper: ({ padding }: StyledIconProps) => ({
+  /**
+   * Generates wrapper styles based on props
+   *
+   * @param {IconStylesProps} padding IconButton padding
+   * @example
+   * wrapper({ padding: Padding.all(8) })
+   * @returns {CSSProperties} The styles.
+   */
+  wrapper: ({ padding }: IconStylesProps) => ({
     ...padding.toStyle(),
   }),
 });
@@ -46,6 +64,7 @@ export const IconButton: FC<IconButtonProps> = forwardRef<HTMLButtonElement, Ico
 
     const rendered = (
       <button
+        data-testid="icon-button__button"
         ref={ref}
         onClick={onPress}
         {...props}

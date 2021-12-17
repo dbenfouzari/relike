@@ -2,6 +2,7 @@ import { FC, InputHTMLAttributes } from "react";
 
 import useTextEditingController, { UseTextEditingController } from "./useTextEditingController";
 
+/** Defines Input props */
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * If you want to control the input directly, pass in a controller.
@@ -17,6 +18,10 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * Basic **Input**.
  * Can be `controlled` by passing `controller` prop.
  *
+ * @param {InputProps} props The props.
+ * @example
+ * <Input />
+ * @returns {JSX.Element} The JSX element
  * @see UseTextEditingController
  */
 export const Input: FC<InputProps> = ({ controller, ...props }) => {

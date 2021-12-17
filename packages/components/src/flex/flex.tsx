@@ -12,9 +12,12 @@ import FlexRow from "./components/flex-row";
 import classes from "./flex.module.scss";
 import { getAlignItems, getFlexDirection, getJustifyContent } from "./utils";
 
+/** Defines gap property */
 export type GapProperty = string | number;
+/** Defines Flex gap property */
 export type FlexGap = GapProperty | [horizontal: GapProperty, vertical: GapProperty];
 
+/** Defines Flex props. */
 export interface FlexProps {
   /** This prop is used to override the style */
   className?: string;
@@ -100,14 +103,21 @@ export interface FlexProps {
    */
   gap?: FlexGap;
 
+  /** The content inside the Flex */
   children: ReactNode | ReactNode[];
 }
 
+/** Defines Flex styles props. */
 type FlexStyleProps = Pick<FlexProps, "gap"> & {
+  /***/
   crossAxisAlignment: CrossAxisAlignment;
+  /***/
   mainAxisAlignment: MainAxisAlignment;
+  /***/
   textDirection: TextDirection;
+  /***/
   direction: Axis;
+  /***/
   verticalDirection: VerticalDirection;
 };
 
@@ -116,6 +126,14 @@ type FlexStyleProps = Pick<FlexProps, "gap"> & {
  */
 const COMPONENT_NAME = "Flex";
 
+/**
+ * Takes a `gap` and returns correct CSS property value.
+ *
+ * @param {FlexStyleProps.gap} gap The gap.
+ * @example
+ * computeGap([32, "12px"])
+ * @returns {any} The final gap
+ */
 const computeGap = (gap?: FlexStyleProps["gap"]) => {
   if (!gap) return null;
 
@@ -137,6 +155,14 @@ const computeGap = (gap?: FlexStyleProps["gap"]) => {
  * Does it really lighten the final bundle size ?
  */
 const useStyles = createUseStyles({
+  /**
+   * Generates flex styles
+   *
+   * @param {FlexStyleProps} props The props
+   * @example
+   * flex({ crossAxisAlignment: CrossAxisAlignment.center, ... })
+   * @returns {CSSProperties} The styles
+   */
   flex: ({
     crossAxisAlignment,
     gap,
@@ -152,8 +178,11 @@ const useStyles = createUseStyles({
   }),
 });
 
+/** Defines Flex component */
 type FlexComponent = ForwardRefExoticComponent<FlexProps & HTMLProps<HTMLDivElement>> & {
+  /** Allows `<Flex.Row />` */
   Row: typeof FlexRow;
+  /** Allows `<Flex.Column />` */
   Column: typeof FlexColumn;
 };
 

@@ -8,6 +8,7 @@ import Color from "../color";
 import Margin from "../margin";
 import Padding from "../padding";
 
+/** Defines Container props */
 export interface ContainerProps {
   /**
    * Add inner padding.
@@ -33,6 +34,7 @@ export interface ContainerProps {
    * Sets container alignment.
    */
   alignment?: Alignment;
+  /** The children */
   children?: ReactNode;
   /**
    * Override rendered component.
@@ -46,15 +48,18 @@ export interface ContainerProps {
   className?: string;
 }
 
-interface ContainerStylesProps {
-  padding?: Padding;
-  margin?: Margin;
-  color?: Color;
-  width?: string | number;
-  height?: string | number;
-}
+/** Defines Container styles props */
+type ContainerStylesProps = Pick<ContainerProps, "padding" | "margin" | "color" | "width" | "height">;
 
 const useStyles = createUseStyles({
+  /**
+   * Builds container styles
+   *
+   * @param {ContainerStylesProps} props The props
+   * @example
+   * container({ color = Colors.blue })
+   * @returns {CSSProperties} The styles
+   */
   container: ({ color, height, margin, padding, width }: ContainerStylesProps) => ({
     boxSizing: "border-box",
     display: "flex",
@@ -89,7 +94,6 @@ const useStyles = createUseStyles({
  * >
  *   <span>Hello users</span>
  * </Container>
- *
  * @see Padding
  * @see Margin
  * @see Color
@@ -99,7 +103,7 @@ export const Container = forwardRef<unknown, ContainerProps>(
   ({ children, as = "div", alignment, className, ...rest }, ref) => {
     const styles = useStyles(rest);
 
-    const restWithDataId = rest as typeof rest & { "data-testid": string };
+    const restWithDataId = rest as typeof rest & { /** Only used for tests */ "data-testid": string };
 
     return createElement(as, {
       ref,

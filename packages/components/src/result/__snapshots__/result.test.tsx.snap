@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result should render successfully with error 1`] = `
+<div
+  class="wrapper"
+  data-testid="result"
+>
+  <div
+    class="icon"
+  >
+    <div
+      class="icon_wrapper icon_wrapper__error"
+      style="width: 72px; height: 72px;"
+    >
+      <span
+        class="jsx-7413529 icon material-icons"
+      >
+        close
+      </span>
+    </div>
+  </div>
+  <div
+    class="title"
+  >
+    Submission Failed
+  </div>
+  <div
+    class="subtitle"
+  >
+    Please check and modify the following information before resubmitting.
+  </div>
+</div>
+`;
+
+exports[`Result should render successfully with info 1`] = `
+<div
+  class="wrapper"
+  data-testid="result"
+>
+  <div
+    class="icon"
+  >
+    <span
+      class="jsx-467294570 icon material-icons"
+    >
+      error
+    </span>
+  </div>
+  <div
+    class="title"
+  >
+    Your operation has been executed.
+  </div>
+</div>
+`;
+
+exports[`Result should render successfully with success 1`] = `
+<div
+  class="wrapper"
+  data-testid="result"
+>
+  <div
+    class="icon"
+  >
+    <div
+      class="icon_wrapper icon_wrapper__success"
+      style="width: 72px; height: 72px;"
+    >
+      <span
+        class="jsx-7413529 icon material-icons"
+      >
+        check
+      </span>
+    </div>
+  </div>
+  <div
+    class="title"
+  >
+    Hello Testing World!
+  </div>
+</div>
+`;
+
+exports[`Result should render successfully with warning 1`] = `
+<div
+  class="wrapper"
+  data-testid="result"
+>
+  <div
+    class="icon"
+  >
+    <span
+      class="jsx-3637481999 icon material-icons-round"
+    >
+      warning
+    </span>
+  </div>
+  <div
+    class="title"
+  >
+    There are some problems with your operation.
+  </div>
+</div>
+`;

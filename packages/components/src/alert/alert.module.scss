@@ -7,6 +7,10 @@
 .icon_wrapper {
   margin-right: 12px;
   padding: 7px 0;
+
+  &__without_title {
+    display: flex;
+  }
 }
 
 .message {

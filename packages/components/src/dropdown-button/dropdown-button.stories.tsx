@@ -1,10 +1,19 @@
 import { action } from "@storybook/addon-actions";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Icons from "../icons";
 import DropdownButton, { DropdownButtonProps } from "./dropdown-button";
 import classes from "./dropdown-button.stories.module.scss";
 
+/**
+ * Helper to generate dropdown items.
+ *
+ * @param {number} [n = 100] Number of items to generate
+ * @example
+ * generateItems() // generates 100 items
+ * generateItems(5) // generates 5 items
+ * @returns {{ value: number, text: string }[]} The items.
+ */
 const generateItems = (n = 100) => {
   const result = [];
   for (let i = 0; i < n; i++) {
@@ -27,9 +36,17 @@ export default {
     icon: { control: { disable: true } },
     classNames: { control: { disable: true } },
   },
-} as ComponentMeta<typeof DropdownButton>;
+} as Meta<DropdownButtonProps>;
 
-const Template: ComponentStory<typeof DropdownButton> = (args) => <DropdownButton {...args} />;
+/**
+ * Default DropdownButton template
+ *
+ * @param {DropdownButtonProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The DropdownButton component
+ */
+const Template: Story<DropdownButtonProps> = (args) => <DropdownButton {...args} />;
 
 const defaultProps: Partial<DropdownButtonProps> = {
   allowEmpty: false,

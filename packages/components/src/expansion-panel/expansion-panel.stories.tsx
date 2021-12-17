@@ -1,8 +1,15 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
-import ExpansionPanel from "./expansion-panel";
+import ExpansionPanel, { ExpansionPanelProps } from "./expansion-panel";
 import classes from "./expansion-panel.stories.module.scss";
 
+/**
+ * A basic header
+ *
+ * @example
+ * <Header />
+ * @returns {JSX.Element} A span.
+ */
 const Header = () => <span>Hello Panel</span>;
 
 export default {
@@ -13,15 +20,31 @@ export default {
     children: { control: { disable: true } },
     classNames: { control: { disable: true } },
   },
-} as ComponentMeta<typeof ExpansionPanel>;
+} as Meta<ExpansionPanelProps>;
 
-const Template: ComponentStory<typeof ExpansionPanel> = (args) => (
+/**
+ * Default ExpansionPanel template.
+ *
+ * @param {ExpansionPanelProps} args The props.
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The ExpansionPanel component
+ */
+const Template: Story<ExpansionPanelProps> = (args) => (
   <ExpansionPanel {...args} headerBuilder={Header}>
     <span>Ah que coucou</span>
   </ExpansionPanel>
 );
 
-const TemplateMultiple: ComponentStory<typeof ExpansionPanel> = (args) => (
+/**
+ * Template with multiple ExpansionPanels.
+ *
+ * @param {ExpansionPanelProps} args The props.
+ * @example
+ * <TemplateMultiple {...args} />
+ * @returns {JSX.Element} Wrapped ExpansionPanels components
+ */
+const TemplateMultiple: Story<ExpansionPanelProps> = (args) => (
   <div>
     <ExpansionPanel {...args} headerBuilder={Header}>
       <span>Ah que coucou</span>

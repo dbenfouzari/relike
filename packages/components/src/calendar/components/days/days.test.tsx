@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import { SupportedLocales } from "../../constants";
+import { SupportedCalendarLocales } from "../../constants";
 import Days, { threeFirstLetters } from "./days";
 
 describe("Calendar/Days", () => {
@@ -9,13 +9,13 @@ describe("Calendar/Days", () => {
   });
 
   it("days component should use default formatter", () => {
-    render(<Days locale={SupportedLocales.EN} />);
+    render(<Days locale={SupportedCalendarLocales.EN} />);
 
     expect(screen.getByTestId("monday").textContent).toEqual("mon");
   });
 
   it("days component should use custom formatter", () => {
-    render(<Days locale={SupportedLocales.EN} formatDay={(day) => day.substr(0, 4)} />);
+    render(<Days locale={SupportedCalendarLocales.EN} formatDay={(day) => day.substr(0, 4)} />);
 
     expect(screen.getByTestId("monday").textContent).toEqual("mond");
   });

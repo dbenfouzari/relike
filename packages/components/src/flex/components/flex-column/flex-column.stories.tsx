@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../../../colors";
 import Container from "../../../container";
@@ -15,9 +15,17 @@ export default {
     crossAxisAlignment: { control: { type: "radio" } },
     mainAxisAlignment: { control: { type: "radio" } },
   },
-} as ComponentMeta<typeof FlexColumn>;
+} as Meta<FlexColumnProps>;
 
-const Template: ComponentStory<typeof FlexColumn> = (args) => (
+/**
+ * Default FlexColumn template
+ *
+ * @param {FlexColumnProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The FlexColumn component
+ */
+const Template: Story<FlexColumnProps> = (args) => (
   <Container width={500} height={500} color={Colors.grey[100]}>
     <FlexColumn {...args} />
   </Container>

@@ -1,12 +1,13 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
+import { Emphasis } from "../emphasis";
 import Flex from "../flex";
 import Icons from "../icons";
 import ThemeData from "../theme-data";
 import ThemeProvider from "../theme-provider";
 import Typography from "../typography";
-import Button, { ButtonProps, Emphasis } from "./button";
+import Button, { ButtonProps } from "./button";
 
 export default {
   title: "Button",
@@ -15,9 +16,17 @@ export default {
     color: { control: { disable: true } },
     icon: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Button>;
+} as Meta<ButtonProps>;
 
-const ExpoTemplate: ComponentStory<typeof Button> = (args) => (
+/**
+ * Template that exposes 3 emphasis button
+ *
+ * @param {ButtonProps} args The props
+ * @example
+ * <ExpoTemplate {...args} />
+ * @returns {JSX.Element} The row of Buttons
+ */
+const ExpoTemplate: Story<ButtonProps> = (args) => (
   <Flex.Row gap={8}>
     <Button {...args} emphasis={Emphasis.low} />
     <Button {...args} emphasis={Emphasis.medium} />
@@ -25,7 +34,15 @@ const ExpoTemplate: ComponentStory<typeof Button> = (args) => (
   </Flex.Row>
 );
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+/**
+ * Default Button template
+ *
+ * @param {ButtonProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The Button component
+ */
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 const defaultProps: Partial<ButtonProps> = {
   disabled: false,

@@ -1,53 +1,80 @@
 import classNames from "classnames";
-import { createElement, forwardRef, MouseEvent, ReactHTML, ReactNode } from "react";
+import { forwardRef, MouseEvent, ReactNode } from "react";
 
 import classes from "./list-item.module.scss";
 
+/** Defines ListItem props */
 export interface ListItemProps {
   /** This prop is used to override the style */
   className?: string;
-
-  /**
-   * @default li
-   */
-  as?: keyof ReactHTML;
-
+  /** The rendered content */
   children: ReactNode;
-
+  /** Show something on the left side */
   left?: ReactNode;
+  /** Show something on the right side */
   right?: ReactNode;
-
-  onPress?: (event: MouseEvent<HTMLAnchorElement>) => void;
+  /** Callback called when pressing on a list item. */
+  onPress?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-/**
- * Component display name.
- */
+/** Component display name. */
 const COMPONENT_NAME = "ListItem";
 
-const ListItem = forwardRef<unknown, ListItemProps>(
-  ({ className, as, left, onPress, right, children, ...props }, ref) => {
-    const defaultAs = as ?? onPress ? "a" : "li";
+/**
+ * Use `ListItem` inside a `List` to render the items.
+ *
+ * When `onPress` is given, it adds a className that handles `hover` and `active` states.
+ *
+ * When `onPress` is given, it displays as a `a` element by default. Else, it displays as a `li` element.
+ *
+ * @example
+ * <List>
+ *   <ListItem>Hello</ListItem>
+ * </List>
+ * @returns {JSX.Element} The JSX element.
+ */
+export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
+  ({ className, left, onPress, right, children, ...props }, ref) => {
+    /**
+     * Defines the inner wrapper element
+     *
+     * @example
+     * <Wrapper />
+     * @returns {JSX.Element} The wrapper
+     */
+    const Wrapper = () => {
+      if (onPress)
+        return (
+          <button onClick={onPress} className={classes.wrapper} {...props}>
+            {left && <div className={classes.left}>{left}</div>}
+            {children && <div className={classes.content}>{children}</div>}
+            {right}
+          </button>
+        );
 
-    return createElement(defaultAs, {
-      ref,
-      role: "listitem",
-      className: classNames(
-        classes.list_item,
-        {
-          [classes.list_item__clickable]: !!onPress,
-        },
-        className,
-      ),
-      children: (
-        <>
+      return (
+        <div className={classes.wrapper}>
           {left && <div className={classes.left}>{left}</div>}
           {children && <div className={classes.content}>{children}</div>}
           {right}
-        </>
-      ),
-      ...props,
-    });
+        </div>
+      );
+    };
+
+    return (
+      <li
+        ref={ref}
+        className={classNames(
+          classes.list_item,
+          {
+            [classes.list_item__clickable]: !!onPress,
+          },
+          className,
+        )}
+      >
+        <Wrapper />
+      </li>
+    );
   },
 );
 ListItem.displayName = COMPONENT_NAME;
