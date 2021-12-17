@@ -9,6 +9,11 @@ import classes from "./dropdown-button.module.scss";
 /**
  * This method is used to calculate max width of children elements.
  * It aims to get wrapper min width.
+ *
+ * @param {HTMLElement | null} parent The parent.
+ * @example
+ * getMaxChildrenWidth(...)
+ * @returns {number} The children width
  */
 const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
   if (!parent) return;
@@ -30,6 +35,7 @@ const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
   return maxWidth;
 };
 
+/** Defines overloadable classNames */
 export type DropdownButtonClassNames = {
   /**
    * Override wrapper style by creating className.
@@ -45,6 +51,7 @@ export type DropdownButtonClassNames = {
   item_list_item?: HTMLProps<HTMLLIElement>["className"];
 };
 
+/** Defines base DropdownButton props. Meant to be extended. */
 interface BaseDropdownButtonProps {
   /**
    * You have to pass the current value to the select
@@ -55,7 +62,12 @@ interface BaseDropdownButtonProps {
    * `value` is the value that will be returned after selecting it.
    * `text` is the text that will be shown in select options.
    */
-  items: { value: string; text: ReactText }[];
+  items: {
+    /** The item value */
+    value: string;
+    /** The item text */
+    text: ReactText;
+  }[];
   /**
    * @default Icons.arrow_drop_down
    */
@@ -64,27 +76,67 @@ interface BaseDropdownButtonProps {
    * @default 24
    */
   iconSize?: number;
+  /**
+   * Callback that will be called on value selection.
+   *
+   * @param {string} nextValue The next value
+   */
   onChange?: (nextValue: string) => void;
   /**
    * If `allowEmpty` is set to `true`, it will be visually selected if given `value` is unknown,
    * or empty.
    * If it's set to `false`, the first option will be visually selected.
+   *
+   * REQUIRED when you want to allow empty value.
+   *
    * @default false
    */
   allowEmpty?: boolean;
+  /** The override classNames */
   classNames?: DropdownButtonClassNames;
 }
 
+/** Defines DropdownButton props when value can be empty */
 interface DropdownButtonPropsWithAllowEmpty extends BaseDropdownButtonProps {
+  /**
+   * If `allowEmpty` is set to `true`, it will be visually selected if given `value` is unknown,
+   * or empty.
+   * If it's set to `false`, the first option will be visually selected.
+   *
+   * REQUIRED when you want to allow empty value.
+   *
+   * @default false
+   */
   allowEmpty: true;
+  /**
+   * Text to show when no value is selected.
+   *
+   * Must not be defined when `allowEmpty` is `false`.
+   */
   placeholder?: string;
 }
 
+/** Defines DropdownButton props when value can NOT be empty */
 interface DropdownButtonPropsWithoutAllowEmpty extends BaseDropdownButtonProps {
+  /**
+   * If `allowEmpty` is set to `true`, it will be visually selected if given `value` is unknown,
+   * or empty.
+   * If it's set to `false`, the first option will be visually selected.
+   *
+   * REQUIRED when you want to allow empty value.
+   *
+   * @default false
+   */
   allowEmpty?: false;
+  /**
+   * Text to show when no value is selected.
+   *
+   * Must not be defined when `allowEmpty` is `false`.
+   */
   placeholder?: undefined;
 }
 
+/** Defines DropdownButton props. */
 export type DropdownButtonProps = DropdownButtonPropsWithAllowEmpty | DropdownButtonPropsWithoutAllowEmpty;
 
 /**
@@ -92,6 +144,11 @@ export type DropdownButtonProps = DropdownButtonPropsWithAllowEmpty | DropdownBu
  * A dropdown button lets the user select from a number of items.
  * The button shows the currently selected item as well as an arrow that opens a menu for selecting
  * another item.
+ *
+ * @param {DropdownButtonProps} props The props
+ * @example
+ * <DropdownButton items={[ { value: 1, text: 'One' }, { value: 2, text: 'Two' } ]} />
+ * @returns {JSX.Element} The JSX Element.
  */
 export const DropdownButton: FC<DropdownButtonProps> = ({
   allowEmpty = false,
