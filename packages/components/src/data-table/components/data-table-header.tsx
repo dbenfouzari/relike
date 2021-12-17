@@ -5,11 +5,22 @@ import classes from "../data-table.module.scss";
 import { DataTableClassNames, DataTableColumnProps } from "../types";
 import { filterChildren } from "../utils";
 
+/** Defines DataTableHeader props */
 export interface DataTableHeaderProps<C> {
+  /** The children */
   children: ReactElement<C>[];
+  /** Override classNames */
   classNames?: DataTableClassNames;
 }
 
+/**
+ * Display the DataTable header
+ *
+ * @param {DataTableHeaderProps} props The props
+ * @example
+ * <DataTableHeader {...} />
+ * @returns {JSX.Element} The JSX Element.
+ */
 const DataTableHeader = <C extends DataTableColumnProps>({ children, classNames }: DataTableHeaderProps<C>) => {
   const mandatoryColumns = filterChildren(children);
 
