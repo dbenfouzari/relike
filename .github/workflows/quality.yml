@@ -82,7 +82,7 @@ jobs:
         run: yarn install
 
       - name: Check lint
-        run: yarn lint --max-warnings
+        run: yarn lint --max-warnings 1
 
   test:
     name: Test
