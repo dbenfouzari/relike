@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render successfully 1`] = `
+<div
+  class="wrapper-0-2-4"
+  data-testid="loader-screen"
+/>
+`;

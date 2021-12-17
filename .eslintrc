@@ -38,7 +38,8 @@
         "HTMLDivElement",
         "HTMLElement",
         "JSX",
-        "KeyboardEvent"
+        "KeyboardEvent",
+        "CSSProperties"
       ]
     }],
     "jsdoc/require-jsdoc": ["warn", {
