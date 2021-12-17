@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should render successfully 1`] = `
+<ul
+  class="list"
+>
+  <li
+    class="list_item"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="content"
+      >
+        Hello
+      </div>
+    </div>
+  </li>
+  <li
+    class="list_item"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="content"
+      >
+        Tests
+      </div>
+    </div>
+  </li>
+</ul>
+`;
