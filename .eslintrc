@@ -36,6 +36,7 @@
     "jsdoc/no-undefined-types": ["warn", {
       "definedTypes": [
         "CSSProperties",
+        "Element",
         "HTMLDivElement",
         "HTMLElement",
         "JSX",

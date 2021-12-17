@@ -1,8 +1,8 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import { CSSProperties } from "react";
 
 import Colors from "../colors";
-import Carousel from "./carousel";
+import Carousel, { CarouselProps } from "./carousel";
 
 export default {
   title: "Carousel",
@@ -11,9 +11,17 @@ export default {
   argTypes: {
     children: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Carousel>;
+} as Meta<CarouselProps>;
 
-const Template: ComponentStory<typeof Carousel> = (args) => <Carousel {...args} />;
+/**
+ * Default Carousel template.
+ *
+ * @param {CarouselProps} args The props
+ * @example
+ * <Template {...} />
+ * @returns {JSX.Element} The Carousel component
+ */
+const Template: Story<CarouselProps> = (args) => <Carousel {...args} />;
 
 const styles: Record<string, CSSProperties> = {
   element: {
