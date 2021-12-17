@@ -24,3 +24,6 @@ export type Maybe<T> = T | null;
  * type ListProps = ExtendedHTMLProps<HTMLUListElement> & {...}
  */
 export type ExtendedHTMLProps<T extends HTMLElement> = Omit<HTMLProps<T>, "ref">;
+
+/** `setTimeout` type */
+export type Timeout = ReturnType<typeof setTimeout>;

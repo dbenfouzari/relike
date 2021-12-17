@@ -35,11 +35,14 @@
     "jsdoc/require-example": "warn",
     "jsdoc/no-undefined-types": ["warn", {
       "definedTypes": [
+        "CSSProperties",
         "HTMLDivElement",
         "HTMLElement",
         "JSX",
         "KeyboardEvent",
-        "CSSProperties"
+        "MouseEvent",
+        "ThemeData",
+        "TouchEvent"
       ]
     }],
     "jsdoc/require-jsdoc": ["warn", {
