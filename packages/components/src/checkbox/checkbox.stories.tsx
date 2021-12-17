@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Checkbox, { CheckboxProps } from "./checkbox";
@@ -10,9 +10,17 @@ export default {
     color: { control: { disable: true } },
     classNames: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Checkbox>;
+} as Meta<CheckboxProps>;
 
-const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />;
+/**
+ * Default Checkbox Template
+ *
+ * @param {CheckboxProps} args The props
+ * @example
+ * <Template {...} />
+ * @returns {JSX.Element} The Checkbox component
+ */
+const Template: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
 
 const defaultProps: Partial<CheckboxProps> = {
   color: Colors.blue[400],
