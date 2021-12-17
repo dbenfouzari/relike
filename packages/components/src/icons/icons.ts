@@ -1,22 +1,52 @@
-type IconVariant = "sharp" | "rounded" | "outlined" | "screen";
+/** Defines available icon variants. */
+export type IconVariant = "sharp" | "rounded" | "outlined" | "screen";
 
 export class IconData {
   private readonly _name: string;
   private readonly _variant?: IconVariant;
 
+  /**
+   * Creates an IconData.
+   *
+   * @param {string} name The icon name
+   * @param {IconVariant} [variant] The variant
+   * @example
+   * new IconData("access_time_filled", "outlined")
+   */
   constructor(name: string, variant?: IconVariant) {
     this._name = name;
     this._variant = variant;
   }
 
+  /**
+   * Get the icon name.
+   *
+   * @example
+   * new IconData("access_time_filled", "outlined").name // "access_time_filled"
+   * @returns {string} The icon name.
+   */
   public get name() {
     return this._name;
   }
 
+  /**
+   * Get the icon variant.
+   *
+   * @example
+   * new IconData("access_time_filled", "outlined").variant // "outlined"
+   * @returns {string} The icon variant.
+   */
   public get variant() {
     return this._variant;
   }
 
+  /**
+   * Returns the string representation of IconData
+   *
+   * @example
+   * new IconData("access_time_filled", "outlined").toString() // IconData(name: "access_time_filled", variant: "outlined")
+   * @returns {string} The icon name.
+   */
   toString() {
     return `IconData(name: "${this.name}", variant: ${this.variant})`;
   }
