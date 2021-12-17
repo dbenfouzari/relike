@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaterialColor Color(0xffb71c1c) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 28,
+  "green": 28,
+  "hue": 0,
+  "lightness": 41.4,
+  "red": 183,
+  "saturation": 73.5,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4290190364,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffc62828) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 40,
+  "green": 40,
+  "hue": 0,
+  "lightness": 46.7,
+  "red": 198,
+  "saturation": 66.4,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4291176488,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffd32f2f) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 47,
+  "green": 47,
+  "hue": 0,
+  "lightness": 50.6,
+  "red": 211,
+  "saturation": 65.1,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4292030255,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffd50000) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 0,
+  "green": 0,
+  "hue": 0,
+  "lightness": 41.8,
+  "red": 213,
+  "saturation": 100,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4292149248,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffe53935) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 53,
+  "green": 57,
+  "hue": 1,
+  "lightness": 55.3,
+  "red": 229,
+  "saturation": 77.2,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4293212469,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffe57373) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 115,
+  "green": 115,
+  "hue": 0,
+  "lightness": 67.5,
+  "red": 229,
+  "saturation": 68.7,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4293227379,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffef9a9a) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 154,
+  "green": 154,
+  "hue": 0,
+  "lightness": 77.1,
+  "red": 239,
+  "saturation": 72.6,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4293892762,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffef5350) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 80,
+  "green": 83,
+  "hue": 1,
+  "lightness": 62.5,
+  "red": 239,
+  "saturation": 83.2,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4293874512,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xfff44336) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 54,
+  "green": 67,
+  "hue": 4,
+  "lightness": 58.4,
+  "red": 244,
+  "saturation": 89.6,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4294198070,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffff8a80) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 128,
+  "green": 138,
+  "hue": 5,
+  "lightness": 75.1,
+  "red": 255,
+  "saturation": 100,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4294937216,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffff1744) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 68,
+  "green": 23,
+  "hue": 348,
+  "lightness": 54.5,
+  "red": 255,
+  "saturation": 100,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4294907716,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffff5252) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 82,
+  "green": 82,
+  "hue": 0,
+  "lightness": 66.1,
+  "red": 255,
+  "saturation": 100,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4294922834,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffffcdd2) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 210,
+  "green": 205,
+  "hue": 354,
+  "lightness": 90.2,
+  "red": 255,
+  "saturation": 100,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4294954450,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;
+
+exports[`MaterialColor Color(0xffffebee) should be a Color 1`] = `
+Color {
+  "alpha": 255,
+  "blue": 238,
+  "green": 235,
+  "hue": 351,
+  "lightness": 96.1,
+  "red": 255,
+  "saturation": 100,
+  "toRGB": [Function],
+  "toRGBA": [Function],
+  "value": 4294962158,
+  "withAlpha": [Function],
+  "withBlue": [Function],
+  "withGreen": [Function],
+  "withHue": [Function],
+  "withLightness": [Function],
+  "withOpacity": [Function],
+  "withRed": [Function],
+  "withSaturation": [Function],
+}
+`;

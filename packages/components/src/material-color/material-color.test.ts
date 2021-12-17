@@ -18,6 +18,7 @@ describe("MaterialColor", () => {
     materialColor.shade900,
   ])("%s should be a Color", (color) => {
     expect(color).toBeInstanceOf(Color);
+    expect(color).toMatchSnapshot();
   });
 
   it.each([
@@ -27,5 +28,6 @@ describe("MaterialColor", () => {
     materialAccentColor.shade700,
   ])("%s should be a Color", (color) => {
     expect(color).toBeInstanceOf(Color);
+    expect(color).toMatchSnapshot();
   });
 });
