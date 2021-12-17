@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Colors from "../colors";
 import Icon from "../icon";
@@ -8,9 +8,17 @@ import Avatar, { AvatarProps } from "./avatar";
 export default {
   title: "Avatar",
   component: Avatar,
-} as ComponentMeta<typeof Avatar>;
+} as Meta<AvatarProps>;
 
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
+/**
+ * Default Avatar template.
+ *
+ * @param {AvatarProps} args The props
+ * @example
+ * <Template />
+ * @returns {JSX.Element} The Avatar component
+ */
+const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
 const defaultProps: Partial<AvatarProps> = {
   src: undefined,
