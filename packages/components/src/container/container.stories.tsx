@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 
 import Alignment from "../alignment";
 import Colors from "../colors";
@@ -17,9 +17,17 @@ export default {
     width: { control: { type: "text" } },
     height: { control: { type: "text" } },
   },
-} as ComponentMeta<typeof Container>;
+} as Meta<ContainerProps>;
 
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+/**
+ * Default Container template
+ *
+ * @param {ContainerProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The Container component
+ */
+const Template: Story<ContainerProps> = (args) => <Container {...args} />;
 
 const defaultProps: Partial<ContainerProps> = {
   color: Colors.blueGrey[200],
