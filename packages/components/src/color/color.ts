@@ -21,6 +21,7 @@ class Color {
    * Create a Color.
    * It takes a number, but it's pretty hard to know the exact color so it's better so write something like this
    *
+   * @param {number} color The color number (0xff123456)
    * @example new Color(0xff123456) // where "ff" is alpha channel, 12 is red, 34 is green, and 56 is blue.
    */
   constructor(color: number) {
@@ -45,6 +46,10 @@ class Color {
 
   /**
    * Converts a Color to its string representation.
+   *
+   * @example
+   * Colors.red.toString();
+   * @returns {string} The string representation
    */
   public toString() {
     return `Color(0x${(this.value >>> 0).toString(16)})`;
@@ -52,6 +57,15 @@ class Color {
 
   /**
    * Check that all is working as expected.
+   *
+   * @param {number} a Alpha channel
+   * @param {number} r Red channel
+   * @param {number} g Green channel
+   * @param {number} b Blue channel
+   * @example
+   * Color.assert(0, 0, 0, 0)
+   * @returns {void} Nothing
+   * @throws If an error occurs
    */
   static assert = (a: number, r: number, g: number, b: number) => {
     assert(a >= 0, "Alpha channel should be between 0 and 255");
@@ -66,6 +80,14 @@ class Color {
 
   /**
    * Create a [Color] from alpha, red, green and blue channels.
+   *
+   * @param {number} a Alpha channel
+   * @param {number} r Red channel
+   * @param {number} g Green channel
+   * @param {number} b Blue channel
+   * @example
+   * Color.fromARGB(100, 255, 255, 255) // full white
+   * @returns {Color} A new Color
    */
   static fromARGB(a: number, r: number, g: number, b: number) {
     this.assert(a, r, g, b);
@@ -75,6 +97,14 @@ class Color {
 
   /**
    * Create a [Color] from hue, saturation and lightness.
+   *
+   * @param {number} hue Hue between 0 and 360
+   * @param {number} saturation Saturation between 0 and 100
+   * @param {number} lightness Lightness between 0 and 100
+   * @param {number} alpha Alpha between 0 and 255
+   * @example
+   * Color.fromHSLA(0, 100, 50, 255);
+   * @returns {Color} A new Color.
    */
   static fromHSLA(hue: number, saturation: number, lightness: number, alpha = 255) {
     assert(hue >= 0, "Hue should be between 0 and 360");
@@ -130,6 +160,10 @@ class Color {
 
   /**
    * Converts the [Color] instance to CSS `#rrggbbaa`.
+   *
+   * @example
+   * Colors.blue.toRGB()
+   * @returns {string} "#0000ffff"
    */
   toRGB = () => {
     const r = this.red.toString(16).padStart(2, "0");
@@ -141,6 +175,10 @@ class Color {
 
   /**
    * Converts the [Color] instance to CSS `rgba(rrr, ggg, bbb, o)`.
+   *
+   * @example
+   * Colors.blue.toRGBA()
+   * @returns {string} "rgba(0, 0, 255, 1)"
    */
   toRGBA = () => {
     /**
@@ -154,6 +192,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the alpha channel replaced with a (which ranges from 0 to 255).
+   *
+   * @param {number} a Alpha channel
+   * @example
+   * Colors.blue.withAlpha(0)
+   * @returns {Color} A new Color.
    */
   withAlpha = (a: number) => {
     assert(a >= 0, "Alpha channel should be between 0 and 255");
@@ -164,6 +207,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the alpha channel replaced with the given opacity (which ranges from 0.0 to 1.0).
+   *
+   * @param {number} o Opacity
+   * @example
+   * Colors.blue.withOpacity(0)
+   * @returns {Color} A new Color.
    */
   withOpacity = (o: number) => {
     assert(o >= 0, "Opacity should be between 0 and 1");
@@ -174,6 +222,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the red channel replaced with r (which ranges from 0 to 255).
+   *
+   * @param {number} r Red channel
+   * @example
+   * Colors.blue.withRed(10)
+   * @returns {Color} A new Color.
    */
   withRed = (r: number) => {
     assert(r >= 0, "Red channel should be between 0 and 255");
@@ -184,6 +237,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the green channel replaced with g (which ranges from 0 to 255).
+   *
+   * @param {number} g Green channel
+   * @example
+   * Colors.blue.withGreen(10)
+   * @returns {Color} A new Color.
    */
   withGreen = (g: number) => {
     assert(g >= 0, "Green channel should be between 0 and 255");
@@ -194,6 +252,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the blue channel replaced with b (which ranges from 0 to 255).
+   *
+   * @param {number} b Blue channel
+   * @example
+   * Colors.blue.withBlue(10)
+   * @returns {Color} A new Color.
    */
   withBlue = (b: number) => {
     assert(b >= 0, "Blue channel should be between 0 and 255");
@@ -204,6 +267,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the hue replaced with h (which ranged from 0 to 360)
+   *
+   * @param {number} h Hue
+   * @example
+   * Colors.blue.withHue(0)
+   * @returns {Color} A new Color.
    */
   withHue = (h: number) => {
     assert(h >= 0, "Hue should be between 0 and 360");
@@ -214,6 +282,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the saturation replaced with s (which ranged from 0 to 100)
+   *
+   * @param {number} s Saturation
+   * @example
+   * Colors.blue.withSaturation(0)
+   * @returns {Color} A new Color.
    */
   withSaturation = (s: number) => {
     assert(s >= 0, "Saturation should be between 0 and 100");
@@ -224,6 +297,11 @@ class Color {
 
   /**
    * Returns a new color that matches this color with the lightness replaced with l (which ranged from 0 to 100)
+   *
+   * @param {number} l Lightness channel
+   * @example
+   * Colors.blue.withLightness(0)
+   * @returns {Color} A new Color.
    */
   withLightness = (l: number) => {
     assert(l >= 0, "Lightness should be between 0 and 100");
@@ -233,7 +311,13 @@ class Color {
   };
 
   /**
+   * Don't really know how it works, it's internal use ONLY
    *
+   * @param {number} component a value
+   * @example
+   * Color._linearizeColorComponent(this.red / 0xff);
+   * @returns {number} A number
+   * @deprecated DON'T USE IT
    */
   static _linearizeColorComponent(component: number) {
     if (component <= 0.03928) return component / 12.92;
@@ -244,6 +328,10 @@ class Color {
    * Returns a brightness value between 0 for darkest and 1 for lightest.
    * Represents the relative lightness of the color.
    * This value is computationally expensive to calculate.
+   *
+   * @example
+   * Colors.red.computeLuminance();
+   * @returns {number} Between 0 for darkest and 1 for lightest
    */
   computeLuminance() {
     const R = Color._linearizeColorComponent(this.red / 0xff);
@@ -255,6 +343,10 @@ class Color {
   /**
    * Determines whether the given Color is Brightness.LIGHT or Brightness.DARK.
    * This compares the luminosity of the given color to a threshold value that matches the material design specification.
+   *
+   * @example
+   * Colors.red.estimateBrightness();
+   * @returns {Brightness} The brightness.
    */
   estimateBrightness() {
     const relativeLuminance = this.computeLuminance();
