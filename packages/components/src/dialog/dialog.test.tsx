@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import Dialog from "./dialog";
 
@@ -28,5 +28,7 @@ describe("Dialog", () => {
         </footer>
       </Dialog>,
     );
+
+    expect(screen.getByRole("dialog")).toMatchSnapshot();
   });
 });

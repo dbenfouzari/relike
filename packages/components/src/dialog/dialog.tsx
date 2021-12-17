@@ -7,6 +7,7 @@ import Duration from "../duration";
 import useDelayedUnmount from "../hooks/useDelayedUnmount";
 import classes from "./dialog.module.scss";
 
+/** Defines Dialog props. */
 export interface DialogProps {
   /**
    * Whether the dialog is open or not.
@@ -62,6 +63,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
               />
             )}
             <div
+              role="dialog"
               ref={ref}
               className={classNames(classes.dialog, {
                 [classes.dialog__unmounting]: !isOpen,

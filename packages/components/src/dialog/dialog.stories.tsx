@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import { useCallback, useState } from "react";
 
 import Button from "../button";
@@ -55,8 +55,16 @@ export default {
     children: { control: { disable: true } },
     onClose: { control: { disable: true } },
   },
-} as ComponentMeta<typeof Dialog>;
+} as Meta<DialogProps>;
 
+/**
+ * Component that handles Dialog.
+ *
+ * @param {DialogProps} props The props
+ * @example
+ * <Component {...props} />
+ * @returns {JSX.Element} Component that handles Dialog.
+ */
 const Component = (props: DialogProps) => {
   const [isOpen, setIsOpen] = useState(props.isOpen);
 
@@ -74,7 +82,15 @@ const Component = (props: DialogProps) => {
   );
 };
 
-const Template: ComponentStory<typeof Dialog> = (args) => <Component {...args} />;
+/**
+ * Default Dialog template.
+ *
+ * @param {DialogProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The Dialog component
+ */
+const Template: Story<DialogProps> = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
