@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import isChromatic from "chromatic/isChromatic";
 
 import Axis from "../../../axis";
@@ -6,8 +6,16 @@ import Colors from "../../../colors";
 import Icon from "../../../icon";
 import Icons from "../../../icons";
 import Padding from "../../../padding";
-import GridViewCount from "./grid-view-count";
+import GridViewCount, { GridViewCountProps } from "./grid-view-count";
 
+/**
+ * Helper to generate grid view items.
+ *
+ * @param {number} n Number of items to generate.
+ * @example
+ * generateItems(32)
+ * @returns {JSX.Element[]} The items.
+ */
 const generateItems = (n: number) =>
   Array.from({ length: n }, (_, index) => {
     const color = isChromatic() ? Colors.grey : Colors.primaries[Math.floor(Math.random() * Colors.primaries.length)];
@@ -30,6 +38,7 @@ export default {
     viewport: {
       /**
        * Large mobile
+       *
        * @see https://github.com/storybookjs/storybook/blob/main/addons/viewport/src/defaults.ts#L176
        */
       defaultViewport: "mobile2",
@@ -40,9 +49,17 @@ export default {
     className: { control: { disable: true } },
     children: { control: { disable: true } },
   },
-} as ComponentMeta<typeof GridViewCount>;
+} as Meta<GridViewCountProps>;
 
-const Template: ComponentStory<typeof GridViewCount> = (args) => <GridViewCount {...args} />;
+/**
+ * Default GridViewCount template
+ *
+ * @param {GridViewCountProps} args The props
+ * @example
+ * <Template {...args} />
+ * @returns {JSX.Element} The GridViewCount
+ */
+const Template: Story<GridViewCountProps> = (args) => <GridViewCount {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

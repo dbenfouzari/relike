@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridView.Count should render successfully 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d0-0-2-3"
+  data-testid="grid-view-count"
+>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    0
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    1
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    2
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    3
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    4
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    5
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    6
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    7
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    8
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    9
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    10
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    11
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    12
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    13
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    14
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    15
+  </div>
+</div>
+`;
+
+exports[`GridView.Count should render successfully with horizontal scroll 1`] = `
+<div
+  class="wrapper-0-2-1 wrapper-d1-0-2-4"
+  data-testid="grid-view-count"
+>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    0
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    1
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    2
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    3
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    4
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    5
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    6
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    7
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    8
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    9
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    10
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    11
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    12
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    13
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    14
+  </div>
+  <div
+    class="child-0-2-2"
+    style="background-color: rgb(66, 165, 245);"
+  >
+    Item 
+    15
+  </div>
+</div>
+`;
