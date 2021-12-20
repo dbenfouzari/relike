@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render successfully 1`] = `
+exports[`DataTable should render successfully 1`] = `
 <div
   role="table"
 >
@@ -50,12 +50,9 @@ exports[`should render successfully 1`] = `
           John Doe
         </span>
       </div>
-      <div
-        class="cell"
-        role="cell"
-      >
+      <h3>
         23
-      </div>
+      </h3>
       <div
         class="cell"
         role="cell"
