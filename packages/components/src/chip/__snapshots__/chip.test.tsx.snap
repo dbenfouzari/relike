@@ -14,3 +14,42 @@ exports[`Chip should render successfully 1`] = `
   </span>
 </button>
 `;
+
+exports[`Chip should render successfully with avatar 1`] = `
+<button
+  class="chip chip-0-2-1 chip-d6-0-2-13 chip__with_avatar"
+  data-testid="chip"
+  tabindex="-1"
+>
+  <div
+    class="avatar"
+    data-testid="chip-avatar"
+  >
+    <img
+      alt="avatar"
+      src="https://wl-sympa.cf.tsp.li/resize/728x/jpg/f6e/ef6/b5b68253409b796f61f6ecd1f1.jpg"
+    />
+  </div>
+  <span
+    class="elm-0-2-7 elm-d2-0-2-16 label"
+    data-testid="text-elm"
+  >
+    Hello
+  </span>
+</button>
+`;
+
+exports[`Chip should render successfully with dark background 1`] = `
+<button
+  class="chip chip-0-2-1 chip-d3-0-2-9"
+  data-testid="chip"
+  tabindex="-1"
+>
+  <span
+    class="elm-0-2-7 elm-d1-0-2-12 label"
+    data-testid="text-elm"
+  >
+    Hello
+  </span>
+</button>
+`;

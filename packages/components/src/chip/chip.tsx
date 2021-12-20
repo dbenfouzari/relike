@@ -198,7 +198,11 @@ export const Chip = forwardRef<HTMLButtonElement, ChipProps>(
         )}
         {...props}
       >
-        {avatar && <div className={classes.avatar}>{avatar}</div>}
+        {avatar && (
+          <div data-testid="chip-avatar" className={classes.avatar}>
+            {avatar}
+          </div>
+        )}
 
         <Text style={new TextStyle({ color: textColor, fontSize: 13 })} className={classes.label}>
           {children}
