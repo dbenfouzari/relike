@@ -55,6 +55,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
           <>
             {withoutOverlay ? null : (
               <button
+                data-testid="dialog-overlay"
                 style={{ "--color": Colors.black54.toRGBA() } as CSSProperties}
                 className={classNames(classes.overlay, {
                   [classes.overlay__unmounting]: !isOpen,
