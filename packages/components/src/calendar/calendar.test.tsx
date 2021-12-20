@@ -11,7 +11,14 @@ describe("Calendar", () => {
   jest.spyOn(Date, "now").mockImplementation(() => new Date("2021-08-26T21:14:00.000Z").valueOf());
 
   it("should render successfully", () => {
-    render(<Calendar initialValue={currDateTime} />);
+    render(<Calendar />);
+    expect(screen.getByTestId("calendar")).toMatchSnapshot();
+  });
+
+  it("should parse date when initialValue is a Date object", () => {
+    // @ts-expect-error Because `DateTime.date` is private
+    const dateNumber = currDateTime.date.valueOf();
+    render(<Calendar initialValue={dateNumber} />);
     expect(screen.getByTestId("calendar")).toMatchSnapshot();
   });
 
