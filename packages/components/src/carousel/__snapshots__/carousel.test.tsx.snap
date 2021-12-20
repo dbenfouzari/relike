@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should render successfully 1`] = `
+<div
+  class="wrapper"
+  data-testid="carousel"
+>
+  <button
+    class="wrapper wrapper-0-2-1 wrapper-d0-0-2-2 wrapper__clickable button"
+    data-testid="left"
+    tabindex="0"
+  >
+    <span
+      class="jsx-2787895825 icon material-icons"
+    >
+      chevron_left
+    </span>
+  </button>
+  <ul
+    class="inner"
+    role="tablist"
+    style="gap: 12px;"
+    tabindex="0"
+  >
+    <li
+      aria-label="Slide 1 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 1
+      </div>
+    </li>
+    <li
+      aria-label="Slide 2 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 2
+      </div>
+    </li>
+    <li
+      aria-label="Slide 3 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 3
+      </div>
+    </li>
+    <li
+      aria-label="Slide 4 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 4
+      </div>
+    </li>
+    <li
+      aria-label="Slide 5 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 5
+      </div>
+    </li>
+    <li
+      aria-label="Slide 6 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 6
+      </div>
+    </li>
+    <li
+      aria-label="Slide 7 of 7"
+      class="element"
+      role="tab"
+    >
+      <div
+        style="width: 20rem; height: 12rem; border-radius: 4px; background-color: rgb(238, 238, 238); display: flex; align-items: center; justify-content: center;"
+      >
+        Example 7
+      </div>
+    </li>
+  </ul>
+  <button
+    class="wrapper wrapper-0-2-1 wrapper-d1-0-2-3 wrapper__clickable button"
+    data-testid="right"
+    tabindex="0"
+  >
+    <span
+      class="jsx-2787895825 icon material-icons"
+    >
+      chevron_right
+    </span>
+  </button>
+</div>
+`;

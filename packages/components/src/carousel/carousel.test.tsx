@@ -1,6 +1,6 @@
 import "intersection-observer";
 
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { CSSProperties } from "react";
 
 import Colors from "../colors";
@@ -18,32 +18,69 @@ const styles: Record<string, CSSProperties> = {
   },
 };
 
+const mockScrollLeft = jest.fn();
+const mockScrollRight = jest.fn();
+
+jest.mock("./useCarousel", () =>
+  jest.fn(() => ({
+    leftIndicator: true,
+    rightIndicator: true,
+    itemRef: () => jest.fn(),
+    scrollLeft: mockScrollLeft,
+    scrollRight: mockScrollRight,
+  })),
+);
+
+const setup = () => {
+  return render(
+    <Carousel>
+      <div key={1} style={styles.element}>
+        Example 1
+      </div>
+      <div key={2} style={styles.element}>
+        Example 2
+      </div>
+      <div key={3} style={styles.element}>
+        Example 3
+      </div>
+      <div key={4} style={styles.element}>
+        Example 4
+      </div>
+      <div key={5} style={styles.element}>
+        Example 5
+      </div>
+      <div key={6} style={styles.element}>
+        Example 6
+      </div>
+      <div key={7} style={styles.element}>
+        Example 7
+      </div>
+    </Carousel>,
+  );
+};
+
 describe("Carousel", function () {
   it("should render successfully", () => {
-    render(
-      <Carousel>
-        <div key={1} style={styles.element}>
-          Example 1
-        </div>
-        <div key={2} style={styles.element}>
-          Example 2
-        </div>
-        <div key={3} style={styles.element}>
-          Example 3
-        </div>
-        <div key={4} style={styles.element}>
-          Example 4
-        </div>
-        <div key={5} style={styles.element}>
-          Example 5
-        </div>
-        <div key={6} style={styles.element}>
-          Example 6
-        </div>
-        <div key={7} style={styles.element}>
-          Example 7
-        </div>
-      </Carousel>,
-    );
+    setup();
+
+    expect(screen.getByTestId("carousel")).toMatchSnapshot();
+  });
+
+  it("should handle next click", () => {
+    setup();
+
+    const rightIndicator = screen.getByTestId("right");
+    fireEvent.click(rightIndicator);
+
+    expect(mockScrollRight).toHaveBeenCalled();
+  });
+
+  it("should handle prev click", () => {
+    setup();
+
+    const leftIndicator = screen.getByTestId("left");
+    fireEvent.click(leftIndicator);
+
+    expect(mockScrollLeft).toHaveBeenCalled();
   });
 });

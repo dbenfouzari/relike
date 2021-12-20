@@ -61,7 +61,7 @@ export const Carousel: FC<CarouselProps> = ({ children, gap = 12 }) => {
   const onScrollRight = () => scrollRight(1);
 
   return (
-    <div className={classes.wrapper}>
+    <div data-testid="carousel" className={classes.wrapper}>
       {leftIndicator && (
         <IconButton
           tabIndex={0}
