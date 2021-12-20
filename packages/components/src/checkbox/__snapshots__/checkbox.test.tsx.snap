@@ -36,7 +36,7 @@ exports[`Checkbox should render successfully when default checked 1`] = `
   >
     <input
       checked=""
-      class="checkbox checkbox-0-2-1 checkbox-d1-0-2-3"
+      class="checkbox checkbox-0-2-1 checkbox-d2-0-2-4"
       data-testid="input"
       type="checkbox"
     />
@@ -50,5 +50,37 @@ exports[`Checkbox should render successfully when default checked 1`] = `
       </span>
     </span>
   </div>
+</label>
+`;
+
+exports[`Checkbox should render successfully with a label 1`] = `
+<label
+  class="wrapper"
+  data-testid="checkbox-wrapper"
+>
+  <div
+    class="outer"
+  >
+    <input
+      class="checkbox checkbox-0-2-1 checkbox-d1-0-2-3"
+      data-testid="input"
+      type="checkbox"
+    />
+    <span
+      class="checkmark"
+    >
+      <span
+        class="jsx-1697339359 icon material-icons"
+      >
+        check
+      </span>
+    </span>
+  </div>
+  <span
+    class="label"
+    data-testid="label"
+  >
+    Hello Jest
+  </span>
 </label>
 `;

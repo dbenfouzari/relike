@@ -9,6 +9,13 @@ describe("Checkbox", () => {
     expect(screen.getByTestId("checkbox-wrapper")).toMatchSnapshot();
   });
 
+  it("should render successfully with a label", () => {
+    render(<Checkbox label="Hello Jest" />);
+
+    expect(screen.getByTestId("checkbox-wrapper")).toMatchSnapshot();
+    expect(screen.getByTestId("label")).toBeInTheDocument();
+  });
+
   it("should render successfully when default checked", () => {
     render(<Checkbox defaultChecked />);
 

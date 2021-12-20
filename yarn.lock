@@ -2074,6 +2074,7 @@ __metadata:
     "@storybook/preset-create-react-app": ^3.2.0
     "@storybook/react": ^6.4.9
     "@storybook/storybook-deployer": ^2.8.10
+    "@testing-library/jest-dom": ^5.16.1
     "@testing-library/react": ^12.1.2
     "@testing-library/react-hooks": ^7.0.1
     "@testing-library/user-event": ^13.5.0
@@ -2085,6 +2086,7 @@ __metadata:
     "@types/react": ^17.0.0
     "@types/react-dom": ^17.0.0
     "@types/react-window": ^1.8.5
+    "@types/testing-library__jest-dom": ^5.14.2
     babel-plugin-transform-scss: ^1.0.11
     chromatic: ^5.9.2
     classnames: ^2.3.1
@@ -5368,7 +5370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.14.1":
+"@testing-library/jest-dom@npm:^5.14.1, @testing-library/jest-dom@npm:^5.16.1":
   version: 5.16.1
   resolution: "@testing-library/jest-dom@npm:5.16.1"
   dependencies:
@@ -5895,7 +5897,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/testing-library__jest-dom@npm:^5.9.1":
+"@types/testing-library__jest-dom@npm:^5.14.2, @types/testing-library__jest-dom@npm:^5.9.1":
   version: 5.14.2
   resolution: "@types/testing-library__jest-dom@npm:5.14.2"
   dependencies:
