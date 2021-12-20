@@ -26,6 +26,12 @@ describe("DropdownButton", () => {
     expect(screen.getByTestId("dropdown-button")).toMatchSnapshot();
   });
 
+  it("should render successfully with initial value", () => {
+    render(<DropdownButton items={generateItems()} value="5" />);
+
+    expect(screen.getByTestId("dropdown-button")).toMatchSnapshot();
+  });
+
   it("should open", () => {
     const { rerender } = render(<DropdownButton items={generateItems()} />);
     const button = screen.getByTestId("dropdown-button");
