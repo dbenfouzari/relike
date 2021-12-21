@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { forwardRef, MouseEvent, ReactNode } from "react";
 
+import { Size } from "../size";
 import classes from "./list-item.module.scss";
 
 /** Defines ListItem props */
@@ -15,6 +16,12 @@ export interface ListItemProps {
   right?: ReactNode;
   /** Callback called when pressing on a list item. */
   onPress?: (event: MouseEvent<HTMLButtonElement>) => void;
+  /**
+   * ListItem size.
+   *
+   * @default Size.regular
+   */
+  size?: Size;
 }
 
 /** Component display name. */
@@ -34,7 +41,7 @@ const COMPONENT_NAME = "ListItem";
  * @returns {JSX.Element} The JSX element.
  */
 export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
-  ({ className, left, onPress, right, children, ...props }, ref) => {
+  ({ className, size = Size.regular, left, onPress, right, children, ...props }, ref) => {
     /**
      * Defines the inner wrapper element
      *
@@ -68,6 +75,10 @@ export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
           classes.list_item,
           {
             [classes.list_item__clickable]: !!onPress,
+            [classes.size_tiny]: size === Size.tiny,
+            [classes.size_regular]: size === Size.regular,
+            [classes.size_big]: size === Size.big,
+            [classes.size_huge]: size === Size.huge,
           },
           className,
         )}

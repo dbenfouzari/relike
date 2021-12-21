@@ -5,7 +5,7 @@ exports[`List should render successfully 1`] = `
   class="list"
 >
   <li
-    class="list_item"
+    class="list_item size_regular"
   >
     <div
       class="wrapper"
@@ -18,7 +18,7 @@ exports[`List should render successfully 1`] = `
     </div>
   </li>
   <li
-    class="list_item"
+    class="list_item size_regular"
   >
     <div
       class="wrapper"

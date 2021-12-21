@@ -1,12 +1,12 @@
 .list_item {
   list-style: none;
-  height: 48px;
   display: flex;
   align-items: center;
   font-size: 16px;
   transition: background-color 75ms ease;
   padding-inline: 16px;
   padding-block: 8px;
+  box-sizing: border-box;
 
   &__clickable {
     &:hover {
@@ -17,6 +17,22 @@
       background-color: rgba(0, 0, 0, .12);
     }
   }
+}
+
+.size_tiny {
+  min-height: 36px;
+}
+
+.size_regular {
+  min-height: 52px;
+}
+
+.size_big {
+  min-height: 72px;
+}
+
+.size_huge {
+  padding-block: 16px;
 }
 
 .wrapper {

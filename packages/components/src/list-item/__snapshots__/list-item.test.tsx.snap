@@ -2,7 +2,7 @@
 
 exports[`ListItem should render successfully 1`] = `
 <li
-  class="list_item"
+  class="list_item size_regular"
 >
   <div
     class="wrapper"

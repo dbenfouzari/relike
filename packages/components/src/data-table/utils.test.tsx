@@ -1,7 +1,4 @@
-import { FC } from "react";
-
 import { buildDataColumn } from "./data-table";
-import { DataTableColumnProps } from "./types";
 import { filterChildren } from "./utils";
 
 const data = [{ name: "John Doe", age: 23, gender: "male" }] as const;
