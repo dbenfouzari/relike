@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Autocomplete should allow selection 1`] = `
+<div
+  class="autocomplete"
+  data-testid="autocomplete"
+>
+  <input
+    class="text_field"
+    data-testid="text-field"
+    role="textbox"
+    style="--primary-color: rgba(176, 190, 197, 1.00); --darker-color: rgba(120, 144, 156, 1.00);"
+    type="text"
+    value="an"
+  />
+  <ul
+    class="list option_list"
+    data-testid="autocomplete-list"
+    style="min-width: 0; top: 4px;"
+  >
+    <li
+      class="list_item list_item__clickable size_tiny"
+    >
+      <button
+        class="wrapper"
+        data-testid="autocomplete-list-item-losangeles"
+      >
+        <div
+          class="content"
+        >
+          <span
+            class="elm-0-2-1 elm-d0-0-2-2"
+            data-testid="text-elm"
+          >
+            Los Angeles
+          </span>
+        </div>
+      </button>
+    </li>
+    <li
+      class="list_item list_item__clickable size_tiny"
+    >
+      <button
+        class="wrapper"
+        data-testid="autocomplete-list-item-sanfrancisco"
+      >
+        <div
+          class="content"
+        >
+          <span
+            class="elm-0-2-1 elm-d1-0-2-3"
+            data-testid="text-elm"
+          >
+            San Francisco
+          </span>
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Autocomplete should render successfully 1`] = `
 <div
   class="autocomplete"

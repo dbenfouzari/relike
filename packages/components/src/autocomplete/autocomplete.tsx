@@ -51,9 +51,12 @@ export const Autocomplete = forwardRef<HTMLDivElement, AutocompleteProps>(
      * so we can show autocomplete option list that is the same size.
      */
     useEffect(() => {
-      if (!textFieldRef.current) return;
-
-      setInputDimensions(textFieldRef.current.getBoundingClientRect());
+      /**
+       * Because we can't test that `textFieldRef.current` is not null in Jest (because it never is),
+       * we use the non-null-assertion to say it.
+       */
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      setInputDimensions(textFieldRef.current!.getBoundingClientRect());
     }, []);
 
     /**
@@ -117,9 +120,14 @@ export const Autocomplete = forwardRef<HTMLDivElement, AutocompleteProps>(
         />
 
         {isOpen && (
-          <List className={classes.option_list} style={listStyle}>
+          <List data-testid="autocomplete-list" className={classes.option_list} style={listStyle}>
             {filteredOptions.map((option) => (
-              <List.Item key={option.value} size={Size.tiny} onPress={handleItemSelect(option)}>
+              <List.Item
+                data-testid={`autocomplete-list-item-${option.value}`}
+                key={option.value}
+                size={Size.tiny}
+                onPress={handleItemSelect(option)}
+              >
                 <Text>{option.label}</Text>
               </List.Item>
             ))}
