@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { CSSProperties, FC, InputHTMLAttributes } from "react";
+import { CSSProperties, forwardRef, InputHTMLAttributes } from "react";
 
 import Colors from "../colors";
 import Input from "../input";
@@ -30,8 +30,9 @@ export interface TextFieldProps extends InputProps {
  * <TextField obscureText value="toto" />
  * @returns {JSX.Element}          The JSX element.
  */
-export const TextField: FC<TextFieldProps> = ({ className, obscureText, ...props }) => (
+export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(({ className, obscureText, ...props }, ref) => (
   <Input
+    ref={ref}
     type={obscureText ? "password" : "text"}
     className={classNames(classes.text_field, className)}
     role="textbox"
@@ -43,6 +44,6 @@ export const TextField: FC<TextFieldProps> = ({ className, obscureText, ...props
     }
     {...props}
   />
-);
+));
 
 export default TextField;

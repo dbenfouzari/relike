@@ -1,5 +1,13 @@
 import classNames from "classnames";
-import { CSSProperties, ForwardedRef, forwardRef, ReactNode } from "react";
+import {
+  ComponentType,
+  CSSProperties,
+  ForwardedRef,
+  forwardRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+} from "react";
 import { createUseStyles } from "react-jss";
 
 import TextOverflow from "../text-overflow";
@@ -28,6 +36,9 @@ export interface TextProps {
    */
   className?: string;
 }
+
+/** Defines Text component props without the `as` prop. */
+export type TextWithoutAsProps = Omit<TextProps, "as">;
 
 /** Defines props for Text styles */
 export interface TextStylesProps {
@@ -95,6 +106,26 @@ const useStyles = createUseStyles({
   }),
 });
 
+/** Defines Text component */
+export type TextComponent = ForwardRefExoticComponent<TextProps & RefAttributes<HTMLHeadingElement>> & {
+  /** Defines Text as `h1` with correct style. */
+  H1: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `h2` with correct style. */
+  H2: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `h3` with correct style. */
+  H3: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `h4` with correct style. */
+  H4: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `h5` with correct style. */
+  H5: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `h6` with correct style. */
+  H6: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `span` with correct style. */
+  Span: ComponentType<TextWithoutAsProps>;
+  /** Defines Text as `p` with correct style. */
+  P: ComponentType<TextWithoutAsProps>;
+};
+
 export const Text = forwardRef(
   (
     // FIXME: should not use `as TextStyle` since it IS a TextStyle. Check typings.
@@ -114,8 +145,81 @@ export const Text = forwardRef(
       </AsElement>
     );
   },
-);
+) as TextComponent;
 Text.displayName = COMPONENT_NAME;
 Text.defaultProps = DEFAULT_PROPS;
+
+/**
+ * Defines Text as `h1` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.H1>Example</Text.H1>
+ */
+Text.H1 = (props) => <Text as="h1" style={Typography.blackMountainView.headline1} {...props} />;
+/**
+ * Defines Text as `h2` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.H2>Example</Text.H2>
+ */
+Text.H2 = (props) => <Text as="h2" style={Typography.blackMountainView.headline2} {...props} />;
+/**
+ * Defines Text as `h3` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.H3>Example</Text.H3>
+ */
+Text.H3 = (props) => <Text as="h3" style={Typography.blackMountainView.headline3} {...props} />;
+/**
+ * Defines Text as `h4` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.H4>Example</Text.H4>
+ */
+Text.H4 = (props) => <Text as="h4" style={Typography.blackMountainView.headline4} {...props} />;
+/**
+ * Defines Text as `h5` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.H5>Example</Text.H5>
+ */
+Text.H5 = (props) => <Text as="h5" style={Typography.blackMountainView.headline5} {...props} />;
+/**
+ * Defines Text as `h6` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.H6>Example</Text.H6>
+ */
+Text.H6 = (props) => <Text as="h6" style={Typography.blackMountainView.headline6} {...props} />;
+/**
+ * Defines Text as `span` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.Span>Example</Text.Span>
+ */
+Text.Span = (props) => <Text as="span" style={Typography.blackMountainView.bodyText1} {...props} />;
+/**
+ * Defines Text as `p` with correct style.
+ *
+ * @param   {TextWithoutAsProps} props The props
+ * @returns {JSX.Element}              The Text component
+ * @example
+ * <Text.P>Example</Text.P>
+ */
+Text.P = (props) => <Text as="p" style={Typography.blackMountainView.bodyText1} {...props} />;
 
 export default Text;

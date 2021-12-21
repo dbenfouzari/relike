@@ -37,36 +37,42 @@ export const Headline1 = Template.bind({});
 Headline1.args = {
   children: "Hello, Storybook!",
   style: Typography.blackMountainView.headline1,
+  as: "h1",
 };
 
 export const Headline2 = Template.bind({});
 Headline2.args = {
   children: "Hello, Storybook!",
   style: Typography.blackMountainView.headline2,
+  as: "h2",
 };
 
 export const Headline3 = Template.bind({});
 Headline3.args = {
   children: "Hello, Storybook!",
   style: Typography.blackMountainView.headline3,
+  as: "h3",
 };
 
 export const Headline4 = Template.bind({});
 Headline4.args = {
   children: "Hello, Storybook!",
   style: Typography.blackMountainView.headline4,
+  as: "h4",
 };
 
 export const Headline5 = Template.bind({});
 Headline5.args = {
   children: "Hello, Storybook!",
   style: Typography.blackMountainView.headline5,
+  as: "h5",
 };
 
 export const Headline6 = Template.bind({});
 Headline6.args = {
   children: "Hello, Storybook!",
   style: Typography.blackMountainView.headline6,
+  as: "h6",
 };
 
 export const BodyText1 = Template.bind({});

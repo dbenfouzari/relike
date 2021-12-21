@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete should render successfully 1`] = `
+<div
+  class="autocomplete"
+  data-testid="autocomplete"
+>
+  <input
+    class="text_field"
+    data-testid="text-field"
+    role="textbox"
+    style="--primary-color: rgba(176, 190, 197, 1.00); --darker-color: rgba(120, 144, 156, 1.00);"
+    type="text"
+  />
+  <div
+    style="position: absolute; width: 0px; top: 0px;"
+  >
+    Hello
+  </div>
+</div>
+`;
