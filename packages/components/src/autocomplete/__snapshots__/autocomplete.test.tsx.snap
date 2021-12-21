@@ -11,11 +11,7 @@ exports[`Autocomplete should render successfully 1`] = `
     role="textbox"
     style="--primary-color: rgba(176, 190, 197, 1.00); --darker-color: rgba(120, 144, 156, 1.00);"
     type="text"
+    value=""
   />
-  <div
-    style="position: absolute; width: 0px; top: 0px;"
-  >
-    Hello
-  </div>
 </div>
 `;

@@ -94,9 +94,8 @@ export const Autocomplete = forwardRef<HTMLDivElement, AutocompleteProps>(
     /**
      * Method called by ListItem when user clicks an option.
      *
-     * @param   {string | number} value  The option value
-     * @param                     option
-     * @returns {void}                   Nothing
+     * @param   {AutocompleteOption} option The selected option
+     * @returns {void}                      Nothing
      * @example
      * <List.Item onPress={handleItemSelect("toto")} />
      */
