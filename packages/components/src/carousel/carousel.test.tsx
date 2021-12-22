@@ -25,12 +25,26 @@ jest.mock("./useCarousel", () =>
   jest.fn(() => ({
     leftIndicator: true,
     rightIndicator: true,
+    /**
+     * Component ref creator.
+     *
+     * @returns {any} The ref
+     * @example
+     * <div ref={itemRef} />
+     */
     itemRef: () => jest.fn(),
     scrollLeft: mockScrollLeft,
     scrollRight: mockScrollRight,
   })),
 );
 
+/**
+ * Set up tests
+ *
+ * @returns {any} The result
+ * @example
+ * setup()
+ */
 const setup = () => {
   return render(
     <Carousel>
