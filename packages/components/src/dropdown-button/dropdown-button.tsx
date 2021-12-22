@@ -15,7 +15,7 @@ import classes from "./dropdown-button.module.scss";
  * getMaxChildrenWidth(...)
  * @returns {number}                    The children width
  */
-const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
+export const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
   if (!parent) return;
   let maxWidth = 0;
 
@@ -222,7 +222,10 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
 
       <ul ref={ulRef} className={classnames(classes.item_list, classNames?.item_list)}>
         {allowEmpty && (
-          <li className={classnames(classes.item_list_item, classes.item_list_item__placeholder)}>
+          <li
+            data-testid="empty-placeholder"
+            className={classnames(classes.item_list_item, classes.item_list_item__placeholder)}
+          >
             <button onClick={handleSelect("")}>{placeholder}</button>
           </li>
         )}
@@ -239,7 +242,9 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
               classNames?.item_list_item,
             )}
           >
-            <button onClick={handleSelect(item.value)}>{item.text}</button>
+            <button data-testid={`button-${item.value}`} onClick={handleSelect(item.value)}>
+              {item.text}
+            </button>
           </li>
         ))}
       </ul>

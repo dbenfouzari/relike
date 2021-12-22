@@ -25,7 +25,9 @@ exports[`DropdownButton should render successfully 1`] = `
       data-testid="0"
       id="dropdown-value-0"
     >
-      <button>
+      <button
+        data-testid="button-0"
+      >
         Item 0
       </button>
     </li>
@@ -34,7 +36,9 @@ exports[`DropdownButton should render successfully 1`] = `
       data-testid="1"
       id="dropdown-value-1"
     >
-      <button>
+      <button
+        data-testid="button-1"
+      >
         Item 1
       </button>
     </li>
@@ -43,7 +47,9 @@ exports[`DropdownButton should render successfully 1`] = `
       data-testid="2"
       id="dropdown-value-2"
     >
-      <button>
+      <button
+        data-testid="button-2"
+      >
         Item 2
       </button>
     </li>
@@ -52,7 +58,9 @@ exports[`DropdownButton should render successfully 1`] = `
       data-testid="3"
       id="dropdown-value-3"
     >
-      <button>
+      <button
+        data-testid="button-3"
+      >
         Item 3
       </button>
     </li>
@@ -61,7 +69,9 @@ exports[`DropdownButton should render successfully 1`] = `
       data-testid="4"
       id="dropdown-value-4"
     >
-      <button>
+      <button
+        data-testid="button-4"
+      >
         Item 4
       </button>
     </li>
@@ -77,9 +87,9 @@ exports[`DropdownButton should render successfully with initial value 1`] = `
   <span
     style="min-width: 0;"
   >
-    <span
-      class="value_placeholder"
-    />
+    <span>
+      Item 2
+    </span>
     <span
       class="jsx-786785084 icon material-icons"
     >
@@ -94,7 +104,9 @@ exports[`DropdownButton should render successfully with initial value 1`] = `
       data-testid="0"
       id="dropdown-value-0"
     >
-      <button>
+      <button
+        data-testid="button-0"
+      >
         Item 0
       </button>
     </li>
@@ -103,16 +115,20 @@ exports[`DropdownButton should render successfully with initial value 1`] = `
       data-testid="1"
       id="dropdown-value-1"
     >
-      <button>
+      <button
+        data-testid="button-1"
+      >
         Item 1
       </button>
     </li>
     <li
-      class="item_list_item"
+      class="item_list_item item_list_item__selected"
       data-testid="2"
       id="dropdown-value-2"
     >
-      <button>
+      <button
+        data-testid="button-2"
+      >
         Item 2
       </button>
     </li>
@@ -121,7 +137,9 @@ exports[`DropdownButton should render successfully with initial value 1`] = `
       data-testid="3"
       id="dropdown-value-3"
     >
-      <button>
+      <button
+        data-testid="button-3"
+      >
         Item 3
       </button>
     </li>
@@ -130,7 +148,9 @@ exports[`DropdownButton should render successfully with initial value 1`] = `
       data-testid="4"
       id="dropdown-value-4"
     >
-      <button>
+      <button
+        data-testid="button-4"
+      >
         Item 4
       </button>
     </li>
