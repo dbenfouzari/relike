@@ -5,13 +5,99 @@ exports[`toggle should render successfully 1`] = `
   aria-checked="false"
   aria-label="Toggle off"
   class="button button-0-2-1 button-d0-0-2-2"
-  data-testid="toggle"
   role="switch"
   type="button"
 >
   <span
     class="handle"
   />
+  <span
+    class="inner"
+  />
+</button>
+`;
+
+exports[`toggle should render successfully when disabled 1`] = `
+<button
+  aria-checked="false"
+  aria-label="Toggle off"
+  class="button button-0-2-1 button-d5-0-2-7 button__disabled"
+  role="switch"
+  type="button"
+>
+  <span
+    class="handle"
+  />
+  <span
+    class="inner"
+  />
+</button>
+`;
+
+exports[`toggle should render successfully when loading and size is normal and unchecked 1`] = `
+<button
+  aria-checked="false"
+  aria-label="Toggle off"
+  class="button button-0-2-1 button-d7-0-2-18 button__disabled"
+  role="switch"
+  type="button"
+>
+  <span
+    class="handle"
+  >
+    <div
+      class="wrapper-0-2-10 wrapper-d2-0-2-19 loader"
+      data-testid="loader"
+    >
+      <span
+        class="item-0-2-11 item-d3-0-2-20 item1-0-2-12"
+      />
+      <span
+        class="item-0-2-11 item-d3-0-2-20 item2-0-2-13"
+      />
+      <span
+        class="item-0-2-11 item-d3-0-2-20 item3-0-2-14"
+      />
+      <span
+        class="item-0-2-11 item-d3-0-2-20 item4-0-2-15"
+      />
+    </div>
+  </span>
+  <span
+    class="inner"
+  />
+</button>
+`;
+
+exports[`toggle should render successfully when loading and small and checked 1`] = `
+<button
+  aria-checked="true"
+  aria-label="Toggle on"
+  class="button button-0-2-1 button-d6-0-2-8 button__checked button__small button__disabled"
+  role="switch"
+  type="button"
+>
+  <span
+    class="handle"
+  >
+    <div
+      class="wrapper-0-2-10 wrapper-d0-0-2-16 loader"
+      data-testid="loader"
+    >
+      <span
+        class="item-0-2-11 item-d1-0-2-17 item1-0-2-12"
+      />
+      <span
+        class="item-0-2-11 item-d1-0-2-17 item2-0-2-13"
+      />
+      <span
+        class="item-0-2-11 item-d1-0-2-17 item3-0-2-14"
+      />
+      <span
+        class="item-0-2-11 item-d1-0-2-17 item4-0-2-15"
+      />
+    </div>
+  </span>
   <span
     class="inner"
   />
