@@ -1,8 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button should render successfully when disabled 1`] = `
+<button
+  class="button button__disabled button__high buttonHigh-0-2-3 buttonHigh-d14-0-2-20"
+  disabled=""
+>
+  <span
+    class="jsx-3151094360 icon material-icons icon"
+    role="img"
+  >
+    add
+  </span>
+</button>
+`;
+
 exports[`Button should render successfully when extended 1`] = `
 <button
-  class="button button__extended button__high buttonHigh-0-2-3 buttonHigh-d5-0-2-9"
+  class="button button__extended button__high buttonHigh-0-2-3 buttonHigh-d11-0-2-15"
 >
   <span
     class="jsx-3151094360 icon material-icons icon"
@@ -11,7 +25,7 @@ exports[`Button should render successfully when extended 1`] = `
     check
   </span>
   <span
-    class="elm-0-2-10 elm-d0-0-2-11"
+    class="elm-0-2-16 elm-d0-0-2-17"
     data-testid="text-elm"
   >
     See all results
@@ -25,6 +39,58 @@ exports[`Button should render successfully with high emphasis 1`] = `
 >
   <span
     class="jsx-3151094360 icon material-icons icon"
+    role="img"
+  >
+    add
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with high emphasis and high lightness color 1`] = `
+<button
+  class="button button__high buttonHigh-0-2-3 buttonHigh-d20-0-2-26"
+>
+  <span
+    class="jsx-3212838394 icon material-icons icon"
+    role="img"
+  >
+    add
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with low emphasis 1`] = `
+<button
+  class="button buttonLow-0-2-1 buttonLow-d6-0-2-10"
+>
+  <span
+    class="jsx-1118668747 icon material-icons icon"
+    role="img"
+  >
+    add
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with low lightness color 1`] = `
+<button
+  class="button button__high buttonHigh-0-2-3 buttonHigh-d17-0-2-23"
+>
+  <span
+    class="jsx-3151094360 icon material-icons icon"
+    role="img"
+  >
+    add
+  </span>
+</button>
+`;
+
+exports[`Button should render successfully with medium emphasis 1`] = `
+<button
+  class="button buttonMedium-0-2-2 buttonMedium-d4-0-2-8"
+>
+  <span
+    class="jsx-1118668747 icon material-icons icon"
     role="img"
   >
     add

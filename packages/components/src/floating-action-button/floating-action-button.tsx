@@ -99,9 +99,9 @@ const useStyles = createUseStyles({
    * Generates low emphasis styles.
    *
    * @param   {FloatingActionButtonStylesProps} props The props
+   * @returns {CSSProperties}                         The styles
    * @example
    * buttonLow({ color: Colors.blue, disabled: false })
-   * @returns {CSSProperties}                         The styles
    */
   buttonLow: ({ color, disabled }: FloatingActionButtonStylesProps) => ({
     "&:hover, &:focus": {

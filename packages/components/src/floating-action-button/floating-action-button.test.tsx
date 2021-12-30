@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
+import Color from "../color";
 import { Emphasis } from "../emphasis";
 import Icons from "../icons";
 import FloatingActionButton, { FloatingActionButtonProps } from "./floating-action-button";
@@ -29,8 +30,38 @@ describe("Button", () => {
     expect(screen.getByRole("button")).toMatchSnapshot();
   });
 
+  it("should render successfully with medium emphasis", () => {
+    setup({ emphasis: Emphasis.medium });
+
+    expect(screen.getByRole("button")).toMatchSnapshot();
+  });
+
+  it("should render successfully with low emphasis", () => {
+    setup({ emphasis: Emphasis.low });
+
+    expect(screen.getByRole("button")).toMatchSnapshot();
+  });
+
   it("should render successfully when extended", () => {
     setup({ icon: Icons.check, label: "See all results" });
+
+    expect(screen.getByRole("button")).toMatchSnapshot();
+  });
+
+  it("should render successfully when disabled", () => {
+    setup({ disabled: true });
+
+    expect(screen.getByRole("button")).toMatchSnapshot();
+  });
+
+  it("should render successfully with low lightness color", () => {
+    setup({ color: Color.fromHSLA(100, 50, 5) });
+
+    expect(screen.getByRole("button")).toMatchSnapshot();
+  });
+
+  it("should render successfully with high emphasis and high lightness color", () => {
+    setup({ color: Color.fromHSLA(100, 50, 100), emphasis: Emphasis.high });
 
     expect(screen.getByRole("button")).toMatchSnapshot();
   });
