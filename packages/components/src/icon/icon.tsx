@@ -59,30 +59,27 @@ export interface IconProps {
  * @see IconButton
  * @see Icons
  */
-export const Icon: FC<IconProps> = ({ className, icon, semanticLabel, color = Colors.black, disabled, size = 24 }) => {
-  return (
-    <>
-      <span
-        className={classNames(
-          classes.icon,
-          getIconClassName(icon.variant),
-          {
-            [classes.icon__disabled]: disabled,
-          },
-          className,
-        )}
-        aria-label={semanticLabel}
-      >
-        {icon.name}
-      </span>
+export const Icon: FC<IconProps> = ({ className, icon, semanticLabel, color = Colors.black, disabled, size = 24 }) => (
+  <span
+    role="img"
+    className={classNames(
+      classes.icon,
+      getIconClassName(icon.variant),
+      {
+        [classes.icon__disabled]: disabled,
+      },
+      className,
+    )}
+    aria-label={semanticLabel}
+  >
+    {icon.name}
 
-      <style jsx>{`
-        --color: ${color.toRGBA()};
-        --disabled-color: ${Colors.black26.toRGBA()};
-        --size: ${size}px;
-      `}</style>
-    </>
-  );
-};
+    <style jsx>{`
+      --color: ${color.toRGBA()};
+      --disabled-color: ${Colors.black26.toRGBA()};
+      --size: ${size}px;
+    `}</style>
+  </span>
+);
 
 export default Icon;

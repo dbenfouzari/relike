@@ -42,7 +42,8 @@ exports[`DataTable should render successfully 1`] = `
         role="cell"
       >
         <span
-          class="jsx-786785084 icon material-icons"
+          class="jsx-3212838394 icon material-icons"
+          role="img"
         >
           person
         </span>

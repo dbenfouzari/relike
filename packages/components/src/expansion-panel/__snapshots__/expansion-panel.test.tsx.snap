@@ -18,7 +18,8 @@ exports[`ExpansionPanel should open 1`] = `
       data-testid="toggle"
     >
       <span
-        class="jsx-786785084 icon material-icons arrow"
+        class="jsx-3212838394 icon material-icons arrow"
+        role="img"
       >
         keyboard_arrow_down
       </span>
@@ -55,7 +56,8 @@ exports[`ExpansionPanel should render successfully 1`] = `
       data-testid="toggle"
     >
       <span
-        class="jsx-786785084 icon material-icons arrow"
+        class="jsx-3212838394 icon material-icons arrow"
+        role="img"
       >
         keyboard_arrow_down
       </span>

@@ -58,7 +58,8 @@ exports[`Button should render successfully with icon 1`] = `
   class="jsx-1787608142 button button__medium"
 >
   <span
-    class="jsx-2439414882 icon material-icons icon"
+    class="jsx-2698498724 icon material-icons icon"
+    role="img"
   >
     access_time
   </span>

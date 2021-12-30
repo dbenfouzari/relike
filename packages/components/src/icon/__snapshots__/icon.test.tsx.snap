@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Icon should render successfully 1`] = `
+<span
+  class="jsx-3212838394 icon material-icons"
+  role="img"
+>
+  access_time
+</span>
+`;
+
+exports[`Components/Icon should render successfully with no variant 1`] = `
+<span
+  class="jsx-3212838394 icon material-icons"
+  role="img"
+>
+  access_time
+</span>
+`;
+
+exports[`Components/Icon should render successfully with outlined variant 1`] = `
+<span
+  class="jsx-3212838394 icon material-icons-outlined"
+  role="img"
+>
+  access_time
+</span>
+`;
+
+exports[`Components/Icon should render successfully with rounded variant 1`] = `
+<span
+  class="jsx-3212838394 icon material-icons-round"
+  role="img"
+>
+  access_time
+</span>
+`;
+
+exports[`Components/Icon should render successfully with sharp variant 1`] = `
+<span
+  class="jsx-3212838394 icon material-icons-sharp"
+  role="img"
+>
+  access_time
+</span>
+`;

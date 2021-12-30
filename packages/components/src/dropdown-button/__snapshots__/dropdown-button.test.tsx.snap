@@ -12,7 +12,8 @@ exports[`DropdownButton should render successfully 1`] = `
       class="value_placeholder"
     />
     <span
-      class="jsx-786785084 icon material-icons"
+      class="jsx-3212838394 icon material-icons"
+      role="img"
     >
       arrow_drop_down
     </span>
@@ -91,7 +92,8 @@ exports[`DropdownButton should render successfully with initial value 1`] = `
       Item 2
     </span>
     <span
-      class="jsx-786785084 icon material-icons"
+      class="jsx-3212838394 icon material-icons"
+      role="img"
     >
       arrow_drop_down
     </span>

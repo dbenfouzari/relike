@@ -6,7 +6,8 @@ exports[`should render successfully 1`] = `
   data-testid="icon-button__button"
 >
   <span
-    class="jsx-786785084 icon material-icons"
+    class="jsx-3212838394 icon material-icons"
+    role="img"
   >
     arrow_drop_down
   </span>

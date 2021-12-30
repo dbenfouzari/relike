@@ -11,7 +11,8 @@ exports[`Carousel should render successfully 1`] = `
     tabindex="0"
   >
     <span
-      class="jsx-2787895825 icon material-icons"
+      class="jsx-3238418135 icon material-icons"
+      role="img"
     >
       chevron_left
     </span>
@@ -106,7 +107,8 @@ exports[`Carousel should render successfully 1`] = `
     tabindex="0"
   >
     <span
-      class="jsx-2787895825 icon material-icons"
+      class="jsx-3238418135 icon material-icons"
+      role="img"
     >
       chevron_right
     </span>

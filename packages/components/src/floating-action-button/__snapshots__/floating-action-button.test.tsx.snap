@@ -5,7 +5,8 @@ exports[`Button should render successfully when extended 1`] = `
   class="button button__extended button__high buttonHigh-0-2-3 buttonHigh-d5-0-2-9"
 >
   <span
-    class="jsx-1654271774 icon material-icons icon"
+    class="jsx-3151094360 icon material-icons icon"
+    role="img"
   >
     check
   </span>
@@ -23,7 +24,8 @@ exports[`Button should render successfully with high emphasis 1`] = `
   class="button button__high buttonHigh-0-2-3 buttonHigh-d2-0-2-6"
 >
   <span
-    class="jsx-1654271774 icon material-icons icon"
+    class="jsx-3151094360 icon material-icons icon"
+    role="img"
   >
     add
   </span>

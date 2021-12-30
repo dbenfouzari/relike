@@ -18,7 +18,8 @@ exports[`Calendar should handle previous month 1`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_left
         </span>
@@ -49,7 +50,8 @@ exports[`Calendar should handle previous month 1`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_right
         </span>
@@ -665,7 +667,8 @@ exports[`Calendar should handle previous month 2`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_left
         </span>
@@ -696,7 +699,8 @@ exports[`Calendar should handle previous month 2`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_right
         </span>
@@ -1213,7 +1217,8 @@ exports[`Calendar should handle previous month 3`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_left
         </span>
@@ -1244,7 +1249,8 @@ exports[`Calendar should handle previous month 3`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_right
         </span>
@@ -1761,7 +1767,8 @@ exports[`Calendar should parse date when initialValue is a Date object 1`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_left
         </span>
@@ -1792,7 +1799,8 @@ exports[`Calendar should parse date when initialValue is a Date object 1`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_right
         </span>
@@ -2393,7 +2401,8 @@ exports[`Calendar should render successfully 1`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_left
         </span>
@@ -2424,7 +2433,8 @@ exports[`Calendar should render successfully 1`] = `
         tabindex="0"
       >
         <span
-          class="jsx-579726175 icon material-icons"
+          class="jsx-310316441 icon material-icons"
+          role="img"
         >
           arrow_right
         </span>

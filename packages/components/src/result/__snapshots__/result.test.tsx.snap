@@ -13,7 +13,8 @@ exports[`Result should render successfully with error 1`] = `
       style="width: 72px; height: 72px;"
     >
       <span
-        class="jsx-7413529 icon material-icons"
+        class="jsx-3729215967 icon material-icons"
+        role="img"
       >
         close
       </span>
@@ -41,7 +42,8 @@ exports[`Result should render successfully with info 1`] = `
     class="icon"
   >
     <span
-      class="jsx-467294570 icon material-icons"
+      class="jsx-3997658540 icon material-icons"
+      role="img"
     >
       error
     </span>
@@ -67,7 +69,8 @@ exports[`Result should render successfully with success 1`] = `
       style="width: 72px; height: 72px;"
     >
       <span
-        class="jsx-7413529 icon material-icons"
+        class="jsx-3729215967 icon material-icons"
+        role="img"
       >
         check
       </span>
@@ -90,7 +93,8 @@ exports[`Result should render successfully with warning 1`] = `
     class="icon"
   >
     <span
-      class="jsx-3637481999 icon material-icons-round"
+      class="jsx-3368072265 icon material-icons-round"
+      role="img"
     >
       warning
     </span>
