@@ -10,12 +10,13 @@ import classes from "./dropdown-button.module.scss";
  * This method is used to calculate max width of children elements.
  * It aims to get wrapper min width.
  *
- * @param   {HTMLElement | null} parent The parent.
+ * @param   {HTMLElement | null} parent   The parent.
+ * @param   {Function}           createEl A custom createElement method, if necessary
  * @example
  * getMaxChildrenWidth(...)
- * @returns {number}                    The children width
+ * @returns {number}                      The children width
  */
-export const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
+export const getMaxChildrenWidth = (parent?: HTMLElement | null, createEl = document.createElement.bind(document)) => {
   if (!parent) return;
   let maxWidth = 0;
 
@@ -23,7 +24,7 @@ export const getMaxChildrenWidth = (parent?: HTMLElement | null) => {
     const child = parent.childNodes[i];
 
     const textContent = child.textContent;
-    const span = document.createElement("span");
+    const span = createEl("span");
     span.innerText = textContent || "";
     document.body.appendChild(span);
     const w = span.getBoundingClientRect().width;

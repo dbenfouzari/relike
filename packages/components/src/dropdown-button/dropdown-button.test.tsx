@@ -63,6 +63,14 @@ describe("DropdownButton", () => {
     expect(onSelect).toHaveBeenCalledWith("4");
   });
 
+  it("should handle selection when no onChange given", () => {
+    render(<DropdownButton items={generateItems()} />);
+    const button = screen.getByTestId("dropdown-button");
+
+    fireEvent.click(button);
+    fireEvent.click(screen.getByTestId("button-4"));
+  });
+
   it("should close on click outside", () => {
     /**
      * Dumb component, just to be able to click outside the dropdown button
@@ -101,5 +109,37 @@ describe("DropdownButton", () => {
 
   it("getMaxChildrenWidth should return nothing when no parent given", () => {
     expect(getMaxChildrenWidth(null)).toBe(undefined);
+  });
+
+  it("getMaxChildrenWidth should return bigger children width", () => {
+    const getBoundingClientRectSpy = jest
+      .fn()
+      .mockImplementationOnce(() => ({ width: 50 }))
+      .mockImplementation(() => ({ width: 100 }));
+
+    /**
+     * Override default `document.createElement` to be able to mock method.
+     *
+     * @param   {string} tagName The tag to create
+     * @returns {any}            The final Node
+     * @example
+     * createElement("span");
+     */
+    const createElement = (tagName: string) => {
+      const spanNode = document.createElement(tagName);
+
+      spanNode.getBoundingClientRect = getBoundingClientRectSpy;
+
+      return spanNode;
+    };
+
+    render(
+      <div data-testid="test-container">
+        <div>Hello</div>
+        <div>Testing World</div>
+      </div>,
+    );
+
+    expect(getMaxChildrenWidth(screen.getByTestId("test-container"), createElement)).toEqual(100);
   });
 });
