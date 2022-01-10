@@ -1,33 +1,33 @@
-# @hastics/cli
+# @neono/cli
 
 This package provides some useful commands to help to build your components.
 
-* [@hastics/cli](#hasticscli)
+* [@neono/cli](#neonocli)
 * [Usage](#usage)
 * [Commands](#commands)
-    * [`hastics generate:component [NAME] [PATH]`](#hastics-generatecomponent-name-path)
-    * [`hastics generate:native-component [NAME] [PATH]`](#hastics-generatenative-component-name-path)
-    * [`hastics generate:index [PATH] [EXCLUDED]`](#hastics-generateindex-path-excluded)
+    * [`neono generate:component [NAME] [PATH]`](#neono-generatecomponent-name-path)
+    * [`neono generate:native-component [NAME] [PATH]`](#neono-generatenative-component-name-path)
+    * [`neono generate:index [PATH] [EXCLUDED]`](#neono-generateindex-path-excluded)
 
 # Usage
 
 ```sh-session
-$ yarn add -D @hastics/cli
-$ hastics COMMAND
+$ yarn add -D @neono/cli
+$ neono COMMAND
 running command...
-$ hastics --help [COMMAND]
+$ neono --help [COMMAND]
 USAGE
-  $ hastics COMMAND
+  $ neono COMMAND
 ...
 ```
 
 # Commands
 
-* [`hastics generate:component [NAME] [PATH]`](#hastics-generatecomponent-name-path)
-* [`hastics generate:native-component [NAME] [PATH]`](#hastics-generatenative-component-name-path)
-* [`hastics generate:index [PATH] [EXCLUDED]`](#hastics-generateindex-path-excluded)
+* [`neono generate:component [NAME] [PATH]`](#neono-generatecomponent-name-path)
+* [`neono generate:native-component [NAME] [PATH]`](#neono-generatenative-component-name-path)
+* [`neono generate:index [PATH] [EXCLUDED]`](#neono-generateindex-path-excluded)
 
-## `hastics generate:component [NAME] [PATH]`
+## `neono generate:component [NAME] [PATH]`
 
 Generate a React component with reliable skeleton.
 
@@ -41,8 +41,8 @@ yarn add -D @testing-library/react
 
 ```
 USAGE
-  $ hastics generate:component [NAME] [PATH]
-  $ hastics g:c [NAME] [PATH]
+  $ neono generate:component [NAME] [PATH]
+  $ neono g:c [NAME] [PATH]
 
 ARGUMENTS
   NAME  Component name
@@ -58,13 +58,13 @@ OPTIONS
 
 EXAMPLES
   # By passing arguments
-     $ hastics generate:component button src/components
+     $ neono generate:component button src/components
 
   # By passing flags
-     $ hastics generate:component --name=button --path=src/components
+     $ neono generate:component --name=button --path=src/components
 
   # By following wizard
-     $ hastics generate:component
+     $ neono generate:component
 
      ? What is the component name ? button
      ? Select a target directory src/components/
@@ -82,7 +82,7 @@ EXAMPLES
     ┗ ...
 ```
 
-## `hastics generate:native-component [NAME] [PATH]`
+## `neono generate:native-component [NAME] [PATH]`
 
 Generate a React-Native component with reliable skeleton.
 
@@ -96,8 +96,8 @@ yarn add -D @testing-library/react-native
 
 ```
 USAGE
-  $ hastics generate:native-component [NAME] [PATH]
-  $ hastics g:nc [NAME] [PATH]
+  $ neono generate:native-component [NAME] [PATH]
+  $ neono g:nc [NAME] [PATH]
 
 ARGUMENTS
   NAME  Component name
@@ -112,13 +112,13 @@ OPTIONS
 
 EXAMPLES
   # By passing arguments
-     $ hastics generate:native-component button src/components
+     $ neono generate:native-component button src/components
 
   # By passing flags
-     $ hastics generate:native-component --name=button --path=src/components
+     $ neono generate:native-component --name=button --path=src/components
 
   # By following wizard
-     $ hastics generate:native-component
+     $ neono generate:native-component
 
      ? What is the component name ? button
      ? Select a target directory src/components/
@@ -135,7 +135,7 @@ EXAMPLES
     ┗ ...
 ```
 
-## `hastics generate:index [PATH] [EXCLUDED]`
+## `neono generate:index [PATH] [EXCLUDED]`
 
 This command allows you to automatically generate an `index.ts` file that exports all modules in a folder.
 
@@ -144,7 +144,7 @@ Let's assume you have a folder `components` that actually contains `button`, `ic
 By calling command
 
 ```shell
-yarn hastics generate:index src/components
+yarn neono generate:index src/components
 ```
 
 you will create an `index.ts` file in `src/components` that will contain
@@ -157,8 +157,8 @@ export { default as Text } from "./text";
 
 ```
 USAGE
-  $ hastics generate:index [NAME] [PATH]
-  $ hastics g:i [NAME] [PATH]
+  $ neono generate:index [NAME] [PATH]
+  $ neono g:i [NAME] [PATH]
 
 ARGUMENTS
   PATH      Your components' folder path
@@ -171,8 +171,8 @@ OPTIONS
 
 EXAMPLES
   # By passing arguments
-     $ hastics generate:index src/components index.ts,react-app-env.d.ts,setupTests.ts,types.ts
+     $ neono generate:index src/components index.ts,react-app-env.d.ts,setupTests.ts,types.ts
 
   # By passing flags
-     $ hastics generate:index --path=src/components --excluded=index.ts,react-app-env.d.ts,setupTests.ts,types.ts
+     $ neono generate:index --path=src/components --excluded=index.ts,react-app-env.d.ts,setupTests.ts,types.ts
 ```

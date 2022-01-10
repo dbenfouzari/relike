@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "lint:cli": "eslint packages/cli",
     "lint:components": "eslint packages/components",
-    "chromatic:components": "yarn workspace @hastics/components chromatic"
+    "chromatic:components": "yarn workspace @neono/components chromatic"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",

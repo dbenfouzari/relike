@@ -33,6 +33,6 @@ jobs:
         run: yarn build
 
       - name: Release Storybook
-        run: yarn workspace @hastics/components storybook:deploy --ci
+        run: yarn workspace @neono/components storybook:deploy --ci
         env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.HASTICS_STORYBOOK_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.NEONO_STORYBOOK_TOKEN }}

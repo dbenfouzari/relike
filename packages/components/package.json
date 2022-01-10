@@ -1,9 +1,9 @@
 {
-  "name": "@hastics/components",
+  "name": "@neono/components",
   "version": "0.0.1",
   "author": "Donovan BENFOUZARI <d.benfouzari@gmail.com>",
-  "bugs": "https://github.com/hastics/hastics/issues",
-  "homepage": "https://github.com/hastics/hastics",
+  "bugs": "https://github.com/neono-dev/neono/issues",
+  "homepage": "https://github.com/neono/neono",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,7 +12,7 @@
     "/dist"
   ],
   "scripts": {
-    "generate-index": "yarn hastics generate:index src --exclude __snapshots__,hooks,index.ts,introduction.stories.mdx,react-app-env.d.ts,setupTests.ts,types.ts",
+    "generate-index": "yarn neono generate:index src --exclude __snapshots__,hooks,index.ts,introduction.stories.mdx,react-app-env.d.ts,setupTests.ts,types.ts",
     "build:cjs": "babel --source-maps --quiet --root-mode upward src -d dist/cjs --env-name cjs --extensions \".ts,.tsx,.js,.jsx\"",
     "build:esm": "babel --source-maps --quiet --root-mode upward src -d dist/esm --extensions \".ts,.tsx,.js,.jsx\"",
     "build:js": "yarn build:cjs && yarn build:esm",
@@ -41,8 +41,8 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
-    "@hastics/cli": "^0.0.1",
     "@mdx-js/react": "^1.6.22",
+    "@neono/cli": "^0.0.1",
     "@storybook/addon-a11y": "^6.4.9",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-docs": "^6.4.9",
@@ -80,7 +80,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hastics/hastics.git",
+    "url": "git+https://github.com/neono-dev/neono.git",
     "directory": "packages/cli"
   },
   "browserslist": {

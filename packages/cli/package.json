@@ -1,14 +1,14 @@
 {
-  "name": "@hastics/cli",
+  "name": "@neono/cli",
   "description": "Some CLI to help your development process",
   "version": "0.0.1",
   "author": "Donovan BENFOUZARI <d.benfouzari@gmail.com>",
-  "bugs": "https://github.com/hastics/hastics/issues",
-  "homepage": "https://github.com/hastics/hastics",
+  "bugs": "https://github.com/neono-dev/neono/issues",
+  "homepage": "https://github.com/neono-dev/neono",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": {
-    "hastics": "dist/index.js"
+    "neono": "dist/index.js"
   },
   "scripts": {
     "prepare": "rm -rf ./dist/templates && mkdir -p ./dist && cp -r ./src/templates/ ./dist/templates",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hastics/hastics.git",
+    "url": "git+https://github.com/neono-dev/neono.git",
     "directory": "packages/cli"
   },
   "dependencies": {

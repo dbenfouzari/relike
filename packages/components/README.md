@@ -1,4 +1,4 @@
-# @hastics
+# @neono
 
 This project aims to help by creating beautiful React components, without headache.
 
@@ -7,24 +7,24 @@ that work for you.
 
 ## Demo
 
-See live demo at https://hastics.github.io/hastics/
+See live demo at https://neono-dev.github.io/neono/
 
 ## Installation
 
 ```shell
-yarn add @hastics/components
+yarn add @neono/components
 ```
 
 Or
 
 ```shell
-npm i -S @hastics/components
+npm i -S @neono/components
 ```
 
 ## Usage
 
 ```tsx
-import { IconButton, Icon, Icons } from '@hastics/components';
+import { IconButton, Icon, Icons } from '@neono/components';
 
 const App = () => (
   <IconButton
@@ -34,5 +34,5 @@ const App = () => (
 )
 ```
 ## Documentation
-You can see all documentation on https://hastics.github.io/hastics/.
+You can see all documentation on https://neono.github.io/neono/.
 It's a component library that exposes all available components.
